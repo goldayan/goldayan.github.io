@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+        <url>
+            <loc>/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/categories/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/categories/hello-world/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/page/1/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/some-article/</loc>
+            
+                <lastmod>2017-09-24</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>/some-other-article/</loc>
+            
+                <lastmod>2017-09-25</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>/statistics/</loc>
+            
+                <lastmod>2019-09-04</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/maths/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/other/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/rust/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/ssg/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>/tags/statistics/</loc>
+            
+        </url>
+    
+</urlset>

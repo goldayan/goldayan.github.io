@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>after-dark theme</title>
+        <link>/</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="/tags/maths/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Statistics Page</title>
+                <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+                <link>/statistics/</link>
+                <guid>/statistics/</guid>
+                <description>&lt;p&gt;yes or no
+predict &#x2F; decision&lt;&#x2F;p&gt;
+&lt;p&gt;statistics is about making sense of data and figuring out how to put that information to use&lt;&#x2F;p&gt;
+&lt;p&gt;Statistics&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;study and practice of collecting and analyzing data. ( Field of statistics )&lt;&#x2F;li&gt;
+&lt;li&gt;Facts or summarize of data.&lt;&#x2F;li&gt;
+&lt;li&gt;Tools which help us to reason.&lt;&#x2F;li&gt;
+&lt;li&gt;see through uncertainty.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
