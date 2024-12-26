@@ -15,8 +15,8 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4  # Updated to the latest version
 
-      - name: Install Git and Emacs
-        run: sudo apt install git emacs-nox --yes
+      - name: Install Emacs
+        run: sudo apt install emacs-nox --yes
 
       - name: Make build script executable
         run: chmod +x ./build.sh
