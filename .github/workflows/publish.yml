@@ -3,7 +3,7 @@ name: Publish to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3  # Updated to the latest version
 
       - name: Install Emacs
         run: sudo apt install emacs-nox --yes
+
+      - name: Make build script executable
+        run: chmod +x ./build.sh
 
       - name: Build the site
         run: ./build.sh
