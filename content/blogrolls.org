@@ -1,0 +1,13 @@
+#+title: Blogrolls
+
+*** TODO Julia Evans (blog)
+
+*** TODO System crafters, System crafters forums
+
+*** TODO Kaniyam
+
+*** TODO tamilnadu.tech
+
+*** TODO youtube - tlc, system crafters, mine, distrotube
+
+*** TODO podcast - darnet diary, andrew huberman, selfhosted

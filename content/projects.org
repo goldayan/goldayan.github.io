@@ -1,0 +1,7 @@
+#+title: Projects
+
+*** TODO Include Book translation
+
+*** TODO Previous notable open source contribution
+
+*** TODO Current ongoing projects

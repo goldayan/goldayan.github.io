@@ -1,0 +1,8 @@
+#+title: Goldayan articles
+
+** 2025
+*** -> [[file:hello.org][Hello world post]]
+*** -> [[file:hello.org][Hello world post]]
+*** -> [[file:hello.org][Hello world post]]
+*** -> [[file:hello.org][Hello world post]]
+*** -> [[file:hello.org][Hello world post]]
