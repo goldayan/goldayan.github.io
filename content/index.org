@@ -1,16 +1,44 @@
-#+title: Org Mode Example Site
+#+title: Homepage
 
-Here is a new change to our websites!
+** Hellooo, Tinkerers!
 
-* Overview
+This is Thanga Ayyanar A @ Gold Ayan
 
-This is an *example* of a _website_ written with [[https://orgmode.org][Org Mode]]!
+I am a versatile polyglot programmer with extensive experience across
+multiple programming languages. Sometimes, I will deliver a talk at
+*Kanchilug* or participating in a conference in and around
+Chennai, where I share my insights and knowledge with fellow tech
+enthusiasts. In addition to my speaking engagements, I am passionate
+about promoting open-source software and actively translate
+open-source books into Tamil, making valuable resources accessible to
+a wider audience.
 
-Here is a link to my [[./Emacs.org][Emacs configuration]].
+My favorite tools include **Linux**, **Emacs**, and **Scheme/Lisp**. I
+am also an active member of the Tamil Linux Community, where I
+contribute to discussions and share knowledge. You can often find me
+engaging with the community at [[https://forums.tamillinuxcommunity.org][Tamil Linux Community]]
 
-* Links
+Additionally, I encourage you to explore the *Tamil tech event
+calendar*, which lists various upcoming events in the region. You can
+view the calendar [[https://calendar.google.com/calendar/u/0/r?cid=9286037a22efd277b0551234d5424afe788cbbf7a2740471b1cfeb9d88f98099@group.calendar.google.com][here]]. This resource is a great way to stay informed
+about the latest happenings in the Tamil tech community.
 
-- [[https://systemcrafters.net][System Crafters Official Site]]
-- [[https://youtube.com/SystemCrafters][System Crafters on YouTube]]
-- [[https://twitch.com/SystemCrafters][System Crafters on Twitch]]
-- [[https://twitter.com/SystemCrafters][System Crafters on Twitter]]
+Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
+
+** About this blog
+- TIL means Today I Learned, this section is inspired from Juila Evans blog.
+- Project tab contains projects which are currently working on or completed projects.
+- Posts tab has the blog articles.
+- Blogrolls my favorite bloggers, podcasts, youtube channels sites (has both tamil and english language blog).
+- RSS - Rich Site Summary (use feed reader to subscribe this blog).
+
+
+** Social handles
+| LinkedIn      | https://linkedin.com/in/thangaayyanar                                    |
+| Mastodon      | @goldayan@clj.social                                                     |
+| Github        | https://github.com/thangaayyanar                                         |
+| Youtube       | https://youtube.com/@goldayantinkers                                     |
+| IRC           | Goldayan(nickname) in #kaniyam, #systemcrafters, #ilugc to name a few... |
+| Twitter/X.com | @0xgoldayan (Not much now a days)                                        |
+
+Feel free to explore the website, I like to keep the website simple and stupid.
