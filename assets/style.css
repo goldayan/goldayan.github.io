@@ -1,0 +1,125 @@
+:root {
+    font-size: 18px;
+    font-family: 'Share Tech Mono', sans-serif;
+
+     /* theme platte */
+    --theme-color-one: #cb0033; /* Vivid Crimson */
+    --theme-color-two: #db143c; /* Crimson */
+    --theme-color-three: #ed465a; /* Desire */
+    --theme-color-four: #edb970; /* Middle yello red */
+    --theme-color-five: #e4a241; /* Meat brown */
+
+    --theme-nav-background: #333;
+}
+
+
+/* Center the element */
+.container {
+    max-width: 70rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Few space infront of the blog content at left and right */
+.blog-content {
+    padding: 0 0.75rem;
+}
+
+
+body {
+    margin: 0;
+}
+
+.header-content {
+    background-color: var(--theme-nav-background);
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li {
+    font-weight: bold;
+    float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: var(--theme-color-four);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {color:  var(--theme-color-three);}
+
+/* Mobile devices */
+@media screen and (max-width: 600px) {
+  ul.topnav li {float: none;}
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 14px 0px;
+
+    color: var(--theme-color-four);
+    background-color: var(--theme-nav-background);
+
+    text-align: center;
+
+    /*position: fixed;
+    bottom: 0;
+    width: 100%;*/
+}
+
+
+/* Theme */
+h1, h2, h3, h4, h5 {
+    color: var(--theme-color-one);
+}
+
+b,i {
+    color: var(--theme-color-two);
+}
+
+pre.src {
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+a {
+    color: var(--theme-color-three)
+}
+
+/* Org todo */
+.todo.TODO {
+	color: cadetblue;
+}
+
+.done.DONE {
+	color: forestgreen;
+}
+
+.todo.TODO, .done.DONE {
+    font-style: italic;
+}
+
+.todo.TODO:after, .done.DONE:after {
+    content: ':';
+}
+
+/* https://stackoverflow.com/questions/5467605/add-a-space-after-an-element-using-after */
+h3 span.todo::before, h3 span.done::before {
+	content: ' ';
+	white-space: pre;
+}
+
+h4 span.todo::before, h4 span.done::before {
+	content: '  ';
+	white-space: pre;
+}
