@@ -85,10 +85,20 @@ b,i {
     color: var(--theme-color-two);
 }
 
-pre.src {
+pre.src, pre.example {
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
+    border-left: 8px solid var(--theme-color-five);
+}
+
+blockquote {
+    padding: 2px;
+    border-radius: 10px;
+    color: #555;
+    background: #EDEDED;
+    font-style: italic;
+    border-left: 8px solid var(--theme-color-five);
 }
 
 a {
