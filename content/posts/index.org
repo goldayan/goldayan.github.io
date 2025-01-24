@@ -2,7 +2,12 @@
 
 ** 2025
 *** -> [[file:hello.org][Hello world post]]
-*** -> [[file:hello.org][Hello world post]]
-*** -> [[file:hello.org][Hello world post]]
-*** -> [[file:hello.org][Hello world post]]
-*** -> [[file:hello.org][Hello world post]]
+
+** Old articles
+*** -> [[file:trying_podman.org][Learning postgres using podman]]
+*** -> [[file:alpine_vm.org][Playing with AlpineVM]]
+*** -> [[file:touch_typing.org][Learn and improve touch typing]]
+*** -> [[file:clojure_http_server.org][Clojure http server using ChatGPT]]
+*** -> [[file:esp8266_ubuntu.org][ESP8266 in Ubuntu]]
+*** -> [[file:digital_notes.org][Digital notes exploration]]
+*** -> [[file:shared_storage_samba.org][Sambda configuration experience]]
