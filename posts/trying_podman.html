@@ -1,0 +1,266 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+I thought of learning postgres. Instead of installing in the host
+machine how difficult it would be to spin up the container. Let's find
+out.
+</p>
+
+<div id="outline-container-orga9cbb43" class="outline-2">
+<h2 id="orga9cbb43">Installing podman</h2>
+<div class="outline-text-2" id="text-orga9cbb43">
+<ul class="org-ul">
+<li>I installed the podman that is available in ubuntu repo</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install podman
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Note: you won't get the latest podman</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2015feb" class="outline-2">
+<h2 id="org2015feb">Let's check podman</h2>
+<div class="outline-text-2" id="text-org2015feb">
+<ul class="org-ul">
+<li>Let's pull the postgres container</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pull postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Nothing happened, so i tried <code>podman search postgres</code> which gave me
+the following error</li>
+</ul>
+
+<pre class="example" id="org41a32fa">
+ERRO[0000] User-selected graph driver "vfs" overwritten by graph driver "overlay" from database - delete libpod local files to resolve 
+</pre>
+
+<ul class="org-ul">
+<li>After some googling and github issue surfing i found <code>fuse-overlayfs</code>
+is missing in my system, which caused the above error</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install fuse-overlayfs
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Only install this if you face error, by default it should be installed
+along with podman.</li>
+<li>source:
+<a href="https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an">https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org604491a" class="outline-2">
+<h2 id="org604491a">Pod initialize</h2>
+<div class="outline-text-2" id="text-org604491a">
+<ul class="org-ul">
+<li>we will spin the container inside the pod, later if we want we can
+migrate it to kubernetes :p.</li>
+<li>Creating the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod create --name postgres-pod -p 9876:80
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Install postgres in the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-v ~/Documents/Postgres:/var/lib/postgresql/data <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_PASSWORD</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_USER</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+--name db <span class="org-sh-escaped-newline">\</span>
+-d postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>I got the following error
+<code>short-name "postgres" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"</code></li>
+<li>I found the answer for this issue in the following stackoverflow
+answer,
+<a href="https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an">https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an</a></li>
+<li><code>NOTE: RISK OF USING UNQUALIFIED IMAGE NAMES</code> We recommend always
+using fully qualified image names including the registry server (full
+dns name), namespace, image name, and tag (e.g.,
+registry.redhat.io/ubi8/ubi:latest). Pulling by digest (i.e.,
+quay.io/repository/name@digest) further eliminates the ambiguity of
+tags</li>
+<li>Run the following command, let's replace postgres with
+docker.io/postgres.</li>
+<li>Telling it to fetch the image from docker.io registery.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-v ~/Documents/Postgres:/var/lib/postgresql/data <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_PASSWORD</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_USER</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+--name db <span class="org-sh-escaped-newline">\</span>
+-d docker.io/postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>pgadmin web version</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-string">'PGADMIN_DEFAULT_EMAIL=me@goldayan.in'</span> <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-string">'PGADMIN_DEFAULT_PASSWORD=goldayan'</span> <span class="org-sh-escaped-newline">\</span>
+--name pgadmin <span class="org-string">\ </span> <span class="org-comment-delimiter"># </span><span class="org-comment">name the container</span>
+-d docker.io/dpage/pgadmin4   <span class="org-comment-delimiter"># </span><span class="org-comment">the image we are pulling</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Login to pgadmin using the following url <code>localhost:9876</code></li>
+<li>Enter the creds, same as what you given for PGADMIN<sub>DEFAULT</sub><sub>EMAIL</sub> and
+PGADMIN<sub>DEFAULT</sub><sub>PASSWORD</sub> when running pgadmin container</li>
+<li>After SignIn, Press add new server</li>
+<li>Give any name for the server and for the connection type <code>localhost</code>
+for server and <code>5432</code> as port number.</li>
+<li>Maintenance database will be postgres by default.</li>
+<li>Username and password will be what you specified in the POSTGRES<sub>USER</sub>
+and POSTGRES<sub>PASSWORD</sub> when running postgres container.</li>
+<li>Press save.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org370d474" class="outline-2">
+<h2 id="org370d474">Pod commands</h2>
+<div class="outline-text-2" id="text-org370d474">
+<ul class="org-ul">
+<li>Status of the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod stats postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Pause and unpause the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod pause postgres-pod
+podman pod unpause postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Start and stop the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod start postgres-pod
+podman pod stop postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Last but not least, generate kubeconfig from the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman generate kube postgres-pod &gt;&gt; postgres-pod-conf.yml
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe60581" class="outline-2">
+<h2 id="orgbe60581">Log into postgres container</h2>
+<div class="outline-text-2" id="text-orgbe60581">
+<ul class="org-ul">
+<li>we will log into the postgres container and use the psql command</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman exec -it db bash
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>psql command to connect to the db</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">psql -U goldayan
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>we use goldayan because that is the username we used previously during
+creating postgres container.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ca9fbb" class="outline-2">
+<h2 id="org3ca9fbb">When importing csv file in pgadmin</h2>
+<div class="outline-text-2" id="text-org3ca9fbb">
+<ul class="org-ul">
+<li>Before I upload the csv file i removed the header</li>
+<li>Select the upload csv file then press import, voila&#x2026; imported.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org99c935e" class="outline-2">
+<h2 id="org99c935e">Reset the podman [WARN]</h2>
+<div class="outline-text-2" id="text-org99c935e">
+<ul class="org-ul">
+<li>To delete all the images, containers, pods and cache</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman system reset
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Just delete containers</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo rm -rf ~/.local/share/containers/
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf246826" class="outline-2">
+<h2 id="orgf246826">Reference</h2>
+<div class="outline-text-2" id="text-orgf246826">
+<ul class="org-ul">
+<li><a href="https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o">https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o</a></li>
+<li><a href="https://mehmetozanguven.com/run-postgresql-with-podman/">https://mehmetozanguven.com/run-postgresql-with-podman/</a></li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

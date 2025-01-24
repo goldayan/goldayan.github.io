@@ -1,0 +1,303 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+Let's say you need to play/learn virtualization on linux but you are
+system has pretty low specs then what would you do ? we would use a low
+foot print linux distro, I choosed Alpine
+</p>
+
+<p>
+Before we start, we need to download the alpine iso, Alpine offers wide
+variety of iso. you can download the iso from -
+<a href="https://alpinelinux.org/downloads/">https://alpinelinux.org/downloads/</a> I choose virtual(x86<sub>64</sub>) and it is
+only 50MB (Mind Blown).
+</p>
+
+<p>
+Okay let's boot up Virtual Box and Create a new VM Type : Linux Version:
+Other Linux(64 Bit) no other special option, just go with default
+option.
+</p>
+
+<p>
+Before booting the server, let's set the networking.
+</p>
+
+<div id="outline-container-org44c5f84" class="outline-2">
+<h2 id="org44c5f84">Networking</h2>
+<div class="outline-text-2" id="text-org44c5f84">
+<ul class="org-ul">
+<li>We need to forward the SSH port to Host so that we can connect to SSH
+using NAT.</li>
+<li>Right click the VM and choose the settigs.</li>
+<li>Navigate to the Network tab.</li>
+<li>Click the Advanced and Tap the Port Forwarding button</li>
+<li>Add new Rule
+
+<ul class="org-ul">
+<li>Name: SSH</li>
+<li>Protocol: TCP</li>
+<li>Host Protocol: 2200</li>
+<li>Guest Protocol: 22</li>
+</ul></li>
+
+<li>Add another Rule
+
+<ul class="org-ul">
+<li>Name: Test</li>
+<li>Protocol: TCP</li>
+<li>Host Protocol: 4444</li>
+<li>Guest Protocol: 4444</li>
+</ul></li>
+
+<li>Just leave the host and guest IP address as blank.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1ca8a38" class="outline-2">
+<h2 id="org1ca8a38">Booting</h2>
+<div class="outline-text-2" id="text-org1ca8a38">
+<ul class="org-ul">
+<li>Start the VM</li>
+<li>When asked for username enter <i>root</i></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5ebb8f4" class="outline-2">
+<h2 id="org5ebb8f4">Setting up network</h2>
+<div class="outline-text-2" id="text-org5ebb8f4">
+<ul class="org-ul">
+<li>By default all the network interface are down</li>
+<li>You can check the network interface using</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifconfig -a
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>To up the network interface</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifconfig lo up
+ifconfig eth0 up
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Get IP address automatically</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">vi /etc/network/interfaces
+iface eth0 inet dhcp
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>up the eth0</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifup eth0
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Now check if you have ip address in eth0.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge7cceb9" class="outline-2">
+<h2 id="orge7cceb9">Checking network connection</h2>
+<div class="outline-text-2" id="text-orge7cceb9">
+<ul class="org-ul">
+<li>To check Host and Guest network connection works properly.</li>
+<li>We will use a tool called <code>nc</code> (netcat).</li>
+<li>In Alpine enter</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc -l -p 4444
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>In Host system enter</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc localhost 4444
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>if you type in guest/host, the text will appear in other system.</li>
+<li>If that happens then network connection is configured properly.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1915d16" class="outline-2">
+<h2 id="org1915d16">Setting up SSH Server</h2>
+<div class="outline-text-2" id="text-org1915d16">
+<ul class="org-ul">
+<li>Install openssh server in alpine</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">apk add openssh
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Enable the sshd service so that its starts at boot</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">rc-update add sshd
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>List services using</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">rc-status
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>To check the sshd is enabled or not.</li>
+<li>Before we start let us disable the password authentication for SSH.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">vi /etc/ssh/sshd_config
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Search for the following string and remove # before and set yes to no.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">PasswordAuthentication no
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Start sshd service</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">/etc/init.d/sshd start
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgff53c3c" class="outline-2">
+<h2 id="orgff53c3c">SSH Connection between Guest and Host</h2>
+<div class="outline-text-2" id="text-orgff53c3c">
+<ul class="org-ul">
+<li>In Host system we need to run</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh-keygen
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Will use default file name and no passpharse</li>
+<li>This will create a id<sub>rsa</sub> and id<sub>rsa.pub</sub> file</li>
+<li>We need to copy the file id<sub>rsa.pub</sub> to the Alpine VM</li>
+<li>We can use the nc.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc -l -p 4444 &gt; ~/.ssh/authorized_keys <span class="org-comment-delimiter"># </span><span class="org-comment">On VM</span>
+nc localhost 4444 &lt; ~/.ssh/id_rsa.pub <span class="org-comment-delimiter"># </span><span class="org-comment">On Host</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>After few seconds we can cut the connection using Ctrl+c.</li>
+<li>Ensure the permission of the ssh related files and folder</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Restart the SSH server</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">/etc/init.d/sshd restart
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Connect from Host</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh -i ~/.ssh/id_rsa.pub root@localhost -p 2200
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Voila you logged into Alpine VM from Host system.</li>
+</ul>
+
+<p>
+The VM is created for demo purpose if you are using it for real
+projects, read below heading
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf47c64b" class="outline-2">
+<h2 id="orgf47c64b">Do's and Don't</h2>
+<div class="outline-text-2" id="text-orgf47c64b">
+<ul class="org-ul">
+<li>Use passpharse when generating ssh-keygen.</li>
+<li>Use ssh-copy-id instead of nc</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh-copy-id -i path/to/certificate -p port username@remote_host
+</pre>
+</div>
+
+<p>
+In next article we can look into how to communicate between two Alpine
+VM.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e10d6d" class="outline-2">
+<h2 id="org9e10d6d">Resources</h2>
+<div class="outline-text-2" id="text-org9e10d6d">
+<ul class="org-ul">
+<li><a href="https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server">https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server</a></li>
+<li><a href="https://wiki.alpinelinux.org/wiki/Configure_Networking">https://wiki.alpinelinux.org/wiki/Configure_Networking</a></li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

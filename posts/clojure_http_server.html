@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+when i want to transfer a file in a network, I normal use the following
+command to host a simple http server in python that host the current
+directory
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">python3 <span class="org-operator">-</span>m http.server 8888
+</pre>
+</div>
+
+<p>
+Here we are using the http.server module and telling it to run in <i>8888</i>
+port
+</p>
+
+<p>
+One of my junior developer uses chatgpt at work to solve some problems
+</p>
+
+<p>
+I was impressed very much with the relevant answer, I logged in
+yesterday and tried bunch of other things and i thought &gt; HMM why not
+ask the ChatGPT to create a simple HTTP server in clojure I started
+asking ton of question and the answer is just pouring out, It's like
+raining but you cann't harvest all the water. Time to harvest some
+answers.
+</p>
+
+<p>
+I started connecting the pieces together and voila, HTTP server that can
+serve a directory in clojure. It makes few mistakes though not biggy
+</p>
+
+<p>
+Let's discuss the code piece by piece
+</p>
+
+<p>
+We need HTTP server lib first so i choosed <code>http-kit</code>.
+</p>
+
+<p>
+deps.edn
+</p>
+
+<pre class="example" id="orga307c0a">
+{:deps {http-kit/http-kit {:mvn/version "2.7.0-alpha1"}}}
+</pre>
+
+<p>
+Full code:
+<a href="https://github.com/ThangaAyyanar/Learning-Adventure/blob/master/Clojure/simple-http-server.clj">https://github.com/ThangaAyyanar/Learning-Adventure/blob/master/Clojure/simple-http-server.clj</a>
+</p>
+
+<p>
+Let's get straight into the coding
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(ns simple-http-server
+  (:require [org.httpkit.server :as http]
+            [clojure.java.io :as io]
+            [clojure.string :as string]))
+</pre>
+</div>
+
+<p>
+here we required - <code>java.io</code> to reading files and folder - <code>string</code>
+split and join the string - Next, Setting up the http sever
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defonce server (atom nil))
+
+(defn stop-server []
+  (when-not (nil? @server)
+    ;; graceful shutdown: wait 100ms for existing requests to be finished
+    ;; :timeout is optional, when no timeout, stop immediately
+    (@server :timeout 100)
+    (reset! server nil)))
+
+(defn -main [&amp; args]
+  (reset! server (http/run-server #'handler {:port 8080})))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Starting and stoping the http server code</li>
+<li>Below we have the handler function that does the routing and
+downloading file logics</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn get-path [uri]
+    (if (= uri "/") dir-path (str dir-path uri)))
+
+(def error-response {:status 404 :body "404 Not Found"})
+
+(defn file-download-response [file-path]
+  {:status 200
+   :headers {"Content-Type" "application/octet-stream"
+             "Content-Disposition" (str "attachment; filename="(.getName file-path))}
+   :body (io/input-stream file-path)})
+
+(defn folder-html-response [uri path]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (contents uri path)})
+
+(defn handler [request]
+  (let [uri (or (:uri request) "/")
+        path (get-path uri)
+        file-path (io/file path)]
+    (if file-path
+      (cond
+        (.isFile file-path) (file-download-response file-path)
+        (.isDirectory file-path) (folder-html-response uri path)
+        :else error-response
+        )
+      error-response)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>one of the core function of this program is getting all the files and
+directory</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn list-folders
+  ([path] (list-folders "/" path))
+  ([uri path]
+    (-&gt;&gt; (io/file path)
+        (.listFiles)
+        (map #(dirs-to-string uri %))
+        (string/join)
+        )))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Here we used multi arity function.</li>
+<li>First we will convert the path Eg: <code>/User/Ayan/Temp</code> into file object.</li>
+<li>Get all the files and folders using <code>.listFiles</code></li>
+<li>Convert it to strings using dirs-to-string function</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">defn folder-html [uri name]
+ (str "&lt;li&gt;&lt;a href='" (str uri name) "'&gt;" (str name "/") "&lt;/a&gt; &lt;/li&gt;"))
+
+(defn file-html [uri name]
+ (str "&lt;li&gt;&lt;a href='" (str uri name) "' download&gt;" (str name) "&lt;/a&gt; &lt;/li&gt;"))
+
+(defn dirs-to-string [uri file]
+  (let [name (.getName file)
+        new-uri (if (= uri "/") uri (str uri "/"))]
+    (cond
+      (.isDirectory file) (folder-html new-uri name)
+      (.isFile file) (file-html new-uri name)
+      :else "")))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>We use <code>.getName</code> function to get the name of the file or folder.</li>
+<li>Then construct a html string out of it.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn prepend-up-dir [uri]
+  (if (= uri "/") nil
+      (let [prev-folder (string/join "/" (pop (string/split uri #"/")))]
+        (str "&lt;li&gt;&lt;a href='" (if (empty? prev-folder) "/" prev-folder) "'&gt;..&lt;/a&gt;&lt;/li&gt;"))))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Also added a link to traverse back to previous folder if we move into
+other folder other than root.</li>
+<li>Finally generating overall html</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn generate-html
+  [title uri items]
+  (let [title-html (str "&lt;h1&gt;" title "&lt;/h1&gt;")
+        uri-html  (str "&lt;b&gt;URI:&lt;/b&gt;" uri)
+        prev-dir (or (prepend-up-dir uri) "")
+        contents (str "&lt;hr/&gt;&lt;ul&gt;" prev-dir items "&lt;/ul&gt;&lt;hr/&gt;")]
+     (str title-html uri-html contents)))
+
+(defn contents [uri path]
+  (let [folders (list-folders uri path)]
+    (generate-html "Simple HTTP Server" uri folders)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>generate-html</code> function generate page for the browser</li>
+<li>I know, I have not included the boiler plate html code like html, head
+and body tags.</li>
+<li>That is a exercise for you :p</li>
+</ul>
+
+<div id="outline-container-would-you-like-to-go-further-try-few-things-below" class="outline-2">
+<h2 id="would-you-like-to-go-further-try-few-things-below">Would you like to go further, Try few things below</h2>
+<div class="outline-text-2" id="text-would-you-like-to-go-further-try-few-things-below">
+<ul class="org-ul">
+<li>Run the above script in babashka</li>
+<li>How to add simple authentication token ?
+
+<ul class="org-ul">
+<li>Simple Token in header</li>
+<li>Authentication using jwt token</li>
+</ul></li>
+
+<li>Restrict maximum concurrent downloads</li>
+<li>My future self crazy idea's</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-resources" class="outline-2">
+<h2 id="resources">Resources</h2>
+<div class="outline-text-2" id="text-resources">
+<ul class="org-ul">
+<li>ChatGPT</li>
+<li>Clojure Examples</li>
+<li>Amazing clojure docs website</li>
+<li>Last but not least, Stackoverflow</li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

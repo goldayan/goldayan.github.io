@@ -1,0 +1,214 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+Everyone has a smart phone in our house, alteast one smart TV and a one
+laptop or computer.
+</p>
+
+<p>
+Things we do most of the time:
+</p>
+
+<ul class="org-ul">
+<li>Take photos in mobile transfer to computer for backup</li>
+<li>Download some video and transfer to Mobile/PC</li>
+<li>Share media or photos with Siblings or Parents</li>
+<li>Play those media in Smart TV</li>
+</ul>
+
+<p>
+One of the boring task. Can we make it interesting ?
+</p>
+
+<p>
+We need something that can act as middle man to store the stuff and can
+be accessed from any device.
+</p>
+
+<p>
+Solutions:
+</p>
+
+<ul class="org-ul">
+<li>SMB (Secure Message Block) protocol</li>
+<li>NFS (Network File System)</li>
+</ul>
+
+<p>
+So let's try to do a POC on SMB. The SMB in linux side called SAMBA
+(Open source implementation of SMB)
+</p>
+
+<div id="outline-container-org17cbf8d" class="outline-2">
+<h2 id="org17cbf8d">POC</h2>
+<div class="outline-text-2" id="text-org17cbf8d">
+<p>
+Installing samba server in Ubuntu
+</p>
+
+<pre class="example" id="org13ab223">
+sudo apt install samba
+</pre>
+
+<p>
+Configuring samba Configuration
+</p>
+
+<ul class="org-ul">
+<li>Tell samba server which folder to share.</li>
+<li>Who have permission to read/write.</li>
+<li>Template of /etc/samba/smb.conf</li>
+</ul>
+
+<pre class="example" id="org489811f">
+[NAME]
+   Configuration
+</pre>
+
+<ul class="org-ul">
+<li>My Config</li>
+</ul>
+
+<pre class="example" id="org6d4d4d9">
+[Public]
+    comment = Samba on Ubuntu
+    path = /home/sample/Public
+    read only = no
+    write list = ayan
+    browsable = yes
+    guest ok = yes
+
+[Videos]
+    comment = Samba on Ubuntu
+    path = /home/sample/Videos
+    browsable = yes
+    guest ok = yes
+</pre>
+
+<ul class="org-ul">
+<li>In the above config only user <b>ayan</b> has permission to write file in
+public folder</li>
+<li>For Videos folder no one has write permission.</li>
+<li>Samba shared folders can be accessed by Guest (any one in the network)
+or Authenticated user.</li>
+<li>Let's see how we can create user for samba authentication.</li>
+</ul>
+
+<pre class="example" id="org5b5d163">
+sudo useradd ayan -s /sbin/nologin
+</pre>
+
+<ul class="org-ul">
+<li>The above user creds cannot be used to login in to your linux system
+because of <code>-s /sbin/nologin</code></li>
+<li>Check if your user added to your system</li>
+</ul>
+
+<pre class="example" id="orgeb627ea">
+sudo cat /etc/passwd
+</pre>
+
+<ul class="org-ul">
+<li>Set samba password for your user</li>
+</ul>
+
+<pre class="example" id="org392a790">
+sudo smbpasswd -a ayan
+</pre>
+
+<ul class="org-ul">
+<li>All done</li>
+<li>Restart the samba server</li>
+</ul>
+
+<pre class="example" id="org93fb37f">
+sudo service smbd restart
+</pre>
+</div>
+
+<div id="outline-container-orgbe46a7d" class="outline-3">
+<h3 id="orgbe46a7d">Debugging</h3>
+<div class="outline-text-3" id="text-orgbe46a7d">
+<ul class="org-ul">
+<li>Cheking the service</li>
+</ul>
+
+<pre class="example" id="orgb3573d6">
+sudo service smbd status
+</pre>
+
+<ul class="org-ul">
+<li>smb config debug</li>
+</ul>
+
+<pre class="example" id="org201d152">
+sudo testparm
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org531a5e0" class="outline-2">
+<h2 id="org531a5e0">Pros</h2>
+<div class="outline-text-2" id="text-org531a5e0">
+<ul class="org-ul">
+<li>All you need is VLC media player software or SMB Client.</li>
+<li>You can play the media in the shared folders.</li>
+<li>If you have SMB client you can copy new files or delete existing
+files.</li>
+</ul>
+
+<p>
+One of my favorite quote
+</p>
+
+<blockquote>
+<p>
+Solution to problem creates new problems
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org76e48d2" class="outline-2">
+<h2 id="org76e48d2">Cons</h2>
+<div class="outline-text-2" id="text-org76e48d2">
+<ul class="org-ul">
+<li>Device should be Alive.
+
+<ul class="org-ul">
+<li>We can use <i>Raspberry PI</i> which takes less power and do more than
+what we need</li>
+<li>Synology sells hardware that does similar things.</li>
+</ul></li>
+
+<li>Devices need to be same network
+
+<ul class="org-ul">
+<li>Most of us basically connects to same network (Wifi Router)</li>
+<li>You can enable hotspot in any device and connect the rest of the
+device you need to shared.</li>
+</ul></li>
+
+<li>Not able to access it through Internet.
+
+<ul class="org-ul">
+<li>We can set up software such as Tails or Zeronet through which we can
+access your home server from internet.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d00278" class="outline-2">
+<h2 id="org7d00278">Resources</h2>
+<div class="outline-text-2" id="text-org7d00278">
+<ul class="org-ul">
+<li>Ubuntu official</li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
