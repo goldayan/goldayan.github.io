@@ -1,0 +1,191 @@
+Let's say you need to play/learn virtualization on linux but you are
+system has pretty low specs then what would you do ? we would use a low
+foot print linux distro, I choosed Alpine
+
+Before we start, we need to download the alpine iso, Alpine offers wide
+variety of iso. you can download the iso from -
+https://alpinelinux.org/downloads/ I choose virtual(x86_64) and it is
+only 50MB (Mind Blown).
+
+Okay let's boot up Virtual Box and Create a new VM Type : Linux Version:
+Other Linux(64 Bit) no other special option, just go with default
+option.
+
+Before booting the server, let's set the networking.
+
+*** Networking
+
+- We need to forward the SSH port to Host so that we can connect to SSH
+  using NAT.
+- Right click the VM and choose the settigs.
+- Navigate to the Network tab.
+- Click the Advanced and Tap the Port Forwarding button
+- Add new Rule
+
+  - Name: SSH
+  - Protocol: TCP
+  - Host Protocol: 2200
+  - Guest Protocol: 22
+
+- Add another Rule
+
+  - Name: Test
+  - Protocol: TCP
+  - Host Protocol: 4444
+  - Guest Protocol: 4444
+
+- Just leave the host and guest IP address as blank.
+
+*** Booting
+
+- Start the VM
+- When asked for username enter /root/
+
+*** Setting up network
+
+- By default all the network interface are down
+- You can check the network interface using
+
+#+BEGIN_SRC shell
+  ifconfig -a
+#+END_SRC
+
+- To up the network interface
+
+#+BEGIN_SRC shell
+  ifconfig lo up
+  ifconfig eth0 up
+#+END_SRC
+
+- Get IP address automatically
+
+#+BEGIN_SRC shell
+  vi /etc/network/interfaces
+  iface eth0 inet dhcp
+#+END_SRC
+
+- up the eth0
+
+#+BEGIN_SRC shell
+  ifup eth0
+#+END_SRC
+
+- Now check if you have ip address in eth0.
+
+*** Checking network connection
+
+- To check Host and Guest network connection works properly.
+- We will use a tool called =nc= (netcat).
+- In Alpine enter
+
+#+BEGIN_SRC shell
+  nc -l -p 4444
+#+END_SRC
+
+- In Host system enter
+
+#+BEGIN_SRC shell
+  nc localhost 4444
+#+END_SRC
+
+- if you type in guest/host, the text will appear in other system.
+- If that happens then network connection is configured properly.
+
+*** Setting up SSH Server
+
+- Install openssh server in alpine
+
+#+BEGIN_SRC shell
+  apk add openssh
+#+END_SRC
+
+- Enable the sshd service so that its starts at boot
+
+#+BEGIN_SRC shell
+  rc-update add sshd
+#+END_SRC
+
+- List services using
+
+#+BEGIN_SRC shell
+  rc-status
+#+END_SRC
+
+- To check the sshd is enabled or not.
+- Before we start let us disable the password authentication for SSH.
+
+#+BEGIN_SRC shell
+  vi /etc/ssh/sshd_config
+#+END_SRC
+
+- Search for the following string and remove # before and set yes to no.
+
+#+BEGIN_SRC shell
+  PasswordAuthentication no
+#+END_SRC
+
+- Start sshd service
+
+#+BEGIN_SRC shell
+  /etc/init.d/sshd start
+#+END_SRC
+
+*** SSH Connection between Guest and Host
+
+- In Host system we need to run
+
+#+BEGIN_SRC shell
+  ssh-keygen
+#+END_SRC
+
+- Will use default file name and no passpharse
+- This will create a id_rsa and id_rsa.pub file
+- We need to copy the file id_rsa.pub to the Alpine VM
+- We can use the nc.
+
+#+BEGIN_SRC shell
+  nc -l -p 4444 > ~/.ssh/authorized_keys # On VM
+  nc localhost 4444 < ~/.ssh/id_rsa.pub # On Host
+#+END_SRC
+
+- After few seconds we can cut the connection using Ctrl+c.
+- Ensure the permission of the ssh related files and folder
+
+#+BEGIN_SRC shell
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/authorized_keys
+#+END_SRC
+
+- Restart the SSH server
+
+#+BEGIN_SRC shell
+  /etc/init.d/sshd restart
+#+END_SRC
+
+- Connect from Host
+
+#+BEGIN_SRC shell
+  ssh -i ~/.ssh/id_rsa.pub root@localhost -p 2200
+#+END_SRC
+
+- Voila you logged into Alpine VM from Host system.
+
+The VM is created for demo purpose if you are using it for real
+projects, read below heading
+
+*** Do's and Don't
+
+- Use passpharse when generating ssh-keygen.
+- Use ssh-copy-id instead of nc
+
+#+BEGIN_SRC shell
+  ssh-copy-id -i path/to/certificate -p port username@remote_host
+#+END_SRC
+
+In next article we can look into how to communicate between two Alpine
+VM.
+
+*** Resources
+
+- https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server
+- https://wiki.alpinelinux.org/wiki/Configure_Networking
