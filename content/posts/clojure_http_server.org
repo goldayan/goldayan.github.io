@@ -1,3 +1,8 @@
+#+title: Clojure HTTP server
+#+subtitle: writing simple http server in clojure with chatgpt's help
+#+date: <2023-01-15 Sun>
+#+author: Gold Ayan
+
 when i want to transfer a file in a network, I normal use the following
 command to host a simple http server in python that host the current
 directory

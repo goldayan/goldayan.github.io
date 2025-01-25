@@ -1,4 +1,7 @@
-#+title: Hello post
+#+title: Hello world
+#+subtitle: hello world foss united chennai
+#+date: <2024-11-12 Tue>
+#+author: Gold Ayan
 
 This is a simple hello world article
 

@@ -1,3 +1,8 @@
+#+title: Playing with AlpineVM
+#+subtitle: play/learn virtualization on linux using alpine
+#+date: <2022-11-12 Sat>
+#+author: Gold Ayan
+
 Let's say you need to play/learn virtualization on linux but you are
 system has pretty low specs then what would you do ? we would use a low
 foot print linux distro, I choosed Alpine

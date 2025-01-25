@@ -10,8 +10,20 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+;; Install use-package
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+(require 'use-package)
+
 ;; Install dependencies
-(package-install 'htmlize)
+(use-package htmlize
+  :ensure t)
+
+(use-package webfeeder
+  :ensure t)
+
+;; Set language environment
+(set-language-environment "UTF-8")
 
 ;; Load the publishing system
 (require 'ox-publish)
@@ -28,6 +40,7 @@
   (concat "<!DOCTYPE html>"
 "<html>"
   "<head>"
+    (concat "<!-- " (org-export-data (org-export-get-date info "%Y-%m-%d") info) " -->")
     (org-html--build-meta-info info)
     (org-html--build-head info)
   "</head>"
@@ -69,6 +82,8 @@
       org-html-head-include-scripts nil       ;; Use our own scripts
       org-html-head-include-default-style nil ;; Use our own styles
       org-html-htmlize-output-type 'css
+      ;;org-publish-use-timestamps-flag t
+      ;;org-publish-timestamp-directory "./.org-cache/"
       )
 
 ;; Define the publishing project
@@ -101,13 +116,13 @@
 
 ;; RSS builder
 
-;;(webfeeder-build "rss/news.xml"
-;;                   "./public"
-;;                   ""
-;;                   (let ((default-directory (expand-file-name "./public/posts")))
-;;                     (directory-files-recursively "news" ".*\\.html$"))
-;;                   :builder 'webfeeder-make-rss
-;;                   :title "System Crafters News"
-;;                   :description "News and Insights from System Crafters!"
-;;                   :author "David Wilson")
-;;
+(webfeeder-build "./feed.xml"
+                   "./public"
+                   "https://goldayan.in"
+                   (delete "posts/index.html" (let ((default-directory (expand-file-name "./public")))
+                     (directory-files-recursively "posts" ".*\\.html$")))
+                   :builder 'webfeeder-make-rss
+                   :title "Gold Ayan's Tinker Garage"
+                   :description "Let’s tinker!"
+                   :author "Gold Ayan")
+

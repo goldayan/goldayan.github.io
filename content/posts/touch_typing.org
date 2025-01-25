@@ -1,3 +1,8 @@
+#+title: Learn and improve touch typing
+#+subtitle: Where to learn and improve your touch typing skills
+#+date: <2022-11-16 Wed>
+#+author: Gold Ayan
+
 *** What is Touch Typing
 Also called as Blind Typing, Able to type keys without seeing the
 keyboard

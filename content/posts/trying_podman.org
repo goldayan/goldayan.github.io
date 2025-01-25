@@ -1,3 +1,8 @@
+#+title: Learning postgres using podman
+#+subtitle: postgres database exploration using podman
+#+date: <2023-08-16 Wed>
+#+author: Gold Ayan
+
 I thought of learning postgres. Instead of installing in the host
 machine how difficult it would be to spin up the container. Let's find
 out.

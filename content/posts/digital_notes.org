@@ -1,3 +1,8 @@
+#+title: Digital notes exploration
+#+subtitle: differnt ways to take digital notes
+#+date: <2019-12-05 Thu>
+#+author: Gold Ayan
+
 Everything becomes digital nowdays. I barely ever touch paper and pen so
 how to create and manage notes?
 
