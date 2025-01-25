@@ -1,6 +1,6 @@
-<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!DOCTYPE html><html><head><!-- 2023-08-16 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Learning postgres using podman</title>
 <meta name="generator" content="Org Mode" />
 <link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
 </head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
@@ -9,9 +9,9 @@ machine how difficult it would be to spin up the container. Let's find
 out.
 </p>
 
-<div id="outline-container-org20f5a1f" class="outline-2">
-<h2 id="org20f5a1f">Installing podman</h2>
-<div class="outline-text-2" id="text-org20f5a1f">
+<div id="outline-container-orgcf94274" class="outline-2">
+<h2 id="orgcf94274">Installing podman</h2>
+<div class="outline-text-2" id="text-orgcf94274">
 <ul class="org-ul">
 <li>I installed the podman that is available in ubuntu repo</li>
 </ul>
@@ -27,9 +27,9 @@ out.
 </div>
 </div>
 
-<div id="outline-container-orgcf64ea0" class="outline-2">
-<h2 id="orgcf64ea0">Let's check podman</h2>
-<div class="outline-text-2" id="text-orgcf64ea0">
+<div id="outline-container-orgc17c9d0" class="outline-2">
+<h2 id="orgc17c9d0">Let's check podman</h2>
+<div class="outline-text-2" id="text-orgc17c9d0">
 <ul class="org-ul">
 <li>Let's pull the postgres container</li>
 </ul>
@@ -44,7 +44,7 @@ out.
 the following error</li>
 </ul>
 
-<pre class="example" id="org70ec803">
+<pre class="example" id="org95369ff">
 ERRO[0000] User-selected graph driver "vfs" overwritten by graph driver "overlay" from database - delete libpod local files to resolve 
 </pre>
 
@@ -67,9 +67,9 @@ along with podman.</li>
 </div>
 </div>
 
-<div id="outline-container-org005a240" class="outline-2">
-<h2 id="org005a240">Pod initialize</h2>
-<div class="outline-text-2" id="text-org005a240">
+<div id="outline-container-org15b8060" class="outline-2">
+<h2 id="org15b8060">Pod initialize</h2>
+<div class="outline-text-2" id="text-org15b8060">
 <ul class="org-ul">
 <li>we will spin the container inside the pod, later if we want we can
 migrate it to kubernetes :p.</li>
@@ -150,9 +150,9 @@ and POSTGRES<sub>PASSWORD</sub> when running postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-orga9e03c7" class="outline-2">
-<h2 id="orga9e03c7">Pod commands</h2>
-<div class="outline-text-2" id="text-orga9e03c7">
+<div id="outline-container-orgb6d458f" class="outline-2">
+<h2 id="orgb6d458f">Pod commands</h2>
+<div class="outline-text-2" id="text-orgb6d458f">
 <ul class="org-ul">
 <li>Status of the pod</li>
 </ul>
@@ -193,9 +193,9 @@ podman pod stop postgres-pod
 </div>
 </div>
 
-<div id="outline-container-orgf499009" class="outline-2">
-<h2 id="orgf499009">Log into postgres container</h2>
-<div class="outline-text-2" id="text-orgf499009">
+<div id="outline-container-org9801ab2" class="outline-2">
+<h2 id="org9801ab2">Log into postgres container</h2>
+<div class="outline-text-2" id="text-org9801ab2">
 <ul class="org-ul">
 <li>we will log into the postgres container and use the psql command</li>
 </ul>
@@ -221,9 +221,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-org43b4fa3" class="outline-2">
-<h2 id="org43b4fa3">When importing csv file in pgadmin</h2>
-<div class="outline-text-2" id="text-org43b4fa3">
+<div id="outline-container-orgdb8d02c" class="outline-2">
+<h2 id="orgdb8d02c">When importing csv file in pgadmin</h2>
+<div class="outline-text-2" id="text-orgdb8d02c">
 <ul class="org-ul">
 <li>Before I upload the csv file i removed the header</li>
 <li>Select the upload csv file then press import, voila&#x2026; imported.</li>
@@ -231,9 +231,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-org758025f" class="outline-2">
-<h2 id="org758025f">Reset the podman [WARN]</h2>
-<div class="outline-text-2" id="text-org758025f">
+<div id="outline-container-orge269451" class="outline-2">
+<h2 id="orge269451">Reset the podman [WARN]</h2>
+<div class="outline-text-2" id="text-orge269451">
 <ul class="org-ul">
 <li>To delete all the images, containers, pods and cache</li>
 </ul>
@@ -254,9 +254,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-org7fd1af7" class="outline-2">
-<h2 id="org7fd1af7">Reference</h2>
-<div class="outline-text-2" id="text-org7fd1af7">
+<div id="outline-container-orgbd54737" class="outline-2">
+<h2 id="orgbd54737">Reference</h2>
+<div class="outline-text-2" id="text-orgbd54737">
 <ul class="org-ul">
 <li><a href="https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o">https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o</a></li>
 <li><a href="https://mehmetozanguven.com/run-postgresql-with-podman/">https://mehmetozanguven.com/run-postgresql-with-podman/</a></li>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<author><name>Gold Ayan</name></author>
+<title>Gold Ayan's Tinker Garage</title>
+<description>Let’s tinker!</description>
+<generator>Emacs webfeeder.el</generator>
+<link>https://goldayan.in</link>
+<atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Sat, 25 Jan 2025 07:37:51 +0000</lastBuildDate>
+<item>
+  <title>Hello world</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/hello.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/hello.html</guid>
+  <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Learning postgres using podman</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/trying_podman.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/trying_podman.html</guid>
+  <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>ESP8266 in ubuntu</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/esp8266_ubuntu.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/esp8266_ubuntu.html</guid>
+  <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Clojure HTTP server</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/clojure_http_server.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/clojure_http_server.html</guid>
+  <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Learn and improve touch typing</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/touch_typing.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/touch_typing.html</guid>
+  <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Playing with AlpineVM</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/alpine_vm.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/alpine_vm.html</guid>
+  <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Samba configuration experience</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/shared_storage_samba.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/shared_storage_samba.html</guid>
+  <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Digital notes exploration</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/digital_notes.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/digital_notes.html</guid>
+  <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

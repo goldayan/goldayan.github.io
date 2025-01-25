@@ -1,6 +1,6 @@
-<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!DOCTYPE html><html><head><!-- 2021-11-04 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Samba configuration experience</title>
 <meta name="generator" content="Org Mode" />
 <link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
 </head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
@@ -42,14 +42,14 @@ So let's try to do a POC on SMB. The SMB in linux side called SAMBA
 (Open source implementation of SMB)
 </p>
 
-<div id="outline-container-org0391ec9" class="outline-2">
-<h2 id="org0391ec9">POC</h2>
-<div class="outline-text-2" id="text-org0391ec9">
+<div id="outline-container-orgf5aaf36" class="outline-2">
+<h2 id="orgf5aaf36">POC</h2>
+<div class="outline-text-2" id="text-orgf5aaf36">
 <p>
 Installing samba server in Ubuntu
 </p>
 
-<pre class="example" id="org64a3044">
+<pre class="example" id="org8090278">
 sudo apt install samba
 </pre>
 
@@ -63,7 +63,7 @@ Configuring samba Configuration
 <li>Template of /etc/samba/smb.conf</li>
 </ul>
 
-<pre class="example" id="org0c4aa50">
+<pre class="example" id="org30f2f33">
 [NAME]
    Configuration
 </pre>
@@ -72,7 +72,7 @@ Configuring samba Configuration
 <li>My Config</li>
 </ul>
 
-<pre class="example" id="org926390c">
+<pre class="example" id="orgfe2b44d">
 [Public]
     comment = Samba on Ubuntu
     path = /home/sample/Public
@@ -97,7 +97,7 @@ or Authenticated user.</li>
 <li>Let's see how we can create user for samba authentication.</li>
 </ul>
 
-<pre class="example" id="org3e71d89">
+<pre class="example" id="orga45b020">
 sudo useradd ayan -s /sbin/nologin
 </pre>
 
@@ -107,7 +107,7 @@ because of <code>-s /sbin/nologin</code></li>
 <li>Check if your user added to your system</li>
 </ul>
 
-<pre class="example" id="org09ca6f5">
+<pre class="example" id="org0867a6f">
 sudo cat /etc/passwd
 </pre>
 
@@ -115,7 +115,7 @@ sudo cat /etc/passwd
 <li>Set samba password for your user</li>
 </ul>
 
-<pre class="example" id="org5035e6c">
+<pre class="example" id="org68d33b9">
 sudo smbpasswd -a ayan
 </pre>
 
@@ -124,19 +124,19 @@ sudo smbpasswd -a ayan
 <li>Restart the samba server</li>
 </ul>
 
-<pre class="example" id="org78d8dd5">
+<pre class="example" id="orga6e9495">
 sudo service smbd restart
 </pre>
 </div>
 
-<div id="outline-container-org88adeaf" class="outline-3">
-<h3 id="org88adeaf">Debugging</h3>
-<div class="outline-text-3" id="text-org88adeaf">
+<div id="outline-container-org2251e4d" class="outline-3">
+<h3 id="org2251e4d">Debugging</h3>
+<div class="outline-text-3" id="text-org2251e4d">
 <ul class="org-ul">
 <li>Cheking the service</li>
 </ul>
 
-<pre class="example" id="orgedf6c97">
+<pre class="example" id="orgfb3e1e4">
 sudo service smbd status
 </pre>
 
@@ -144,16 +144,16 @@ sudo service smbd status
 <li>smb config debug</li>
 </ul>
 
-<pre class="example" id="org1f5762c">
+<pre class="example" id="org42f112a">
 sudo testparm
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org996bd8b" class="outline-2">
-<h2 id="org996bd8b">Pros</h2>
-<div class="outline-text-2" id="text-org996bd8b">
+<div id="outline-container-org4b98918" class="outline-2">
+<h2 id="org4b98918">Pros</h2>
+<div class="outline-text-2" id="text-org4b98918">
 <ul class="org-ul">
 <li>All you need is VLC media player software or SMB Client.</li>
 <li>You can play the media in the shared folders.</li>
@@ -173,9 +173,9 @@ Solution to problem creates new problems
 </div>
 </div>
 
-<div id="outline-container-org0929d1d" class="outline-2">
-<h2 id="org0929d1d">Cons</h2>
-<div class="outline-text-2" id="text-org0929d1d">
+<div id="outline-container-orgcd42cf7" class="outline-2">
+<h2 id="orgcd42cf7">Cons</h2>
+<div class="outline-text-2" id="text-orgcd42cf7">
 <ul class="org-ul">
 <li>Device should be Alive.
 
@@ -203,9 +203,9 @@ access your home server from internet.</li>
 </div>
 </div>
 
-<div id="outline-container-org5192a46" class="outline-2">
-<h2 id="org5192a46">Resources</h2>
-<div class="outline-text-2" id="text-org5192a46">
+<div id="outline-container-org6688c58" class="outline-2">
+<h2 id="org6688c58">Resources</h2>
+<div class="outline-text-2" id="text-org6688c58">
 <ul class="org-ul">
 <li>Ubuntu official</li>
 </ul>
