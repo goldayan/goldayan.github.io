@@ -4,6 +4,13 @@ We can also name it ~Mini articles~
 
 ** 2025
 
+*** Emacs Copy, Cut (Kill), Paste (Yank) Trick
+- Assume you want to copy or cut part of a paragraph, but not the entire thing.
+- Go to the start of the text you want to select and press C-space twice.
+- Then, move to the end of the text you want to operate on and press C-w to cut (kill) or M-w to copy.
+- This method works in reverse as well, which is quite interesting.
+- Normally, I select the text I want and then press the copy or cut command, but this approach changes the way you do it completely.
+
 *** CSS before trick
 - If you need to add any whitespace before text use the below logic
 #+begin_src css
