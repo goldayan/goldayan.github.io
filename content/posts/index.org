@@ -1,6 +1,9 @@
 #+title: Goldayan articles
 
 ** 2025
+*** TODO -> Not able to comprehend eSIM
+*** TODO -> NCMC chennai card pros & cons
+*** -> [[file:journaling_prompts.org][Journalling prompts/question that i like most]] 
 *** -> [[file:hello.org][Hello world post]]
 
 ** Old articles
