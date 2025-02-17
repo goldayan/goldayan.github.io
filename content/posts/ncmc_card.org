@@ -1,0 +1,67 @@
+#+title: NCMC Chennai card, My experience
+#+subtitle: NCMC is a prepaid card which can used for bus and metro
+#+date: <2025-02-17 Mon>
+#+author: Gold Ayan
+
+The National Common Mobility Card (NCMC) can be obtained for free from
+major bus stands in Chennai. I got one for free, but the minimum
+recharge amount for the card starts at ₹100, so I had a card with ₹100
+on it. The card is issued by SBI and is a prepaid card that can only
+be used for commuting, not for other but services like metro parking
+can be used (I haven't tried that, so I don't know for sure). They ask
+for your mobile number, and within five minutes, the card is ready to
+use.
+
+I started using it for MTC (Metropolitan Transport Corporation
+Chennai) buses, and after my third ride, the balance dropped to around
+₹17. At this point, I needed to recharge the card. There are two
+options: online and offline.
+
+Online options:
+- Paytm
+- Airtel Thanks App (I have tried this method: search for "NCMC",
+  enter your mobile number and the last 4-6 digits of your card,
+  select the recharge amount, and pay. They charge a platform fee of
+  ₹1.80. Similarly, there is a fee on Paytm, and I’m not sure if the
+  SBI app charges a fee.)
+- SBI (I assume an option is available)
+
+Offline option:
+- Visit a major bus stand and recharge the card there.
+
+I attempted to recharge ₹200 for my card. I received a message saying
+the transaction was successful and that the amount would be reflected
+within a couple of hours. The amount was debited from my account;
+however, after a few hours, I received another message stating that
+the transaction had failed and my amount would be refunded.
+
+I then visited a nearby bus stand and spoke with the NCMC stall
+attendant about the issue. They refreshed the card (or did something
+similar), and the ₹200 was eventually transferred. They provided me
+with a new receipt showing the updated balance. Even though I
+recharged online, I had to verify it with them to get the amount
+credited, which is a bit inconvenient and takes away the convenience
+of online recharging.
+
+Overall, from my experience, here are the pros and cons:
+
+Pros:
+- Cashless payment—no need to carry cash.
+- You can block the card and get a new one if you lose
+  it. Additionally, you can recover the amount stored on the card (at
+  least, that’s what I’ve heard).
+- It can be used with the metro and, soon, for purchasing electric
+  train tickets.
+
+Cons:
+- You do not receive an SMS or any notification after the transaction.
+- I found the Airtel Thanks App for checking the NCMC card balance to
+  be inaccurate, so there is no reliable way to check the balance
+  online at the time of my writing. You either have to ask the bus
+  conductor to check it or visit a bus stand.
+- Even with online recharging, a visit to the bus stand is needed to
+  “refresh” the card so that the recharge amount reflects in your
+  balance (at the time of writing).
+
+This feature has been introduced recently, so kindly carry some cash
+with you just in case.
