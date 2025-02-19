@@ -1,0 +1,59 @@
+#+title: Not able to comprehend eSIM
+#+subtitle: eSIM issue i have faced
+#+date: <2025-02-19 Wed>
+#+author: Gold Ayan
+
+I got a new phone from my office, and I swapped my Airtel 4G SIM to
+the new phone, but it didn't work. I borrowed my sibling's SIM to
+check if the phone was damaged, and his SIM worked immediately. In
+theory, the problem was with my SIM.
+
+I approached the Airtel store in our hometown, and I was told to get a
+new Airtel SIM for my number. However, since my SIM was originally
+purchased under my father's ID, I took my father with me. The SIM was
+registered under my father's first name only (what the heck?), not his
+full name, and they told us to go to the city Airtel office to get a
+new SIM.
+
+When I told my friends about the issue, one of them suggested using an
+eSIM if my mobile supports it. The good thing is that the process can
+be initiated from the Airtel Thanks app. Before proceeding, I wanted
+to ensure that my phone number was mapped to the correct email address
+because we need a QR code from Airtel to activate the eSIM. After
+selecting eSIM on the new phone, it opened a QR scanner so I emailed
+Airtel customer care to confirm that (121@in.airtel.com). Got
+confirmation that my mail id is mapped to this phone number.
+
+I initiated the eSIM process, but I didn't receive any QR email for
+eSIM from Airtel, so I emailed customer care about that. I started the
+process on Thursday, and after Friday night, incoming calls were
+barred—I could only use Online apps like whatsapp and others, and only
+mobile data worked.
+
+I approached a nearby Airtel store for assistance, and they told me to
+buy a replacement SIM. I opted for the eSIM because of the new SIM
+issue.
+
+Since I had no SIM for personal use no, I decided to buy a new SIM
+from a different operator. I inserted the new SIM, restarted the
+phone, and it said that the eSIM was detected and that Airtel worked.
+
+What??
+
+I didn't know what the heck had happened—it worked bizarrely, right?
+
+I didn't receive a proper response from either the Airtel store or
+Airtel support. We use our mobile numbers as identity for many things,
+especially for financial apps.
+
+Prevention (my rambling):
+- If your personal SIM is registered under a parent's name, change it
+  to your name as soon as possible. This way, if anything happens, you
+  can take quick action.
+- Keep a secondary SIM for personal use, such as for staying in touch
+  with friends and family. If one SIM becomes compromised, you'll have
+  another way to contact them.
+- Back up your contacts to the cloud.
+
+What are your prevention mechanism do you use ? file it as issue in
+https://github.com/goldayan/goldayan.github.io/issues
