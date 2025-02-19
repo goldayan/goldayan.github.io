@@ -9,9 +9,9 @@ machine how difficult it would be to spin up the container. Let's find
 out.
 </p>
 
-<div id="outline-container-org08e7e51" class="outline-2">
-<h2 id="org08e7e51">Installing podman</h2>
-<div class="outline-text-2" id="text-org08e7e51">
+<div id="outline-container-orge5a899a" class="outline-2">
+<h2 id="orge5a899a">Installing podman</h2>
+<div class="outline-text-2" id="text-orge5a899a">
 <ul class="org-ul">
 <li>I installed the podman that is available in ubuntu repo</li>
 </ul>
@@ -27,9 +27,9 @@ out.
 </div>
 </div>
 
-<div id="outline-container-org8e81643" class="outline-2">
-<h2 id="org8e81643">Let's check podman</h2>
-<div class="outline-text-2" id="text-org8e81643">
+<div id="outline-container-org4e82dbf" class="outline-2">
+<h2 id="org4e82dbf">Let's check podman</h2>
+<div class="outline-text-2" id="text-org4e82dbf">
 <ul class="org-ul">
 <li>Let's pull the postgres container</li>
 </ul>
@@ -44,7 +44,7 @@ out.
 the following error</li>
 </ul>
 
-<pre class="example" id="org2a30458">
+<pre class="example" id="org710894c">
 ERRO[0000] User-selected graph driver "vfs" overwritten by graph driver "overlay" from database - delete libpod local files to resolve 
 </pre>
 
@@ -67,9 +67,9 @@ along with podman.</li>
 </div>
 </div>
 
-<div id="outline-container-orgccb9252" class="outline-2">
-<h2 id="orgccb9252">Pod initialize</h2>
-<div class="outline-text-2" id="text-orgccb9252">
+<div id="outline-container-orgfaf649d" class="outline-2">
+<h2 id="orgfaf649d">Pod initialize</h2>
+<div class="outline-text-2" id="text-orgfaf649d">
 <ul class="org-ul">
 <li>we will spin the container inside the pod, later if we want we can
 migrate it to kubernetes :p.</li>
@@ -150,9 +150,9 @@ and POSTGRES<sub>PASSWORD</sub> when running postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-org5e55522" class="outline-2">
-<h2 id="org5e55522">Pod commands</h2>
-<div class="outline-text-2" id="text-org5e55522">
+<div id="outline-container-orgbef1c6a" class="outline-2">
+<h2 id="orgbef1c6a">Pod commands</h2>
+<div class="outline-text-2" id="text-orgbef1c6a">
 <ul class="org-ul">
 <li>Status of the pod</li>
 </ul>
@@ -193,9 +193,9 @@ podman pod stop postgres-pod
 </div>
 </div>
 
-<div id="outline-container-orgf5bbcdc" class="outline-2">
-<h2 id="orgf5bbcdc">Log into postgres container</h2>
-<div class="outline-text-2" id="text-orgf5bbcdc">
+<div id="outline-container-orgf83cb68" class="outline-2">
+<h2 id="orgf83cb68">Log into postgres container</h2>
+<div class="outline-text-2" id="text-orgf83cb68">
 <ul class="org-ul">
 <li>we will log into the postgres container and use the psql command</li>
 </ul>
@@ -221,9 +221,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-orgdfbf1fe" class="outline-2">
-<h2 id="orgdfbf1fe">When importing csv file in pgadmin</h2>
-<div class="outline-text-2" id="text-orgdfbf1fe">
+<div id="outline-container-orgb0332fb" class="outline-2">
+<h2 id="orgb0332fb">When importing csv file in pgadmin</h2>
+<div class="outline-text-2" id="text-orgb0332fb">
 <ul class="org-ul">
 <li>Before I upload the csv file i removed the header</li>
 <li>Select the upload csv file then press import, voila&#x2026; imported.</li>
@@ -231,9 +231,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-orge058baa" class="outline-2">
-<h2 id="orge058baa">Reset the podman [WARN]</h2>
-<div class="outline-text-2" id="text-orge058baa">
+<div id="outline-container-orgdd3bdf5" class="outline-2">
+<h2 id="orgdd3bdf5">Reset the podman [WARN]</h2>
+<div class="outline-text-2" id="text-orgdd3bdf5">
 <ul class="org-ul">
 <li>To delete all the images, containers, pods and cache</li>
 </ul>
@@ -254,9 +254,9 @@ creating postgres container.</li>
 </div>
 </div>
 
-<div id="outline-container-org92115a1" class="outline-2">
-<h2 id="org92115a1">Reference</h2>
-<div class="outline-text-2" id="text-org92115a1">
+<div id="outline-container-org0d7d51b" class="outline-2">
+<h2 id="org0d7d51b">Reference</h2>
+<div class="outline-text-2" id="text-org0d7d51b">
 <ul class="org-ul">
 <li><a href="https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o">https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o</a></li>
 <li><a href="https://mehmetozanguven.com/run-postgresql-with-podman/">https://mehmetozanguven.com/run-postgresql-with-podman/</a></li>
