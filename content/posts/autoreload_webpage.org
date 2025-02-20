@@ -1,0 +1,76 @@
+
+
+Auto reload page when some changes occur
+
+Shell script which uses inotify to monitor the file changes, well we can use something simple like ~entr~
+#+begin_src shell
+#!/bin/bash
+ 
+if [ -z "$(which inotifywait)" ]; then
+    echo "inotifywait not installed."
+    echo "In most distros, it is available in the inotify-tools package."
+    exit 1
+fi
+ 
+inotifywait --recursive --monitor --format "%e %w%f" \
+--event modify,move,create,delete ./ \
+| while read changed; do
+    echo "reload"
+done
+#+end_src
+
+violent monkey script
+
+#+begin_src javascript
+// ==UserScript==
+// @name        New script 127.0.0.1:7878
+// @namespace   Violentmonkey Scripts
+// @match       http://127.0.0.1:7878/*
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 20/2/2025, 10:25:19 pm
+// @require https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
+// ==/UserScript==
+
+console.log("hello world")
+
+let toggle = false;
+const socket = new WebSocket('ws://localhost:7070');
+
+socket.onopen = function(event) {
+  console.log("Websocket is created");
+};
+
+socket.onmessage = function(event) {
+  console.log(event.data);
+  if(event.data==="reload") {
+    window.location.reload(); //reload the window (simple reload not hard reload)
+  }
+};
+
+socket.onclose = function(event) {
+  console.log("Websocket is terminated");
+};
+
+function sendMessage(message) {
+  socket.send(message);
+}
+
+// Keybindings
+
+const { register } = VM.shortcut;
+
+register('c-i', () => {
+  toogle = !toggle;
+  sendMessage(toggle);
+});
+#+end_src
+
+final piece of the puzzle is the websocket server ~websocketd~
+
+download the websocketd binary from the github, https://github.com/joewalnes/websocketd
+
+#+begin_src shell
+  ./websocketd --port=7070 ./sample.sh 
+#+end_src
