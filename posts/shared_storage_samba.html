@@ -42,14 +42,14 @@ So let's try to do a POC on SMB. The SMB in linux side called SAMBA
 (Open source implementation of SMB)
 </p>
 
-<div id="outline-container-org83de14f" class="outline-2">
-<h2 id="org83de14f">POC</h2>
-<div class="outline-text-2" id="text-org83de14f">
+<div id="outline-container-org67d9c13" class="outline-2">
+<h2 id="org67d9c13">POC</h2>
+<div class="outline-text-2" id="text-org67d9c13">
 <p>
 Installing samba server in Ubuntu
 </p>
 
-<pre class="example" id="org5554387">
+<pre class="example" id="orgec85177">
 sudo apt install samba
 </pre>
 
@@ -63,7 +63,7 @@ Configuring samba Configuration
 <li>Template of /etc/samba/smb.conf</li>
 </ul>
 
-<pre class="example" id="org29b21c1">
+<pre class="example" id="orgc4140cc">
 [NAME]
    Configuration
 </pre>
@@ -72,7 +72,7 @@ Configuring samba Configuration
 <li>My Config</li>
 </ul>
 
-<pre class="example" id="org983e282">
+<pre class="example" id="org14177b0">
 [Public]
     comment = Samba on Ubuntu
     path = /home/sample/Public
@@ -97,7 +97,7 @@ or Authenticated user.</li>
 <li>Let's see how we can create user for samba authentication.</li>
 </ul>
 
-<pre class="example" id="org46dce4d">
+<pre class="example" id="org0766704">
 sudo useradd ayan -s /sbin/nologin
 </pre>
 
@@ -107,7 +107,7 @@ because of <code>-s /sbin/nologin</code></li>
 <li>Check if your user added to your system</li>
 </ul>
 
-<pre class="example" id="orga3f372a">
+<pre class="example" id="org24f8c06">
 sudo cat /etc/passwd
 </pre>
 
@@ -115,7 +115,7 @@ sudo cat /etc/passwd
 <li>Set samba password for your user</li>
 </ul>
 
-<pre class="example" id="orgd6144f0">
+<pre class="example" id="org8751628">
 sudo smbpasswd -a ayan
 </pre>
 
@@ -124,19 +124,19 @@ sudo smbpasswd -a ayan
 <li>Restart the samba server</li>
 </ul>
 
-<pre class="example" id="orgcae48a8">
+<pre class="example" id="org9a142b7">
 sudo service smbd restart
 </pre>
 </div>
 
-<div id="outline-container-org944609d" class="outline-3">
-<h3 id="org944609d">Debugging</h3>
-<div class="outline-text-3" id="text-org944609d">
+<div id="outline-container-org1d8c858" class="outline-3">
+<h3 id="org1d8c858">Debugging</h3>
+<div class="outline-text-3" id="text-org1d8c858">
 <ul class="org-ul">
 <li>Cheking the service</li>
 </ul>
 
-<pre class="example" id="org99f76dc">
+<pre class="example" id="org4a24c7a">
 sudo service smbd status
 </pre>
 
@@ -144,16 +144,16 @@ sudo service smbd status
 <li>smb config debug</li>
 </ul>
 
-<pre class="example" id="orgfd0f3ec">
+<pre class="example" id="org8fe4193">
 sudo testparm
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb7a47cd" class="outline-2">
-<h2 id="orgb7a47cd">Pros</h2>
-<div class="outline-text-2" id="text-orgb7a47cd">
+<div id="outline-container-org0380a82" class="outline-2">
+<h2 id="org0380a82">Pros</h2>
+<div class="outline-text-2" id="text-org0380a82">
 <ul class="org-ul">
 <li>All you need is VLC media player software or SMB Client.</li>
 <li>You can play the media in the shared folders.</li>
@@ -173,9 +173,9 @@ Solution to problem creates new problems
 </div>
 </div>
 
-<div id="outline-container-orgb26107c" class="outline-2">
-<h2 id="orgb26107c">Cons</h2>
-<div class="outline-text-2" id="text-orgb26107c">
+<div id="outline-container-orga4073bf" class="outline-2">
+<h2 id="orga4073bf">Cons</h2>
+<div class="outline-text-2" id="text-orga4073bf">
 <ul class="org-ul">
 <li>Device should be Alive.
 
@@ -203,9 +203,9 @@ access your home server from internet.</li>
 </div>
 </div>
 
-<div id="outline-container-orgb419fb2" class="outline-2">
-<h2 id="orgb419fb2">Resources</h2>
-<div class="outline-text-2" id="text-orgb419fb2">
+<div id="outline-container-org96a983e" class="outline-2">
+<h2 id="org96a983e">Resources</h2>
+<div class="outline-text-2" id="text-org96a983e">
 <ul class="org-ul">
 <li>Ubuntu official</li>
 </ul>
