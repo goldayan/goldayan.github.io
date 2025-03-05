@@ -1,13 +1,30 @@
 #+title: Blogrolls
 
-*** TODO Julia Evans (blog)
+*** Blogs
+**** English
+- [[https://jvns.ca/][Julia Evans]]
+  - Lot of tiny experiments on open source tools
+**** Tamil
+- [[https://kaniyam.com][Kaniyam]]
+  - Open source software and technical article in tamil
 
-*** TODO System crafters, System crafters forums
+*** Events
+- [[https://tamilnadu.tech][Tamilnadu Tech]]
+  - Technical conference, meetups and hackathon in and around Tamil Nadu, India
 
-*** TODO Kaniyam
+*** Youtube
+**** English
+- [[https://www.youtube.com/@SystemCrafters][System Crafters]]
+  - Emacs, Guix, Linux, Open source tools
+**** Tamil
+- [[https://www.youtube.com/@TamilLinuxCommunity][Tamil Linux Community]]
+  - Linux, Open source tools in tamil language
 
-*** TODO tamilnadu.tech
+*** Podcasts
 
-*** TODO youtube - tlc, system crafters, mine, distrotube
 
-*** TODO podcast - darnet diary, andrew huberman, selfhosted
+*** Remainders
+**** TODO System crafters, System crafters forums
+**** TODO Kaniyam
+**** TODO youtube - distrotube
+**** TODO podcast - darnet diary, andrew huberman, selfhosted
