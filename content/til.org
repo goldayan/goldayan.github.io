@@ -4,6 +4,13 @@ We can also name it ~Mini articles~
 
 ** 2025
 
+*** Open DNS family shield - Make internet browsing safer for whole family
+- https://www.opendns.com/setupguide/#familyshield
+- Blocks most of the adult websites
+#+begin_example
+208.67.222.123, 208.67.220.123
+#+end_example
+
 *** Emacs Copy, Cut (Kill), Paste (Yank) Trick
 - Assume you want to copy or cut part of a paragraph, but not the entire thing.
 - Go to the start of the text you want to select and press C-space twice.
