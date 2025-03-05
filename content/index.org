@@ -19,8 +19,8 @@ contribute to discussions and share knowledge. You can often find me
 engaging with the community at [[https://forums.tamillinuxcommunity.org][Tamil Linux Community]]
 
 Additionally, I encourage you to explore the *Tamil tech event
-calendar*, which lists various upcoming events in the region. You can
-view the calendar [[https://calendar.google.com/calendar/u/0/r?cid=9286037a22efd277b0551234d5424afe788cbbf7a2740471b1cfeb9d88f98099@group.calendar.google.com][here]]. This resource is a great way to stay informed
+Website*, which lists various upcoming events in the region. You can
+view the website [[https://tamilnadu.tech][here]]. This resource is a great way to stay informed
 about the latest happenings in the Tamil tech community.
 
 Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
