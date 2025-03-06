@@ -3,7 +3,11 @@
 #+date: <2025-02-22 Sat>
 #+author: Gold Ayan
 
-Auto reload page when some changes occur
+Simple live reload server using shell script, violent monkey (browser extension) and websocket.
+
+TLDR, File changes are detected using shell script(inotify) and sent a
+websocket message to violent monkey extension script to reload the
+site
 
 Shell script which uses inotify to monitor the file changes, well we can use something simple like ~entr~
 #+begin_src shell
@@ -77,3 +81,6 @@ download the websocketd binary from the github, https://github.com/joewalnes/web
 #+begin_src shell
   ./websocketd --port=7070 ./sample.sh 
 #+end_src
+
+Drawback, This does a soft reload not hard reload. Still exploring how
+to do hard reload from javascript.
