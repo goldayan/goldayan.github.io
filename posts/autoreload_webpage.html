@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><!-- 2025-02-22 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Live reload server</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+Simple live reload server using shell script, violent monkey (browser extension) and websocket.
+</p>
+
+<p>
+TLDR, File changes are detected using shell script(inotify) and sent a
+websocket message to violent monkey extension script to reload the
+site
+</p>
+
+<p>
+Shell script which uses inotify to monitor the file changes, well we can use something simple like <code>entr</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-comment-delimiter">#</span><span class="org-comment">!/bin/</span><span class="org-keyword">bash</span>
+
+<span class="org-keyword">if</span> [ -z <span class="org-string">"$(which inotifywait)"</span> ]; <span class="org-keyword">then</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"inotifywait not installed."</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"In most distros, it is available in the inotify-tools package."</span>
+    <span class="org-keyword">exit</span> 1
+<span class="org-keyword">fi</span>
+
+inotifywait --recursive --monitor --format <span class="org-string">"%e %w%f"</span> <span class="org-sh-escaped-newline">\</span>
+--event modify,move,create,delete ./ <span class="org-sh-escaped-newline">\</span>
+| <span class="org-keyword">while </span><span class="org-builtin">read</span> changed; <span class="org-keyword">do</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"reload"</span>
+<span class="org-keyword">done</span>
+</pre>
+</div>
+
+<p>
+violent monkey script
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span class="org-comment-delimiter">// </span><span class="org-comment">==UserScript==</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@name        New script 127.0.0.1:7878</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@namespace   Violentmonkey Scripts</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@match       http://127.0.0.1:7878/*</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@grant       none</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@version     1.0</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@author      -</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@description 20/2/2025, 10:25:19 pm</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">@require https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">==/UserScript==</span>
+
+console.log(<span class="org-string">"hello world"</span>)
+
+<span class="org-keyword">let</span> <span class="org-variable-name">toggle</span> = <span class="org-constant">false</span>;
+<span class="org-keyword">const</span> <span class="org-variable-name">socket</span> = <span class="org-keyword">new</span> <span class="org-type">WebSocket</span>(<span class="org-string">'ws://localhost:7070'</span>);
+
+socket.onopen = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(<span class="org-string">"Websocket is created"</span>);
+};
+
+socket.onmessage = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(event.data);
+  <span class="org-keyword">if</span>(event.data===<span class="org-string">"reload"</span>) {
+    window.location.reload(); <span class="org-comment-delimiter">//</span><span class="org-comment">reload the window (simple reload not hard reload)</span>
+  }
+};
+
+socket.onclose = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(<span class="org-string">"Websocket is terminated"</span>);
+};
+
+<span class="org-keyword">function</span> <span class="org-function-name">sendMessage</span>(<span class="org-variable-name">message</span>) {
+  socket.send(message);
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Keybindings</span>
+
+<span class="org-keyword">const</span> { register } = VM.shortcut;
+
+register(<span class="org-string">'c-i'</span>, () =&gt; {
+  toogle = !toggle;
+  sendMessage(toggle);
+});
+</pre>
+</div>
+
+<p>
+final piece of the puzzle is the websocket server <code>websocketd</code>
+</p>
+
+<p>
+download the websocketd binary from the github, <a href="https://github.com/joewalnes/websocketd">https://github.com/joewalnes/websocketd</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">./websocketd --port=7070 ./sample.sh 
+</pre>
+</div>
+
+<p>
+Drawback, This does a soft reload not hard reload. Still exploring how
+to do hard reload from javascript.
+</p>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
