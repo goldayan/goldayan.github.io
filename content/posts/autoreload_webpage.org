@@ -1,4 +1,7 @@
-
+#+title: Simple Live reload server
+#+subtitle: simple live reload server for HTML development
+#+date: <2025-02-22 Sat>
+#+author: Gold Ayan
 
 Auto reload page when some changes occur
 
