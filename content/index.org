@@ -25,14 +25,6 @@ about the latest happenings in the Tamil tech community.
 
 Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
 
-** About this blog
-- TIL means Today I Learned, this section is inspired from Juila Evans blog.
-- Project tab contains projects which are currently working on or completed projects.
-- Posts tab has the blog articles.
-- Blogrolls my favorite bloggers, podcasts, youtube channels sites (has both tamil and english language blog).
-- RSS - Rich Site Summary (use feed reader to subscribe this blog).
-
-
 ** Social handles
 | LinkedIn      | https://linkedin.com/in/thangaayyanar                                    |
 | Mastodon      | @goldayan@clj.social                                                     |
@@ -41,4 +33,11 @@ Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
 | IRC           | Goldayan(nickname) in #kaniyam, #systemcrafters, #ilugc to name a few... |
 | Twitter/X.com | @0xgoldayan (Not much now a days)                                        |
 
+** About this blog
+- TIL means Today I Learned, this section is inspired from Juila Evans blog.
+- Project tab contains projects which are currently working on or completed projects.
+- Posts tab has the blog articles.
+- Blogrolls my favorite bloggers, podcasts, youtube channels sites (has both tamil and english language blog).
+- RSS - Rich Site Summary (use feed reader to subscribe this blog).
+  
 Feel free to explore the website [[https://github.com/goldayan/goldayan.github.io][here]], I like to keep the website simple and stupid.
