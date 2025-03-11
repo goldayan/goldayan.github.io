@@ -41,4 +41,4 @@ Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
 | IRC           | Goldayan(nickname) in #kaniyam, #systemcrafters, #ilugc to name a few... |
 | Twitter/X.com | @0xgoldayan (Not much now a days)                                        |
 
-Feel free to explore the website, I like to keep the website simple and stupid.
+Feel free to explore the website [[https://github.com/goldayan/goldayan.github.io][here]], I like to keep the website simple and stupid.
