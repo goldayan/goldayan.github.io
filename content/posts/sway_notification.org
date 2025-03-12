@@ -30,6 +30,28 @@ To send notification from the Emacs
   (org-show-notification "Hello world notification from emacs")
 #+end_src
 
+To send custom notification from emacs
+#+begin_src elisp
+  (require 'notifications)
+
+  (defun my-on-action-function (id key)
+    (message "Message %d, key \"%s\" pressed" id key))
+
+
+  (defun my-on-close-function (id reason)
+    (message "Message %d, closed due to \"%s\"" id reason))
+
+
+  (notifications-notify
+   :title "Title"
+   :body "This is <b>important</b>."
+   :actions '("Confirm" "I agree" "Refuse" "I disagree")
+   :on-action 'my-on-action-function
+   :on-close 'my-on-close-function)
+#+end_src
+- actions only close function is called when notification is tapped, may be due to mako i guess
+- reference: https://www.gnu.org/software/emacs/manual/html_node/elisp/Desktop-Notifications.html
+
 we can control the mako daemon using *makoctl* command
 
 Few things i played with makoctl are
