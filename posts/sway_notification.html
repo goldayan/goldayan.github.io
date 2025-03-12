@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head><!-- 2025-03-12 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mako and Ednc Notifcation daemon</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+I haven't focused on installing notification daemon for my linux
+machine which run sway in ubuntu. I come across dead simple
+notification notification daemon which works out of the box
+</p>
+
+<div id="outline-container-orgbf64e03" class="outline-2">
+<h2 id="orgbf64e03">Mako</h2>
+<div class="outline-text-2" id="text-orgbf64e03">
+<p>
+Installing in ubuntu
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install mako-notifier
+</pre>
+</div>
+
+<p>
+Then in your sway config, add the following line
+</p>
+<pre class="example" id="org5a8286c">
+exec mako
+</pre>
+
+<p>
+that's it. To test whether the notification working or not. Open the
+terminal and type the following
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">notify-send <span class="org-string">"Hello world notification"</span>
+</pre>
+</div>
+
+<p>
+To send notification from the Emacs
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(org-show-notification <span class="org-string">"Hello world notification from emacs"</span>)
+</pre>
+</div>
+
+<p>
+we can control the mako daemon using <b>makoctl</b> command
+</p>
+
+<p>
+Few things i played with makoctl are
+</p>
+<ul class="org-ul">
+<li>dismiss the notification from the terminal</li>
+<li>display the last notification from history</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org12cff62" class="outline-2">
+<h2 id="org12cff62">EDNC - The Emacs Desktop Notification Center</h2>
+<div class="outline-text-2" id="text-org12cff62">
+<ul class="org-ul">
+<li>site: <a href="https://github.com/sinic/ednc">https://github.com/sinic/ednc</a></li>
+</ul>
+
+<p>
+We can use emacs as notification daemon using a package called ednc,
+to use ednc ensure there is no other notification daemon is running
+</p>
+
+<p>
+Install the package (package is available in melpa)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">use-package</span> <span class="org-constant">ednc</span>)
+</pre>
+</div>
+
+<p>
+Enable <b>ednc-mode</b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">require</span> '<span class="org-constant">notifications</span>)
+(notifications-notify <span class="org-builtin">:title</span> <span class="org-string">"1st test"</span> <span class="org-builtin">:body</span> <span class="org-string">"hello, world"</span> <span class="org-builtin">:app-name</span> <span class="org-string">"EDNC"</span>
+                      <span class="org-builtin">:actions</span> '(<span class="org-string">"default"</span> <span class="org-string">"default"</span>))
+</pre>
+</div>
+
+<p>
+Notification list can be seen in <code>*ednc-log*</code> buffer
+</p>
+
+
+<p>
+Both are awesome package, for now i will stick with mako and see how
+it goes.
+</p>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
