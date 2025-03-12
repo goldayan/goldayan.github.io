@@ -3,6 +3,7 @@
 ** 2025
 *** TODO -> [[file:new_phone_migration.org][Migration from old phone]]
 *** TODO -> Kanchilug Feb16 - Static analyzer
+*** -> [[file:sway_notification.org][Mako and Ednc Notifcation daemon]]
 *** -> [[file:autoreload_webpage.org][Simple Live reload server]]
 *** -> [[file:esim_issue.org][Not able to comprehend eSIM]]
 *** -> [[file:ncmc_card.org][NCMC Chennai card, My experience]]
