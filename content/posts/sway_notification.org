@@ -1,0 +1,63 @@
+#+title: Mako and Ednc Notifcation daemon
+#+subtitle: configure dead simple notifcation daemon for sway
+#+date: <2025-03-12 Wed>
+#+author: Gold Ayan
+
+I haven't focused on installing notification daemon for my linux
+machine which run sway in ubuntu. I come across dead simple
+notification notification daemon which works out of the box
+
+** Mako
+
+Installing in ubuntu
+#+begin_src shell
+  sudo apt install mako-notifier
+#+end_src
+
+Then in your sway config, add the following line
+#+begin_example
+exec mako
+#+end_example
+
+that's it. To test whether the notification working or not. Open the
+terminal and type the following
+#+begin_src shell
+  notify-send "Hello world notification"
+#+end_src
+
+To send notification from the Emacs
+#+begin_src elisp
+  (org-show-notification "Hello world notification from emacs")
+#+end_src
+
+we can control the mako daemon using *makoctl* command
+
+Few things i played with makoctl are
+- dismiss the notification from the terminal
+- display the last notification from history
+
+** EDNC - The Emacs Desktop Notification Center
+- site: https://github.com/sinic/ednc
+
+We can use emacs as notification daemon using a package called ednc,
+to use ednc ensure there is no other notification daemon is running
+
+Install the package (package is available in melpa)
+
+#+begin_src elisp
+  (use-package ednc)
+#+end_src
+
+Enable *ednc-mode*
+
+#+begin_src elisp
+  (require 'notifications)
+(notifications-notify :title "1st test" :body "hello, world" :app-name "EDNC"
+                      :actions '("default" "default"))
+#+end_src
+
+Notification list can be seen in ~*ednc-log*~ buffer
+
+
+Both are awesome package, for now i will stick with mako and see how
+it goes.
