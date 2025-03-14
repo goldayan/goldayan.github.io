@@ -7,7 +7,14 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Wed, 12 Mar 2025 18:18:49 +0000</lastBuildDate>
+<lastBuildDate>Fri, 14 Mar 2025 07:20:54 +0000</lastBuildDate>
+<item>
+  <title>Digital library using calibre</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/calibre_digital_library.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/calibre_digital_library.html</guid>
+  <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Mako and Ednc Notifcation daemon</title>
   <description><![CDATA[<nil></nil>]]></description>

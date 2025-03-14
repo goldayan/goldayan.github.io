@@ -1,0 +1,184 @@
+<!DOCTYPE html><html><head><!-- 2025-03-14 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Digital library using calibre</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+Looking for a software to manage my ebooks. almost everyone recommends to calibre
+</p>
+
+<div id="outline-container-org6d81ac2" class="outline-2">
+<h2 id="org6d81ac2">Installing</h2>
+<div class="outline-text-2" id="text-org6d81ac2">
+<p>
+Binary installation
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo -v &amp;&amp; wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+</pre>
+</div>
+
+<p>
+once installed i am able to open the calibre
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f4f3f9" class="outline-2">
+<h2 id="org4f4f3f9">Library path</h2>
+<div class="outline-text-2" id="text-org4f4f3f9">
+<p>
+you can change the location where the books are stored by clicking the
+<b>Calibre library</b> in tool bar. The default location will be
+</p>
+<pre class="example" id="orgb9de364">
+~/Calibre Library
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgaa08d83" class="outline-2">
+<h2 id="orgaa08d83">Appearance changes</h2>
+<div class="outline-text-2" id="text-orgaa08d83">
+<p>
+Default appearance of the calibre looks pretty old let's change
+it. select preference and click look &amp; feel
+</p>
+<ul class="org-ul">
+<li>Dark mode</li>
+<li>Set the font to Jet brains Mono nerd font (My preference)</li>
+<li>Change the icon pack to Monstre</li>
+</ul>
+
+<p>
+You can select different layout option using <b>layout</b> button in the status bar
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ac3ec4" class="outline-2">
+<h2 id="org9ac3ec4">Adding book</h2>
+<div class="outline-text-2" id="text-org9ac3ec4">
+<p>
+You can start adding books
+</p>
+<ul class="org-ul">
+<li>By drag and dropping the books</li>
+<li>Add books button</li>
+<li>Using calibredb command</li>
+</ul>
+
+
+<p>
+When you are trying to access calibre functions from the terminal
+ensure the GUI application is not opened or it will raise some errors
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd23c78" class="outline-2">
+<h2 id="orgbd23c78">Calibredb</h2>
+<div class="outline-text-2" id="text-orgbd23c78">
+<p>
+One of the coolest way to add books is to use <b>calibredb</b> command line tool. Check whether calibredb is accesible from terminal using the following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibredb list
+</pre>
+</div>
+<p>
+This will list all the books available in calibre. To add new books to the library
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibredb add [options] file1 file2
+</pre>
+</div>
+<p>
+you can more operation using calibredb like editing meta data, remove ebook.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e4e345" class="outline-2">
+<h2 id="org1e4e345">Calibre web server</h2>
+<div class="outline-text-2" id="text-org1e4e345">
+<ul class="org-ul">
+<li><p>
+Start the web server using following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibre-server
+</pre>
+</div></li>
+<li><p>
+Web server with custom port
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibre-server --port=9876
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6f66f35" class="outline-2">
+<h2 id="org6f66f35">OPDS</h2>
+<div class="outline-text-2" id="text-org6f66f35">
+<ul class="org-ul">
+<li>OPDS is a protocol to access your ebook library in other devices</li>
+<li>URL for your OPDS is <b>HOSTNAME:PORT/opds</b> eg: 192.268.1.10:8080/opds</li>
+<li>Software that i use to consume content from OPDS
+<ul class="org-ul">
+<li>Foliate (linux ebook reader)
+<ul class="org-ul">
+<li><a href="https://johnfactotum.github.io/foliate/">https://johnfactotum.github.io/foliate/</a></li>
+</ul></li>
+<li>Librera Reader (Android)
+<ul class="org-ul">
+<li><a href="https://github.com/foobnix/LibreraReader">https://github.com/foobnix/LibreraReader</a></li>
+<li>Download the Pro version from github repo.</li>
+<li>Network tab in the app</li>
+<li>If network tab is not there then reset(not reinstall) the app</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd69b964" class="outline-2">
+<h2 id="orgd69b964">Convert ebooks from terminal</h2>
+<div class="outline-text-2" id="text-orgd69b964">
+<ul class="org-ul">
+<li><p>
+you can convert books from GUI. i prefer terminal tools
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">ebook-convert input_file output_file [options]
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcf010d7" class="outline-2">
+<h2 id="orgcf010d7">Backuping up</h2>
+<div class="outline-text-2" id="text-orgcf010d7">
+<p>
+To backup the library all we need is to copy the content of <b>Calibre
+Library</b> like a monthly once or twice. Depends on your needs
+</p>
+</div>
+</div>
+
+<div id="outline-container-org733119c" class="outline-2">
+<h2 id="org733119c">Others</h2>
+<div class="outline-text-2" id="text-org733119c">
+<ul class="org-ul">
+<li><a href="https://github.com/janeczku/calibre-web">https://github.com/janeczku/calibre-web</a>
+<ul class="org-ul">
+<li>If you are not satisfied with web server that comes with calibre you can look into this.</li>
+</ul></li>
+<li>If you are okay with self hosting you can try <b>Kavita</b> - <a href="https://www.kavitareader.com/">https://www.kavitareader.com/</a></li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
