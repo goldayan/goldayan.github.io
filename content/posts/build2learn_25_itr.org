@@ -1,0 +1,27 @@
+#+title: 25th Build2Learn Hackathon project
+#+subtitle: project that i have done during 25th build2learn
+#+date: <2025-03-22 Sat>
+#+author: Gold Ayan
+
+This time instead of creating project i want to write a book about
+understanding programming concepts.
+
+The book is currently developed in the following github
+[[https://github.com/ThangaAyyanar/understand-programs]]
+
+I would like to thank Muthu from Pailagam && other build2learn members
+for give me pointers in few chapters.
+
+This book is aimed at beginners who understand little bit about
+programming but fears when they see a program with nested loops,
+recursion and algorithms.
+
+So far i am able to write a draft for 3 chapters. Plan to write
+atleast 5 chapters within end of this week
+
+Future plans will be to seperate code and concepts so that a script
+can be used to generate a book for programming language
+
+Reason i started writing this book is to take note of tips and tricks
+i have used during my learning phase and share it with others. Other
+reason would be to learn more tips and tricks from other people
