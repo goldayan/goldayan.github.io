@@ -1,16 +1,34 @@
 #+title: Blogrolls
 
-*** Blogs
-**** English
-- [[https://jvns.ca/][Julia Evans]]
-  - Lot of tiny experiments on open source tools
-**** Tamil
-- [[https://kaniyam.com][Kaniyam]]
-  - Open source software and technical article in tamil
+*** Jobs
+- [[https://fossunited.org/jobs][Foss United Job board]]
 
 *** Events
 - [[https://tamilnadu.tech][Tamilnadu Tech]]
   - Technical conference, meetups and hackathon in and around Tamil Nadu, India
+
+*** Blogs
+**** English
+- [[https://jvns.ca/][Julia Evans]]
+  - Lot of tiny experiments on open source tools
+- 
+**** Tamil
+- [[https://kaniyam.com][Kaniyam]]
+  - Open source software and technical article in tamil
+
+*** Forums
+**** English
+- [[https://forum.systemcrafters.net/][System crafters forum]]
+  - Emacs, Open source
+**** Tamil
+- [[https://forums.tamillinuxcommunity.org/][Tamil linux community forum]]
+  - Open source
+
+*** Podcasts
+- Darknet Diary
+- Malicious Life
+- Andrew huberman
+- Selfhosted
 
 *** Youtube
 **** English
@@ -18,13 +36,7 @@
   - Emacs, Guix, Linux, Open source tools
 **** Tamil
 - [[https://www.youtube.com/@TamilLinuxCommunity][Tamil Linux Community]]
-  - Linux, Open source tools in tamil language
+  - Linux, Open source tools
+- [[https://www.youtube.com/@syedjaferk][Syed Jafer K ( Parottasalna )]]
+  - Linux, Open source tools, Code walkthrough, Technical papers.
 
-*** Podcasts
-
-
-*** Remainders
-**** TODO System crafters, System crafters forums
-**** TODO Kaniyam
-**** TODO youtube - distrotube
-**** TODO podcast - darnet diary, andrew huberman, selfhosted
