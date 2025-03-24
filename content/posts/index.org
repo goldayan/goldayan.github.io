@@ -9,7 +9,6 @@
 *** -> [[file:esim_issue.org][Not able to comprehend eSIM]]
 *** -> [[file:ncmc_card.org][NCMC Chennai card, My experience]]
 *** -> [[file:journaling_prompts.org][Journalling prompts/question that i like most]] 
-*** -> [[file:hello.org][Hello world post]]
 
 ** Old articles
 *** -> [[file:trying_podman.org][Learning postgres using podman]]
