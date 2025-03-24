@@ -1,9 +1,15 @@
 #+title: Projects
+#+OPTIONS: toc:2
 
+** Books
 *** Make file tutorial in tamil
 - Translated make file tutorial book from english to tamil
 - https://github.com/ThangaAyyanar/Makefile-tamil/blob/main/makefile.org
 - Original: https://makefiletutorial.com/
+*** TODO Understanding programs
+- Book about understanding programming concepts
+- [[https://github.com/ThangaAyyanar/understand-programs]]
 
+** Code
 *** TODO Gopass-webui (On progress)
 - Web user interface for gopass command line tool.
