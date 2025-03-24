@@ -3,6 +3,10 @@
 We can also name it ~Mini articles~
 
 ** 2025
+*** Google colab to finetune llm
+During the Foss United March 2025 meetup i came to know that llm can
+be finetuned using google colab. 
+- https://github.com/poloclub/Fine-tuning-LLMs
 
 *** Open DNS family shield - Make internet browsing safer for whole family
 - https://www.opendns.com/setupguide/#familyshield
