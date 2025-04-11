@@ -29,6 +29,7 @@ Sometimes i write blog in Tamil language at [[https://kaniyam.com][kaniyam.com]]
 | LinkedIn      | https://linkedin.com/in/thangaayyanar                                    |
 | Mastodon      | @goldayan@clj.social                                                     |
 | Github        | https://github.com/thangaayyanar                                         |
+| Codeberg      | https://codeberg.org/thangaayyanar                                       |
 | Youtube       | https://youtube.com/@goldayantinkers                                     |
 | IRC           | Goldayan(nickname) in #kaniyam, #systemcrafters, #ilugc to name a few... |
 | Twitter/X.com | @0xgoldayan (Not much now a days)                                        |
