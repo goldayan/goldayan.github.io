@@ -7,7 +7,21 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Mon, 24 Mar 2025 23:15:04 +0000</lastBuildDate>
+<lastBuildDate>Tue, 15 Apr 2025 15:49:32 +0000</lastBuildDate>
+<item>
+  <title>Warpd - Keyboard driven virtual pointer</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/warpd.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/warpd.html</guid>
+  <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>25th Build2Learn Hackathon project</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/build2learn_25_itr.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/build2learn_25_itr.html</guid>
+  <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Digital library using calibre</title>
   <description><![CDATA[<nil></nil>]]></description>

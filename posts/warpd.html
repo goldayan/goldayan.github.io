@@ -1,0 +1,119 @@
+<!DOCTYPE html><html><head><!-- 2025-04-15 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warpd - Keyboard driven virtual pointer</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+This program allow us to control the mouse from keyboard that's why it
+is called keyboard driven virtual pointer
+</p>
+
+<p>
+I was looking for keyboard driven virtual pointer for long time
+especially for wayland. As i already know <b>keynav</b> keyboard driven
+virtual pointer which support X server.
+</p>
+
+<p>
+Today i stumble across <b>warpd</b> and when i find out it supports wayland
+i should defintely want to try out.
+</p>
+
+<p>
+To install in debian or ubuntu, I followed the below steps
+</p>
+<ul class="org-ul">
+<li><p>
+First clone the warpd repo
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">git clone https://github.com/rvaiya/warpd.git
+</pre>
+</div></li>
+<li><p>
+Install the dependency
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install libcairo2-dev libxkbcommon-dev libwayland-dev
+</pre>
+</div></li>
+<li><p>
+Go into the directory
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-builtin">cd</span> warpd
+</pre>
+</div></li>
+<li><p>
+Compile the warpd for wayland
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">PLATFORM</span>=wayland make
+</pre>
+</div></li>
+<li><p>
+Install warpd
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo make install
+</pre>
+</div></li>
+<li><p>
+To use in sway, use the following line in sway config
+</p>
+<pre class="example" id="orgd5879e4">
+# warpd hotkeys
+
+bindsym Mod4+Mod1+x exec warpd --hint
+bindsym Mod4+Mod1+c exec warpd --normal
+bindsym Mod4+Mod1+v exec warpd --grid
+</pre>
+
+<p>
+That's it
+</p>
+
+<p>
+to invoke warpd use Window key(mod4) + ALT (mod1) with the shortcuts
+</p></li>
+</ul>
+
+<div id="outline-container-org0655b69" class="outline-2">
+<h2 id="org0655b69">Things like about warpd</h2>
+<div class="outline-text-2" id="text-org0655b69">
+<ul class="org-ul">
+<li>Normal mode is great i can control the mouse using vim key bindings
+(hjkl) and use (m,.) for left click, middle click and right click</li>
+<li>Hint and normal mode provides overlay that will help to narrow down
+the area where the mouse needs to be placed.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc52ae3f" class="outline-2">
+<h2 id="orgc52ae3f">Need to explore</h2>
+<div class="outline-text-2" id="text-orgc52ae3f">
+<ul class="org-ul">
+<li>Drag and drop workflow
+<ul class="org-ul">
+<li>I still don't understand it, need to spend more time in it.</li>
+</ul></li>
+<li>Customization using configuration file
+<ul class="org-ul">
+<li>It can be customized so i want to customize it little bit.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb327e81" class="outline-2">
+<h2 id="orgb327e81">Resources</h2>
+<div class="outline-text-2" id="text-orgb327e81">
+<ul class="org-ul">
+<li>man warpd</li>
+<li><a href="https://github.com/rvaiya/warpd">https://github.com/rvaiya/warpd</a></li>
+<li><a href="https://www.joyk.com/dig/detail/1665915344496931">https://www.joyk.com/dig/detail/1665915344496931</a></li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
