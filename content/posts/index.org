@@ -2,10 +2,10 @@
 
 ** 2025
 *** TODO -> [[file:new_phone_migration.org][Migration from old phone]]
-*** TODO -> Kanchilug Feb16 - Static analyzer
 *** -> [[file:warpd.org][Warp - control mouse using keyboard (wayland)]]
 *** -> [[file:build2learn_25_itr.org][25th Build2Learn hackathon project]]
 *** -> [[file:calibre_digital_library.org][Digital library using calibre]]
+*** -> [[file:trying_floorp.org][Trying out floorp browser (Firefox fork)]]
 *** -> [[file:sway_notification.org][Mako and Ednc Notifcation daemon]]
 *** -> [[file:autoreload_webpage.org][Simple Live reload server]]
 *** -> [[file:esim_issue.org][Not able to comprehend eSIM]]
