@@ -1,0 +1,66 @@
+#+title: Warpd - Keyboard driven virtual pointer
+#+subtitle: keyboard driven virtual pointer for wayland, X and Mac
+#+date: <2025-04-15 Tue>
+#+author: Gold Ayan
+
+This program allow us to control the mouse from keyboard that's why it
+is called keyboard driven virtual pointer
+
+I was looking for keyboard driven virtual pointer for long time
+especially for wayland. As i already know *keynav* keyboard driven
+virtual pointer which support X server.
+
+Today i stumble across *warpd* and when i find out it supports wayland
+i should defintely want to try out.
+
+To install in debian or ubuntu, I followed the below steps
+- First clone the warpd repo
+  #+begin_src shell
+    git clone https://github.com/rvaiya/warpd.git
+  #+end_src
+- Install the dependency
+  #+begin_src shell
+    sudo apt install libcairo2-dev libxkbcommon-dev libwayland-dev
+  #+end_src
+- Go into the directory
+  #+begin_src shell
+    cd warpd
+  #+end_src
+- Compile the warpd for wayland
+  #+begin_src shell
+    PLATFORM=wayland make
+  #+end_src
+- Install warpd
+  #+begin_src shell
+    sudo make install
+  #+end_src
+- To use in sway, use the following line in sway config
+  #+begin_example
+  # warpd hotkeys
+
+  bindsym Mod4+Mod1+x exec warpd --hint
+  bindsym Mod4+Mod1+c exec warpd --normal
+  bindsym Mod4+Mod1+v exec warpd --grid
+  #+end_example
+
+  That's it
+
+  to invoke warpd use Window key(mod4) + ALT (mod1) with the shortcuts
+
+*** Things like about warpd
+- Normal mode is great i can control the mouse using vim key bindings
+  (hjkl) and use (m,.) for left click, middle click and right click
+- Hint and normal mode provides overlay that will help to narrow down
+  the area where the mouse needs to be placed.
+
+*** Need to explore
+- Drag and drop workflow
+  - I still don't understand it, need to spend more time in it.
+- Customization using configuration file
+  - It can be customized so i want to customize it little bit.
+
+*** Resources
+- man warpd
+- https://github.com/rvaiya/warpd
+- https://www.joyk.com/dig/detail/1665915344496931
+
