@@ -1,0 +1,39 @@
+#+title: Trying out floorp browser
+#+subtitle: checking out floorp browser
+#+date: <2025-03-14 Fri>
+#+author: Gold Ayan
+
+I use flatpak to install floorp
+
+#+begin_src shell
+  flatpak install flathub one.ablaze.floorp
+#+end_src
+
+Gone with Lepton custom theme as i need to customize the UI little bit.
+
+Disabled the following
+- Tabs
+- Side bar heading
+- removed few unnecessary menu items in the menu bar
+
+Addons
+- Firefox containers
+- Container Tabs Sidebar
+  - I usually prefar sidebery plugin but i want something minimalistic the website restore on startup
+- ublock origin
+
+Installing web progressive app can be done once it is enabled in the
+settings
+
+but when progressive app is open the Floorp instance with existing
+session is also opened if it is not opened already which is annoying
+
+Other than that it is great no need to dabble with chrome.css to
+change UI (atleast for me, as my requirement is basic which comes with
+browser options itself)
+
+My browser needs are satisfied by
+- librewolf
+- floorp (sometimes)
+- chrome (If above two won't work as expected)
+
