@@ -1,0 +1,175 @@
+#+title: Jbang exploration
+#+subtitle: Fast and furious Java POC using Jbang
+#+date: <2025-06-03 Tue>
+#+author: Gold Ayan
+
+* Installing jbang
+- [[https://asdf-vm.com/guide/getting-started.html][ASDF]] is what i used (works in linux and mac)
+
+* Basics
+- Minimum requirement Java 8
+- argument to jbang
+  - Kotlin and groovy are experimental
+| Extension | operation                 |
+|-----------+---------------------------|
+| .java     | Compile the java          |
+| .jsh      | Jshell                    |
+| .md       | Java code inside markdown |
+| Folder    | Main.java file executed   |
+- Get started
+  #+begin_src shell
+    jbang Sample.java
+  #+end_src
+- Sample.java
+  #+begin_src java
+    public class Sample {
+	public static void main(String[] args) {
+	    System.out.println("Hello, this is a simple Java program!");
+	}
+    }
+  #+end_src
+
+* Managing Java version
+- Adopt JDK will be used
+- List jdk installed in the system
+  #+begin_src shell
+    jbang jdk list
+  #+end_src
+- Install particular java version
+  #+begin_src shell
+    jbang jdk install 14
+  #+end_src
+- List all the available version by jbang
+  #+begin_src shell
+    jbang jdk list --available
+  #+end_src
+- Set default jdk version
+  #+begin_src shell
+    jbang jdk default 17
+  #+end_src
+- Uninstall particular version
+  #+begin_src shell
+    jbang jdk uninstall 17
+  #+end_src
+- JDK home path
+  #+begin_src shell
+    jbang jdk home
+  #+end_src
+- Install java from existing path
+  #+begin_src shell
+    jbang jdk install 17 <PATH>
+    jbang jdk install 17 `sdk home java 17.0.4.1-tem`
+  #+end_src
+- Environment variable details
+  #+begin_src shell
+    jbang jdk java-env
+  #+end_src
+
+* Simple example
+#+begin_src shell
+  java init --template=cli hello.java
+#+end_src
+
+* JFX
+- Let's look into few examples
+  #+begin_src java
+    //JAVA 21+
+//DEPS org.openjfx:javafx-controls:21:${os.detected.jfxname}
+//DEPS org.openjfx:javafx-graphics:21:${os.detected.jfxname}
+//RUNTIME_OPTIONS --enable-native-access=javafx.graphics
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+
+public class jfx extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        String javaVersion = System.getProperty("java.version");
+        String javafxVersion = System.getProperty("javafx.version");
+        Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
+        Scene scene = new Scene(new StackPane(l), 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+}
+  #+end_src
+
+* Jbang edit
+  #+begin_src shell
+    jbang edit myfile.java
+  #+end_src
+- For Emacs/Vim (in sandbox mode), For editor that doesn't support jbang
+  #+begin_src shell
+    jbang edit -b myfile.java
+  #+end_src
+- Live editing
+  #+begin_src shell
+    jbang edit --live
+  #+end_src
+
+* Jshell integration
+- Simple jsh file
+  #+begin_src java
+    // Import necessary classes
+    import java.util.ArrayList;
+
+    // Create a list and add elements
+    ArrayList<String> fruits = new ArrayList<>();
+    fruits.add("Apple");
+    fruits.add("Banana");
+    fruits.add("Cherry");
+
+    // Print the list
+    System.out.println("Fruits: " + fruits);
+
+    // Iterate over the list
+    for (String fruit : fruits) {
+	System.out.println(fruit);
+    }
+  #+end_src
+
+- Execute the above script using
+  #+begin_src shell
+    jbang Sample.jsh
+  #+end_src
+
+- We can spawn a interactive shell using the following command
+  #+begin_src shell
+    jbang --interactive Sample.jsh
+  #+end_src
+
+* Java debugging
+#+begin_src shell
+  jbang --debug hello.java
+#+end_src
+- attach with jdb
+  #+begin_src shell
+    jdb -attach IP_ADDRESS:PORT
+  #+end_src
+* Export
+** Gradle
+#+begin_src shell
+  jbang export gradle --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+#+end_src
+** Maven
+#+begin_src shell
+  jbang export maven --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+#+end_src
+
+* Java Flight Recorder
+#+begin_src shell
+  jbang --jfr myapp.java
+#+end_src
+* Want more
+- https://www.jbang.dev/try/ (run it in the browser)
+- Check their docs
+- It can also generate Native code using GraalVM.
