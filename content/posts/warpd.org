@@ -57,7 +57,6 @@ To install in debian or ubuntu, I followed the below steps
 - Drag and drop workflow
   - I still don't understand it, need to spend more time in it.
 - Customization using configuration file
-  - It can be customized so i want to customize it little bit.
 
 *** Resources
 - man warpd
