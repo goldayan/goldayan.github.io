@@ -1,0 +1,336 @@
+<!DOCTYPE html><html><head><!-- 2025-06-03 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jbang exploration</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content">
+<div id="outline-container-org3780e94" class="outline-2">
+<h2 id="org3780e94">Installing jbang</h2>
+<div class="outline-text-2" id="text-org3780e94">
+<ul class="org-ul">
+<li><a href="https://asdf-vm.com/guide/getting-started.html">ASDF</a> is what i used (works in linux and mac)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org970f48f" class="outline-2">
+<h2 id="org970f48f">Basics</h2>
+<div class="outline-text-2" id="text-org970f48f">
+<ul class="org-ul">
+<li>Minimum requirement Java 8</li>
+<li>argument to jbang
+<ul class="org-ul">
+<li>Kotlin and groovy are experimental</li>
+</ul></li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Extension</th>
+<th scope="col" class="org-left">operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">.java</td>
+<td class="org-left">Compile the java</td>
+</tr>
+
+<tr>
+<td class="org-left">.jsh</td>
+<td class="org-left">Jshell</td>
+</tr>
+
+<tr>
+<td class="org-left">.md</td>
+<td class="org-left">Java code inside markdown</td>
+</tr>
+
+<tr>
+<td class="org-left">Folder</td>
+<td class="org-left">Main.java file executed</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li><p>
+Get started
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang Sample.java
+</pre>
+</div></li>
+<li><p>
+Sample.java
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Sample</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        System.out.println(<span class="org-string">"Hello, this is a simple Java program!"</span>);
+    }
+}
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org74705c1" class="outline-2">
+<h2 id="org74705c1">Managing Java version</h2>
+<div class="outline-text-2" id="text-org74705c1">
+<ul class="org-ul">
+<li>Adopt JDK will be used</li>
+<li><p>
+List jdk installed in the system
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk list
+</pre>
+</div></li>
+<li><p>
+Install particular java version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk install 14
+</pre>
+</div></li>
+<li><p>
+List all the available version by jbang
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk list --available
+</pre>
+</div></li>
+<li><p>
+Set default jdk version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk default 17
+</pre>
+</div></li>
+<li><p>
+Uninstall particular version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk uninstall 17
+</pre>
+</div></li>
+<li><p>
+JDK home path
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk home
+</pre>
+</div></li>
+<li><p>
+Install java from existing path
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk install 17 &lt;PATH&gt;
+jbang jdk install 17 <span class="org-sh-quoted-exec">`sdk home java 17.0.4.1-tem`</span>
+</pre>
+</div></li>
+<li><p>
+Environment variable details
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk java-env
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4b3073b" class="outline-2">
+<h2 id="org4b3073b">Simple example</h2>
+<div class="outline-text-2" id="text-org4b3073b">
+<div class="org-src-container">
+<pre class="src src-shell">java init --template=cli hello.java
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6458f9d" class="outline-2">
+<h2 id="org6458f9d">JFX</h2>
+<div class="outline-text-2" id="text-org6458f9d">
+<ul class="org-ul">
+<li><p>
+Let's look into few examples
+</p>
+<div class="org-src-container">
+<pre class="src src-java">    <span class="org-comment-delimiter">//</span><span class="org-comment">JAVA 21+</span>
+<span class="org-comment-delimiter">//</span><span class="org-comment">DEPS org.openjfx:javafx-controls:21:${os.detected.jfxname}</span>
+<span class="org-comment-delimiter">//</span><span class="org-comment">DEPS org.openjfx:javafx-graphics:21:${os.detected.jfxname}</span>
+<span class="org-comment-delimiter">//</span><span class="org-comment">RUNTIME_OPTIONS --enable-native-access=javafx.graphics</span>
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">application</span>.<span class="org-type">Application</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-type">Scene</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-constant">control</span>.<span class="org-type">Label</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-constant">layout</span>.<span class="org-type">StackPane</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">stage</span>.<span class="org-type">Stage</span>;
+
+
+<span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">jfx</span> <span class="org-keyword">extends</span> <span class="org-type">Application</span> {
+
+    <span class="org-c-annotation">@Override</span>
+    <span class="org-keyword">public</span> <span class="org-type">void</span> <span class="org-function-name">start</span>(<span class="org-type">Stage</span> <span class="org-variable-name">stage</span>) {
+        <span class="org-type">String</span> <span class="org-variable-name">javaVersion</span> = System.getProperty(<span class="org-string">"java.version"</span>);
+        <span class="org-type">String</span> <span class="org-variable-name">javafxVersion</span> = System.getProperty(<span class="org-string">"javafx.version"</span>);
+        <span class="org-type">Label</span> <span class="org-variable-name">l</span> = <span class="org-keyword">new</span> <span class="org-type">Label</span>(<span class="org-string">"Hello, JavaFX "</span> + javafxVersion + <span class="org-string">", running on Java "</span> + javaVersion + <span class="org-string">"."</span>);
+        <span class="org-type">Scene</span> <span class="org-variable-name">scene</span> = <span class="org-keyword">new</span> <span class="org-type">Scene</span>(<span class="org-keyword">new</span> <span class="org-type">StackPane</span>(l), 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        launch();
+    }
+
+}
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7617ad2" class="outline-2">
+<h2 id="org7617ad2">Jbang edit</h2>
+<div class="outline-text-2" id="text-org7617ad2">
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit myfile.java
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+For Emacs/Vim (in sandbox mode), For editor that doesn't support jbang
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit -b myfile.java
+</pre>
+</div></li>
+<li><p>
+Live editing
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit --live
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge6615cf" class="outline-2">
+<h2 id="orge6615cf">Jshell integration</h2>
+<div class="outline-text-2" id="text-orge6615cf">
+<ul class="org-ul">
+<li><p>
+Simple jsh file
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">Import necessary classes</span>
+<span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.<span class="org-type">ArrayList</span>;
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Create a list and add elements</span>
+<span class="org-type">ArrayList</span>&lt;<span class="org-type">String</span>&gt; <span class="org-variable-name">fruits</span> = <span class="org-keyword">new</span> <span class="org-type">ArrayList</span>&lt;&gt;();
+fruits.add(<span class="org-string">"Apple"</span>);
+fruits.add(<span class="org-string">"Banana"</span>);
+fruits.add(<span class="org-string">"Cherry"</span>);
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Print the list</span>
+System.out.println(<span class="org-string">"Fruits: "</span> + fruits);
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iterate over the list</span>
+<span class="org-keyword">for</span> (<span class="org-type">String</span> <span class="org-variable-name">fruit</span> : fruits) {
+    System.out.println(fruit);
+}
+</pre>
+</div></li>
+
+<li><p>
+Execute the above script using
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang Sample.jsh
+</pre>
+</div></li>
+
+<li><p>
+We can spawn a interactive shell using the following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang --interactive Sample.jsh
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1598b2a" class="outline-2">
+<h2 id="org1598b2a">Java debugging</h2>
+<div class="outline-text-2" id="text-org1598b2a">
+<div class="org-src-container">
+<pre class="src src-shell">jbang --debug hello.java
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+attach with jdb
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jdb -attach IP_ADDRESS:PORT
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51ad553" class="outline-2">
+<h2 id="org51ad553">Export</h2>
+<div class="outline-text-2" id="text-org51ad553">
+</div>
+<div id="outline-container-orgfc1ea35" class="outline-3">
+<h3 id="orgfc1ea35">Gradle</h3>
+<div class="outline-text-3" id="text-orgfc1ea35">
+<div class="org-src-container">
+<pre class="src src-shell">jbang export gradle --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3383d29" class="outline-3">
+<h3 id="org3383d29">Maven</h3>
+<div class="outline-text-3" id="text-org3383d29">
+<div class="org-src-container">
+<pre class="src src-shell">jbang export maven --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4eb7302" class="outline-2">
+<h2 id="org4eb7302">Java Flight Recorder</h2>
+<div class="outline-text-2" id="text-org4eb7302">
+<div class="org-src-container">
+<pre class="src src-shell">jbang --jfr myapp.java
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org75703bd" class="outline-2">
+<h2 id="org75703bd">Want more</h2>
+<div class="outline-text-2" id="text-org75703bd">
+<ul class="org-ul">
+<li><a href="https://www.jbang.dev/try/">https://www.jbang.dev/try/</a> (run it in the browser)</li>
+<li>Check their docs</li>
+<li>It can also generate Native code using GraalVM.</li>
+</ul>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

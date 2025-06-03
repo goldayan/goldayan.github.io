@@ -7,9 +7,9 @@
 This is an ongoing evolution of my original Emacs configuration files, inspired by a bunch of resources I've found online.
 </p>
 
-<div id="outline-container-orgf8ebe82" class="outline-2">
-<h2 id="orgf8ebe82">Startup Performance</h2>
-<div class="outline-text-2" id="text-orgf8ebe82">
+<div id="outline-container-org9e1442a" class="outline-2">
+<h2 id="org9e1442a">Startup Performance</h2>
+<div class="outline-text-2" id="text-org9e1442a">
 <p>
 Make startup faster by reducing the frequency of garbage collection and then use a hook to measure Emacs startup time.
 </p>
@@ -39,9 +39,9 @@ Also, turn on <code>lexical-binding</code> for the init file!
 </div>
 </div>
 
-<div id="outline-container-orgceca689" class="outline-2">
-<h2 id="orgceca689">Native Compilation</h2>
-<div class="outline-text-2" id="text-orgceca689">
+<div id="outline-container-org328ffa8" class="outline-2">
+<h2 id="org328ffa8">Native Compilation</h2>
+<div class="outline-text-2" id="text-org328ffa8">
 <p>
 I've started experimenting with the <code>native-comp</code> branch of Emacs for increased performance.  Here are some settings to tweak the behavior slightly:
 </p>
@@ -59,9 +59,9 @@ I've started experimenting with the <code>native-comp</code> branch of Emacs for
 </div>
 </div>
 
-<div id="outline-container-org413ee62" class="outline-2">
-<h2 id="org413ee62">System Settings</h2>
-<div class="outline-text-2" id="text-org413ee62">
+<div id="outline-container-orgc4a315e" class="outline-2">
+<h2 id="orgc4a315e">System Settings</h2>
+<div class="outline-text-2" id="text-orgc4a315e">
 <p>
 Some parts of the configuration require knowledge of whether Emacs is running on a Guix system or in Termux on Android.  Also load system-specific settings from <code>per-system-settings.el</code>.
 </p>
@@ -87,9 +87,9 @@ Some parts of the configuration require knowledge of whether Emacs is running on
 </div>
 </div>
 
-<div id="outline-container-org0d0ce89" class="outline-2">
-<h2 id="org0d0ce89">Package Management</h2>
-<div class="outline-text-2" id="text-org0d0ce89">
+<div id="outline-container-orge6a09e4" class="outline-2">
+<h2 id="orge6a09e4">Package Management</h2>
+<div class="outline-text-2" id="text-orge6a09e4">
 <p>
 Set up ELPA, MELPA, and Org package repositories and load <code>use-package</code> to manage package configuration.
 </p>
@@ -143,9 +143,9 @@ Set up ELPA, MELPA, and Org package repositories and load <code>use-package</cod
 </div>
 </div>
 
-<div id="outline-container-orgbb82420" class="outline-3">
-<h3 id="orgbb82420">straight.el</h3>
-<div class="outline-text-3" id="text-orgbb82420">
+<div id="outline-container-orgd95dae3" class="outline-3">
+<h3 id="orgd95dae3">straight.el</h3>
+<div class="outline-text-3" id="text-orgd95dae3">
 <p>
 Trying out <code>straight.el</code> for package management.  So far so good!
 </p>
@@ -184,9 +184,9 @@ Sometimes it's good to clean up unused repositories if I've removed packages fro
 </div>
 </div>
 
-<div id="outline-container-org1935a13" class="outline-2">
-<h2 id="org1935a13">Keep .emacs.d Clean</h2>
-<div class="outline-text-2" id="text-org1935a13">
+<div id="outline-container-org2f7ff65" class="outline-2">
+<h2 id="org2f7ff65">Keep .emacs.d Clean</h2>
+<div class="outline-text-2" id="text-org2f7ff65">
 <p>
 I don't want a bunch of transient files showing up as untracked in the Git repo so I move them all to another location.
 </p>
@@ -223,9 +223,9 @@ I don't want a bunch of transient files showing up as untracked in the Git repo 
 </div>
 </div>
 
-<div id="outline-container-org5418804" class="outline-2">
-<h2 id="org5418804">Update Load Path</h2>
-<div class="outline-text-2" id="text-org5418804">
+<div id="outline-container-orgec8998a" class="outline-2">
+<h2 id="orgec8998a">Update Load Path</h2>
+<div class="outline-text-2" id="text-orgec8998a">
 <p>
 I've got a folder of custom Emacs Lisp libraries which must be added to the load path.
 </p>
@@ -240,9 +240,9 @@ I've got a folder of custom Emacs Lisp libraries which must be added to the load
 </div>
 </div>
 
-<div id="outline-container-orgca38d03" class="outline-2">
-<h2 id="orgca38d03">Default Coding System</h2>
-<div class="outline-text-2" id="text-orgca38d03">
+<div id="outline-container-orgacda691" class="outline-2">
+<h2 id="orgacda691">Default Coding System</h2>
+<div class="outline-text-2" id="text-orgacda691">
 <p>
 Avoid constant errors on Windows about the coding system by setting the default to UTF-8.
 </p>
@@ -256,9 +256,9 @@ Avoid constant errors on Windows about the coding system by setting the default 
 </div>
 </div>
 
-<div id="outline-container-orga7f25dd" class="outline-2">
-<h2 id="orga7f25dd">Server Mode</h2>
-<div class="outline-text-2" id="text-orga7f25dd">
+<div id="outline-container-org5f66674" class="outline-2">
+<h2 id="org5f66674">Server Mode</h2>
+<div class="outline-text-2" id="text-org5f66674">
 <p>
 Start the Emacs server from this instance so that all <code>emacsclient</code> calls are routed here.
 </p>
@@ -272,9 +272,9 @@ Start the Emacs server from this instance so that all <code>emacsclient</code> c
 </div>
 </div>
 
-<div id="outline-container-orgeb91266" class="outline-2">
-<h2 id="orgeb91266">Desktop Environment</h2>
-<div class="outline-text-2" id="text-orgeb91266">
+<div id="outline-container-org061382c" class="outline-2">
+<h2 id="org061382c">Desktop Environment</h2>
+<div class="outline-text-2" id="text-org061382c">
 <p>
 Load up the desktop environment if on a machine that supports it and the <code>--use-exwm</code> argument was passed to Emacs on startup.  Desktop environment and window management code can be found in Desktop.org.
 </p>
@@ -310,13 +310,13 @@ Despite the code being in Desktop.org, include the emacs packages for the deskto
 </div>
 </div>
 
-<div id="outline-container-org15d2bb9" class="outline-2">
-<h2 id="org15d2bb9">Keyboard Bindings</h2>
-<div class="outline-text-2" id="text-org15d2bb9">
+<div id="outline-container-org032c31b" class="outline-2">
+<h2 id="org032c31b">Keyboard Bindings</h2>
+<div class="outline-text-2" id="text-org032c31b">
 </div>
-<div id="outline-container-org36140b5" class="outline-3">
-<h3 id="org36140b5">ESC Cancels All</h3>
-<div class="outline-text-3" id="text-org36140b5">
+<div id="outline-container-org00c7343" class="outline-3">
+<h3 id="org00c7343">ESC Cancels All</h3>
+<div class="outline-text-3" id="text-org00c7343">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (global-set-key (kbd <span class="org-string">"&lt;escape&gt;"</span>) 'keyboard-escape-quit)
@@ -326,9 +326,9 @@ Despite the code being in Desktop.org, include the emacs packages for the deskto
 </div>
 </div>
 
-<div id="outline-container-org607c246" class="outline-3">
-<h3 id="org607c246">Rebind C-u</h3>
-<div class="outline-text-3" id="text-org607c246">
+<div id="outline-container-orgb9b794c" class="outline-3">
+<h3 id="orgb9b794c">Rebind C-u</h3>
+<div class="outline-text-3" id="text-orgb9b794c">
 <p>
 Since I let <code>evil-mode</code> take over <code>C-u</code> for buffer scrolling, I need to re-bind the <code>universal-argument</code> command to another key sequence.  I'm choosing <code>C-M-u</code> for this purpose.
 </p>
@@ -342,9 +342,9 @@ Since I let <code>evil-mode</code> take over <code>C-u</code> for buffer scrolli
 </div>
 </div>
 
-<div id="outline-container-org2d2296a" class="outline-3">
-<h3 id="org2d2296a">Let's Be Evil</h3>
-<div class="outline-text-3" id="text-org2d2296a">
+<div id="outline-container-org1aef988" class="outline-3">
+<h3 id="org1aef988">Let's Be Evil</h3>
+<div class="outline-text-3" id="text-org1aef988">
 <p>
 Some tips can be found here:
 </p>
@@ -437,9 +437,9 @@ Some tips can be found here:
 </div>
 </div>
 
-<div id="outline-container-org769a221" class="outline-3">
-<h3 id="org769a221">Keybinding Panel (which-key)</h3>
-<div class="outline-text-3" id="text-org769a221">
+<div id="outline-container-org5040ff6" class="outline-3">
+<h3 id="org5040ff6">Keybinding Panel (which-key)</h3>
+<div class="outline-text-3" id="text-org5040ff6">
 <p>
 <a href="https://github.com/justbur/emacs-which-key">which-key</a> is great for getting an overview of what keybindings are available
 based on the prefix keys you entered.  Learned about this one from Spacemacs.
@@ -469,9 +469,9 @@ based on the prefix keys you entered.  Learned about this one from Spacemacs.
 </div>
 </div>
 
-<div id="outline-container-org8ffea2c" class="outline-3">
-<h3 id="org8ffea2c">Simplify Leader Bindings (general.el)</h3>
-<div class="outline-text-3" id="text-org8ffea2c">
+<div id="outline-container-org4750cf8" class="outline-3">
+<h3 id="org4750cf8">Simplify Leader Bindings (general.el)</h3>
+<div class="outline-text-3" id="text-org4750cf8">
 <p>
 <a href="https://github.com/noctuid/general.el">general.el</a> is a fantastic library for defining prefixed keybindings, especially
 in conjunction with Evil modes.
@@ -508,13 +508,13 @@ in conjunction with Evil modes.
 </div>
 </div>
 
-<div id="outline-container-org5160e63" class="outline-2">
-<h2 id="org5160e63">General Configuration</h2>
-<div class="outline-text-2" id="text-org5160e63">
+<div id="outline-container-orgd74d8ad" class="outline-2">
+<h2 id="orgd74d8ad">General Configuration</h2>
+<div class="outline-text-2" id="text-orgd74d8ad">
 </div>
-<div id="outline-container-org2f15fa7" class="outline-3">
-<h3 id="org2f15fa7">User Interface</h3>
-<div class="outline-text-3" id="text-org2f15fa7">
+<div id="outline-container-orgfb1d414" class="outline-3">
+<h3 id="orgfb1d414">User Interface</h3>
+<div class="outline-text-3" id="text-orgfb1d414">
 <p>
 Clean up Emacs' user interface, make it more minimal.
 </p>
@@ -625,9 +625,9 @@ Don't warn when advice is added for functions
 </div>
 </div>
 
-<div id="outline-container-org5812bb9" class="outline-3">
-<h3 id="org5812bb9">Theme</h3>
-<div class="outline-text-3" id="text-org5812bb9">
+<div id="outline-container-org0147809" class="outline-3">
+<h3 id="org0147809">Theme</h3>
+<div class="outline-text-3" id="text-org0147809">
 <p>
 These days I bounce around between themes included with <a href="https://github.com/hlissner/emacs-doom-themes">DOOM Themes</a> since they're well-designed and integrate with a lot of Emacs packages.
 </p>
@@ -670,13 +670,13 @@ Alternate themes:
 </div>
 </div>
 
-<div id="outline-container-orgc4208eb" class="outline-3">
-<h3 id="orgc4208eb">Font</h3>
-<div class="outline-text-3" id="text-orgc4208eb">
+<div id="outline-container-orgc8d4858" class="outline-3">
+<h3 id="orgc8d4858">Font</h3>
+<div class="outline-text-3" id="text-orgc8d4858">
 </div>
-<div id="outline-container-orgf41d8c1" class="outline-4">
-<h4 id="orgf41d8c1">Set the font</h4>
-<div class="outline-text-4" id="text-orgf41d8c1">
+<div id="outline-container-orga582b35" class="outline-4">
+<h4 id="orga582b35">Set the font</h4>
+<div class="outline-text-4" id="text-orga582b35">
 <p>
 Different platforms need different default font sizes, and <a href="https://mozilla.github.io/Fira/">Fira Mono</a> is currently my favorite face.
 </p>
@@ -710,9 +710,9 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-orgcaf414b" class="outline-4">
-<h4 id="orgcaf414b">Enable proper Unicode glyph support</h4>
-<div class="outline-text-4" id="text-orgcaf414b">
+<div id="outline-container-org5c3d99b" class="outline-4">
+<h4 id="org5c3d99b">Enable proper Unicode glyph support</h4>
+<div class="outline-text-4" id="text-org5c3d99b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/replace-unicode-font-mapping</span> (block-name old-font new-font)
@@ -756,9 +756,9 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-org97d7cca" class="outline-4">
-<h4 id="org97d7cca">Emojis in buffers</h4>
-<div class="outline-text-4" id="text-org97d7cca">
+<div id="outline-container-org9dfad15" class="outline-4">
+<h4 id="org9dfad15">Emojis in buffers</h4>
+<div class="outline-text-4" id="text-org9dfad15">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">emojify</span>
@@ -782,13 +782,13 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-org0624dfb" class="outline-3">
-<h3 id="org0624dfb">Mode Line</h3>
-<div class="outline-text-3" id="text-org0624dfb">
+<div id="outline-container-org937704a" class="outline-3">
+<h3 id="org937704a">Mode Line</h3>
+<div class="outline-text-3" id="text-org937704a">
 </div>
-<div id="outline-container-orgdadaf8d" class="outline-4">
-<h4 id="orgdadaf8d">Basic Customization</h4>
-<div class="outline-text-4" id="text-orgdadaf8d">
+<div id="outline-container-orgf695194" class="outline-4">
+<h4 id="orgf695194">Basic Customization</h4>
+<div class="outline-text-4" id="text-orgf695194">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">setq</span> display-time-format <span class="org-string">"%l:%M %p %b %y"</span>
@@ -799,9 +799,9 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-orgbb0eafd" class="outline-4">
-<h4 id="orgbb0eafd">Enable Mode Diminishing</h4>
-<div class="outline-text-4" id="text-orgbb0eafd">
+<div id="outline-container-orgb9c2374" class="outline-4">
+<h4 id="orgb9c2374">Enable Mode Diminishing</h4>
+<div class="outline-text-4" id="text-orgb9c2374">
 <p>
 The <a href="https://github.com/myrjola/diminish.el">diminish</a> package hides pesky minor modes from the modelines.
 </p>
@@ -815,9 +815,9 @@ The <a href="https://github.com/myrjola/diminish.el">diminish</a> package hides 
 </div>
 </div>
 
-<div id="outline-container-org60cf7f5" class="outline-4">
-<h4 id="org60cf7f5">Smart Mode Line</h4>
-<div class="outline-text-4" id="text-org60cf7f5">
+<div id="outline-container-org8f0a104" class="outline-4">
+<h4 id="org8f0a104">Smart Mode Line</h4>
+<div class="outline-text-4" id="text-org8f0a104">
 <p>
 Prettify the modeline with <a href="https://github.com/Malabarba/smart-mode-line/">smart-mode-line</a>.  Really need to re-evaluate the
 ordering of <code>mode-line-format</code>.  Also not sure if <code>rm-excluded-modes</code> is needed
@@ -882,9 +882,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org9675bf5" class="outline-4">
-<h4 id="org9675bf5">Doom Modeline</h4>
-<div class="outline-text-4" id="text-org9675bf5">
+<div id="outline-container-org15397cd" class="outline-4">
+<h4 id="org15397cd">Doom Modeline</h4>
+<div class="outline-text-4" id="text-org15397cd">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 <span class="org-comment-delimiter">;; </span><span class="org-comment">You must run (all-the-icons-install-fonts) one time after</span>
@@ -930,9 +930,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org9d95311" class="outline-3">
-<h3 id="org9d95311">Workspaces</h3>
-<div class="outline-text-3" id="text-org9d95311">
+<div id="outline-container-org3484009" class="outline-3">
+<h3 id="org3484009">Workspaces</h3>
+<div class="outline-text-3" id="text-org3484009">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">perspective</span>
@@ -963,9 +963,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-orgac588bb" class="outline-3">
-<h3 id="orgac588bb">Notifications</h3>
-<div class="outline-text-3" id="text-orgac588bb">
+<div id="outline-container-org0831bbb" class="outline-3">
+<h3 id="org0831bbb">Notifications</h3>
+<div class="outline-text-3" id="text-org0831bbb">
 <p>
 <a href="https://github.com/jwiegley/alert">alert</a> is a great library for showing notifications from other packages in a variety of ways.  For now I just use it to surface desktop notifications from package code.
 </p>
@@ -993,9 +993,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org86d1b2b" class="outline-3">
-<h3 id="org86d1b2b">Auto-Saving Changed Files</h3>
-<div class="outline-text-3" id="text-org86d1b2b">
+<div id="outline-container-org9c4331b" class="outline-3">
+<h3 id="org9c4331b">Auto-Saving Changed Files</h3>
+<div class="outline-text-3" id="text-org9c4331b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">super-save</span>
@@ -1021,9 +1021,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org120a669" class="outline-3">
-<h3 id="org120a669">Auto-Reverting Changed Files</h3>
-<div class="outline-text-3" id="text-org120a669">
+<div id="outline-container-orgbd3f958" class="outline-3">
+<h3 id="orgbd3f958">Auto-Reverting Changed Files</h3>
+<div class="outline-text-3" id="text-orgbd3f958">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 <span class="org-comment-delimiter">;; </span><span class="org-comment">Revert Dired and other buffers</span>
@@ -1037,9 +1037,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org1a92ec5" class="outline-3">
-<h3 id="org1a92ec5">UI Toggles</h3>
-<div class="outline-text-3" id="text-org1a92ec5">
+<div id="outline-container-org0e4e8f5" class="outline-3">
+<h3 id="org0e4e8f5">UI Toggles</h3>
+<div class="outline-text-3" id="text-org0e4e8f5">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (dw/leader-key-def
@@ -1052,9 +1052,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org0e5f135" class="outline-3">
-<h3 id="org0e5f135">Highlight Matching Braces</h3>
-<div class="outline-text-3" id="text-org0e5f135">
+<div id="outline-container-org84d5973" class="outline-3">
+<h3 id="org84d5973">Highlight Matching Braces</h3>
+<div class="outline-text-3" id="text-org84d5973">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">paren</span>
@@ -1067,9 +1067,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org9319ba9" class="outline-3">
-<h3 id="org9319ba9">Displaying World Time</h3>
-<div class="outline-text-3" id="text-org9319ba9">
+<div id="outline-container-org6306b1d" class="outline-3">
+<h3 id="org6306b1d">Displaying World Time</h3>
+<div class="outline-text-3" id="text-org6306b1d">
 <p>
 <code>display-time-world</code> command provides a nice display of the time at a specified
 list of timezones.  Nice for working in a team with remote members.
@@ -1092,9 +1092,9 @@ list of timezones.  Nice for working in a team with remote members.
 </div>
 </div>
 
-<div id="outline-container-orgdce3076" class="outline-3">
-<h3 id="orgdce3076">Pinentry</h3>
-<div class="outline-text-3" id="text-orgdce3076">
+<div id="outline-container-orgc2db750" class="outline-3">
+<h3 id="orgc2db750">Pinentry</h3>
+<div class="outline-text-3" id="text-orgc2db750">
 <p>
 Emacs can be prompted for the PIN of GPG private keys, we just need to set
 <code>epa-pinentry-mode</code> to accomplish that:
@@ -1124,9 +1124,9 @@ Emacs can be prompted for the PIN of GPG private keys, we just need to set
 </div>
 </div>
 
-<div id="outline-container-org57c04eb" class="outline-3">
-<h3 id="org57c04eb">TRAMP</h3>
-<div class="outline-text-3" id="text-org57c04eb">
+<div id="outline-container-orge600b57" class="outline-3">
+<h3 id="orge600b57">TRAMP</h3>
+<div class="outline-text-3" id="text-orge600b57">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 <span class="org-comment-delimiter">;; </span><span class="org-comment">Set default connection mode to SSH</span>
@@ -1137,9 +1137,9 @@ Emacs can be prompted for the PIN of GPG private keys, we just need to set
 </div>
 </div>
 
-<div id="outline-container-org323c06c" class="outline-3">
-<h3 id="org323c06c">Emacs as External Editor</h3>
-<div class="outline-text-3" id="text-org323c06c">
+<div id="outline-container-orgefbd5f8" class="outline-3">
+<h3 id="orgefbd5f8">Emacs as External Editor</h3>
+<div class="outline-text-3" id="text-orgefbd5f8">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/show-server-edit-buffer</span> (buffer)
@@ -1156,13 +1156,13 @@ Emacs can be prompted for the PIN of GPG private keys, we just need to set
 </div>
 </div>
 
-<div id="outline-container-orge4311cc" class="outline-2">
-<h2 id="orge4311cc">Editing Configuration</h2>
-<div class="outline-text-2" id="text-orge4311cc">
+<div id="outline-container-orgead7ef8" class="outline-2">
+<h2 id="orgead7ef8">Editing Configuration</h2>
+<div class="outline-text-2" id="text-orgead7ef8">
 </div>
-<div id="outline-container-org6d8d8ee" class="outline-3">
-<h3 id="org6d8d8ee">Tab Widths</h3>
-<div class="outline-text-3" id="text-org6d8d8ee">
+<div id="outline-container-org0b06da7" class="outline-3">
+<h3 id="org0b06da7">Tab Widths</h3>
+<div class="outline-text-3" id="text-org0b06da7">
 <p>
 Default to an indentation size of 2 spaces since it's the norm for pretty much every language I use.
 </p>
@@ -1177,9 +1177,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orga16eba8" class="outline-3">
-<h3 id="orga16eba8">Use spaces instead of tabs for indentation</h3>
-<div class="outline-text-3" id="text-orga16eba8">
+<div id="outline-container-orgdd440ae" class="outline-3">
+<h3 id="orgdd440ae">Use spaces instead of tabs for indentation</h3>
+<div class="outline-text-3" id="text-orgdd440ae">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">setq-default</span> indent-tabs-mode nil)
@@ -1189,9 +1189,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org9746111" class="outline-3">
-<h3 id="org9746111">Commenting Lines</h3>
-<div class="outline-text-3" id="text-org9746111">
+<div id="outline-container-org8611cfd" class="outline-3">
+<h3 id="org8611cfd">Commenting Lines</h3>
+<div class="outline-text-3" id="text-org8611cfd">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">evil-nerd-commenter</span>
@@ -1213,9 +1213,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orgc91b56e" class="outline-3">
-<h3 id="orgc91b56e">Automatically clean whitespace</h3>
-<div class="outline-text-3" id="text-orgc91b56e">
+<div id="outline-container-orgdbf9ab3" class="outline-3">
+<h3 id="orgdbf9ab3">Automatically clean whitespace</h3>
+<div class="outline-text-3" id="text-orgdbf9ab3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">ws-butler</span>
@@ -1238,9 +1238,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org0fb8b2d" class="outline-3">
-<h3 id="org0fb8b2d">Use Parinfer for Lispy languages</h3>
-<div class="outline-text-3" id="text-org0fb8b2d">
+<div id="outline-container-org4a04cf9" class="outline-3">
+<h3 id="org4a04cf9">Use Parinfer for Lispy languages</h3>
+<div class="outline-text-3" id="text-org4a04cf9">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">parinfer</span>
@@ -1277,9 +1277,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org4481c14" class="outline-3">
-<h3 id="org4481c14">Origami.el for Folding</h3>
-<div class="outline-text-3" id="text-org4481c14">
+<div id="outline-container-org4d4b7f3" class="outline-3">
+<h3 id="org4d4b7f3">Origami.el for Folding</h3>
+<div class="outline-text-3" id="text-org4d4b7f3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">origami</span>
@@ -1302,13 +1302,13 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orgb3edc36" class="outline-2">
-<h2 id="orgb3edc36">Configuration Files</h2>
-<div class="outline-text-2" id="text-orgb3edc36">
+<div id="outline-container-org7d0d5b1" class="outline-2">
+<h2 id="org7d0d5b1">Configuration Files</h2>
+<div class="outline-text-2" id="text-org7d0d5b1">
 </div>
-<div id="outline-container-orgad0bef7" class="outline-3">
-<h3 id="orgad0bef7">Configuration file management with dotcrafter.el</h3>
-<div class="outline-text-3" id="text-orgad0bef7">
+<div id="outline-container-orgf507484" class="outline-3">
+<h3 id="orgf507484">Configuration file management with dotcrafter.el</h3>
+<div class="outline-text-3" id="text-orgf507484">
 <p>
 I've been working on a package called <a href="https://github.com/daviwil/dotcrafter.el">dotcrafter.el</a> for complete management of your dotfiles folder with special emphasis on configurations written with Org Mode.
 </p>
@@ -1340,9 +1340,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org081a6d6" class="outline-3">
-<h3 id="org081a6d6">Helpers</h3>
-<div class="outline-text-3" id="text-org081a6d6">
+<div id="outline-container-orgc29cfe8" class="outline-3">
+<h3 id="orgc29cfe8">Helpers</h3>
+<div class="outline-text-3" id="text-orgc29cfe8">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/org-file-jump-to-heading</span> (org-file heading-title)
@@ -1369,9 +1369,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org88ce8aa" class="outline-3">
-<h3 id="org88ce8aa">Bindings</h3>
-<div class="outline-text-3" id="text-org88ce8aa">
+<div id="outline-container-org9743b8e" class="outline-3">
+<h3 id="org9743b8e">Bindings</h3>
+<div class="outline-text-3" id="text-org9743b8e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (dw/leader-key-def
@@ -1394,9 +1394,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org507073d" class="outline-2">
-<h2 id="org507073d">Stateful Keymaps with Hydra</h2>
-<div class="outline-text-2" id="text-org507073d">
+<div id="outline-container-org56ef08a" class="outline-2">
+<h2 id="org56ef08a">Stateful Keymaps with Hydra</h2>
+<div class="outline-text-2" id="text-org56ef08a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">hydra</span>
@@ -1418,17 +1418,17 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org0ada2c7" class="outline-2">
-<h2 id="org0ada2c7">Completion System</h2>
-<div class="outline-text-2" id="text-org0ada2c7">
+<div id="outline-container-org105abfd" class="outline-2">
+<h2 id="org105abfd">Completion System</h2>
+<div class="outline-text-2" id="text-org105abfd">
 <p>
 Trying this as an alternative to Ivy and Counsel.
 </p>
 </div>
 
-<div id="outline-container-orgad54bab" class="outline-3">
-<h3 id="orgad54bab">Preserve Minibuffer History with savehist-mode</h3>
-<div class="outline-text-3" id="text-orgad54bab">
+<div id="outline-container-org80e0494" class="outline-3">
+<h3 id="org80e0494">Preserve Minibuffer History with savehist-mode</h3>
+<div class="outline-text-3" id="text-org80e0494">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">savehist</span>
@@ -1446,9 +1446,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-orgc743ae3" class="outline-3">
-<h3 id="orgc743ae3">Completions with Vertico</h3>
-<div class="outline-text-3" id="text-orgc743ae3">
+<div id="outline-container-org7ca851a" class="outline-3">
+<h3 id="org7ca851a">Completions with Vertico</h3>
+<div class="outline-text-3" id="text-org7ca851a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/minibuffer-backward-kill</span> (arg)
@@ -1495,9 +1495,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-org1552951" class="outline-3">
-<h3 id="org1552951">Completions in Regions with Corfu</h3>
-<div class="outline-text-3" id="text-org1552951">
+<div id="outline-container-orge984bc2" class="outline-3">
+<h3 id="orge984bc2">Completions in Regions with Corfu</h3>
+<div class="outline-text-3" id="text-orge984bc2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">corfu</span>
@@ -1517,9 +1517,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-org966f686" class="outline-3">
-<h3 id="org966f686">Improved Candidate Filtering with Orderless</h3>
-<div class="outline-text-3" id="text-org966f686">
+<div id="outline-container-orgeb8f2bf" class="outline-3">
+<h3 id="orgeb8f2bf">Improved Candidate Filtering with Orderless</h3>
+<div class="outline-text-3" id="text-orgeb8f2bf">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">orderless</span>
@@ -1544,9 +1544,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-orgfe6e584" class="outline-3">
-<h3 id="orgfe6e584">Consult Commands</h3>
-<div class="outline-text-3" id="text-orgfe6e584">
+<div id="outline-container-orgbbdb359" class="outline-3">
+<h3 id="orgbbdb359">Consult Commands</h3>
+<div class="outline-text-3" id="text-orgbbdb359">
 <p>
 Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </p>
@@ -1584,9 +1584,9 @@ Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </div>
 </div>
 
-<div id="outline-container-orgd3579f7" class="outline-3">
-<h3 id="orgd3579f7">Switching Directories with consult-dir</h3>
-<div class="outline-text-3" id="text-orgd3579f7">
+<div id="outline-container-org79a0909" class="outline-3">
+<h3 id="org79a0909">Switching Directories with consult-dir</h3>
+<div class="outline-text-3" id="text-org79a0909">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">consult-dir</span>
@@ -1621,9 +1621,9 @@ Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </div>
 </div>
 
-<div id="outline-container-org7055443" class="outline-3">
-<h3 id="org7055443">Completion Annotations with Marginalia</h3>
-<div class="outline-text-3" id="text-org7055443">
+<div id="outline-container-org69000fa" class="outline-3">
+<h3 id="org69000fa">Completion Annotations with Marginalia</h3>
+<div class="outline-text-3" id="text-org69000fa">
 <p>
 Marginalia provides helpful annotations for various types of minibuffer completions.  You can think of it as a replacement of <code>ivy-rich</code>.
 </p>
@@ -1653,9 +1653,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-org723cdfe" class="outline-3">
-<h3 id="org723cdfe">Completion Actions with Embark</h3>
-<div class="outline-text-3" id="text-org723cdfe">
+<div id="outline-container-orge59630c" class="outline-3">
+<h3 id="orge59630c">Completion Actions with Embark</h3>
+<div class="outline-text-3" id="text-orge59630c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">embark</span>
@@ -1696,9 +1696,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-org35987ca" class="outline-3">
-<h3 id="org35987ca">Launching apps</h3>
-<div class="outline-text-3" id="text-org35987ca">
+<div id="outline-container-orgf43fb50" class="outline-3">
+<h3 id="orgf43fb50">Launching apps</h3>
+<div class="outline-text-3" id="text-orgf43fb50">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">app-launcher</span>)
@@ -1720,9 +1720,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-orgae92e84" class="outline-2">
-<h2 id="orgae92e84">Jumping with Avy</h2>
-<div class="outline-text-2" id="text-orgae92e84">
+<div id="outline-container-orga02a794" class="outline-2">
+<h2 id="orga02a794">Jumping with Avy</h2>
+<div class="outline-text-2" id="text-orga02a794">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">avy</span>

@@ -7,7 +7,14 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Tue, 15 Apr 2025 15:59:44 +0000</lastBuildDate>
+<lastBuildDate>Tue, 03 Jun 2025 16:09:02 +0000</lastBuildDate>
+<item>
+  <title>Jbang exploration</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/jbang.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/jbang.html</guid>
+  <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Warpd - Keyboard driven virtual pointer</title>
   <description><![CDATA[<nil></nil>]]></description>
