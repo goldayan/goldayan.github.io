@@ -1,7 +1,7 @@
 #+title: Goldayan articles
 
 ** 2025
-*** TODO -> [[file:new_phone_migration.org][Migration from old phone]]
+*** -> [[file:jbang.org][Jbang talk on CodeOnJVM meetup]]
 *** -> [[file:warpd.org][Warp - control mouse using keyboard (wayland)]]
 *** -> [[file:build2learn_25_itr.org][25th Build2Learn hackathon project]]
 *** -> [[file:calibre_digital_library.org][Digital library using calibre]]
