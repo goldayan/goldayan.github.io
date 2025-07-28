@@ -7,9 +7,9 @@
 This is an ongoing evolution of my original Emacs configuration files, inspired by a bunch of resources I've found online.
 </p>
 
-<div id="outline-container-org0738a24" class="outline-2">
-<h2 id="org0738a24">Startup Performance</h2>
-<div class="outline-text-2" id="text-org0738a24">
+<div id="outline-container-orgcb086b4" class="outline-2">
+<h2 id="orgcb086b4">Startup Performance</h2>
+<div class="outline-text-2" id="text-orgcb086b4">
 <p>
 Make startup faster by reducing the frequency of garbage collection and then use a hook to measure Emacs startup time.
 </p>
@@ -20,13 +20,13 @@ Also, turn on <code>lexical-binding</code> for the init file!
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">-*- lexical-binding: t; -*-</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">-*- lexical-binding: t; -*-
+</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">The default is 800 kilobytes.  Measured in bytes.
+</span>(<span class="org-keyword">setq</span> gc-cons-threshold (* 50 1000 1000))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">The default is 800 kilobytes.  Measured in bytes.</span>
-(<span class="org-keyword">setq</span> gc-cons-threshold (* 50 1000 1000))
-
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Profile emacs startup</span>
-(add-hook 'emacs-startup-hook
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Profile emacs startup
+</span>(add-hook 'emacs-startup-hook
           (<span class="org-keyword">lambda</span> ()
             (message <span class="org-string">"*** Emacs loaded in %s with %d garbage collections."</span>
                      (format <span class="org-string">"%.2f seconds"</span>
@@ -39,29 +39,29 @@ Also, turn on <code>lexical-binding</code> for the init file!
 </div>
 </div>
 
-<div id="outline-container-orgc79b808" class="outline-2">
-<h2 id="orgc79b808">Native Compilation</h2>
-<div class="outline-text-2" id="text-orgc79b808">
+<div id="outline-container-org2b56416" class="outline-2">
+<h2 id="org2b56416">Native Compilation</h2>
+<div class="outline-text-2" id="text-org2b56416">
 <p>
 I've started experimenting with the <code>native-comp</code> branch of Emacs for increased performance.  Here are some settings to tweak the behavior slightly:
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Silence compiler warnings as they can be pretty disruptive</span>
-(<span class="org-keyword">setq</span> native-comp-async-report-warnings-errors nil)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Silence compiler warnings as they can be pretty disruptive
+</span>(<span class="org-keyword">setq</span> native-comp-async-report-warnings-errors nil)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the right directory to store the native comp cache</span>
-(add-to-list 'native-comp-eln-load-path (expand-file-name <span class="org-string">"eln-cache/"</span> user-emacs-directory))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the right directory to store the native comp cache
+</span>(add-to-list 'native-comp-eln-load-path (expand-file-name <span class="org-string">"eln-cache/"</span> user-emacs-directory))
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org6398ca5" class="outline-2">
-<h2 id="org6398ca5">System Settings</h2>
-<div class="outline-text-2" id="text-org6398ca5">
+<div id="outline-container-org98853e1" class="outline-2">
+<h2 id="org98853e1">System Settings</h2>
+<div class="outline-text-2" id="text-org98853e1">
 <p>
 Some parts of the configuration require knowledge of whether Emacs is running on a Guix system or in Termux on Android.  Also load system-specific settings from <code>per-system-settings.el</code>.
 </p>
@@ -70,8 +70,8 @@ Some parts of the configuration require knowledge of whether Emacs is running on
 <pre class="src src-emacs-lisp">
 (load-file <span class="org-string">"~/.dotfiles/.emacs.d/lisp/dw-settings.el"</span>)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Load settings for the first time</span>
-(dw/load-system-settings)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Load settings for the first time
+</span>(dw/load-system-settings)
 
 (<span class="org-keyword">require</span> '<span class="org-constant">subr-x</span>)
 (<span class="org-keyword">setq</span> dw/is-termux
@@ -87,9 +87,9 @@ Some parts of the configuration require knowledge of whether Emacs is running on
 </div>
 </div>
 
-<div id="outline-container-orgc5e65a7" class="outline-2">
-<h2 id="orgc5e65a7">Package Management</h2>
-<div class="outline-text-2" id="text-orgc5e65a7">
+<div id="outline-container-org5dbbd6e" class="outline-2">
+<h2 id="org5dbbd6e">Package Management</h2>
+<div class="outline-text-2" id="text-org5dbbd6e">
 <p>
 Set up ELPA, MELPA, and Org package repositories and load <code>use-package</code> to manage package configuration.
 </p>
@@ -100,33 +100,33 @@ Set up ELPA, MELPA, and Org package repositories and load <code>use-package</cod
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Initialize package sources</span>
-(<span class="org-keyword">require</span> '<span class="org-constant">package</span>)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Initialize package sources
+</span>(<span class="org-keyword">require</span> '<span class="org-constant">package</span>)
 
 (<span class="org-keyword">setq</span> package-archives '((<span class="org-string">"melpa"</span> . <span class="org-string">"https://melpa.org/packages/"</span>)
                          (<span class="org-string">"melpa-stable"</span> . <span class="org-string">"https://stable.melpa.org/packages/"</span>)
                          (<span class="org-string">"org"</span> . <span class="org-string">"https://orgmode.org/elpa/"</span>)
                          (<span class="org-string">"elpa"</span> . <span class="org-string">"https://elpa.gnu.org/packages/"</span>)))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Fix an issue accessing the ELPA archive in Termux</span>
-(<span class="org-keyword">when</span> dw/is-termux
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Fix an issue accessing the ELPA archive in Termux
+</span>(<span class="org-keyword">when</span> dw/is-termux
   (<span class="org-keyword">setq</span> gnutls-algorithm-priority <span class="org-string">"NORMAL:-VERS-TLS1.3"</span>))
 
 (package-initialize)
-<span class="org-comment-delimiter">;; </span><span class="org-comment">(unless package-archive-contents</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">(package-refresh-contents))</span>
-
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Initialize use-package on non-Linux platforms</span>
-(<span class="org-keyword">unless</span> (<span class="org-keyword">or</span> (package-installed-p 'use-package)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">(unless package-archive-contents
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">(package-refresh-contents))
+</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Initialize use-package on non-Linux platforms
+</span>(<span class="org-keyword">unless</span> (<span class="org-keyword">or</span> (package-installed-p 'use-package)
             dw/is-guix-system)
    (package-install 'use-package))
 (<span class="org-keyword">require</span> '<span class="org-constant">use-package</span>)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Uncomment this to get a reading on packages that get loaded at startup</span>
-<span class="org-comment-delimiter">;;</span><span class="org-comment">(setq use-package-verbose t)</span>
-
-<span class="org-comment-delimiter">;; </span><span class="org-comment">On non-Guix systems, "ensure" packages by default</span>
-(<span class="org-keyword">setq</span> use-package-always-ensure (not dw/is-guix-system))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Uncomment this to get a reading on packages that get loaded at startup
+</span><span class="org-comment-delimiter">;;</span><span class="org-comment">(setq use-package-verbose t)
+</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">On non-Guix systems, "ensure" packages by default
+</span>(<span class="org-keyword">setq</span> use-package-always-ensure (not dw/is-guix-system))
 
 </pre>
 </div>
@@ -143,9 +143,9 @@ Set up ELPA, MELPA, and Org package repositories and load <code>use-package</cod
 </div>
 </div>
 
-<div id="outline-container-orgac7ef7e" class="outline-3">
-<h3 id="orgac7ef7e">straight.el</h3>
-<div class="outline-text-3" id="text-orgac7ef7e">
+<div id="outline-container-orgff1350a" class="outline-3">
+<h3 id="orgff1350a">straight.el</h3>
+<div class="outline-text-3" id="text-orgff1350a">
 <p>
 Trying out <code>straight.el</code> for package management.  So far so good!
 </p>
@@ -156,8 +156,8 @@ Sometimes it's good to clean up unused repositories if I've removed packages fro
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Bootstrap straight.el</span>
-(<span class="org-keyword">defvar</span> <span class="org-variable-name">bootstrap-version</span>)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Bootstrap straight.el
+</span>(<span class="org-keyword">defvar</span> <span class="org-variable-name">bootstrap-version</span>)
 (<span class="org-keyword">let</span> ((bootstrap-file
       (expand-file-name <span class="org-string">"straight/repos/straight.el/bootstrap.el"</span> user-emacs-directory))
       (bootstrap-version 5))
@@ -170,38 +170,38 @@ Sometimes it's good to clean up unused repositories if I've removed packages fro
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Always use straight to install on systems other than Linux</span>
-(<span class="org-keyword">setq</span> straight-use-package-by-default (not (eq system-type 'gnu/linux)))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Always use straight to install on systems other than Linux
+</span>(<span class="org-keyword">setq</span> straight-use-package-by-default (not (eq system-type 'gnu/linux)))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Use straight.el for use-package expressions</span>
-(straight-use-package 'use-package)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Use straight.el for use-package expressions
+</span>(straight-use-package 'use-package)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Clean up unused repos with `</span><span class="org-comment"><span class="org-constant">straight-remove-unused-repos</span></span><span class="org-comment">'</span>
-
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Clean up unused repos with `</span><span class="org-comment"><span class="org-constant">straight-remove-unused-repos</span></span><span class="org-comment">'
+</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5c26cd2" class="outline-2">
-<h2 id="org5c26cd2">Keep .emacs.d Clean</h2>
-<div class="outline-text-2" id="text-org5c26cd2">
+<div id="outline-container-org4a32fda" class="outline-2">
+<h2 id="org4a32fda">Keep .emacs.d Clean</h2>
+<div class="outline-text-2" id="text-org4a32fda">
 <p>
 I don't want a bunch of transient files showing up as untracked in the Git repo so I move them all to another location.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Change the user-emacs-directory to keep unwanted things out of ~/.emacs.d</span>
-(<span class="org-keyword">setq</span> user-emacs-directory (expand-file-name <span class="org-string">"~/.cache/emacs/"</span>)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Change the user-emacs-directory to keep unwanted things out of ~/.emacs.d
+</span>(<span class="org-keyword">setq</span> user-emacs-directory (expand-file-name <span class="org-string">"~/.cache/emacs/"</span>)
       url-history-file (expand-file-name <span class="org-string">"url/history"</span> user-emacs-directory))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Use no-littering to automatically set common paths to the new user-emacs-directory</span>
-(<span class="org-keyword">use-package</span> <span class="org-constant">no-littering</span>)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Use no-littering to automatically set common paths to the new user-emacs-directory
+</span>(<span class="org-keyword">use-package</span> <span class="org-constant">no-littering</span>)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Keep customization settings in a temporary file (thanks Ambrevar!)</span>
-(<span class="org-keyword">setq</span> custom-file
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Keep customization settings in a temporary file (thanks Ambrevar!)
+</span>(<span class="org-keyword">setq</span> custom-file
       (<span class="org-keyword">if</span> (boundp 'server-socket-dir)
           (expand-file-name <span class="org-string">"custom.el"</span> server-socket-dir)
         (expand-file-name (format <span class="org-string">"emacs-custom-%s.el"</span> (user-uid)) temporary-file-directory)))
@@ -223,26 +223,26 @@ I don't want a bunch of transient files showing up as untracked in the Git repo 
 </div>
 </div>
 
-<div id="outline-container-orga3e45c0" class="outline-2">
-<h2 id="orga3e45c0">Update Load Path</h2>
-<div class="outline-text-2" id="text-orga3e45c0">
+<div id="outline-container-org00d2c5c" class="outline-2">
+<h2 id="org00d2c5c">Update Load Path</h2>
+<div class="outline-text-2" id="text-org00d2c5c">
 <p>
 I've got a folder of custom Emacs Lisp libraries which must be added to the load path.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Add my library path to load-path</span>
-(<span class="org-keyword">push</span> <span class="org-string">"~/.dotfiles/.emacs.d/lisp"</span> load-path)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Add my library path to load-path
+</span>(<span class="org-keyword">push</span> <span class="org-string">"~/.dotfiles/.emacs.d/lisp"</span> load-path)
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org03d71ee" class="outline-2">
-<h2 id="org03d71ee">Default Coding System</h2>
-<div class="outline-text-2" id="text-org03d71ee">
+<div id="outline-container-org34f6759" class="outline-2">
+<h2 id="org34f6759">Default Coding System</h2>
+<div class="outline-text-2" id="text-org34f6759">
 <p>
 Avoid constant errors on Windows about the coding system by setting the default to UTF-8.
 </p>
@@ -256,9 +256,9 @@ Avoid constant errors on Windows about the coding system by setting the default 
 </div>
 </div>
 
-<div id="outline-container-org132d323" class="outline-2">
-<h2 id="org132d323">Server Mode</h2>
-<div class="outline-text-2" id="text-org132d323">
+<div id="outline-container-org6379900" class="outline-2">
+<h2 id="org6379900">Server Mode</h2>
+<div class="outline-text-2" id="text-org6379900">
 <p>
 Start the Emacs server from this instance so that all <code>emacsclient</code> calls are routed here.
 </p>
@@ -272,9 +272,9 @@ Start the Emacs server from this instance so that all <code>emacsclient</code> c
 </div>
 </div>
 
-<div id="outline-container-org1efcc41" class="outline-2">
-<h2 id="org1efcc41">Desktop Environment</h2>
-<div class="outline-text-2" id="text-org1efcc41">
+<div id="outline-container-org47b892c" class="outline-2">
+<h2 id="org47b892c">Desktop Environment</h2>
+<div class="outline-text-2" id="text-org47b892c">
 <p>
 Load up the desktop environment if on a machine that supports it and the <code>--use-exwm</code> argument was passed to Emacs on startup.  Desktop environment and window management code can be found in Desktop.org.
 </p>
@@ -310,13 +310,13 @@ Despite the code being in Desktop.org, include the emacs packages for the deskto
 </div>
 </div>
 
-<div id="outline-container-org068909d" class="outline-2">
-<h2 id="org068909d">Keyboard Bindings</h2>
-<div class="outline-text-2" id="text-org068909d">
+<div id="outline-container-org17e322e" class="outline-2">
+<h2 id="org17e322e">Keyboard Bindings</h2>
+<div class="outline-text-2" id="text-org17e322e">
 </div>
-<div id="outline-container-orgb4d0a3a" class="outline-3">
-<h3 id="orgb4d0a3a">ESC Cancels All</h3>
-<div class="outline-text-3" id="text-orgb4d0a3a">
+<div id="outline-container-org383cd94" class="outline-3">
+<h3 id="org383cd94">ESC Cancels All</h3>
+<div class="outline-text-3" id="text-org383cd94">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (global-set-key (kbd <span class="org-string">"&lt;escape&gt;"</span>) 'keyboard-escape-quit)
@@ -326,9 +326,9 @@ Despite the code being in Desktop.org, include the emacs packages for the deskto
 </div>
 </div>
 
-<div id="outline-container-org83eae55" class="outline-3">
-<h3 id="org83eae55">Rebind C-u</h3>
-<div class="outline-text-3" id="text-org83eae55">
+<div id="outline-container-org20d7764" class="outline-3">
+<h3 id="org20d7764">Rebind C-u</h3>
+<div class="outline-text-3" id="text-org20d7764">
 <p>
 Since I let <code>evil-mode</code> take over <code>C-u</code> for buffer scrolling, I need to re-bind the <code>universal-argument</code> command to another key sequence.  I'm choosing <code>C-M-u</code> for this purpose.
 </p>
@@ -342,9 +342,9 @@ Since I let <code>evil-mode</code> take over <code>C-u</code> for buffer scrolli
 </div>
 </div>
 
-<div id="outline-container-org296639a" class="outline-3">
-<h3 id="org296639a">Let's Be Evil</h3>
-<div class="outline-text-3" id="text-org296639a">
+<div id="outline-container-org6c0f46d" class="outline-3">
+<h3 id="org6c0f46d">Let's Be Evil</h3>
+<div class="outline-text-3" id="text-org6c0f46d">
 <p>
 Some tips can be found here:
 </p>
@@ -390,13 +390,13 @@ Some tips can be found here:
   (define-key evil-insert-state-map (kbd <span class="org-string">"C-g"</span>) 'evil-normal-state)
   (define-key evil-insert-state-map (kbd <span class="org-string">"C-h"</span>) 'evil-delete-backward-char-and-join)
 
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">Use visual line motions even outside of visual-line-mode buffers</span>
-  (evil-global-set-key 'motion <span class="org-string">"j"</span> 'evil-next-visual-line)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Use visual line motions even outside of visual-line-mode buffers
+</span>  (evil-global-set-key 'motion <span class="org-string">"j"</span> 'evil-next-visual-line)
   (evil-global-set-key 'motion <span class="org-string">"k"</span> 'evil-previous-visual-line)
 
   (<span class="org-keyword">unless</span> dw/is-termux
-    <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable arrow keys in normal and visual modes</span>
-    (define-key evil-normal-state-map (kbd <span class="org-string">"&lt;left&gt;"</span>) 'dw/dont-arrow-me-bro)
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable arrow keys in normal and visual modes
+</span>    (define-key evil-normal-state-map (kbd <span class="org-string">"&lt;left&gt;"</span>) 'dw/dont-arrow-me-bro)
     (define-key evil-normal-state-map (kbd <span class="org-string">"&lt;right&gt;"</span>) 'dw/dont-arrow-me-bro)
     (define-key evil-normal-state-map (kbd <span class="org-string">"&lt;down&gt;"</span>) 'dw/dont-arrow-me-bro)
     (define-key evil-normal-state-map (kbd <span class="org-string">"&lt;up&gt;"</span>) 'dw/dont-arrow-me-bro)
@@ -411,8 +411,8 @@ Some tips can be found here:
 (<span class="org-keyword">use-package</span> <span class="org-constant">evil-collection</span>
   <span class="org-builtin">:after</span> evil
   <span class="org-builtin">:init</span>
-  (<span class="org-keyword">setq</span> evil-collection-company-use-tng nil)  <span class="org-comment-delimiter">;; </span><span class="org-comment">Is this a bug in evil-collection?</span>
-  <span class="org-builtin">:custom</span>
+  (<span class="org-keyword">setq</span> evil-collection-company-use-tng nil)  <span class="org-comment-delimiter">;; </span><span class="org-comment">Is this a bug in evil-collection?
+</span>  <span class="org-builtin">:custom</span>
   (evil-collection-outline-bind-tab-p nil)
   <span class="org-builtin">:config</span>
   (delete 'lispy evil-collection-mode-list)
@@ -437,9 +437,9 @@ Some tips can be found here:
 </div>
 </div>
 
-<div id="outline-container-org76fe1c9" class="outline-3">
-<h3 id="org76fe1c9">Keybinding Panel (which-key)</h3>
-<div class="outline-text-3" id="text-org76fe1c9">
+<div id="outline-container-orga5f2a53" class="outline-3">
+<h3 id="orga5f2a53">Keybinding Panel (which-key)</h3>
+<div class="outline-text-3" id="text-orga5f2a53">
 <p>
 <a href="https://github.com/justbur/emacs-which-key">which-key</a> is great for getting an overview of what keybindings are available
 based on the prefix keys you entered.  Learned about this one from Spacemacs.
@@ -469,9 +469,9 @@ based on the prefix keys you entered.  Learned about this one from Spacemacs.
 </div>
 </div>
 
-<div id="outline-container-org5201d89" class="outline-3">
-<h3 id="org5201d89">Simplify Leader Bindings (general.el)</h3>
-<div class="outline-text-3" id="text-org5201d89">
+<div id="outline-container-orgac4e5a4" class="outline-3">
+<h3 id="orgac4e5a4">Simplify Leader Bindings (general.el)</h3>
+<div class="outline-text-3" id="text-orgac4e5a4">
 <p>
 <a href="https://github.com/noctuid/general.el">general.el</a> is a fantastic library for defining prefixed keybindings, especially
 in conjunction with Evil modes.
@@ -508,32 +508,32 @@ in conjunction with Evil modes.
 </div>
 </div>
 
-<div id="outline-container-org9157931" class="outline-2">
-<h2 id="org9157931">General Configuration</h2>
-<div class="outline-text-2" id="text-org9157931">
+<div id="outline-container-orgdadbc7f" class="outline-2">
+<h2 id="orgdadbc7f">General Configuration</h2>
+<div class="outline-text-2" id="text-orgdadbc7f">
 </div>
-<div id="outline-container-org7643277" class="outline-3">
-<h3 id="org7643277">User Interface</h3>
-<div class="outline-text-3" id="text-org7643277">
+<div id="outline-container-org3032823" class="outline-3">
+<h3 id="org3032823">User Interface</h3>
+<div class="outline-text-3" id="text-org3032823">
 <p>
 Clean up Emacs' user interface, make it more minimal.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Thanks, but no thanks</span>
-(<span class="org-keyword">setq</span> inhibit-startup-message t)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Thanks, but no thanks
+</span>(<span class="org-keyword">setq</span> inhibit-startup-message t)
 
 (<span class="org-keyword">unless</span> dw/is-termux
-  (scroll-bar-mode -1)        <span class="org-comment-delimiter">; </span><span class="org-comment">Disable visible scrollbar</span>
-  (tool-bar-mode -1)          <span class="org-comment-delimiter">; </span><span class="org-comment">Disable the toolbar</span>
-  (tooltip-mode -1)           <span class="org-comment-delimiter">; </span><span class="org-comment">Disable tooltips</span>
-  (set-fringe-mode 10))       <span class="org-comment-delimiter">; </span><span class="org-comment">Give some breathing room</span>
-
-(menu-bar-mode -1)            <span class="org-comment-delimiter">; </span><span class="org-comment">Disable the menu bar</span>
-
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set up the visible bell</span>
-(<span class="org-keyword">setq</span> visible-bell t)
+  (scroll-bar-mode -1)        <span class="org-comment-delimiter">; </span><span class="org-comment">Disable visible scrollbar
+</span>  (tool-bar-mode -1)          <span class="org-comment-delimiter">; </span><span class="org-comment">Disable the toolbar
+</span>  (tooltip-mode -1)           <span class="org-comment-delimiter">; </span><span class="org-comment">Disable tooltips
+</span>  (set-fringe-mode 10))       <span class="org-comment-delimiter">; </span><span class="org-comment">Give some breathing room
+</span>
+(menu-bar-mode -1)            <span class="org-comment-delimiter">; </span><span class="org-comment">Disable the menu bar
+</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set up the visible bell
+</span>(<span class="org-keyword">setq</span> visible-bell t)
 
 </pre>
 </div>
@@ -545,12 +545,12 @@ Improve scrolling.
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">unless</span> dw/is-termux
-  (<span class="org-keyword">setq</span> mouse-wheel-scroll-amount '(1 ((shift) . 1))) <span class="org-comment-delimiter">;; </span><span class="org-comment">one line at a time</span>
-  (<span class="org-keyword">setq</span> mouse-wheel-progressive-speed nil) <span class="org-comment-delimiter">;; </span><span class="org-comment">don't accelerate scrolling</span>
-  (<span class="org-keyword">setq</span> mouse-wheel-follow-mouse 't) <span class="org-comment-delimiter">;; </span><span class="org-comment">scroll window under mouse</span>
-  (<span class="org-keyword">setq</span> scroll-step 1) <span class="org-comment-delimiter">;; </span><span class="org-comment">keyboard scroll one line at a time</span>
-  (<span class="org-keyword">setq</span> use-dialog-box nil)) <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable dialog boxes since they weren't working in Mac OSX</span>
-
+  (<span class="org-keyword">setq</span> mouse-wheel-scroll-amount '(1 ((shift) . 1))) <span class="org-comment-delimiter">;; </span><span class="org-comment">one line at a time
+</span>  (<span class="org-keyword">setq</span> mouse-wheel-progressive-speed nil) <span class="org-comment-delimiter">;; </span><span class="org-comment">don't accelerate scrolling
+</span>  (<span class="org-keyword">setq</span> mouse-wheel-follow-mouse 't) <span class="org-comment-delimiter">;; </span><span class="org-comment">scroll window under mouse
+</span>  (<span class="org-keyword">setq</span> scroll-step 1) <span class="org-comment-delimiter">;; </span><span class="org-comment">keyboard scroll one line at a time
+</span>  (<span class="org-keyword">setq</span> use-dialog-box nil)) <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable dialog boxes since they weren't working in Mac OSX
+</span>
 </pre>
 </div>
 
@@ -577,14 +577,14 @@ Enable line numbers and customize their format.
 <pre class="src src-emacs-lisp">
 (column-number-mode)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Enable line numbers for some modes</span>
-(<span class="org-keyword">dolist</span> (mode '(text-mode-hook
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Enable line numbers for some modes
+</span>(<span class="org-keyword">dolist</span> (mode '(text-mode-hook
                 prog-mode-hook
                 conf-mode-hook))
   (add-hook mode (<span class="org-keyword">lambda</span> () (display-line-numbers-mode 1))))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Override some modes which derive from the above</span>
-(<span class="org-keyword">dolist</span> (mode '(org-mode-hook))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Override some modes which derive from the above
+</span>(<span class="org-keyword">dolist</span> (mode '(org-mode-hook))
   (add-hook mode (<span class="org-keyword">lambda</span> () (display-line-numbers-mode 0))))
 
 </pre>
@@ -625,9 +625,9 @@ Don't warn when advice is added for functions
 </div>
 </div>
 
-<div id="outline-container-org4d80019" class="outline-3">
-<h3 id="org4d80019">Theme</h3>
-<div class="outline-text-3" id="text-org4d80019">
+<div id="outline-container-org78aaf22" class="outline-3">
+<h3 id="org78aaf22">Theme</h3>
+<div class="outline-text-3" id="text-org78aaf22">
 <p>
 These days I bounce around between themes included with <a href="https://github.com/hlissner/emacs-doom-themes">DOOM Themes</a> since they're well-designed and integrate with a lot of Emacs packages.
 </p>
@@ -670,21 +670,21 @@ Alternate themes:
 </div>
 </div>
 
-<div id="outline-container-org1547f8a" class="outline-3">
-<h3 id="org1547f8a">Font</h3>
-<div class="outline-text-3" id="text-org1547f8a">
+<div id="outline-container-org887ac2f" class="outline-3">
+<h3 id="org887ac2f">Font</h3>
+<div class="outline-text-3" id="text-org887ac2f">
 </div>
-<div id="outline-container-org142e7cb" class="outline-4">
-<h4 id="org142e7cb">Set the font</h4>
-<div class="outline-text-4" id="text-org142e7cb">
+<div id="outline-container-org9e90b7e" class="outline-4">
+<h4 id="org9e90b7e">Set the font</h4>
+<div class="outline-text-4" id="text-org9e90b7e">
 <p>
 Different platforms need different default font sizes, and <a href="https://mozilla.github.io/Fira/">Fira Mono</a> is currently my favorite face.
 </p>
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the font face based on platform</span>
-(<span class="org-keyword">pcase</span> system-type
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the font face based on platform
+</span>(<span class="org-keyword">pcase</span> system-type
   ((<span class="org-keyword">or</span> 'gnu/linux 'windows-nt 'cygwin)
    (set-face-attribute 'default nil
                        <span class="org-builtin">:font</span> <span class="org-string">"JetBrains Mono"</span>
@@ -692,16 +692,16 @@ Different platforms need different default font sizes, and <a href="https://mozi
                        <span class="org-builtin">:height</span> (dw/system-settings-get 'emacs/default-face-size)))
   ('darwin (set-face-attribute 'default nil <span class="org-builtin">:font</span> <span class="org-string">"Fira Mono"</span> <span class="org-builtin">:height</span> 170)))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the fixed pitch face</span>
-(set-face-attribute 'fixed-pitch nil
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the fixed pitch face
+</span>(set-face-attribute 'fixed-pitch nil
                     <span class="org-builtin">:font</span> <span class="org-string">"JetBrains Mono"</span>
                     <span class="org-builtin">:weight</span> 'light
                     <span class="org-builtin">:height</span> (dw/system-settings-get 'emacs/fixed-face-size))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the variable pitch face</span>
-(set-face-attribute 'variable-pitch nil
-                    <span class="org-comment-delimiter">;; </span><span class="org-comment">:font "Cantarell"</span>
-                    <span class="org-builtin">:font</span> <span class="org-string">"Iosevka Aile"</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set the variable pitch face
+</span>(set-face-attribute 'variable-pitch nil
+                    <span class="org-comment-delimiter">;; </span><span class="org-comment">:font "Cantarell"
+</span>                    <span class="org-builtin">:font</span> <span class="org-string">"Iosevka Aile"</span>
                     <span class="org-builtin">:height</span> (dw/system-settings-get 'emacs/variable-face-size)
                     <span class="org-builtin">:weight</span> 'light)
 
@@ -710,9 +710,9 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-orgd267750" class="outline-4">
-<h4 id="orgd267750">Enable proper Unicode glyph support</h4>
-<div class="outline-text-4" id="text-orgd267750">
+<div id="outline-container-org11fd0e7" class="outline-4">
+<h4 id="org11fd0e7">Enable proper Unicode glyph support</h4>
+<div class="outline-text-4" id="text-org11fd0e7">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/replace-unicode-font-mapping</span> (block-name old-font new-font)
@@ -730,8 +730,8 @@ Different platforms need different default font sizes, and <a href="https://mozi
   <span class="org-builtin">:custom</span>
   (unicode-fonts-skip-font-groups '(low-quality-glyphs))
   <span class="org-builtin">:config</span>
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">Fix the font mappings to use the right emoji font</span>
-  (mapcar
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Fix the font mappings to use the right emoji font
+</span>  (mapcar
     (<span class="org-keyword">lambda</span> (block-name)
       (dw/replace-unicode-font-mapping block-name <span class="org-string">"Apple Color Emoji"</span> <span class="org-string">"Noto Color Emoji"</span>))
     '(<span class="org-string">"Dingbats"</span>
@@ -749,16 +749,16 @@ Different platforms need different default font sizes, and <a href="https://mozi
 
 <div class="org-src-container">
 <pre class="src src-scheme">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">"emacs-unicode-fonts"</span>
-
+<span class="org-comment-delimiter">;; </span><span class="org-comment">"emacs-unicode-fonts"
+</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org0a2749c" class="outline-4">
-<h4 id="org0a2749c">Emojis in buffers</h4>
-<div class="outline-text-4" id="text-org0a2749c">
+<div id="outline-container-orgca24766" class="outline-4">
+<h4 id="orgca24766">Emojis in buffers</h4>
+<div class="outline-text-4" id="text-orgca24766">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">emojify</span>
@@ -782,13 +782,13 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-org3fa4ee4" class="outline-3">
-<h3 id="org3fa4ee4">Mode Line</h3>
-<div class="outline-text-3" id="text-org3fa4ee4">
+<div id="outline-container-org2a3040d" class="outline-3">
+<h3 id="org2a3040d">Mode Line</h3>
+<div class="outline-text-3" id="text-org2a3040d">
 </div>
-<div id="outline-container-orgf792ead" class="outline-4">
-<h4 id="orgf792ead">Basic Customization</h4>
-<div class="outline-text-4" id="text-orgf792ead">
+<div id="outline-container-orgbc13c8c" class="outline-4">
+<h4 id="orgbc13c8c">Basic Customization</h4>
+<div class="outline-text-4" id="text-orgbc13c8c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">setq</span> display-time-format <span class="org-string">"%l:%M %p %b %y"</span>
@@ -799,9 +799,9 @@ Different platforms need different default font sizes, and <a href="https://mozi
 </div>
 </div>
 
-<div id="outline-container-orgbee7f41" class="outline-4">
-<h4 id="orgbee7f41">Enable Mode Diminishing</h4>
-<div class="outline-text-4" id="text-orgbee7f41">
+<div id="outline-container-org52015cd" class="outline-4">
+<h4 id="org52015cd">Enable Mode Diminishing</h4>
+<div class="outline-text-4" id="text-org52015cd">
 <p>
 The <a href="https://github.com/myrjola/diminish.el">diminish</a> package hides pesky minor modes from the modelines.
 </p>
@@ -815,9 +815,9 @@ The <a href="https://github.com/myrjola/diminish.el">diminish</a> package hides 
 </div>
 </div>
 
-<div id="outline-container-orgeb67020" class="outline-4">
-<h4 id="orgeb67020">Smart Mode Line</h4>
-<div class="outline-text-4" id="text-orgeb67020">
+<div id="outline-container-org5355611" class="outline-4">
+<h4 id="org5355611">Smart Mode Line</h4>
+<div class="outline-text-4" id="text-org5355611">
 <p>
 Prettify the modeline with <a href="https://github.com/Malabarba/smart-mode-line/">smart-mode-line</a>.  Really need to re-evaluate the
 ordering of <code>mode-line-format</code>.  Also not sure if <code>rm-excluded-modes</code> is needed
@@ -832,8 +832,8 @@ anymore if I set up <code>diminish</code> correctly.
   <span class="org-builtin">:config</span>
   (<span class="org-keyword">setq</span> sml/no-confirm-load-theme t)
   (sml/setup)
-  (sml/apply-theme 'respectful)  <span class="org-comment-delimiter">; </span><span class="org-comment">Respect the theme colors</span>
-  (<span class="org-keyword">setq</span> sml/mode-width 'right
+  (sml/apply-theme 'respectful)  <span class="org-comment-delimiter">; </span><span class="org-comment">Respect the theme colors
+</span>  (<span class="org-keyword">setq</span> sml/mode-width 'right
       sml/name-width 60)
 
   (<span class="org-keyword">setq-default</span> mode-line-format
@@ -851,8 +851,8 @@ anymore if I set up <code>diminish</code> correctly.
       sml/pos-id-separator
       (vc-mode vc-mode)
       <span class="org-string">" "</span>
-      <span class="org-comment-delimiter">;</span><span class="org-comment">mode-line-position</span>
-      sml/pre-modes-separator
+      <span class="org-comment-delimiter">;</span><span class="org-comment">mode-line-position
+</span>      sml/pre-modes-separator
       mode-line-modes
       <span class="org-string">" "</span>
       mode-line-misc-info))
@@ -860,8 +860,8 @@ anymore if I set up <code>diminish</code> correctly.
   (<span class="org-keyword">setq</span> rm-excluded-modes
     (mapconcat
       'identity
-      <span class="org-comment-delimiter">; </span><span class="org-comment">These names must start with a space!</span>
-      '(<span class="org-string">" GitGutter"</span> <span class="org-string">" MRev"</span> <span class="org-string">" company"</span>
+      <span class="org-comment-delimiter">; </span><span class="org-comment">These names must start with a space!
+</span>      '(<span class="org-string">" GitGutter"</span> <span class="org-string">" MRev"</span> <span class="org-string">" company"</span>
       <span class="org-string">" Helm"</span> <span class="org-string">" Undo-Tree"</span> <span class="org-string">" Projectile.*"</span> <span class="org-string">" Z"</span> <span class="org-string">" Ind"</span>
       <span class="org-string">" Org-Agenda.*"</span> <span class="org-string">" ElDoc"</span> <span class="org-string">" SP/s"</span> <span class="org-string">" cider.*"</span>)
       <span class="org-string">"</span><span class="org-string"><span class="org-regexp-grouping-backslash">\\</span></span><span class="org-string"><span class="org-regexp-grouping-construct">|</span></span><span class="org-string">"</span>)))
@@ -882,20 +882,20 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org4317828" class="outline-4">
-<h4 id="org4317828">Doom Modeline</h4>
-<div class="outline-text-4" id="text-org4317828">
+<div id="outline-container-org9664682" class="outline-4">
+<h4 id="org9664682">Doom Modeline</h4>
+<div class="outline-text-4" id="text-org9664682">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">You must run (all-the-icons-install-fonts) one time after</span>
-<span class="org-comment-delimiter">;; </span><span class="org-comment">installing this package!</span>
-
+<span class="org-comment-delimiter">;; </span><span class="org-comment">You must run (all-the-icons-install-fonts) one time after
+</span><span class="org-comment-delimiter">;; </span><span class="org-comment">installing this package!
+</span>
 (<span class="org-keyword">use-package</span> <span class="org-constant">minions</span>
   <span class="org-builtin">:hook</span> (doom-modeline-mode . minions-mode))
 
 (<span class="org-keyword">use-package</span> <span class="org-constant">doom-modeline</span>
-  <span class="org-builtin">:after</span> eshell     <span class="org-comment-delimiter">;; </span><span class="org-comment">Make sure it gets hooked after eshell</span>
-  <span class="org-builtin">:hook</span> (after-init . doom-modeline-init)
+  <span class="org-builtin">:after</span> eshell     <span class="org-comment-delimiter">;; </span><span class="org-comment">Make sure it gets hooked after eshell
+</span>  <span class="org-builtin">:hook</span> (after-init . doom-modeline-init)
   <span class="org-builtin">:custom-face</span>
   (mode-line ((t (<span class="org-builtin">:height</span> 0.85))))
   (mode-line-inactive ((t (<span class="org-builtin">:height</span> 0.85))))
@@ -930,9 +930,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-orgd7a8887" class="outline-3">
-<h3 id="orgd7a8887">Workspaces</h3>
-<div class="outline-text-3" id="text-orgd7a8887">
+<div id="outline-container-org3d8d2d9" class="outline-3">
+<h3 id="org3d8d2d9">Workspaces</h3>
+<div class="outline-text-3" id="text-org3d8d2d9">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">perspective</span>
@@ -943,8 +943,8 @@ anymore if I set up <code>diminish</code> correctly.
   <span class="org-builtin">:custom</span>
   (persp-initial-frame-name <span class="org-string">"Main"</span>)
   <span class="org-builtin">:config</span>
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">Running `</span><span class="org-comment"><span class="org-constant">persp-mode</span></span><span class="org-comment">' multiple times resets the perspective list...</span>
-  (<span class="org-keyword">unless</span> (equal persp-mode t)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Running `</span><span class="org-comment"><span class="org-constant">persp-mode</span></span><span class="org-comment">' multiple times resets the perspective list...
+</span>  (<span class="org-keyword">unless</span> (equal persp-mode t)
     (persp-mode)))
 
 </pre>
@@ -963,9 +963,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org039055e" class="outline-3">
-<h3 id="org039055e">Notifications</h3>
-<div class="outline-text-3" id="text-org039055e">
+<div id="outline-container-org07b8eee" class="outline-3">
+<h3 id="org07b8eee">Notifications</h3>
+<div class="outline-text-3" id="text-org07b8eee">
 <p>
 <a href="https://github.com/jwiegley/alert">alert</a> is a great library for showing notifications from other packages in a variety of ways.  For now I just use it to surface desktop notifications from package code.
 </p>
@@ -993,9 +993,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org87ce740" class="outline-3">
-<h3 id="org87ce740">Auto-Saving Changed Files</h3>
-<div class="outline-text-3" id="text-org87ce740">
+<div id="outline-container-org4bfc625" class="outline-3">
+<h3 id="org4bfc625">Auto-Saving Changed Files</h3>
+<div class="outline-text-3" id="text-org4bfc625">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">super-save</span>
@@ -1021,25 +1021,25 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org3b82f3e" class="outline-3">
-<h3 id="org3b82f3e">Auto-Reverting Changed Files</h3>
-<div class="outline-text-3" id="text-org3b82f3e">
+<div id="outline-container-org790e6af" class="outline-3">
+<h3 id="org790e6af">Auto-Reverting Changed Files</h3>
+<div class="outline-text-3" id="text-org790e6af">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Revert Dired and other buffers</span>
-(<span class="org-keyword">setq</span> global-auto-revert-non-file-buffers t)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Revert Dired and other buffers
+</span>(<span class="org-keyword">setq</span> global-auto-revert-non-file-buffers t)
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Revert buffers when the underlying file has changed</span>
-(global-auto-revert-mode 1)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Revert buffers when the underlying file has changed
+</span>(global-auto-revert-mode 1)
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc317ba6" class="outline-3">
-<h3 id="orgc317ba6">UI Toggles</h3>
-<div class="outline-text-3" id="text-orgc317ba6">
+<div id="outline-container-org2241082" class="outline-3">
+<h3 id="org2241082">UI Toggles</h3>
+<div class="outline-text-3" id="text-org2241082">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (dw/leader-key-def
@@ -1052,9 +1052,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org29fd5e0" class="outline-3">
-<h3 id="org29fd5e0">Highlight Matching Braces</h3>
-<div class="outline-text-3" id="text-org29fd5e0">
+<div id="outline-container-orgf690277" class="outline-3">
+<h3 id="orgf690277">Highlight Matching Braces</h3>
+<div class="outline-text-3" id="text-orgf690277">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">paren</span>
@@ -1067,9 +1067,9 @@ anymore if I set up <code>diminish</code> correctly.
 </div>
 </div>
 
-<div id="outline-container-org17a24bf" class="outline-3">
-<h3 id="org17a24bf">Displaying World Time</h3>
-<div class="outline-text-3" id="text-org17a24bf">
+<div id="outline-container-org7e7233c" class="outline-3">
+<h3 id="org7e7233c">Displaying World Time</h3>
+<div class="outline-text-3" id="text-org7e7233c">
 <p>
 <code>display-time-world</code> command provides a nice display of the time at a specified
 list of timezones.  Nice for working in a team with remote members.
@@ -1092,9 +1092,9 @@ list of timezones.  Nice for working in a team with remote members.
 </div>
 </div>
 
-<div id="outline-container-org9bb401b" class="outline-3">
-<h3 id="org9bb401b">Pinentry</h3>
-<div class="outline-text-3" id="text-org9bb401b">
+<div id="outline-container-org7767e50" class="outline-3">
+<h3 id="org7767e50">Pinentry</h3>
+<div class="outline-text-3" id="text-org7767e50">
 <p>
 Emacs can be prompted for the PIN of GPG private keys, we just need to set
 <code>epa-pinentry-mode</code> to accomplish that:
@@ -1124,45 +1124,45 @@ Emacs can be prompted for the PIN of GPG private keys, we just need to set
 </div>
 </div>
 
-<div id="outline-container-org18b17c5" class="outline-3">
-<h3 id="org18b17c5">TRAMP</h3>
-<div class="outline-text-3" id="text-org18b17c5">
+<div id="outline-container-org2b7a08a" class="outline-3">
+<h3 id="org2b7a08a">TRAMP</h3>
+<div class="outline-text-3" id="text-org2b7a08a">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Set default connection mode to SSH</span>
-(<span class="org-keyword">setq</span> tramp-default-method <span class="org-string">"ssh"</span>)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Set default connection mode to SSH
+</span>(<span class="org-keyword">setq</span> tramp-default-method <span class="org-string">"ssh"</span>)
 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org689765f" class="outline-3">
-<h3 id="org689765f">Emacs as External Editor</h3>
-<div class="outline-text-3" id="text-org689765f">
+<div id="outline-container-org0f38739" class="outline-3">
+<h3 id="org0f38739">Emacs as External Editor</h3>
+<div class="outline-text-3" id="text-org0f38739">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/show-server-edit-buffer</span> (buffer)
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">TODO: Set a transient keymap to close with 'C-c C-c'</span>
-  (split-window-vertically -15)
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">TODO: Set a transient keymap to close with 'C-c C-c'
+</span>  (split-window-vertically -15)
   (other-window 1)
   (set-buffer buffer))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">(setq server-window #'dw/show-server-edit-buffer)</span>
-
+<span class="org-comment-delimiter">;; </span><span class="org-comment">(setq server-window #'dw/show-server-edit-buffer)
+</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge2d65cf" class="outline-2">
-<h2 id="orge2d65cf">Editing Configuration</h2>
-<div class="outline-text-2" id="text-orge2d65cf">
+<div id="outline-container-org83e4213" class="outline-2">
+<h2 id="org83e4213">Editing Configuration</h2>
+<div class="outline-text-2" id="text-org83e4213">
 </div>
-<div id="outline-container-org8a8c936" class="outline-3">
-<h3 id="org8a8c936">Tab Widths</h3>
-<div class="outline-text-3" id="text-org8a8c936">
+<div id="outline-container-orge9af22f" class="outline-3">
+<h3 id="orge9af22f">Tab Widths</h3>
+<div class="outline-text-3" id="text-orge9af22f">
 <p>
 Default to an indentation size of 2 spaces since it's the norm for pretty much every language I use.
 </p>
@@ -1177,9 +1177,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org5f4dc51" class="outline-3">
-<h3 id="org5f4dc51">Use spaces instead of tabs for indentation</h3>
-<div class="outline-text-3" id="text-org5f4dc51">
+<div id="outline-container-org0f3ba08" class="outline-3">
+<h3 id="org0f3ba08">Use spaces instead of tabs for indentation</h3>
+<div class="outline-text-3" id="text-org0f3ba08">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">setq-default</span> indent-tabs-mode nil)
@@ -1189,9 +1189,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org5d8a21f" class="outline-3">
-<h3 id="org5d8a21f">Commenting Lines</h3>
-<div class="outline-text-3" id="text-org5d8a21f">
+<div id="outline-container-orgcacc671" class="outline-3">
+<h3 id="orgcacc671">Commenting Lines</h3>
+<div class="outline-text-3" id="text-orgcacc671">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">evil-nerd-commenter</span>
@@ -1213,9 +1213,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-org5209181" class="outline-3">
-<h3 id="org5209181">Automatically clean whitespace</h3>
-<div class="outline-text-3" id="text-org5209181">
+<div id="outline-container-org1a41f3b" class="outline-3">
+<h3 id="org1a41f3b">Automatically clean whitespace</h3>
+<div class="outline-text-3" id="text-org1a41f3b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">ws-butler</span>
@@ -1238,9 +1238,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orgd8179e6" class="outline-3">
-<h3 id="orgd8179e6">Use Parinfer for Lispy languages</h3>
-<div class="outline-text-3" id="text-orgd8179e6">
+<div id="outline-container-org0bc5a1c" class="outline-3">
+<h3 id="org0bc5a1c">Use Parinfer for Lispy languages</h3>
+<div class="outline-text-3" id="text-org0bc5a1c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">parinfer</span>
@@ -1252,12 +1252,12 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
          (lisp-mode . parinfer-mode))
   <span class="org-builtin">:config</span>
   (<span class="org-keyword">setq</span> parinfer-extensions
-      '(defaults       <span class="org-comment-delimiter">; </span><span class="org-comment">should be included.</span>
-        pretty-parens  <span class="org-comment-delimiter">; </span><span class="org-comment">different paren styles for different modes.</span>
-        evil           <span class="org-comment-delimiter">; </span><span class="org-comment">If you use Evil.</span>
-        smart-tab      <span class="org-comment-delimiter">; </span><span class="org-comment">C-b &amp; C-f jump positions and smart shift with tab &amp; S-tab.</span>
-        smart-yank)))  <span class="org-comment-delimiter">; </span><span class="org-comment">Yank behavior depend on mode.</span>
-
+      '(defaults       <span class="org-comment-delimiter">; </span><span class="org-comment">should be included.
+</span>        pretty-parens  <span class="org-comment-delimiter">; </span><span class="org-comment">different paren styles for different modes.
+</span>        evil           <span class="org-comment-delimiter">; </span><span class="org-comment">If you use Evil.
+</span>        smart-tab      <span class="org-comment-delimiter">; </span><span class="org-comment">C-b &amp; C-f jump positions and smart shift with tab &amp; S-tab.
+</span>        smart-yank)))  <span class="org-comment-delimiter">; </span><span class="org-comment">Yank behavior depend on mode.
+</span>
 (dw/leader-key-def
   <span class="org-string">"tp"</span> 'parinfer-toggle-mode)
 
@@ -1277,9 +1277,9 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orgda3e4ff" class="outline-3">
-<h3 id="orgda3e4ff">Origami.el for Folding</h3>
-<div class="outline-text-3" id="text-orgda3e4ff">
+<div id="outline-container-org2d7b8c5" class="outline-3">
+<h3 id="org2d7b8c5">Origami.el for Folding</h3>
+<div class="outline-text-3" id="text-org2d7b8c5">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">origami</span>
@@ -1302,13 +1302,13 @@ Default to an indentation size of 2 spaces since it's the norm for pretty much e
 </div>
 </div>
 
-<div id="outline-container-orgde5c7f0" class="outline-2">
-<h2 id="orgde5c7f0">Configuration Files</h2>
-<div class="outline-text-2" id="text-orgde5c7f0">
+<div id="outline-container-org8b58e30" class="outline-2">
+<h2 id="org8b58e30">Configuration Files</h2>
+<div class="outline-text-2" id="text-org8b58e30">
 </div>
-<div id="outline-container-org887f7dc" class="outline-3">
-<h3 id="org887f7dc">Configuration file management with dotcrafter.el</h3>
-<div class="outline-text-3" id="text-org887f7dc">
+<div id="outline-container-orgb032d97" class="outline-3">
+<h3 id="orgb032d97">Configuration file management with dotcrafter.el</h3>
+<div class="outline-text-3" id="text-orgb032d97">
 <p>
 I've been working on a package called <a href="https://github.com/daviwil/dotcrafter.el">dotcrafter.el</a> for complete management of your dotfiles folder with special emphasis on configurations written with Org Mode.
 </p>
@@ -1331,8 +1331,8 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
                           <span class="org-string">"Mail.org"</span>
                           <span class="org-string">"Workflow.org"</span>))
   <span class="org-builtin">:init</span>
-  (<span class="org-keyword">require</span> '<span class="org-constant">dotcrafter</span>) <span class="org-comment-delimiter">; </span><span class="org-comment">Not sure why I have to do this...</span>
-  <span class="org-builtin">:config</span>
+  (<span class="org-keyword">require</span> '<span class="org-constant">dotcrafter</span>) <span class="org-comment-delimiter">; </span><span class="org-comment">Not sure why I have to do this...
+</span>  <span class="org-builtin">:config</span>
   (dotcrafter-mode))
 
 </pre>
@@ -1340,9 +1340,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org37d95c2" class="outline-3">
-<h3 id="org37d95c2">Helpers</h3>
-<div class="outline-text-3" id="text-org37d95c2">
+<div id="outline-container-org23f9bdc" class="outline-3">
+<h3 id="org23f9bdc">Helpers</h3>
+<div class="outline-text-3" id="text-org23f9bdc">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/org-file-jump-to-heading</span> (org-file heading-title)
@@ -1369,9 +1369,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-orgd3947da" class="outline-3">
-<h3 id="orgd3947da">Bindings</h3>
-<div class="outline-text-3" id="text-orgd3947da">
+<div id="outline-container-orgc74fa87" class="outline-3">
+<h3 id="orgc74fa87">Bindings</h3>
+<div class="outline-text-3" id="text-orgc74fa87">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (dw/leader-key-def
@@ -1394,9 +1394,9 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org5024b6c" class="outline-2">
-<h2 id="org5024b6c">Stateful Keymaps with Hydra</h2>
-<div class="outline-text-2" id="text-org5024b6c">
+<div id="outline-container-org916c811" class="outline-2">
+<h2 id="org916c811">Stateful Keymaps with Hydra</h2>
+<div class="outline-text-2" id="text-org916c811">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">hydra</span>
@@ -1418,17 +1418,17 @@ Check out my <a href="https://systemcrafters.cc/learning-emacs-lisp/">Learning E
 </div>
 </div>
 
-<div id="outline-container-org2a06bb9" class="outline-2">
-<h2 id="org2a06bb9">Completion System</h2>
-<div class="outline-text-2" id="text-org2a06bb9">
+<div id="outline-container-orgd665ed8" class="outline-2">
+<h2 id="orgd665ed8">Completion System</h2>
+<div class="outline-text-2" id="text-orgd665ed8">
 <p>
 Trying this as an alternative to Ivy and Counsel.
 </p>
 </div>
 
-<div id="outline-container-org68beeba" class="outline-3">
-<h3 id="org68beeba">Preserve Minibuffer History with savehist-mode</h3>
-<div class="outline-text-3" id="text-org68beeba">
+<div id="outline-container-orgf2bef12" class="outline-3">
+<h3 id="orgf2bef12">Preserve Minibuffer History with savehist-mode</h3>
+<div class="outline-text-3" id="text-orgf2bef12">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">savehist</span>
@@ -1436,37 +1436,37 @@ Trying this as an alternative to Ivy and Counsel.
   (<span class="org-keyword">setq</span> history-length 25)
   (savehist-mode 1))
 
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">Individual history elements can be configured separately</span>
-  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'minibuffer-history 'history-length 25)</span>
-  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'evil-ex-history 'history-length 50)</span>
-  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'kill-ring 'history-length 25))</span>
-
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Individual history elements can be configured separately
+</span>  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'minibuffer-history 'history-length 25)
+</span>  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'evil-ex-history 'history-length 50)
+</span>  <span class="org-comment-delimiter">;;</span><span class="org-comment">(put 'kill-ring 'history-length 25))
+</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org022ab7e" class="outline-3">
-<h3 id="org022ab7e">Completions with Vertico</h3>
-<div class="outline-text-3" id="text-org022ab7e">
+<div id="outline-container-org0276b67" class="outline-3">
+<h3 id="org0276b67">Completions with Vertico</h3>
+<div class="outline-text-3" id="text-org0276b67">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">defun</span> <span class="org-function-name">dw/minibuffer-backward-kill</span> (arg)
-  <span class="org-doc">"When minibuffer is completing a file name delete up to parent</span>
-<span class="org-doc">folder, otherwise delete a word"</span>
+  <span class="org-doc">"When minibuffer is completing a file name delete up to parent
+folder, otherwise delete a word"</span>
   (<span class="org-keyword">interactive</span> <span class="org-string">"p"</span>)
   (<span class="org-keyword">if</span> minibuffer-completing-file-name
-      <span class="org-comment-delimiter">;; </span><span class="org-comment">Borrowed from https://github.com/raxod502/selectrum/issues/498#issuecomment-803283608</span>
-      (<span class="org-keyword">if</span> (string-match-p <span class="org-string">"/."</span> (minibuffer-contents))
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Borrowed from https://github.com/raxod502/selectrum/issues/498#issuecomment-803283608
+</span>      (<span class="org-keyword">if</span> (string-match-p <span class="org-string">"/."</span> (minibuffer-contents))
           (zap-up-to-char (- arg) ?/)
         (delete-minibuffer-contents))
       (delete-word (- arg))))
 
 (<span class="org-keyword">use-package</span> <span class="org-constant">vertico</span>
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">:straight '(vertico :host github</span>
-  <span class="org-comment-delimiter">;;                     </span><span class="org-comment">:repo "minad/vertico"</span>
-  <span class="org-comment-delimiter">;;                     </span><span class="org-comment">:branch "main")</span>
-  <span class="org-builtin">:bind</span> (<span class="org-builtin">:map</span> vertico-map
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">:straight '(vertico :host github
+</span>  <span class="org-comment-delimiter">;;                     </span><span class="org-comment">:repo "minad/vertico"
+</span>  <span class="org-comment-delimiter">;;                     </span><span class="org-comment">:branch "main")
+</span>  <span class="org-builtin">:bind</span> (<span class="org-builtin">:map</span> vertico-map
          (<span class="org-string">"C-j"</span> . vertico-next)
          (<span class="org-string">"C-k"</span> . vertico-previous)
          (<span class="org-string">"C-f"</span> . vertico-exit)
@@ -1495,9 +1495,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-org8cc3abb" class="outline-3">
-<h3 id="org8cc3abb">Completions in Regions with Corfu</h3>
-<div class="outline-text-3" id="text-org8cc3abb">
+<div id="outline-container-org31ca171" class="outline-3">
+<h3 id="org31ca171">Completions in Regions with Corfu</h3>
+<div class="outline-text-3" id="text-org31ca171">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">corfu</span>
@@ -1517,9 +1517,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-orgbc12e02" class="outline-3">
-<h3 id="orgbc12e02">Improved Candidate Filtering with Orderless</h3>
-<div class="outline-text-3" id="text-orgbc12e02">
+<div id="outline-container-orgea837cf" class="outline-3">
+<h3 id="orgea837cf">Improved Candidate Filtering with Orderless</h3>
+<div class="outline-text-3" id="text-orgea837cf">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">orderless</span>
@@ -1544,9 +1544,9 @@ Trying this as an alternative to Ivy and Counsel.
 </div>
 </div>
 
-<div id="outline-container-org2a717bc" class="outline-3">
-<h3 id="org2a717bc">Consult Commands</h3>
-<div class="outline-text-3" id="text-org2a717bc">
+<div id="outline-container-org2d33b61" class="outline-3">
+<h3 id="org2d33b61">Consult Commands</h3>
+<div class="outline-text-3" id="text-org2d33b61">
 <p>
 Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </p>
@@ -1584,9 +1584,9 @@ Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </div>
 </div>
 
-<div id="outline-container-orgb625bfd" class="outline-3">
-<h3 id="orgb625bfd">Switching Directories with consult-dir</h3>
-<div class="outline-text-3" id="text-orgb625bfd">
+<div id="outline-container-org5d20754" class="outline-3">
+<h3 id="org5d20754">Switching Directories with consult-dir</h3>
+<div class="outline-text-3" id="text-org5d20754">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">consult-dir</span>
@@ -1598,8 +1598,8 @@ Consult provides a lot of useful completion commands similar to Ivy's Counsel.
   <span class="org-builtin">:custom</span>
   (consult-dir-project-list-function nil))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">Thanks Karthik!</span>
-(<span class="org-keyword">with-eval-after-load</span> 'eshell-mode
+<span class="org-comment-delimiter">;; </span><span class="org-comment">Thanks Karthik!
+</span>(<span class="org-keyword">with-eval-after-load</span> 'eshell-mode
   (<span class="org-keyword">defun</span> <span class="org-function-name">eshell/z</span> (<span class="org-type">&amp;optional</span> regexp)
     <span class="org-doc">"Navigate to a previously visited directory in eshell."</span>
     (<span class="org-keyword">let</span> ((eshell-dirs (delete-dups (mapcar 'abbreviate-file-name
@@ -1621,9 +1621,9 @@ Consult provides a lot of useful completion commands similar to Ivy's Counsel.
 </div>
 </div>
 
-<div id="outline-container-org3079045" class="outline-3">
-<h3 id="org3079045">Completion Annotations with Marginalia</h3>
-<div class="outline-text-3" id="text-org3079045">
+<div id="outline-container-org3fd7aa0" class="outline-3">
+<h3 id="org3fd7aa0">Completion Annotations with Marginalia</h3>
+<div class="outline-text-3" id="text-org3fd7aa0">
 <p>
 Marginalia provides helpful annotations for various types of minibuffer completions.  You can think of it as a replacement of <code>ivy-rich</code>.
 </p>
@@ -1653,9 +1653,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-org707554e" class="outline-3">
-<h3 id="org707554e">Completion Actions with Embark</h3>
-<div class="outline-text-3" id="text-org707554e">
+<div id="outline-container-org686fd58" class="outline-3">
+<h3 id="org686fd58">Completion Actions with Embark</h3>
+<div class="outline-text-3" id="text-org686fd58">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">embark</span>
@@ -1664,22 +1664,22 @@ Marginalia provides helpful annotations for various types of minibuffer completi
          (<span class="org-string">"C-d"</span> . embark-act))
   <span class="org-builtin">:config</span>
 
-  <span class="org-comment-delimiter">;; </span><span class="org-comment">Show Embark actions via which-key</span>
-  (<span class="org-keyword">setq</span> embark-action-indicator
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">Show Embark actions via which-key
+</span>  (<span class="org-keyword">setq</span> embark-action-indicator
         (<span class="org-keyword">lambda</span> (map)
           (which-key--show-keymap <span class="org-string">"Embark"</span> map nil nil 'no-paging)
           #'which-key--hide-popup-ignore-command)
         embark-become-indicator embark-action-indicator))
 
-<span class="org-comment-delimiter">;; </span><span class="org-comment">(use-package embark-consult</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">:straight '(embark-consult :host github</span>
-<span class="org-comment-delimiter">;;                              </span><span class="org-comment">:repo "oantolin/embark"</span>
-<span class="org-comment-delimiter">;;                              </span><span class="org-comment">:files ("embark-consult.el"))</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">:after (embark consult)</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">:demand t</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">:hook</span>
-<span class="org-comment-delimiter">;;   </span><span class="org-comment">(embark-collect-mode . embark-consult-preview-minor-mode))</span>
-
+<span class="org-comment-delimiter">;; </span><span class="org-comment">(use-package embark-consult
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">:straight '(embark-consult :host github
+</span><span class="org-comment-delimiter">;;                              </span><span class="org-comment">:repo "oantolin/embark"
+</span><span class="org-comment-delimiter">;;                              </span><span class="org-comment">:files ("embark-consult.el"))
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">:after (embark consult)
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">:demand t
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">:hook
+</span><span class="org-comment-delimiter">;;   </span><span class="org-comment">(embark-collect-mode . embark-consult-preview-minor-mode))
+</span>
 </pre>
 </div>
 
@@ -1696,9 +1696,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-org88c75fb" class="outline-3">
-<h3 id="org88c75fb">Launching apps</h3>
-<div class="outline-text-3" id="text-org88c75fb">
+<div id="outline-container-org649cc65" class="outline-3">
+<h3 id="org649cc65">Launching apps</h3>
+<div class="outline-text-3" id="text-org649cc65">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">app-launcher</span>)
@@ -1720,9 +1720,9 @@ Marginalia provides helpful annotations for various types of minibuffer completi
 </div>
 </div>
 
-<div id="outline-container-org26529ec" class="outline-2">
-<h2 id="org26529ec">Jumping with Avy</h2>
-<div class="outline-text-2" id="text-org26529ec">
+<div id="outline-container-org8f62281" class="outline-2">
+<h2 id="org8f62281">Jumping with Avy</h2>
+<div class="outline-text-2" id="text-org8f62281">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">
 (<span class="org-keyword">use-package</span> <span class="org-constant">avy</span>

@@ -7,7 +7,14 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Wed, 04 Jun 2025 02:32:15 +0000</lastBuildDate>
+<lastBuildDate>Mon, 28 Jul 2025 01:43:30 +0000</lastBuildDate>
+<item>
+  <title>HTML Button&apos;s Weird Behavior</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/html_button_issue.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/html_button_issue.html</guid>
+  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Jbang exploration</title>
   <description><![CDATA[<nil></nil>]]></description>
