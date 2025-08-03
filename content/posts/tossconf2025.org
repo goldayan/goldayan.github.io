@@ -1,0 +1,87 @@
+#+title: TossConf 2025
+#+subtitle: My experience in tossconf 2025 before and after
+#+date: <2025-08-03 Sun>
+#+author: Gold Ayan
+
+This year, I got an opportunity to be a volunteer at the JSLover conference
+which helped me a lot for TOSSConf 2025 preparation, as well as last
+year SFD(Software Freedom Day) 2024 event.
+
+KanchiLug volunteers, Pailagam Institute and St.joseph students are
+The reasons we can successfully hold this conference with great
+success.
+
++I+ We implemented a lot of things at the conference
+- Two separate tracks for both the Workshop and talks
+- Stalls
+- Dhuruvangal book for speakers
+- A5 Stickers sheet (stole the idea from JSLover conference)
+
+Each of the above tasks comes with its own set of issues, but with
+Volunteers, we can finalise the details before the conference starts.
+
+*** Workshop
+- Self-hosting workshop
+  - It went great. The only thing I regret is that we are only able to cover Jellyfin.
+- Clojure
+  - This workshop is not only about programming language but about a thought process.
+  - How to approach the problem.
+  - Functional paradigms that we can utilise in other programming languages.
+  - Finally, I got another reason to solve problems in Clojure.
+
+*** Talks
+- I was in Track 2, so I only got to listen to things that are happening there.
+- Demystifying Artificial Intelligence: A Beginner’s Guide to Smart Machines
+  - Dr. U. Sabura Banu gave this talk.
+  - How to solve problems around us using simple devices and tools.
+  - Examples given by the mam are very interesting.
+- Dissect, Build Network packets
+  - Rengaraj, one of the organisers of chennaipy community, gave this talk.
+  - Scapy is an excellent tool. He demonstrated what we can do with this.
+- A day in the open source world
+  - Bowrna Prabhakaran gave this talk.
+  - Impressed by her story and phonetic search support for the Tamil story
+  - I think we can use this to create a cheap autosuggestion for the editor
+    - If anyone is interested, ping me.
+- Speed It Up! Building Efficient Indexes in MongoDB
+  - Naveen Kumar gave this talk.
+  - He went all out with this talk.
+  - I never thought talking about indexes would be this interesting.
+  - Interactive Quiz using Open source tool at the end is super cool.
+    - tool: https://classquiz.de/
+- Building Web with Batteries Included.
+  - Namma Hari gave this talk, FossUnited organiser
+  - He gave a demo about creating a website on https://frappe.io/
+  - I can't explain this software in words, damn this thing is crazy.
+  - Building SAS software in minutes is mind-blowing.
+  - Dhanasekar, the previous ilugc co-ordinator, gave a demo about this in
+    Kanchilug but Hari took it to the next level.
+  - He asked if the crowd is not big, we can do a workshop. Wish I had said yes to him.
+
+*** Conference
+**** Pros
+- Met a lot of old and new friends at this conference.
+- Stickers
+  - we decided which sticker to print so got firefox, vlc, blender, ..
+  - Also tons of sticker from stalls but not able to get few.
+  - My laptop has no room for stickers now.
+- Got my own hard copy of the book Dhuruvangal.
+  - Gave my copy to my college friend to read.
+- Invited my brothers for this event, they too enjoyed the event.
+- Conducted Selfhosting workshop with salman over a huge crowd (I never did that before :p).
+  - Conducting workshop with more than one member helps us identify and address the issue properly.
+  - So next time i am doing workshop i plan on doing it with more people.
+  - It also help us with crowd control and resolve their problems quickly.
+**** Cons 
+- Not able to attend few talks
+  - As i was handling one of the track i am not able to listen to talks that are happening in other track.
+- Only had a few time to roam around the stall so i took bunch of photo but not able to talk to lot of them.
+- Day 2 was more tough, i missed meeting few people who came to the conference.
+- I felt the crowd control was bit off now and then but worked out in the end.
+- Sometimes we felt we have fewer volunteers, especially during lunch.
+
+Overall i learned a lot and i am honoured that i get to take part in
+Tamil Nadu's only Tamil based Open Source conferenece.
+
+
+
