@@ -7,7 +7,14 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Mon, 28 Jul 2025 01:43:30 +0000</lastBuildDate>
+<lastBuildDate>Sun, 03 Aug 2025 17:08:30 +0000</lastBuildDate>
+<item>
+  <title>TossConf 2025</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/tossconf2025.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/tossconf2025.html</guid>
+  <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>HTML Button&apos;s Weird Behavior</title>
   <description><![CDATA[<nil></nil>]]></description>
