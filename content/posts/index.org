@@ -1,6 +1,7 @@
 #+title: Goldayan articles
 
 ** 2025
+*** -> [[file:cheap_storage_server.org][Cheap storage server]]
 *** -> [[file:tossconf2025.org][Tossconf 2025 experience]]
 *** -> [[file:html_button_issue.org][Html button issue]]
 *** -> [[file:jbang.org][Jbang talk on CodeOnJVM meetup]]
