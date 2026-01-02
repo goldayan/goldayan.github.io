@@ -7,6 +7,7 @@ We can also name it ~Mini articles~
 - We can swap the Function key and Ctrl key in BIOS
 - F1 to enter bios and go to Config menu.
 - Under Keyboard and mouse *Fn and Ctrl Key swap* make it enabled.
+  
 *** Access google email as RSS
 - Create app password using following link: https://myaccount.google.com/apppasswords
 #+begin_src shell
