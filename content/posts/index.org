@@ -1,6 +1,32 @@
 #+title: Goldayan articles
 
+** 2026
+*** TODO -> Tiny experiment
+*** TODO -> [Book] Emacs Elements 
+*** TODO Make phone less distracting (kiss, ola and notification)
+*** TODO Network isolation in homelab
+- Guest wifi
+- Two router
+*** TODO Buy it for life (casio F-91W, thinkpad t480, T14)
+*** TODO oneko.html
+*** TODO Live reloader js
+*** TODO Text editor in single js
+*** TODO Web speech recognition API
+*** TODO Simple archive selfhost using single file html and babashka
+*** TODO Emacs custom identation
+*** TODO My pixel phone display fault experience
+- Esim issue
+- ADB and wireless adb to resuce with scrcpy
+- Backuping up data, default usb mode selection in developer option
+- Caffinate - always on display
+- Lesson learnt
+*** TODO Adb android app install like pro
+- download apk from fdroid
+- install using adb
+*** TODO Bullet journelling good and bad
+
 ** 2025
+*** -> [[file:anna_library.org][Visited Anna Centenary Library]]
 *** -> [[file:cheap_storage_server.org][Cheap storage server]]
 *** -> [[file:tossconf2025.org][Tossconf 2025 experience]]
 *** -> [[file:html_button_issue.org][Html button issue]]
