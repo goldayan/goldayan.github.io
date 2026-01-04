@@ -1,0 +1,73 @@
+#+title: Visited Anna Centenary Library
+#+subtitle: first time visiting anna library
+#+date: <2025-12-13 Sat>
+#+author: Gold Ayan
+
+This was my first time visiting the library, and it is impressive with
+its **8 floors** (plus a ground floor). The process is very simple:
+you don't need to pay any fees. Just drop your bag at the nearby
+counter (free of charge). You are allowed to carry a notebook and a
+water bottle inside. To enter, you just need to sign in—either in a
+physical register or online.
+
+If you bring a **laptop**, there is a separate sign-in process for
+security when entering and exiting. Each floor is divided into two
+sections: **Section A (அ)** and **Section B (ஆ)**.
+*** Floor 1
+
+I spent about 30–45 minutes here. **Section A** houses newspapers and
+magazines, while **Section B** is dedicated to children's books. I
+found several tech and science magazines particularly interesting,
+including:
+
+| Number | Magazine Name     |
+|--------+-------------------|
+|     44 | Tamil Computer    |
+|    112 | Data quest        |
+|    113 | Digit             |
+|    114 | Down to earth     |
+|    117 | Electronics for u |
+|    146 | PC Quest          |
+|    154 | Stuff             |
+|    184 | The book review   |
+
+I started with the December 1st edition of *Tamil Computer*. It
+featured fascinating articles on the importance of savings, Linux apps
+on Pixel, using the Linux terminal on Android, the benefits of
+websites, and how LLMs (Large Language Models) work. I even spotted
+articles by my friends: one on **Spell Checkers** by Kaniyam Shrini
+and another on **USB Workings** by Kaleeshwar. It reminded me of a
+conversation I had with Shrini last year about open-source
+spell-checking tools.
+
+*** Floor 3 section A 
+Here i explored computer book specially and found quite a lot of interesting books.
+- Domain Driven Design
+I found books from following publication
+- OReilly
+- APress
+- Head First books (WOW)
+- dummies series (eg: Network for Dummies)
+- BPB publication
+
+I spent most of my time reading *Implementing NLP Use Cases Using
+BERT*. My interest in this was sparked by AI/ML engineers I've met at
+conferences and meetups who recommended studying **BERT**
+(Bidirectional Encoder Representations from Transformers).
+
+*** Floor 5 section A
+Next, I explored the Mathematics section. Two books stood out:
+- Business calculus DeMystified
+- Make: Calculus
+  - This one is amazing! It teaches calculus using **OpenSCAD** (3D
+    modeling software), which is a very unique approach. I’ll
+    definitely be coming back for this one.
+
+*** Final Thoughts
+  My only regret was **not bringing my laptop**. While the library is a
+bit of a long commute for me, it is absolutely worth the trip. If you
+are in or around Chennai, you should definitely check it out!
+
+*** Useful links
+- Library catalogue and Membership
+  - https://www.annacentenarylibrary.org/pages/view/library-catalogue
