@@ -7,8 +7,8 @@ I often work on legacy codebases. Using Emacs at work is not a lot of
 fun due to the mix of indentation. As some lines in the project files
 have used TAB, some lines have 2, 4, or sometimes 8 spaces.
 
-I thought, how about making the indentation in a particular buffer
-That should solve the problem.
+I thought, how about turning the indentation in a particular buffer
+off. That should solve the problem.
 
 I asked Gemini to create an interactive function to do that. which
 toggle the new and old indentation when it is called.
@@ -43,7 +43,7 @@ toggle the new and old indentation when it is called.
 #+end_src
 
 - Here we are making the indent-line-function as just insert-tab, By
-  default, this will have programming language/file basic indentation
+  default, this will have programming language/file specific indentation
   function such as c-indent-line or python-indent-line.
 - Then we are turning off tab-always-indent to nil. When it is true,
   it indents the current line when the tab is pressed; when it is nil,
@@ -94,9 +94,9 @@ previous line when a new line is inserted? This should do it...
 
 Here I removed tab-based behavior for now and applied new behavior to
 ~enter key~ followed by disabling electric-indent-local-mode. I worked
-with legacy source code, much, much better.
+with legacy source code, much, much better now.
 
 I have called this function for each file in the project I am working
-on on.Planning to add this function to .dir-locals.el after some time,
-I will update the article once I work on it.
+on.Planning to add this function to .dir-locals.el after some time, I
+will update the article once I work on it.
 
