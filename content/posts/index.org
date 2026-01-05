@@ -13,7 +13,6 @@
 *** TODO Text editor in single js
 *** TODO Web speech recognition API
 *** TODO Simple archive selfhost using single file html and babashka
-*** TODO Emacs custom identation
 *** TODO My pixel phone display fault experience
 - Esim issue
 - ADB and wireless adb to resuce with scrcpy
@@ -24,6 +23,7 @@
 - download apk from fdroid
 - install using adb
 *** TODO Bullet journelling good and bad
+*** -> [[file:emacs_identation.org][Emacs custom identation for legacy code]]
 
 ** 2025
 *** -> [[file:anna_library.org][Visited Anna Centenary Library]]
