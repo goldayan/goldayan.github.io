@@ -1,0 +1,29 @@
+#+title: Cheap way to isolate devices in home network
+#+subtitle: Some methods to isolate devices on home network on budget
+#+date: <2025-12-31 Wed>
+#+author: Gold Ayan
+
+Network isolation for vulnerable devices in home
+
+** Smart TV
+- I my case it uses intranet to stream video and cast video from phone.
+- I can assign static ip address to smart tv and Access Control / Parental Controls: Create a rule to Block Internet Access for that specific IP.
+- I can allow when needed to install app or stream something in it.
+- If your case, you only use internet then the following solution can work out for you.
+
+** IOT devices
+- Enable guest network
+- The Isolation: In your router settings, look for a checkbox that says "Allow guests to see each other" or "Access Intranet/Local Network." Make sure these are OFF.
+- If you use consume content from internet for TV use this network.
+- If you use DIY IOT devices and use local api then connect it to the main wifi access point
+
+** Homelab server
+- Assign static ip address based on Mac
+- For ease of use, you can assosiate free duckdns domain to it.
+- Why ? Getting SSL certificates for local server it pretty easy this way
+- I have personally tried caddy.
+- If you want to secure further, you can access it through tailscale and map the tailscale ip to the duckdns domain.
+
+** Personal devices
+- Your phone, laptops are connected to normal wifi access point
+- Your phone cann't access IOT devices
