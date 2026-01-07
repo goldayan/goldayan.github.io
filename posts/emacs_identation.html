@@ -1,0 +1,120 @@
+<!DOCTYPE html><html><head><!-- 2026-01-02 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs custom Indentation for legacy code</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+I often work on legacy codebases. Using Emacs at work is not a lot of
+fun due to the mix of indentation. As some lines in the project files
+have used TAB, some lines have 2, 4, or sometimes 8 spaces.
+</p>
+
+<p>
+I thought, how about turning the indentation in a particular buffer
+off. That should solve the problem.
+</p>
+
+<p>
+I asked Gemini to create an interactive function to do that. which
+toggle the new and old indentation when it is called.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil
+  <span class="org-doc">"Tracks whether free-flow mode is active in the current buffer."</span>)
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-original-indent-func</span> nil
+  <span class="org-doc">"Stores the original indentation function to restore it later."</span>)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Free Flow' (no auto-indent)."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">ENABLE FREE FLOW
+</span>      (<span class="org-keyword">progn</span>
+        (<span class="org-keyword">setq</span> my-original-indent-func indent-line-function)
+        (<span class="org-keyword">setq-local</span> indent-line-function 'insert-tab)
+        (<span class="org-keyword">setq-local</span> tab-always-indent nil)
+        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Emacs will not touch your indentation)"</span>))
+
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">DISABLE FREE FLOW (Restore Defaults)
+</span>    (<span class="org-keyword">progn</span>
+      (<span class="org-keyword">setq-local</span> indent-line-function (<span class="org-keyword">or</span> my-original-indent-func 'indent-relative))
+      (<span class="org-keyword">setq-local</span> tab-always-indent t)
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Standard indentation restored)"</span>)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Here we are making the indent-line-function as just insert-tab, By
+default, this will have programming language/file specific indentation
+function such as c-indent-line or python-indent-line.</li>
+<li>Then we are turning off tab-always-indent to nil. When it is true,
+it indents the current line when the tab is pressed; when it is nil,
+it does not. If the cursor is at the start of a line, it indents;
+otherwise, it inserts &lt;tab&gt; key.</li>
+<li>Turning off the electric indent local mode, a feature that automatically
+indents the line the moment you press RET (Enter) or type certain
+characters (like a { or }).</li>
+</ul>
+
+<p>
+After navigating with the legacy code with new indentation, I was not
+satisfied with the result. There has to be a better way.
+</p>
+
+<p>
+Suddenly, an idea pops out: how about using the indentation of the
+previous line when a new line is inserted? This should do it&#x2026;
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defun</span> <span class="org-function-name">my/indent-like-previous-line</span> ()
+  <span class="org-doc">"Insert a newline and indent it exactly like the previous line."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((indent (<span class="org-keyword">save-excursion</span>
+                  (forward-line 0)
+                  (<span class="org-keyword">let</span> ((start (point)))
+                    (back-to-indentation)
+                    (buffer-substring-no-properties start (point))))))
+    (newline)
+    (insert indent)))
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Previous Line' flow."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      (<span class="org-keyword">progn</span>
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Map RET to our new 'copy previous indent' function
+</span>        (local-set-key (kbd <span class="org-string">"RET"</span>) 'my/indent-like-previous-line)
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable Emacs's automatic '</span><span class="org-comment"><span class="org-constant">electric</span></span><span class="org-comment">' indentation
+</span>        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Indenting based on previous line)"</span>))
+    (<span class="org-keyword">progn</span>
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Restore default Return behavior
+</span>      (local-unset-key (kbd <span class="org-string">"RET"</span>))
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Default Emacs indentation restored)"</span>)))
+</pre>
+</div>
+
+<p>
+Here I removed tab-based behavior for now and applied new behavior to
+<code>enter key</code> followed by disabling electric-indent-local-mode. I worked
+with legacy source code, much, much better now.
+</p>
+
+<p>
+I have called this function for each file in the project I am working
+on.Planning to add this function to .dir-locals.el after some time, I
+will update the article once I work on it.
+</p>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

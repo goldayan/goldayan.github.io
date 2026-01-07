@@ -7,7 +7,21 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sun, 04 Jan 2026 14:37:57 +0000</lastBuildDate>
+<lastBuildDate>Wed, 07 Jan 2026 03:25:09 +0000</lastBuildDate>
+<item>
+  <title>Emacs custom Indentation for legacy code</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/emacs_identation.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/emacs_identation.html</guid>
+  <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Cheap way to isolate devices in home network</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/homelab_network.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/homelab_network.html</guid>
+  <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Visited Anna Centenary Library</title>
   <description><![CDATA[<nil></nil>]]></description>
