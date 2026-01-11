@@ -1,0 +1,60 @@
+#+title: My phone is dead and my learning
+#+subtitle: Phone issue and learnings from it.
+#+date: <2026-01-03 Sat>
+#+author: Gold Ayan
+
+It was Saturday morning, and I thought of checking my WhatsApp status
+and message on my Android phone, and the display went black. I can see
+partial screen now and then, with a green line at the top, sometimes a
+green square covering 1/3rd of the screen. My thoughts are holy crap,
+not again, I need to buy or replace my phone again, as I got this
+phone not a year ago.
+
+After checking the phone, only the display is not working rest of the
+functionality seems to be working. My company provides the phone I am
+currently using, so I want talk to them first.
+
+Okay, fine. Let's see what I can do in this situation and write 4
+points.
+1) E-sim issue
+   - I need to find a device that has e-SIM capability, and a phone
+     with this capability is not cheap.
+   - I have to go to the Airtel showroom (I did).
+   - New proof, the problem is this in my father's name.
+2) Buy a new Android phone
+   - A decent Android phone costs around 30K ruppees. It's a new year,
+     and I don't want to spend the bulk of my amount on a new mobile.
+   - I know my primary sim is gone for a few days, so let's have an
+     emergency number for contact with family.
+   - Why not buy a dumb keypad phone that supports all mobile
+     operators?
+   - I bought the HMD 4G keypad mobile for 2400 rupees for emergency
+     contact with my family and friends.
+     - I will write more about the HMD phone in a separate blog.
+3) Backup important data
+   - I charged the phone for 2 to 3 hours and prayed it would be back
+     to normal for a few minutes so I could back up important data.
+   - Photos, Documents, and some videos.
+   - It came back to normal, then plugged into my laptop and gave file
+     transfer permission.
+4) Enable USB debugging and wireless debugging for screen mirroring.
+   - Parallely, when backing up, I have enabled USB debugging and
+     wireless debugging.
+   - Done adb pairing with laptop using **adb pair <ip addr>:<port>**
+   - Downloaded **scrcpy** static binary build and I can screen mirror
+     it in laptop woooh SAFEEE..
+   - To keep the screen awake, I installed **caffinate** from F-Droid.
+
+*** After some time
+After a while, my phone seems to be back to normal after I keep the
+phone turned on for a day (caffinate app). So I guess the issue is
+software, I have factory reset the phone, now it works properly, but
+still the display flickers.
+
+*** Learnings
+- Have an emergency dumb phone. You can get one for less than 3000 rupees.
+- I don't plan on using E-sim here after (Until it is available in a
+  mid-budget phone).
+- You can enable default option to be done when USB is connected in developer settings.
+  - If developer settings is enabled some app won't work - IRCTC, Banking apps.
+- JIO SIM won't work unless it is a 4G phone.

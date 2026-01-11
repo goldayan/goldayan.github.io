@@ -100,8 +100,8 @@
              :with-author nil           ;; Don't include author name
              :with-creator nil          ;; Include Emacs and Org versions in footer
              :with-toc nil              ;; Include a table of contents
-             :section-numbers nil       ;; Don't include section numbers
-             :time-stamp-file nil)      ;; Don't include time stamp in file
+             :section-numbers nil)      ;; Don't include section numbers
+             ;;:time-stamp-file nil)      ;; Don't include time stamp in file
        (list "goldayan:assets"          ;; Copy all the assets - images, css and js
              :recursive t
              :base-directory "./assets"

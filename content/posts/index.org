@@ -10,16 +10,13 @@
 *** TODO Text editor in single js
 *** TODO Web speech recognition API
 *** TODO Simple archive selfhost using single file html and babashka
-*** TODO My pixel phone display fault experience
-- Esim issue
-- ADB and wireless adb to resuce with scrcpy
-- Backuping up data, default usb mode selection in developer option
-- Caffinate - always on display
-- Lesson learnt
 *** TODO Adb android app install like pro
 - download apk from fdroid
 - install using adb
 *** TODO Bullet journelling good and bad
+*** TODO .llama file and its magic
+*** TODO -> [[file:jan9_javascript_learning.org][Javascript learnings this week]]
+*** -> [[file:pixel_phone_issue.org][My phone is dead and my learnings]]
 *** -> [[file:emacs_identation.org][Emacs custom identation for legacy code]]
 
 ** 2025

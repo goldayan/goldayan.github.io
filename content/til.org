@@ -1,6 +1,24 @@
 #+title: Today i learned
 
 We can also name it ~Mini articles~
+** 2026
+*** Ntfy notification from emacs [2026-01-07 Wed]
+#+begin_src elisp
+  (defun my/ntfy-send (message &optional title priority tags)
+  "Send a notification to ntfy.sh."
+  (let* ((url-request-method "POST")
+         (url-request-data (encode-coding-string message 'utf-8))
+         (url-request-extra-headers
+          `(("Title" . ,(or title "Emacs Alert"))
+            ("Priority" . ,(or priority "3"))
+            ("Tags" . ,(or tags "purple_circle"))))
+         (topic "<TOPIC>") ;; -----------------------> Your topic here
+         (url (concat "https://ntfy.sh/" topic))) ;; ------------> Official or selfhosted ntfy server url
+    (url-retrieve url (lambda (status) (message "ntfy: Sent!")))))
+
+
+(my/ntfy-send "Hello from emacs" "EMACSSS" "1" "book")
+#+end_src
 
 ** 2025
 *** Thinkpad T480 Fn, Ctrl swap
