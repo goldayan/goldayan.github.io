@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><head><!-- 2025-07-27 --><meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!DOCTYPE html><html><head><!-- 2025-07-27 --><!-- 2026-01-11 Sun 16:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HTML Button's Weird Behavior</title>
 <meta name="generator" content="Org Mode" />
@@ -18,9 +19,9 @@ on that page, but only Button B's `onclick` is triggered.
 Upon closer inspection:
 </p>
 
-<div id="outline-container-orgb955576" class="outline-2">
-<h2 id="orgb955576">Button A code:</h2>
-<div class="outline-text-2" id="text-orgb955576">
+<div id="outline-container-orgb5fc347" class="outline-2">
+<h2 id="orgb5fc347">Button A code:</h2>
+<div class="outline-text-2" id="text-orgb5fc347">
 <div class="org-src-container">
 <pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button A&lt;/<span class="org-function-name">button</span>&gt;
 </pre>
@@ -28,9 +29,9 @@ Upon closer inspection:
 </div>
 </div>
 
-<div id="outline-container-org9df3f8d" class="outline-2">
-<h2 id="org9df3f8d">Button B code:</h2>
-<div class="outline-text-2" id="text-org9df3f8d">
+<div id="outline-container-orge5972ba" class="outline-2">
+<h2 id="orge5972ba">Button B code:</h2>
+<div class="outline-text-2" id="text-orge5972ba">
 <div class="org-src-container">
 <pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample2"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button B&lt;/<span class="org-function-name">button</span>&gt;
 </pre>
@@ -52,9 +53,9 @@ is `submit`, which caused this issue.
 </div>
 </div>
 
-<div id="outline-container-orgecce456" class="outline-2">
-<h2 id="orgecce456">Proof of Concept:</h2>
-<div class="outline-text-2" id="text-orgecce456">
+<div id="outline-container-org75273c3" class="outline-2">
+<h2 id="org75273c3">Proof of Concept:</h2>
+<div class="outline-text-2" id="text-org75273c3">
 <ul class="org-ul">
 <li>Keep the cursor in the input text field and press enter; the submit
 button's `onclick` will be called.</li>
