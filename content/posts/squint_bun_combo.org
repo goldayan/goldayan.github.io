@@ -1,0 +1,54 @@
+#+title: Squint-cljs with bun
+#+subtitle: Using squint cljs with bun
+#+date: <2026-01-21 Wed>
+#+author: Gold Ayan
+
+Ensure you have bun installed in your system
+
+Tip:
+- Install bun using stand lone executable file.
+- We can upgrade it using ~bun upgrade~.
+
+*** Very simple Squint project
+- Create a temp directory and change into it
+#+begin_src shell
+  mkdir squint-demo
+  cd squint-demo
+#+end_src
+- Once you are inside
+#+begin_src shell
+  bun add squint-cljs
+#+end_src
+- If you are using node and bun parallel, then in windows i faced the issue while running ~bun squint --help~.
+    #+begin_src shell
+  bun .\node_modules\squint-cljs\node_cli.js --help
+    #+end_src
+- create a sample.cljs file
+#+begin_src clojure
+  (ns main)
+
+(defn greet [name]
+  (str "Hello, " name " from Squint!"))
+
+;; Simple DOM manipulation
+(let [app (.getElementById js/document "app")]
+  (set! (.-innerText app) (greet "User")))
+
+(js/console.log "Squint is running!")
+#+end_src
+- Compile the above script to js or mjs
+#+begin_src shell
+  bun .\node_modules\squint-cljs\node_cli.js compile .\sample.cljs
+#+end_src
+- Build for browser using
+#+begin_src shell
+  bun build .\sample.mjs --outfile .\sample.js
+  bun build .\sample.mjs --outfile .\sample.js --minify // for minification
+#+end_src
+- If you have more than one js file in a folder
+#+begin_src shell
+  bun .\node_modules\squint-cljs\node_cli.js compile src --out-dir out
+  bun build ./out/main.js --outdir ./dist --minify --target browser
+#+end_src
+
+
