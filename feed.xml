@@ -7,7 +7,28 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sun, 11 Jan 2026 16:41:48 +0000</lastBuildDate>
+<lastBuildDate>Thu, 22 Jan 2026 07:14:11 +0000</lastBuildDate>
+<item>
+  <title>Scittle and P5 js with REPL</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/scittle_with_p5.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/scittle_with_p5.html</guid>
+  <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Squint-cljs with bun</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/squint_bun_combo.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/squint_bun_combo.html</guid>
+  <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Javascript learning this week</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/jan9_javascript_learning.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/jan9_javascript_learning.html</guid>
+  <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>My phone is dead and my learning</title>
   <description><![CDATA[<nil></nil>]]></description>

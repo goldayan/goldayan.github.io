@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head><!-- 2026-01-21 --><!-- 2026-01-22 Thu 07:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Squint-cljs with bun</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+Ensure you have bun installed in your system
+</p>
+
+<p>
+Tip:
+</p>
+<ul class="org-ul">
+<li>Install bun using stand lone executable file.</li>
+<li>We can upgrade it using <code>bun upgrade</code>.</li>
+</ul>
+
+<div id="outline-container-org24c1477" class="outline-2">
+<h2 id="org24c1477">Very simple Squint project</h2>
+<div class="outline-text-2" id="text-org24c1477">
+<ul class="org-ul">
+<li>Create a temp directory and change into it</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">mkdir squint-demo
+<span class="org-builtin">cd</span> squint-demo
+</pre>
+</div>
+<ul class="org-ul">
+<li>Once you are inside</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun add squint-cljs
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+If you are using node and bun parallel, then in windows i faced the issue while running <code>bun squint --help</code>.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js --help
+</pre>
+</div></li>
+<li>create a sample.cljs file</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-clojure">  (ns main)
+
+(defn greet [name]
+  (str "Hello, " name " from Squint!"))
+
+;; Simple DOM manipulation
+(let [app (.getElementById js/document "app")]
+  (set! (.-innerText app) (greet "User")))
+
+(js/console.log "Squint is running!")
+</pre>
+</div>
+<ul class="org-ul">
+<li>Compile the above script to js or mjs</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js compile .\sample.cljs
+</pre>
+</div>
+<ul class="org-ul">
+<li>Build for browser using</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun build .\sample.mjs --outfile .\sample.js
+bun build .\sample.mjs --outfile .\sample.js --minify // for minification
+</pre>
+</div>
+<ul class="org-ul">
+<li>If you have more than one js file in a folder</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js compile src --out-dir out
+bun build ./out/main.js --outdir ./dist --minify --target browser
+</pre>
+</div>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

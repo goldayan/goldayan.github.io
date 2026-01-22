@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><!-- 2026-01-22 --><!-- 2026-01-22 Thu 07:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scittle and P5 js with REPL</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content">
+<div id="outline-container-org2a4e4b2" class="outline-2">
+<h2 id="org2a4e4b2">HTML with scittle and p5 js script</h2>
+<div class="outline-text-2" id="text-org2a4e4b2">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-keyword">!DOCTYPE</span> html&gt;
+&lt;<span class="org-function-name">html</span>&gt;
+  &lt;<span class="org-function-name">head</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+    &lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Scittle + p5.js</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://cdn.jsdelivr.net/npm/p5@2.2.0/lib/p5.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://cdn.jsdelivr.net/npm/scittle@0.7.30/dist/scittle.js"</span> <span class="org-variable-name">type</span>=<span class="org-string">"application/javascript"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+  &lt;/<span class="org-function-name">head</span>&gt;
+  &lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"playground.cljs"</span> <span class="org-variable-name">type</span>=<span class="org-string">"application/x-scittle"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+  &lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc35e3ad" class="outline-2">
+<h2 id="orgc35e3ad">Playground.cljs file</h2>
+<div class="outline-text-2" id="text-orgc35e3ad">
+<ul class="org-ul">
+<li>Simple p5 code to create a canvas 400x400</li>
+<li>Create a circle of radius 100 with mousex, mousey as origin</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-clojure">(defn setup []
+  (doto js/window
+    (.createCanvas 400 400)
+    )
+  )
+
+(defn draw []
+  (doto js/window
+    (.background 220)
+    (.fill 100 200 255)
+    (.strokeWeight 2)
+    (.circle js/mouseX js/mouseY 100)))
+
+;; Bind Clojure functions to the global p5 instance
+(set! (.-setup js/window) setup)
+(set! (.-draw js/window) draw)
+
+
+(comment
+  (js/console.log "hello")
+  (set! (.-setup js/window) #(setup))
+  (set! (.-draw js/window) #(draw))
+
+  ;; Above and below are same
+  (set! (.-setup js/window) (fn [] (setup)))
+  (set! (.-draw js/window) (fn [] (draw)))
+
+  (defn reset-sketch []
+    (setup)
+    (.loop js/window)) ;; Ensures the draw loop is running
+
+  ;; Run this in REPL to "Hot Reload" the setup
+  (reset-sketch)
+  )
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb931e96" class="outline-2">
+<h2 id="orgb931e96">REPL driven development</h2>
+<div class="outline-text-2" id="text-orgb931e96">
+<ul class="org-ul">
+<li>I use a extension called <a href="https://github.com/PEZ/browser-jack-in">Browser jack in</a></li>
+<li><p>
+In the terminal side i execute 
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">bb -Sdeps <span class="org-string">'{:deps {io.github.babashka/sci.nrepl {:git/sha \"1042578d5784db07b4d1b6d974f1db7cabf89e3f\"}}}'</span> -e <span class="org-string">'(require (quote [sci.nrepl.browser-server :as server])) (server/start! {:nrepl-port 1339 :websocket-port 1340}) @(promise)'</span>
+</pre>
+</div></li>
+<li>Babashka to run sci nrepl server and websocket.</li>
+<li>Extension connects with nrepl through websocket.</li>
+<li>In the browser side, i have to manually press <b><b>Connect</b></b> once in the extension.q</li>
+<li>NRepl runs on port 1339</li>
+<li>From Emacs i use clojure-connect-cljs
+<ul class="org-ul">
+<li>Host: localhost</li>
+<li>Port: 1339</li>
+<li>REPL type: nbb
+<ul class="org-ul">
+<li>It worked for me :p</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+It took me a while to figure out, now i can do p5 related code in cljs and have fun.
+</p>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
