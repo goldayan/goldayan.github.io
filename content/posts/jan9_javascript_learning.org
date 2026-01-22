@@ -1,0 +1,6 @@
+#+title: Javascript learning this week
+#+subtitle: Things i learned new this week in javascript
+#+date: <2026-01-09 Fri>
+#+author: Gold Ayan
+
+hello world java 

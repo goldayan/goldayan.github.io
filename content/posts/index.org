@@ -16,6 +16,8 @@
 *** TODO Bullet journelling good and bad
 *** TODO .llama file and its magic
 *** TODO -> [[file:jan9_javascript_learning.org][Javascript learnings this week]]
+*** -> [[file:scittle_with_p5.org][Scittle and P5 js with REPL]]
+*** -> [[file:squint_bun_combo.org][Simple Squint file with bun]]
 *** -> [[file:pixel_phone_issue.org][My phone is dead and my learnings]]
 *** -> [[file:emacs_identation.org][Emacs custom identation for legacy code]]
 

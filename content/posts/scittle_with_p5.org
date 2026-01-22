@@ -1,0 +1,76 @@
+#+title: Scittle and P5 js with REPL
+#+subtitle: Scittle with P5 js demo with REPL driven development
+#+date: <2026-01-22 Thu>
+#+author: Gold Ayan
+
+*** HTML with scittle and p5 js script
+#+begin_src html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Scittle + p5.js</title>
+      <script src="https://cdn.jsdelivr.net/npm/p5@2.2.0/lib/p5.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/scittle@0.7.30/dist/scittle.js" type="application/javascript"></script>
+    </head>
+    <body>
+      <script src="playground.cljs" type="application/x-scittle"></script>
+    </body>
+  </html>
+#+end_src
+*** Playground.cljs file
+- Simple p5 code to create a canvas 400x400
+- Create a circle of radius 100 with mousex, mousey as origin
+#+begin_src clojure
+  (defn setup []
+    (doto js/window
+      (.createCanvas 400 400)
+      )
+    )
+
+  (defn draw []
+    (doto js/window
+      (.background 220)
+      (.fill 100 200 255)
+      (.strokeWeight 2)
+      (.circle js/mouseX js/mouseY 100)))
+
+  ;; Bind Clojure functions to the global p5 instance
+  (set! (.-setup js/window) setup)
+  (set! (.-draw js/window) draw)
+
+
+  (comment
+    (js/console.log "hello")
+    (set! (.-setup js/window) #(setup))
+    (set! (.-draw js/window) #(draw))
+
+    ;; Above and below are same
+    (set! (.-setup js/window) (fn [] (setup)))
+    (set! (.-draw js/window) (fn [] (draw)))
+
+    (defn reset-sketch []
+      (setup)
+      (.loop js/window)) ;; Ensures the draw loop is running
+
+    ;; Run this in REPL to "Hot Reload" the setup
+    (reset-sketch)
+    )
+#+end_src
+*** REPL driven development
+- I use a extension called [[https://github.com/PEZ/browser-jack-in][Browser jack in]]
+- In the terminal side i execute 
+  #+begin_src shell
+    bb -Sdeps '{:deps {io.github.babashka/sci.nrepl {:git/sha \"1042578d5784db07b4d1b6d974f1db7cabf89e3f\"}}}' -e '(require (quote [sci.nrepl.browser-server :as server])) (server/start! {:nrepl-port 1339 :websocket-port 1340}) @(promise)'
+  #+end_src
+- Babashka to run sci nrepl server and websocket.
+- Extension connects with nrepl through websocket.
+- In the browser side, i have to manually press **Connect** once in the extension.q
+- NRepl runs on port 1339
+- From Emacs i use clojure-connect-cljs
+  - Host: localhost
+  - Port: 1339
+  - REPL type: nbb
+    - It worked for me :p
+
+It took me a while to figure out, now i can do p5 related code in cljs and have fun.
