@@ -3,4 +3,54 @@
 #+date: <2026-01-09 Fri>
 #+author: Gold Ayan
 
-hello world java 
+I learned few awesome javascript tricks this week
+
+*** Structured clone
+- Deep copy a java object, you can also transfer i.e detach object from one to another.
+#+begin_src javascript
+const superhero = {}
+superhero.dc = ["superman", "batman"];
+superhero.marvel = ["captain","ironman"];
+
+const superheroClone = structuredClone(superhero);
+superheroClone.marvel.push("spiderman");
+
+console.log(superhero.marvel); // [ "captain", "ironman" ]
+console.log(superheroClone.marvel); // [ "captain", "ironman", "spiderman" ]
+#+end_src
+- ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
+
+*** Event Listener
+
+**** Scroll end
+- I was looking similar to this for a week and found this listener.
+- The listener will trigger for user as well as after javascript scrollTo.
+#+begin_src javascript
+  ELEMENT.addEventListener("scrollend", (event) => { })
+#+end_src
+- ref: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event
+
+**** Offline and Online listener
+- Listener to get trigger for offline and online functionality.
+#+begin_src javascript
+  window.addEventListener("offline", (event) => {
+      console.log("The network connection has been lost.");
+  });
+
+  window.addEventListener("online", (event) => {
+      console.log("You are now connected to the network.");
+  });
+#+end_src
+- ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event
+- ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/online_evetn
+
+*** Optional chaining
+- This is super helpful (If you are using latest javascript).
+#+begin_src javascript
+  object = null;
+  object?.property // Undefined - no error will be thrown
+#+end_src
+- If the object is null, then we get undefined value not error thrown at runtime which is super cool
+
+
+That's it. Thats all the things i learned during this week.
