@@ -1,10 +1,101 @@
-<!DOCTYPE html><html><head><!-- 2026-01-09 --><!-- 2026-01-22 Thu 07:14 -->
+<!DOCTYPE html><html><head><!-- 2026-01-09 --><!-- 2026-01-28 Wed 15:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Javascript learning this week</title>
 <meta name="generator" content="Org Mode" />
 <link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
 </head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
-hello world java 
+I learned few awesome javascript tricks this week
 </p>
+
+<div id="outline-container-org960262b" class="outline-2">
+<h2 id="org960262b">Structured clone</h2>
+<div class="outline-text-2" id="text-org960262b">
+<ul class="org-ul">
+<li>Deep copy a java object, you can also transfer i.e detach object from one to another.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript"><span class="org-keyword">const</span> <span class="org-variable-name">superhero</span> = {}
+superhero.dc = [<span class="org-string">"superman"</span>, <span class="org-string">"batman"</span>];
+superhero.marvel = [<span class="org-string">"captain"</span>,<span class="org-string">"ironman"</span>];
+
+<span class="org-keyword">const</span> <span class="org-variable-name">superheroClone</span> = structuredClone(superhero);
+superheroClone.marvel.push(<span class="org-string">"spiderman"</span>);
+
+console.log(superhero.marvel); <span class="org-comment-delimiter">// </span><span class="org-comment">[ "captain", "ironman" ]
+</span>console.log(superheroClone.marvel); <span class="org-comment-delimiter">// </span><span class="org-comment">[ "captain", "ironman", "spiderman" ]</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone">https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36a5a49" class="outline-2">
+<h2 id="org36a5a49">Event Listener</h2>
+<div class="outline-text-2" id="text-org36a5a49">
+</div>
+<div id="outline-container-org7cf5855" class="outline-3">
+<h3 id="org7cf5855">Scroll end</h3>
+<div class="outline-text-3" id="text-org7cf5855">
+<ul class="org-ul">
+<li>I was looking similar to this for a week and found this listener.</li>
+<li>The listener will trigger for user as well as after javascript scrollTo.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">ELEMENT.addEventListener(<span class="org-string">"scrollend"</span>, (event) =&gt; { })
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event">https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbd7e0e9" class="outline-3">
+<h3 id="orgbd7e0e9">Offline and Online listener</h3>
+<div class="outline-text-3" id="text-orgbd7e0e9">
+<ul class="org-ul">
+<li>Listener to get trigger for offline and online functionality.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">window.addEventListener(<span class="org-string">"offline"</span>, (event) =&gt; {
+    console.log(<span class="org-string">"The network connection has been lost."</span>);
+});
+
+window.addEventListener(<span class="org-string">"online"</span>, (event) =&gt; {
+    console.log(<span class="org-string">"You are now connected to the network."</span>);
+});
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event">https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event</a></li>
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/online_evetn">https://developer.mozilla.org/en-US/docs/Web/API/Window/online_evetn</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb617e84" class="outline-2">
+<h2 id="orgb617e84">Optional chaining</h2>
+<div class="outline-text-2" id="text-orgb617e84">
+<ul class="org-ul">
+<li>This is super helpful (If you are using latest javascript).</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">object = <span class="org-constant">null</span>;
+object?.property <span class="org-comment-delimiter">// </span><span class="org-comment">Undefined - no error will be thrown</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>If the object is null, then we get undefined value not error thrown at runtime which is super cool</li>
+</ul>
+
+
+<p>
+That's it. Thats all the things i learned during this week.
+</p>
+</div>
+</div>
 </div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>
