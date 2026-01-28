@@ -2,7 +2,13 @@
 
 We can also name it ~Mini articles~
 ** 2026
-*** Ntfy notification from emacs [2026-01-07 Wed]
+*** Harper integration with Emacs for org mode [2026-01-28 Wed]
+#+begin_src elisp
+  (with-eval-after-load 'eglot
+    (add-to-list 'eglot-server-programs
+		 '(org-mode . ("harper-ls" "--stdio"))))
+#+end_src
+*** Ntfy notification from Emacs [2026-01-07 Wed]
 #+begin_src elisp
   (defun my/ntfy-send (message &optional title priority tags)
   "Send a notification to ntfy.sh."
@@ -19,13 +25,12 @@ We can also name it ~Mini articles~
 
 (my/ntfy-send "Hello from emacs" "EMACSSS" "1" "book")
 #+end_src
-
 ** 2025
 *** Thinkpad T480 Fn, Ctrl swap
 - We can swap the Function key and Ctrl key in BIOS
 - F1 to enter bios and go to Config menu.
 - Under Keyboard and mouse *Fn and Ctrl Key swap* make it enabled.
-  
+ 
 *** Access google email as RSS
 - Create app password using following link: https://myaccount.google.com/apppasswords
 #+begin_src shell
