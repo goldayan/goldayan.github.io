@@ -7,7 +7,7 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Wed, 28 Jan 2026 15:53:50 +0000</lastBuildDate>
+<lastBuildDate>Thu, 29 Jan 2026 14:13:59 +0000</lastBuildDate>
 <item>
   <title>Scittle and P5 js with REPL</title>
   <description><![CDATA[<nil></nil>]]></description>
@@ -42,6 +42,13 @@
   <link>https://goldayan.in/posts/emacs_identation.html</link>
   <guid isPermaLink="false">https://goldayan.in/posts/emacs_identation.html</guid>
   <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Enable wireless debugging in Pixel phone</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/wireless_adb_pixel.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/wireless_adb_pixel.html</guid>
+  <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
 </item>
 <item>
   <title>Cheap way to isolate devices in home network</title>
