@@ -3,9 +3,11 @@
 #+date: <2026-01-01 Thu>
 #+author: Gold Ayan
 
-On the Google Pixel 9 (running Android 14 or 15), there is **no single
-default port** for wireless debugging. Instead, the port number is
-**randomized** every time you enable the feature or reboot the device.
+Before trying this, ensure both laptop and android phone is on same
+network. On the Google Pixel 9 (running Android 14 or 15), there is
+**no single default port** for wireless debugging. Instead, the port
+number is **randomized** every time you enable the feature or reboot
+the device.
 
 This is a security feature introduced in Android 11 to prevent
 unauthorized remote access. To find your specific port and connect,
@@ -37,24 +39,7 @@ Port** and the **Connection Port** are usually different.
 4. Once paired, use the **main port** shown on the previous screen to connect:
 `adb connect [IP_ADDRESS]:[CONNECTION_PORT]`
 
-*** How to use the "Classic" Port 5555
-
-If you need a static port (like the traditional **5555**) because your
-script or tool requires it, you can force it manually using a USB
-cable once:
-
-1. Connect your Pixel 9 to your computer via **USB**.
-2. Open your terminal and run:
-   #+begin_src shell
-     adb tcpip 5555
-   #+end_src
-
-3. Disconnect the USB cable.
-4. You can now connect wirelessly using:
-`adb connect [YOUR_IP_ADDRESS]:5555`
-
-> [!WARNING]
-> This manual port setting will reset to random/disabled if you reboot your phone.
+*** Below is a fun little experiment using nmap
 
 To find the pairing port using `nmap`, you need to scan the specific
 range of ports that Android uses for wireless debugging. On the Pixel
@@ -66,7 +51,7 @@ main one on the Wireless Debugging screen) and the **Pairing Port**
 (the one that appears only when you click "Pair device with pairing
 code").
 
-*** The Nmap Command
+**** The Nmap Command
 
 To find the open port on your Pixel 9, use the following command
 (replace `192.168.1.XX` with your phone's actual IP address):
@@ -84,7 +69,7 @@ scan and filter the results:
 sudo nmap -sS -p 30000-49999 --open 192.168.1.XX
 #+end_src
 
-*** How to distinguish between the ports
+**** How to distinguish between the ports
 
 When you run the scan, you might see one or two ports open:
 
@@ -100,7 +85,7 @@ usually the pairing port, but the safest way to know is to run the
 scan once with the pairing popup closed, and once with it open. The
 "new" port that appears is your pairing port.
 
-*** One-Liner to Pair and Connect
+**** One-Liner to Pair and Connect
 
 If you have `nmap` and `awk` installed, you can use this bash
 one-liner to find the port and connect automatically:
@@ -110,6 +95,32 @@ one-liner to find the port and connect automatically:
 PHONE_IP="192.168.1.XX"
 adb connect $PHONE_IP:$(nmap -p 30000-49999 $PHONE_IP | awk "/\/tcp/ {print \$1}" | cut -d/ -f1)
 #+end_src
+
+*** How to use the "Classic" Port 5555
+
+If you need a static port (like the traditional **5555**) because your
+script or tool requires it, you can force it manually using a USB
+cable once:
+
+1. Connect your Pixel 9 to your computer via **USB**.
+2. Open your terminal and run:
+   #+begin_src shell
+     adb tcpip 5555
+   #+end_src
+
+3. Disconnect the USB cable.
+4. You can now connect wirelessly using:
+`adb connect [YOUR_IP_ADDRESS]:5555`
+
+You will get a conformation in device to allow debugging, once it is
+allowed. You are good to go. Check if the adb is connect via tcp
+
+#+begin_src shell
+  adb devices
+#+end_src
+
+> [!WARNING]
+> This manual port setting will reset to random/disabled if you reboot your phone.
 
 *** Important Considerations
 - **Unlocked Screen:** Sometimes the wireless debugging service goes
