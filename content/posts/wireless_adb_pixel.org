@@ -1,0 +1,130 @@
+#+title: Enable wireless debugging in Pixel phone
+#+subtitle: wireless debugginhg in pixel phone step by step guide
+#+date: <2026-01-01 Thu>
+#+author: Gold Ayan
+
+On the Google Pixel 9 (running Android 14 or 15), there is **no single
+default port** for wireless debugging. Instead, the port number is
+**randomized** every time you enable the feature or reboot the device.
+
+This is a security feature introduced in Android 11 to prevent
+unauthorized remote access. To find your specific port and connect,
+follow the steps below.
+
+Before you are planning to follow the below instruction, enable
+Developer options in settings. Tap Build number until developer option
+is enabled message popup.
+
+*** Enabling Wireless debugging
+
+1. Go to **Settings** > **System** > **Developer options**.
+2. Scroll down to the **Debugging** section and tap the text
+   **"Wireless debugging"** (not just the toggle).
+3. Look under **IP address & Port**. You will see something like:
+> `192.168.1.15:43215`
+> *(In this example, **43215** is the port you need).*
+
+*** First time pairing
+
+If this is your first time connecting this computer to your Pixel 9,
+you must "Pair" before you can "Connect." Note that the **Pairing
+Port** and the **Connection Port** are usually different.
+
+1. In the Wireless debugging menu, tap **Pair device with pairing code**.
+2. On your computer, run:
+`adb pair [IP_ADDRESS]:[PAIRING_PORT]`
+3. Enter the 6-digit code shown on your phone.
+4. Once paired, use the **main port** shown on the previous screen to connect:
+`adb connect [IP_ADDRESS]:[CONNECTION_PORT]`
+
+*** How to use the "Classic" Port 5555
+
+If you need a static port (like the traditional **5555**) because your
+script or tool requires it, you can force it manually using a USB
+cable once:
+
+1. Connect your Pixel 9 to your computer via **USB**.
+2. Open your terminal and run:
+   #+begin_src shell
+     adb tcpip 5555
+   #+end_src
+
+3. Disconnect the USB cable.
+4. You can now connect wirelessly using:
+`adb connect [YOUR_IP_ADDRESS]:5555`
+
+> [!WARNING]
+> This manual port setting will reset to random/disabled if you reboot your phone.
+
+To find the pairing port using `nmap`, you need to scan the specific
+range of ports that Android uses for wireless debugging. On the Pixel
+9 (and other Android 11+ devices), these ports are typically found in
+the high range between **30000 and 49999**.
+
+Note that there are two different ports: the **Connection Port** (the
+main one on the Wireless Debugging screen) and the **Pairing Port**
+(the one that appears only when you click "Pair device with pairing
+code").
+
+*** The Nmap Command
+
+To find the open port on your Pixel 9, use the following command
+(replace `192.168.1.XX` with your phone's actual IP address):
+
+#+begin_src shell
+nmap -p 30000-49999 192.168.1.XX
+#+end_src
+
+**** Speeding up the scan:
+
+Since you only care about "Open" ports, you can use a faster "Stealth"
+scan and filter the results:
+
+#+begin_src shell
+sudo nmap -sS -p 30000-49999 --open 192.168.1.XX
+#+end_src
+
+*** How to distinguish between the ports
+
+When you run the scan, you might see one or two ports open:
+
+1. **The Connection Port:** This port is active as long as "Wireless
+   Debugging" is toggled **ON**. It is used for the `adb connect`
+   command.
+2. **The Pairing Port:** This port **only opens** when you are
+   physically looking at the "Pair device with pairing code" popup on
+   your phone. If you close that popup, the port closes.
+
+**Pro Tip:** If you see two ports open, the **higher** number is
+usually the pairing port, but the safest way to know is to run the
+scan once with the pairing popup closed, and once with it open. The
+"new" port that appears is your pairing port.
+
+*** One-Liner to Pair and Connect
+
+If you have `nmap` and `awk` installed, you can use this bash
+one-liner to find the port and connect automatically:
+
+#+begin_src shell
+# To Connect (after you have already paired once)
+PHONE_IP="192.168.1.XX"
+adb connect $PHONE_IP:$(nmap -p 30000-49999 $PHONE_IP | awk "/\/tcp/ {print \$1}" | cut -d/ -f1)
+#+end_src
+
+*** Important Considerations
+- **Unlocked Screen:** Sometimes the wireless debugging service goes
+  into a "sleep" state. Ensure your phone screen is **on and
+  unlocked** while running the scan.
+- **mDNS Alternative:** Android actually broadcasts these ports via
+  mDNS. If you have the `mdns-scan` tool or use `adb mdns check`, you
+  can often find the port without a full nmap scan.
+  Command: `adb mdns services`
+
+*** Always on display
+To make your phone screen ON and unlocked, I used a app called **Caffinate** from F-droid
+
+*** What to do next ?
+- Scrcpy
+  - Mirror your android screen and control it from the laptop.
+  - Follow the below blogpost on more info on this.
+- https://iamyaash.github.io/stashed/posts/tips/screen-mirror/scrcpy/

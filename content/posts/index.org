@@ -15,11 +15,13 @@
 - install using adb
 *** TODO Bullet journelling good and bad
 *** TODO .llama file and its magic
+- checkout https://github.com/LostRuins/koboldcpp
 *** -> [[file:scittle_with_p5.org][Scittle and P5 js with REPL]]
 *** -> [[file:squint_bun_combo.org][Simple Squint file with bun]]
 *** -> [[file:pixel_phone_issue.org][My phone is dead and my learnings]]
 *** -> [[file:jan9_javascript_learning.org][Javascript learnings this week]]
 *** -> [[file:emacs_identation.org][Emacs custom identation for legacy code]]
+*** -> [[file:wireless_adb_pixel.org][Enable wireless debugging in Pixel phone]]
 
 ** 2025
 *** -> [[file:homelab_network.org][Cheap way to isolate devices in home network]]
