@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><!-- 2025-07-27 --><!-- 2026-01-29 Thu 14:13 -->
+<!DOCTYPE html><html><head><!-- 2025-07-27 --><!-- 2026-01-29 Thu 14:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HTML Button's Weird Behavior</title>
@@ -19,9 +19,9 @@ on that page, but only Button B's `onclick` is triggered.
 Upon closer inspection:
 </p>
 
-<div id="outline-container-org35de43b" class="outline-2">
-<h2 id="org35de43b">Button A code:</h2>
-<div class="outline-text-2" id="text-org35de43b">
+<div id="outline-container-org85d271e" class="outline-2">
+<h2 id="org85d271e">Button A code:</h2>
+<div class="outline-text-2" id="text-org85d271e">
 <div class="org-src-container">
 <pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button A&lt;/<span class="org-function-name">button</span>&gt;
 </pre>
@@ -29,9 +29,9 @@ Upon closer inspection:
 </div>
 </div>
 
-<div id="outline-container-org77d014e" class="outline-2">
-<h2 id="org77d014e">Button B code:</h2>
-<div class="outline-text-2" id="text-org77d014e">
+<div id="outline-container-org871edcf" class="outline-2">
+<h2 id="org871edcf">Button B code:</h2>
+<div class="outline-text-2" id="text-org871edcf">
 <div class="org-src-container">
 <pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample2"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button B&lt;/<span class="org-function-name">button</span>&gt;
 </pre>
@@ -53,9 +53,9 @@ is `submit`, which caused this issue.
 </div>
 </div>
 
-<div id="outline-container-org13e1784" class="outline-2">
-<h2 id="org13e1784">Proof of Concept:</h2>
-<div class="outline-text-2" id="text-org13e1784">
+<div id="outline-container-orgb5b8302" class="outline-2">
+<h2 id="orgb5b8302">Proof of Concept:</h2>
+<div class="outline-text-2" id="text-orgb5b8302">
 <ul class="org-ul">
 <li>Keep the cursor in the input text field and press enter; the submit
 button's `onclick` will be called.</li>
