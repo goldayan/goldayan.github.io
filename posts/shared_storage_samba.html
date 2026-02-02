@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><!-- 2021-11-04 --><!-- 2026-01-29 Thu 14:53 -->
+<!DOCTYPE html><html><head><!-- 2021-11-04 --><!-- 2026-02-02 Mon 10:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Samba configuration experience</title>
@@ -43,14 +43,14 @@ So let's try to do a POC on SMB. The SMB in linux side called SAMBA
 (Open source implementation of SMB)
 </p>
 
-<div id="outline-container-org3f2596b" class="outline-2">
-<h2 id="org3f2596b">POC</h2>
-<div class="outline-text-2" id="text-org3f2596b">
+<div id="outline-container-orgd6e85f3" class="outline-2">
+<h2 id="orgd6e85f3">POC</h2>
+<div class="outline-text-2" id="text-orgd6e85f3">
 <p>
 Installing samba server in Ubuntu
 </p>
 
-<pre class="example" id="org8d3eadc">
+<pre class="example" id="org76453eb">
 sudo apt install samba
 </pre>
 
@@ -64,7 +64,7 @@ Configuring samba Configuration
 <li>Template of /etc/samba/smb.conf</li>
 </ul>
 
-<pre class="example" id="orgc498759">
+<pre class="example" id="orge850a72">
 [NAME]
    Configuration
 </pre>
@@ -73,7 +73,7 @@ Configuring samba Configuration
 <li>My Config</li>
 </ul>
 
-<pre class="example" id="org83f4340">
+<pre class="example" id="org1a83560">
 [Public]
     comment = Samba on Ubuntu
     path = /home/sample/Public
@@ -98,7 +98,7 @@ or Authenticated user.</li>
 <li>Let's see how we can create user for samba authentication.</li>
 </ul>
 
-<pre class="example" id="org5e4a44e">
+<pre class="example" id="orgdacf153">
 sudo useradd ayan -s /sbin/nologin
 </pre>
 
@@ -108,7 +108,7 @@ because of <code>-s /sbin/nologin</code></li>
 <li>Check if your user added to your system</li>
 </ul>
 
-<pre class="example" id="org3190fdd">
+<pre class="example" id="orgb434de5">
 sudo cat /etc/passwd
 </pre>
 
@@ -116,7 +116,7 @@ sudo cat /etc/passwd
 <li>Set samba password for your user</li>
 </ul>
 
-<pre class="example" id="org7160265">
+<pre class="example" id="orgfa9605b">
 sudo smbpasswd -a ayan
 </pre>
 
@@ -125,19 +125,19 @@ sudo smbpasswd -a ayan
 <li>Restart the samba server</li>
 </ul>
 
-<pre class="example" id="org987fedd">
+<pre class="example" id="orgffe8f1d">
 sudo service smbd restart
 </pre>
 </div>
 
-<div id="outline-container-org8a7bd24" class="outline-3">
-<h3 id="org8a7bd24">Debugging</h3>
-<div class="outline-text-3" id="text-org8a7bd24">
+<div id="outline-container-orge19c084" class="outline-3">
+<h3 id="orge19c084">Debugging</h3>
+<div class="outline-text-3" id="text-orge19c084">
 <ul class="org-ul">
 <li>Cheking the service</li>
 </ul>
 
-<pre class="example" id="orgf3ebae5">
+<pre class="example" id="orgc0966a9">
 sudo service smbd status
 </pre>
 
@@ -145,16 +145,16 @@ sudo service smbd status
 <li>smb config debug</li>
 </ul>
 
-<pre class="example" id="orgf49303b">
+<pre class="example" id="org163f803">
 sudo testparm
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org80eafdc" class="outline-2">
-<h2 id="org80eafdc">Pros</h2>
-<div class="outline-text-2" id="text-org80eafdc">
+<div id="outline-container-orgae06630" class="outline-2">
+<h2 id="orgae06630">Pros</h2>
+<div class="outline-text-2" id="text-orgae06630">
 <ul class="org-ul">
 <li>All you need is VLC media player software or SMB Client.</li>
 <li>You can play the media in the shared folders.</li>
@@ -174,9 +174,9 @@ Solution to problem creates new problems
 </div>
 </div>
 
-<div id="outline-container-org2191ccf" class="outline-2">
-<h2 id="org2191ccf">Cons</h2>
-<div class="outline-text-2" id="text-org2191ccf">
+<div id="outline-container-org56adb93" class="outline-2">
+<h2 id="org56adb93">Cons</h2>
+<div class="outline-text-2" id="text-org56adb93">
 <ul class="org-ul">
 <li>Device should be Alive.
 
@@ -204,9 +204,9 @@ access your home server from internet.</li>
 </div>
 </div>
 
-<div id="outline-container-org542cda2" class="outline-2">
-<h2 id="org542cda2">Resources</h2>
-<div class="outline-text-2" id="text-org542cda2">
+<div id="outline-container-org1b8120e" class="outline-2">
+<h2 id="org1b8120e">Resources</h2>
+<div class="outline-text-2" id="text-org1b8120e">
 <ul class="org-ul">
 <li>Ubuntu official</li>
 </ul>

@@ -90,6 +90,7 @@ pre.src, pre.example {
     padding: 10px;
     border-radius: 10px;
     border-left: 8px solid var(--theme-color-five);
+    overflow: auto;
 }
 
 blockquote {
