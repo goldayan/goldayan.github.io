@@ -7,7 +7,21 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
 <atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Mon, 02 Feb 2026 10:51:21 +0000</lastBuildDate>
+<lastBuildDate>Tue, 07 Jul 2026 02:30:08 +0000</lastBuildDate>
+<item>
+  <title>Writer deck with cage and emacs</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/writer_deck_emacs.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/writer_deck_emacs.html</guid>
+  <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+</item>
+<item>
+  <title>Lubuntu installation</title>
+  <description><![CDATA[<nil></nil>]]></description>
+  <link>https://goldayan.in/posts/lubuntu_notes.html</link>
+  <guid isPermaLink="false">https://goldayan.in/posts/lubuntu_notes.html</guid>
+  <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+</item>
 <item>
   <title>Scittle and P5 js with REPL</title>
   <description><![CDATA[<nil></nil>]]></description>

@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><!-- 2026-05-24 --><!-- 2026-07-07 Tue 02:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lubuntu installation</title>
+<meta name="generator" content="Org Mode" />
+<link href="https://fonts.cdnfonts.com/css/share-tech-mono" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/assets/code.css"/><link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head><body><header><div class="container"><h1>Gold Ayan's Tinker Garage</h1></div><div class="header-content"><nav class="container"><ul class="topnav"><li><a href="/index.html">Home</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/posts">Posts</a></li><li><a href="/til.html">TIL</a></li><li><a href="/blogrolls.html">Blogrolls</a></li><li><a href="/feed.xml">RSS</a></li></ul></nav></div></header><article class="container"><div class="blog-content"><p>
+I bought a second hand laptop, which has AMD PRO A4-4350B processor
+with 4gb ram, i have upgraded the 500GB HDD to 256 GB SSD and tried
+Lubuntu 26.04 happy with performance and installed it.
+</p>
+
+<p>
+I used manual partition
+</p>
+
+<ul class="org-ul">
+<li>GPT partition</li>
+</ul>
+
+<div id="outline-container-org7233c9e" class="outline-2">
+<h2 id="org7233c9e">EFI partition</h2>
+<div class="outline-text-2" id="text-org7233c9e">
+<ul class="org-ul">
+<li>Size: 512MB</li>
+<li>Type: Fat32</li>
+<li>MountPoint: /boot/efi</li>
+<li>Flag: boot (not boot-grub)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga506060" class="outline-2">
+<h2 id="orga506060">Swap</h2>
+<div class="outline-text-2" id="text-orga506060">
+<ul class="org-ul">
+<li>Size: 4196MB</li>
+<li>Type: Linux swap</li>
+<li>Flag: swap</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1973399" class="outline-2">
+<h2 id="org1973399">Root</h2>
+<div class="outline-text-2" id="text-org1973399">
+<ul class="org-ul">
+<li>Size: Rest of the space</li>
+<li>Type: Ext</li>
+<li>MountPoint: /</li>
+</ul>
+
+<p>
+Above partition structure is what i used and it installed successfully
+for me. This laptop basically planned to use for light browsing,
+movies, music, Libre calc and others.
+</p>
+
+<p>
+Sometimes i create parition for /home and allocate some space to it
+for 256GB i thought i don't want to do it so i plan put everything in
+the root partition itself.
+</p>
+
+<p>
+Just want to note down my steps i have used and share it with others
+so it will help me and others in future.
+</p>
+</div>
+</div>
+</div></article><footer>This site is made with ❤️ using Emacs.</footer></body></html>

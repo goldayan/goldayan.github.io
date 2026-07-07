@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><!-- 2026-01-01 --><!-- 2026-02-02 Mon 10:51 -->
+<!DOCTYPE html><html><head><!-- 2026-01-01 --><!-- 2026-07-07 Tue 02:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Enable wireless debugging in Pixel phone</title>
@@ -24,9 +24,9 @@ Developer options in settings. Tap Build number until developer option
 is enabled message popup.
 </p>
 
-<div id="outline-container-org0f3d3c8" class="outline-2">
-<h2 id="org0f3d3c8">Enabling Wireless debugging</h2>
-<div class="outline-text-2" id="text-org0f3d3c8">
+<div id="outline-container-org685b099" class="outline-2">
+<h2 id="org685b099">Enabling Wireless debugging</h2>
+<div class="outline-text-2" id="text-org685b099">
 <ol class="org-ol">
 <li>Go to <b><b>Settings</b></b> &gt; <b><b>System</b></b> &gt; <b><b>Developer options</b></b>.</li>
 <li>Scroll down to the <b><b>Debugging</b></b> section and tap the text
@@ -40,9 +40,9 @@ is enabled message popup.
 </div>
 </div>
 
-<div id="outline-container-org83817ac" class="outline-2">
-<h2 id="org83817ac">First time pairing</h2>
-<div class="outline-text-2" id="text-org83817ac">
+<div id="outline-container-orgdb8c6d0" class="outline-2">
+<h2 id="orgdb8c6d0">First time pairing</h2>
+<div class="outline-text-2" id="text-orgdb8c6d0">
 <p>
 If this is your first time connecting this computer to your Pixel 9,
 you must "Pair" before you can "Connect." Note that the <b><b>Pairing
@@ -66,9 +66,9 @@ Port</b></b> and the <b><b>Connection Port</b></b> are usually different.
 </div>
 </div>
 
-<div id="outline-container-org5b3ed87" class="outline-2">
-<h2 id="org5b3ed87">Below is a fun little experiment using nmap</h2>
-<div class="outline-text-2" id="text-org5b3ed87">
+<div id="outline-container-org05ec813" class="outline-2">
+<h2 id="org05ec813">Below is a fun little experiment using nmap</h2>
+<div class="outline-text-2" id="text-org05ec813">
 <p>
 To find the pairing port using `nmap`, you need to scan the specific
 range of ports that Android uses for wireless debugging. On the Pixel
@@ -84,9 +84,9 @@ code").
 </p>
 </div>
 
-<div id="outline-container-orga6b8549" class="outline-3">
-<h3 id="orga6b8549">The Nmap Command</h3>
-<div class="outline-text-3" id="text-orga6b8549">
+<div id="outline-container-orgc672fa4" class="outline-3">
+<h3 id="orgc672fa4">The Nmap Command</h3>
+<div class="outline-text-3" id="text-orgc672fa4">
 <p>
 To find the open port on your Pixel 9, use the following command
 (replace `192.168.1.XX` with your phone's actual IP address):
@@ -99,9 +99,9 @@ To find the open port on your Pixel 9, use the following command
 </div>
 </div>
 
-<div id="outline-container-orge38065f" class="outline-3">
-<h3 id="orge38065f">Speeding up the scan:</h3>
-<div class="outline-text-3" id="text-orge38065f">
+<div id="outline-container-org6cb3fd2" class="outline-3">
+<h3 id="org6cb3fd2">Speeding up the scan:</h3>
+<div class="outline-text-3" id="text-org6cb3fd2">
 <p>
 Since you only care about "Open" ports, you can use a faster "Stealth"
 scan and filter the results:
@@ -114,9 +114,9 @@ scan and filter the results:
 </div>
 </div>
 
-<div id="outline-container-org0ce60d8" class="outline-3">
-<h3 id="org0ce60d8">How to distinguish between the ports</h3>
-<div class="outline-text-3" id="text-org0ce60d8">
+<div id="outline-container-org5004998" class="outline-3">
+<h3 id="org5004998">How to distinguish between the ports</h3>
+<div class="outline-text-3" id="text-org5004998">
 <p>
 When you run the scan, you might see one or two ports open:
 </p>
@@ -139,9 +139,9 @@ scan once with the pairing popup closed, and once with it open. The
 </div>
 </div>
 
-<div id="outline-container-org139209a" class="outline-3">
-<h3 id="org139209a">One-Liner to Pair and Connect</h3>
-<div class="outline-text-3" id="text-org139209a">
+<div id="outline-container-org8d72b5b" class="outline-3">
+<h3 id="org8d72b5b">One-Liner to Pair and Connect</h3>
+<div class="outline-text-3" id="text-org8d72b5b">
 <p>
 If you have `nmap` and `awk` installed, you can use this bash
 one-liner to find the port and connect automatically:
@@ -157,9 +157,9 @@ adb connect $<span class="org-variable-name">PHONE_IP</span>:$(<span class="org-
 </div>
 </div>
 
-<div id="outline-container-orgf11f6a1" class="outline-2">
-<h2 id="orgf11f6a1">How to use the "Classic" Port 5555</h2>
-<div class="outline-text-2" id="text-orgf11f6a1">
+<div id="outline-container-org24038a9" class="outline-2">
+<h2 id="org24038a9">How to use the "Classic" Port 5555</h2>
+<div class="outline-text-2" id="text-org24038a9">
 <p>
 If you need a static port (like the traditional <b><b>5555</b></b>) because your
 script or tool requires it, you can force it manually using a USB
@@ -200,9 +200,9 @@ allowed. You are good to go. Check if the adb is connect via tcp
 </div>
 </div>
 
-<div id="outline-container-org9a88806" class="outline-2">
-<h2 id="org9a88806">Important Considerations</h2>
-<div class="outline-text-2" id="text-org9a88806">
+<div id="outline-container-orgb87cca6" class="outline-2">
+<h2 id="orgb87cca6">Important Considerations</h2>
+<div class="outline-text-2" id="text-orgb87cca6">
 <ul class="org-ul">
 <li><b><b>Unlocked Screen:</b></b> Sometimes the wireless debugging service goes
 into a "sleep" state. Ensure your phone screen is <b><b>on and
@@ -215,18 +215,18 @@ Command: `adb mdns services`</li>
 </div>
 </div>
 
-<div id="outline-container-org1d20bd1" class="outline-2">
-<h2 id="org1d20bd1">Always on display</h2>
-<div class="outline-text-2" id="text-org1d20bd1">
+<div id="outline-container-orga7f7ff4" class="outline-2">
+<h2 id="orga7f7ff4">Always on display</h2>
+<div class="outline-text-2" id="text-orga7f7ff4">
 <p>
 To make your phone screen ON and unlocked, I used a app called <b><b>Caffinate</b></b> from F-droid
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgad969e3" class="outline-2">
-<h2 id="orgad969e3">What to do next ?</h2>
-<div class="outline-text-2" id="text-orgad969e3">
+<div id="outline-container-org42a7367" class="outline-2">
+<h2 id="org42a7367">What to do next ?</h2>
+<div class="outline-text-2" id="text-org42a7367">
 <ul class="org-ul">
 <li>Scrcpy
 <ul class="org-ul">
