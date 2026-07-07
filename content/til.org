@@ -2,6 +2,30 @@
 
 We can also call it ~Mini articles~
 ** 2026
+*** Add watchers for clojure agent/atom/var/ref reference <2026-02-02 Mon>
+- I really like the below example from the clojure docs
+  - ref: https://clojuredocs.org/clojure.core/add-watch#example-549f17c0e4b09260f767ca7f
+#+begin_src clojure
+  (def a (atom {}))
+
+  (add-watch a :watcher
+             (fn [key atom old-state new-state]
+               (prn "-- Atom Changed --")
+               (prn "key" key)
+               (prn "atom" atom)
+               (prn "old-state" old-state)
+               (prn "new-state" new-state)))
+
+  (reset! a {:foo "bar"})
+
+  ;; "-- Atom Changed --"
+  ;; "key" :watcher
+  ;; "atom" #<Atom@4b020acf: {:foo "bar"}>
+  ;; "old-state" {}
+  ;; "new-state" {:foo "bar"}
+  ;; {:foo "bar"}
+#+end_src
+
 *** Harper integration with Emacs for org mode [2026-01-28 Wed]
 #+begin_src elisp
   (with-eval-after-load 'eglot
