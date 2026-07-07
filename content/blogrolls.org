@@ -41,3 +41,23 @@
 - [[https://www.youtube.com/@syedjaferk][Syed Jafer K ( Parottasalna )]]
   - Linux, Open source tools, Code walkthrough, Technical papers.
 
+*** Android app
+- Open Food Facts
+  - https://github.com/openfoodfacts/smooth-app
+- Food you
+  - https://f-droid.org/en/packages/com.maksimowiczm.foodyou/
+  - Energize: (webdav)
+  - https://f-droid.org/en/packages/com.flasskamp.energize/
+- Read you
+  - RSS Reader
+- Bluetooth remote for android TV
+  - https://f-droid.org/en/packages/com.atharok.btremote/
+- Keypass Vault (with webdav support)
+  - https://f-droid.org/en/packages/com.ivanovsky.passnotes/
+- Tactic master (Chess puzzles)
+  - https://f-droid.org/en/packages/com.tacticmaster/
+- Round sync
+  - rclone for android
+  - https://f-droid.org/en/packages/de.felixnuesse.extract/
+- https://floccus.org/
+
