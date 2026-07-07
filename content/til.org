@@ -1,6 +1,6 @@
 #+title: Today i learned
 
-We can also name it ~Mini articles~
+We can also call it ~Mini articles~
 ** 2026
 *** Harper integration with Emacs for org mode [2026-01-28 Wed]
 #+begin_src elisp
@@ -8,6 +8,7 @@ We can also name it ~Mini articles~
     (add-to-list 'eglot-server-programs
 		 '(org-mode . ("harper-ls" "--stdio"))))
 #+end_src
+
 *** Ntfy notification from Emacs [2026-01-07 Wed]
 #+begin_src elisp
   (defun my/ntfy-send (message &optional title priority tags)
