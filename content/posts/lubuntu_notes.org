@@ -1,0 +1,40 @@
+#+title: Lubuntu installation
+#+subtitle: play/learn virtualization on linux using alpine
+#+date: <2026-05-24 Sun>
+#+author: Gold Ayan
+
+I bought a second hand laptop, which has AMD PRO A4-4350B processor
+with 4gb ram, i have upgraded the 500GB HDD to 256 GB SSD and tried
+Lubuntu 26.04 happy with performance and installed it.
+
+I used manual partition
+
+- GPT partition
+
+** EFI partition
+- Size: 512MB
+- Type: Fat32
+- MountPoint: /boot/efi
+- Flag: boot (not boot-grub)
+
+** Swap
+- Size: 4196MB
+- Type: Linux swap
+- Flag: swap
+
+** Root
+- Size: Rest of the space
+- Type: Ext
+- MountPoint: /
+
+Above partition structure is what i used and it installed successfully
+for me. This laptop basically planned to use for light browsing,
+movies, music, Libre calc and others.
+
+Sometimes i create parition for /home and allocate some space to it
+for 256GB i thought i don't want to do it so i plan put everything in
+the root partition itself.
+
+Just want to note down my steps i have used and share it with others
+so it will help me and others in future.
+
