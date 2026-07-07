@@ -1,0 +1,51 @@
+#+title: Writer deck with cage and emacs
+#+subtitle: simple writer deck with emacs and caget
+#+date: <2026-06-17 Wed>
+#+author: Gold Ayan
+
+What is writer deck?
+TLDR Distraction free writing machine, heard about this in Veronica
+explain channel video on Writer deck
+
+I don't have seperate machine to use as writer so i thought why not
+create a seperate user when i logged in with that user i only have
+writing tool for me it is emacs.
+
+After a while i came across a program called cage,
+
+What is cage ?
+- Cage is a wayland kiosk compositor
+- Cage runs a single, maximized application. Cage can run multiple
+  applications, but only a single one is visible at any point in time.
+
+In ubuntu all you need to do for installing cage
+#+begin_src shell
+  sudo apt install cage
+#+end_src
+
+Create a wayland session file in the following location
+*/usr/share/wayland-sessions*. I have created a file called
+cage-emacs.desktop with following content.
+#+begin_example
+[Desktop Entry]
+Name=Cage Emacs
+Comment=Run Emacs as a standalone Wayland kiosk
+Exec=env XKB_DEFAULT_OPTIONS="ctrl:nocaps" cage /opt/emacs29/bin/emacs
+Type=Application
+DesktopNames=Cage-Emacs
+#+end_example
+
+In Exec, i have specified
+#+begin_src shell
+  env XKB_DEFAULT_OPTIONS="ctrl:nocaps"
+#+end_src
+When i press caps it will be known as ctrl. (I got used to it) 
+
+Before i login to the system all i need to do is change the session
+(which will be in the bottom right in ubuntu login screen) and login
+in. I will be greeted with emacs. Sweeet..
+
+*** Cons
+- If your program hanged then only way is to poweroff explicitly
+  because virtual tty not worked for me inside cage so keep that in
+  mind. I faced it one time
