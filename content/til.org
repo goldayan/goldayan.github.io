@@ -2,7 +2,19 @@
 
 We can also call it ~Mini articles~
 ** 2026
-*** Add watchers for clojure agent/atom/var/ref reference <2026-02-02 Mon>
+*** Change scrolling behavior for emacs [2026-02-17 Tue]
+#+begin_src elisp
+  ;;; SCROLLING CONFIGURATION
+	(setq scroll-conservatively 101) ;; Move the page just enough to see the cursor
+	(setq scroll-margin 5)           ;; Keep 3 lines context at top/bottom
+	(setq scroll-step 1)             ;; 1 line at a time C-n, C-p
+	(setq scroll-preserve-screen-position t) ;; Keep relative cursor pos during page up/down
+	(setq next-screen-context-lines 5) ;; Show past 5 line for C-v, A-v
+	;; Emacs 29+ only: Pixel scrolling
+	(when (fboundp 'pixel-scroll-precision-mode)
+	  (pixel-scroll-precision-mode 1)) ;; trackpad and mouse
+#+end_src
+*** Add watchers for clojure agent/atom/var/ref reference [2026-02-02 Mon]
 - I really like the below example from the clojure docs
   - ref: https://clojuredocs.org/clojure.core/add-watch#example-549f17c0e4b09260f767ca7f
 #+begin_src clojure
