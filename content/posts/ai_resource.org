@@ -1,0 +1,48 @@
+#+title: How i keep me updated about new AI stuff
+#+subtitle: AI resource i use to keep myself updated
+#+date: <2026-10-20 Tue>
+#+author: Gold Ayan
+#+tags: ai
+
+I use open source android application, [[https://antennapod.org/][antennapod]] to listen to podcast.
+- [[https://syntax.fm/][Syntax.fm]] podcast is one of favorite, easy to listen and keeps me
+updated on latest tech and ai news. 
+- [[https://www.dwarkesh.com/podcast][dwarkesh]] podcast, in depeth ai tech episode
+
+Blogs i will checkout regularly via RSS (Rich Site Summary)
+- Sebastian Raschka
+  - https://magazine.sebastianraschka.com/
+  - He is the author of LLM from scratch and Reasoning from scratch
+  - His [[https://sebastianraschka.com/books/ml-q-and-ai/#table-of-contents][Machine learning Q and AI]] is free to read on web, check it out it has few nuggets
+- Simon Willison 
+  - https://simonwillison.net/entries/
+  - Author of datasette and lot of small tools
+  - He will post update on latest ai model, repost tech quotes from twitter and other source
+- Hacker news
+  - https://news.ycombinator.com/
+  - Check it once or twice a day you will get to now most of important stuff happening around technology.
+
+Sub reddit i follow via RSS and sometimes browse in web
+- LocalLLaMA
+  - https://www.reddit.com/r/LocalLLaMA/
+  - New model release especially more discussion on local model and configuration.
+- Pi Coding agent
+  - https://www.reddit.com/r/PiCodingAgent/
+  - Pi is minimal ai agent which is easy to customize so if something
+    in ai is good, there will be plugin for it in pi.
+
+Youtube channel
+- https://www.youtube.com/@TwoMinutePapers
+- https://www.youtube.com/@AndrejKarpathy
+- https://www.youtube.com/@mrdbourke
+- https://www.youtube.com/@WelchLabs
+- https://www.youtube.com/@3blue1brown (Math)
+- https://www.youtube.com/@0xSero
+
+Also follow the author i mentioned via social platform where they post
+new insights now and then.
+
+This is all i remember for now, will update the list if i come across
+any awesome blog, podcast or youtube channel. If you have any
+suggestion or correction send it to gldayan8 [at] gmail [dot] com.
+
