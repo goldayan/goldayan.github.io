@@ -1,229 +1,4733 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:atom="http://www.w3.org/2005/Atom"
+ xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+ xmlns:georss="http://www.georss.org/georss"
+ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+ xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
-<author><name>Gold Ayan</name></author>
+<atom:link href="https://goldayan.in/feed.xml" rel="self" type="application/rss+xml" />
 <title>Gold Ayan's Tinker Garage</title>
-<description>Let’s tinker!</description>
-<generator>Emacs webfeeder.el</generator>
 <link>https://goldayan.in</link>
-<atom:link href="https://goldayan.in/./feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Tue, 07 Jul 2026 02:30:08 +0000</lastBuildDate>
+<description><![CDATA[Let’s tinker!]]></description>
+<language>en</language>
+<lastBuildDate>Tue, 20 Oct 2026 17:30:14 +0000</lastBuildDate>
+<generator>Emacs 29.3 org-publish-rss.el 0.8</generator>
 <item>
-  <title>Writer deck with cage and emacs</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/writer_deck_emacs.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/writer_deck_emacs.html</guid>
-  <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
-</item>
+<title>How i keep me updated about new AI stuff</title>
+<link>https://goldayan.in/posts/ai_resource.html</link>
+<pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/ai_resource.html</guid>
+<description>
+<![CDATA[<p>
+I use open source android application, <a href="https://antennapod.org/">antennapod</a> to listen to podcast.
+</p>
+<ul class="org-ul">
+<li><a href="https://syntax.fm/">Syntax.fm</a> podcast is one of favorite, easy to listen and keeps me</li>
+</ul>
+<p>
+updated on latest tech and ai news. 
+</p>
+<ul class="org-ul">
+<li><a href="https://www.dwarkesh.com/podcast">dwarkesh</a> podcast, in depeth ai tech episode</li>
+</ul>
+
+<p>
+Blogs i will checkout regularly via RSS (Rich Site Summary)
+</p>
+<ul class="org-ul">
+<li>Sebastian Raschka
+<ul class="org-ul">
+<li><a href="https://magazine.sebastianraschka.com/">https://magazine.sebastianraschka.com/</a></li>
+<li>He is the author of LLM from scratch and Reasoning from scratch</li>
+<li>His <a href="https://sebastianraschka.com/books/ml-q-and-ai/#table-of-contents">Machine learning Q and AI</a> is free to read on web, check it out it has few nuggets</li>
+</ul></li>
+<li>Simon Willison 
+<ul class="org-ul">
+<li><a href="https://simonwillison.net/entries/">https://simonwillison.net/entries/</a></li>
+<li>Author of datasette and lot of small tools</li>
+<li>He will post update on latest ai model, repost tech quotes from twitter and other source</li>
+</ul></li>
+<li>Hacker news
+<ul class="org-ul">
+<li><a href="https://news.ycombinator.com/">https://news.ycombinator.com/</a></li>
+<li>Check it once or twice a day you will get to now most of important stuff happening around technology.</li>
+</ul></li>
+</ul>
+
+<p>
+Sub reddit i follow via RSS and sometimes browse in web
+</p>
+<ul class="org-ul">
+<li>LocalLLaMA
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/LocalLLaMA/">https://www.reddit.com/r/LocalLLaMA/</a></li>
+<li>New model release especially more discussion on local model and configuration.</li>
+</ul></li>
+<li>Pi Coding agent
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/PiCodingAgent/">https://www.reddit.com/r/PiCodingAgent/</a></li>
+<li>Pi is minimal ai agent which is easy to customize so if something
+in ai is good, there will be plugin for it in pi.</li>
+</ul></li>
+</ul>
+
+<p>
+Youtube channel
+</p>
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/@TwoMinutePapers">https://www.youtube.com/@TwoMinutePapers</a></li>
+<li><a href="https://www.youtube.com/@AndrejKarpathy">https://www.youtube.com/@AndrejKarpathy</a></li>
+<li><a href="https://www.youtube.com/@mrdbourke">https://www.youtube.com/@mrdbourke</a></li>
+<li><a href="https://www.youtube.com/@WelchLabs">https://www.youtube.com/@WelchLabs</a></li>
+<li><a href="https://www.youtube.com/@3blue1brown">https://www.youtube.com/@3blue1brown</a> (Math)</li>
+<li><a href="https://www.youtube.com/@0xSero">https://www.youtube.com/@0xSero</a></li>
+</ul>
+
+<p>
+Also follow the author i mentioned via social platform where they post
+new insights now and then.
+</p>
+
+<p>
+This is all i remember for now, will update the list if i come across
+any awesome blog, podcast or youtube channel. If you have any
+suggestion or correction send it to gldayan8 [at] gmail [dot] com.
+</p>
+]]>
+</description></item>
 <item>
-  <title>Lubuntu installation</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/lubuntu_notes.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/lubuntu_notes.html</guid>
-  <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Writer deck with cage and emacs</title>
+<link>https://goldayan.in/posts/writer_deck_emacs.html</link>
+<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/writer_deck_emacs.html</guid>
+<description>
+<![CDATA[<p>
+What is writer deck?
+TLDR Distraction free writing machine, heard about this in Veronica
+explain channel video on Writer deck
+</p>
+
+<p>
+I don't have seperate machine to use as writer so i thought why not
+create a seperate user when i logged in with that user i only have
+writing tool for me it is emacs.
+</p>
+
+<p>
+After a while i came across a program called cage,
+</p>
+
+<p>
+What is cage ?
+</p>
+<ul class="org-ul">
+<li>Cage is a wayland kiosk compositor</li>
+<li>Cage runs a single, maximized application. Cage can run multiple
+applications, but only a single one is visible at any point in time.</li>
+</ul>
+
+<p>
+In ubuntu all you need to do for installing cage
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install cage
+</pre>
+</div>
+
+<p>
+Create a wayland session file in the following location
+<b>/usr/share/wayland-sessions</b>. I have created a file called
+cage-emacs.desktop with following content.
+</p>
+<pre class="example" id="org4d97bc5">
+[Desktop Entry]
+Name=Cage Emacs
+Comment=Run Emacs as a standalone Wayland kiosk
+Exec=env XKB_DEFAULT_OPTIONS="ctrl:nocaps" cage /opt/emacs29/bin/emacs
+Type=Application
+DesktopNames=Cage-Emacs
+</pre>
+
+<p>
+In Exec, i have specified
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">env <span class="org-variable-name">XKB_DEFAULT_OPTIONS</span>=<span class="org-string">"ctrl:nocaps"</span>
+</pre>
+</div>
+<p>
+When i press caps it will be known as ctrl. (I got used to it) 
+</p>
+
+<p>
+Before i login to the system all i need to do is change the session
+(which will be in the bottom right in ubuntu login screen) and login
+in. I will be greeted with emacs. Sweeet..
+</p>
+
+<div id="outline-container-orgfb17b18" class="outline-2">
+<h2 id="orgfb17b18"><span class="section-number-2">1.</span> Cons</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>If your program hanged then only way is to poweroff explicitly
+because virtual tty not worked for me inside cage so keep that in
+mind. I faced it one time</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Scittle and P5 js with REPL</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/scittle_with_p5.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/scittle_with_p5.html</guid>
-  <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Lubuntu installation</title>
+<link>https://goldayan.in/posts/lubuntu_notes.html</link>
+<pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/lubuntu_notes.html</guid>
+<description>
+<![CDATA[<p>
+I bought a second hand laptop, which has AMD PRO A4-4350B processor
+with 4gb ram, i have upgraded the 500GB HDD to 256 GB SSD and tried
+Lubuntu 26.04 happy with performance and installed it.
+</p>
+
+<p>
+I used manual partition
+</p>
+
+<ul class="org-ul">
+<li>GPT partition</li>
+</ul>
+
+<div id="outline-container-org8efc514" class="outline-2">
+<h2 id="org8efc514"><span class="section-number-2">1.</span> EFI partition</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Size: 512MB</li>
+<li>Type: Fat32</li>
+<li>MountPoint: /boot/efi</li>
+<li>Flag: boot (not boot-grub)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9f69e3f" class="outline-2">
+<h2 id="org9f69e3f"><span class="section-number-2">2.</span> Swap</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Size: 4196MB</li>
+<li>Type: Linux swap</li>
+<li>Flag: swap</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd28a28" class="outline-2">
+<h2 id="orgdd28a28"><span class="section-number-2">3.</span> Root</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Size: Rest of the space</li>
+<li>Type: Ext</li>
+<li>MountPoint: /</li>
+</ul>
+
+<p>
+Above partition structure is what i used and it installed successfully
+for me. This laptop basically planned to use for light browsing,
+movies, music, Libre calc and others.
+</p>
+
+<p>
+Sometimes i create parition for /home and allocate some space to it
+for 256GB i thought i don't want to do it so i plan put everything in
+the root partition itself.
+</p>
+
+<p>
+Just want to note down my steps i have used and share it with others
+so it will help me and others in future.
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Squint-cljs with bun</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/squint_bun_combo.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/squint_bun_combo.html</guid>
-  <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Scittle and P5 js with REPL</title>
+<link>https://goldayan.in/posts/scittle_with_p5.html</link>
+<pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/scittle_with_p5.html</guid>
+<description>
+<![CDATA[
+<div id="outline-container-orgd32484b" class="outline-2">
+<h2 id="orgd32484b"><span class="section-number-2">1.</span> HTML with scittle and p5 js script</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-keyword">!DOCTYPE</span> html&gt;
+&lt;<span class="org-function-name">html</span>&gt;
+  &lt;<span class="org-function-name">head</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"utf-8"</span>&gt;
+    &lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Scittle + p5.js</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://cdn.jsdelivr.net/npm/p5@2.2.0/lib/p5.js"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"https://cdn.jsdelivr.net/npm/scittle@0.7.30/dist/scittle.js"</span> <span class="org-variable-name">type</span>=<span class="org-string">"application/javascript"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+  &lt;/<span class="org-function-name">head</span>&gt;
+  &lt;<span class="org-function-name">body</span>&gt;
+    &lt;<span class="org-function-name">script</span> <span class="org-variable-name">src</span>=<span class="org-string">"playground.cljs"</span> <span class="org-variable-name">type</span>=<span class="org-string">"application/x-scittle"</span>&gt;&lt;/<span class="org-function-name">script</span>&gt;
+  &lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb0ff8e6" class="outline-2">
+<h2 id="orgb0ff8e6"><span class="section-number-2">2.</span> Playground.cljs file</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Simple p5 code to create a canvas 400x400</li>
+<li>Create a circle of radius 100 with mousex, mousey as origin</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-clojure">(defn setup []
+  (doto js/window
+    (.createCanvas 400 400)
+    )
+  )
+
+(defn draw []
+  (doto js/window
+    (.background 220)
+    (.fill 100 200 255)
+    (.strokeWeight 2)
+    (.circle js/mouseX js/mouseY 100)))
+
+;; Bind Clojure functions to the global p5 instance
+(set! (.-setup js/window) setup)
+(set! (.-draw js/window) draw)
+
+
+(comment
+  (js/console.log "hello")
+  (set! (.-setup js/window) #(setup))
+  (set! (.-draw js/window) #(draw))
+
+  ;; Above and below are same
+  (set! (.-setup js/window) (fn [] (setup)))
+  (set! (.-draw js/window) (fn [] (draw)))
+
+  (defn reset-sketch []
+    (setup)
+    (.loop js/window)) ;; Ensures the draw loop is running
+
+  ;; Run this in REPL to "Hot Reload" the setup
+  (reset-sketch)
+  )
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfefd286" class="outline-2">
+<h2 id="orgfefd286"><span class="section-number-2">3.</span> REPL driven development</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>I use a extension called <a href="https://github.com/PEZ/browser-jack-in">Browser jack in</a></li>
+<li><p>
+In the terminal side i execute 
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">bb -Sdeps <span class="org-string">'{:deps {io.github.babashka/sci.nrepl {:git/sha \"1042578d5784db07b4d1b6d974f1db7cabf89e3f\"}}}'</span> -e <span class="org-string">'(require (quote [sci.nrepl.browser-server :as server])) (server/start! {:nrepl-port 1339 :websocket-port 1340}) @(promise)'</span>
+</pre>
+</div></li>
+<li>Babashka to run sci nrepl server and websocket.</li>
+<li>Extension connects with nrepl through websocket.</li>
+<li>In the browser side, i have to manually press <b><b>Connect</b></b> once in the extension.q</li>
+<li>NRepl runs on port 1339</li>
+<li>From Emacs i use clojure-connect-cljs
+<ul class="org-ul">
+<li>Host: localhost</li>
+<li>Port: 1339</li>
+<li>REPL type: nbb
+<ul class="org-ul">
+<li>It worked for me :p</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+It took me a while to figure out, now i can do p5 related code in cljs and have fun.
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Javascript learning this week</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/jan9_javascript_learning.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/jan9_javascript_learning.html</guid>
-  <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Squint-cljs with bun</title>
+<link>https://goldayan.in/posts/squint_bun_combo.html</link>
+<pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/squint_bun_combo.html</guid>
+<description>
+<![CDATA[<p>
+Ensure you have bun installed in your system
+</p>
+
+<p>
+Tip:
+</p>
+<ul class="org-ul">
+<li>Install bun using stand lone executable file.</li>
+<li>We can upgrade it using <code>bun upgrade</code>.</li>
+</ul>
+
+<div id="outline-container-orgf510caf" class="outline-2">
+<h2 id="orgf510caf"><span class="section-number-2">1.</span> Very simple Squint project</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Create a temp directory and change into it</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">mkdir squint-demo
+<span class="org-builtin">cd</span> squint-demo
+</pre>
+</div>
+<ul class="org-ul">
+<li>Once you are inside</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun add squint-cljs
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+If you are using node and bun parallel, then in windows i faced the issue while running <code>bun squint --help</code>.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js --help
+</pre>
+</div></li>
+<li>create a sample.cljs file</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-clojure">  (ns main)
+
+(defn greet [name]
+  (str "Hello, " name " from Squint!"))
+
+;; Simple DOM manipulation
+(let [app (.getElementById js/document "app")]
+  (set! (.-innerText app) (greet "User")))
+
+(js/console.log "Squint is running!")
+</pre>
+</div>
+<ul class="org-ul">
+<li>Compile the above script to js or mjs</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js compile .\sample.cljs
+</pre>
+</div>
+<ul class="org-ul">
+<li>Build for browser using</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun build .\sample.mjs --outfile .\sample.js
+bun build .\sample.mjs --outfile .\sample.js --minify // for minification
+</pre>
+</div>
+<ul class="org-ul">
+<li>If you have more than one js file in a folder</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-shell">bun .\node_modules\squint-cljs\node_cli.js compile src --out-dir out
+bun build ./out/main.js --outdir ./dist --minify --target browser
+</pre>
+</div>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>My phone is dead and my learning</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/pixel_phone_issue.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/pixel_phone_issue.html</guid>
-  <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Javascript learning this week</title>
+<link>https://goldayan.in/posts/jan9_javascript_learning.html</link>
+<pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/jan9_javascript_learning.html</guid>
+<description>
+<![CDATA[<p>
+I learned few awesome javascript tricks this week
+</p>
+
+<div id="outline-container-orgd87f0cb" class="outline-2">
+<h2 id="orgd87f0cb"><span class="section-number-2">1.</span> Structured clone</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Deep copy a java object, you can also transfer i.e detach object from one to another.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript"><span class="org-keyword">const</span> <span class="org-variable-name">superhero</span> = {}
+superhero.dc = [<span class="org-string">"superman"</span>, <span class="org-string">"batman"</span>];
+superhero.marvel = [<span class="org-string">"captain"</span>,<span class="org-string">"ironman"</span>];
+
+<span class="org-keyword">const</span> <span class="org-variable-name">superheroClone</span> = structuredClone(superhero);
+superheroClone.marvel.push(<span class="org-string">"spiderman"</span>);
+
+console.log(superhero.marvel); <span class="org-comment-delimiter">// </span><span class="org-comment">[ "captain", "ironman" ]
+</span>console.log(superheroClone.marvel); <span class="org-comment-delimiter">// </span><span class="org-comment">[ "captain", "ironman", "spiderman" ]</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone">https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf4a9094" class="outline-2">
+<h2 id="orgf4a9094"><span class="section-number-2">2.</span> Event Listener</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgfffa6e4" class="outline-3">
+<h3 id="orgfffa6e4"><span class="section-number-3">2.1.</span> Scroll end</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>I was looking similar to this for a week and found this listener.</li>
+<li>The listener will trigger for user as well as after javascript scrollTo.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">ELEMENT.addEventListener(<span class="org-string">"scrollend"</span>, (event) =&gt; { })
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event">https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9f4a498" class="outline-3">
+<h3 id="org9f4a498"><span class="section-number-3">2.2.</span> Offline and Online listener</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Listener to get trigger for offline and online functionality.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">window.addEventListener(<span class="org-string">"offline"</span>, (event) =&gt; {
+    console.log(<span class="org-string">"The network connection has been lost."</span>);
+});
+
+window.addEventListener(<span class="org-string">"online"</span>, (event) =&gt; {
+    console.log(<span class="org-string">"You are now connected to the network."</span>);
+});
+</pre>
+</div>
+<ul class="org-ul">
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event">https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event</a></li>
+<li>ref: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/online_evetn">https://developer.mozilla.org/en-US/docs/Web/API/Window/online_evetn</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd437f2a" class="outline-2">
+<h2 id="orgd437f2a"><span class="section-number-2">3.</span> Optional chaining</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>This is super helpful (If you are using latest javascript).</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-javascript">object = <span class="org-constant">null</span>;
+object?.property <span class="org-comment-delimiter">// </span><span class="org-comment">Undefined - no error will be thrown</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>If the object is null, then we get undefined value not error thrown at runtime which is super cool</li>
+</ul>
+
+
+<p>
+That's it. Thats all the things i learned during this week.
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Emacs custom Indentation for legacy code</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/emacs_identation.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/emacs_identation.html</guid>
-  <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>My phone is dead and my learning</title>
+<link>https://goldayan.in/posts/pixel_phone_issue.html</link>
+<pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/pixel_phone_issue.html</guid>
+<description>
+<![CDATA[<p>
+It was Saturday morning, and I thought of checking my WhatsApp status
+and message on my Android phone, and the display went black. I can see
+partial screen now and then, with a green line at the top, sometimes a
+green square covering 1/3rd of the screen. My thoughts are holy crap,
+not again, I need to buy or replace my phone again, as I got this
+phone not a year ago.
+</p>
+
+<p>
+After checking the phone, only the display is not working rest of the
+functionality seems to be working. My company provides the phone I am
+currently using, so I want talk to them first.
+</p>
+
+<p>
+Okay, fine. Let's see what I can do in this situation and write 4
+points.
+</p>
+<ol class="org-ol">
+<li>E-sim issue
+<ul class="org-ul">
+<li>I need to find a device that has e-SIM capability, and a phone
+with this capability is not cheap.</li>
+<li>I have to go to the Airtel showroom (I did).</li>
+<li>New proof, the problem is this in my father's name.</li>
+</ul></li>
+<li>Buy a new Android phone
+<ul class="org-ul">
+<li>A decent Android phone costs around 30K ruppees. It's a new year,
+and I don't want to spend the bulk of my amount on a new mobile.</li>
+<li>I know my primary sim is gone for a few days, so let's have an
+emergency number for contact with family.</li>
+<li>Why not buy a dumb keypad phone that supports all mobile
+operators?</li>
+<li>I bought the HMD 4G keypad mobile for 2400 rupees for emergency
+contact with my family and friends.
+<ul class="org-ul">
+<li>I will write more about the HMD phone in a separate blog.</li>
+</ul></li>
+</ul></li>
+<li>Backup important data
+<ul class="org-ul">
+<li>I charged the phone for 2 to 3 hours and prayed it would be back
+to normal for a few minutes so I could back up important data.</li>
+<li>Photos, Documents, and some videos.</li>
+<li>It came back to normal, then plugged into my laptop and gave file
+transfer permission.</li>
+</ul></li>
+<li>Enable USB debugging and wireless debugging for screen mirroring.
+<ul class="org-ul">
+<li>Parallely, when backing up, I have enabled USB debugging and
+wireless debugging.</li>
+<li>Done adb pairing with laptop using <b><b>adb pair &lt;ip addr&gt;:&lt;port&gt;</b></b></li>
+<li>Downloaded <b><b>scrcpy</b></b> static binary build and I can screen mirror
+it in laptop woooh SAFEEE..</li>
+<li>To keep the screen awake, I installed <b><b>caffinate</b></b> from F-Droid.</li>
+</ul></li>
+</ol>
+
+<div id="outline-container-org5d888f9" class="outline-2">
+<h2 id="org5d888f9"><span class="section-number-2">1.</span> After some time</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+After a while, my phone seems to be back to normal after I keep the
+phone turned on for a day (caffinate app). So I guess the issue is
+software, I have factory reset the phone, now it works properly, but
+still the display flickers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5d242e" class="outline-2">
+<h2 id="orgb5d242e"><span class="section-number-2">2.</span> Learnings</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Have an emergency dumb phone. You can get one for less than 3000 rupees.</li>
+<li>I don't plan on using E-sim here after (Until it is available in a
+mid-budget phone).</li>
+<li>You can enable default option to be done when USB is connected in developer settings.
+<ul class="org-ul">
+<li>If developer settings is enabled some app won't work - IRCTC, Banking apps.</li>
+</ul></li>
+<li>JIO SIM won't work unless it is a 4G phone.</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Enable wireless debugging in Pixel phone</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/wireless_adb_pixel.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/wireless_adb_pixel.html</guid>
-  <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-</item>
+<title>Emacs custom Indentation for legacy code</title>
+<link>https://goldayan.in/posts/emacs_identation.html</link>
+<pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/emacs_identation.html</guid>
+<description>
+<![CDATA[<p>
+I often work on legacy codebases. Using Emacs at work is not a lot of
+fun due to the mix of indentation. As some lines in the project files
+have used TAB, some lines have 2, 4, or sometimes 8 spaces.
+</p>
+
+<p>
+I thought, how about turning the indentation in a particular buffer
+off. That should solve the problem.
+</p>
+
+<p>
+I asked Gemini to create an interactive function to do that. which
+toggle the new and old indentation when it is called.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil
+  <span class="org-doc">"Tracks whether free-flow mode is active in the current buffer."</span>)
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-original-indent-func</span> nil
+  <span class="org-doc">"Stores the original indentation function to restore it later."</span>)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Free Flow' (no auto-indent)."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">ENABLE FREE FLOW
+</span>      (<span class="org-keyword">progn</span>
+        (<span class="org-keyword">setq</span> my-original-indent-func indent-line-function)
+        (<span class="org-keyword">setq-local</span> indent-line-function 'insert-tab)
+        (<span class="org-keyword">setq-local</span> tab-always-indent nil)
+        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Emacs will not touch your indentation)"</span>))
+
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">DISABLE FREE FLOW (Restore Defaults)
+</span>    (<span class="org-keyword">progn</span>
+      (<span class="org-keyword">setq-local</span> indent-line-function (<span class="org-keyword">or</span> my-original-indent-func 'indent-relative))
+      (<span class="org-keyword">setq-local</span> tab-always-indent t)
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Standard indentation restored)"</span>)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Here we are making the indent-line-function as just insert-tab, By
+default, this will have programming language/file specific indentation
+function such as c-indent-line or python-indent-line.</li>
+<li>Then we are turning off tab-always-indent to nil. When it is true,
+it indents the current line when the tab is pressed; when it is nil,
+it does not. If the cursor is at the start of a line, it indents;
+otherwise, it inserts &lt;tab&gt; key.</li>
+<li>Turning off the electric indent local mode, a feature that automatically
+indents the line the moment you press RET (Enter) or type certain
+characters (like a { or }).</li>
+</ul>
+
+<p>
+After navigating with the legacy code with new indentation, I was not
+satisfied with the result. There has to be a better way.
+</p>
+
+<p>
+Suddenly, an idea pops out: how about using the indentation of the
+previous line when a new line is inserted? This should do it&#x2026;
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defun</span> <span class="org-function-name">my/indent-like-previous-line</span> ()
+  <span class="org-doc">"Insert a newline and indent it exactly like the previous line."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((indent (<span class="org-keyword">save-excursion</span>
+                  (forward-line 0)
+                  (<span class="org-keyword">let</span> ((start (point)))
+                    (back-to-indentation)
+                    (buffer-substring-no-properties start (point))))))
+    (newline)
+    (insert indent)))
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Previous Line' flow."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      (<span class="org-keyword">progn</span>
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Map RET to our new 'copy previous indent' function
+</span>        (local-set-key (kbd <span class="org-string">"RET"</span>) 'my/indent-like-previous-line)
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable Emacs's automatic '</span><span class="org-comment"><span class="org-constant">electric</span></span><span class="org-comment">' indentation
+</span>        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Indenting based on previous line)"</span>))
+    (<span class="org-keyword">progn</span>
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Restore default Return behavior
+</span>      (local-unset-key (kbd <span class="org-string">"RET"</span>))
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Default Emacs indentation restored)"</span>)))
+</pre>
+</div>
+
+<p>
+Here I removed tab-based behavior for now and applied new behavior to
+<code>enter key</code> followed by disabling electric-indent-local-mode. I worked
+with legacy source code, much, much better now.
+</p>
+
+<p>
+I have called this function for each file in the project I am working
+on.Planning to add this function to .dir-locals.el after some time, I
+will update the article once I work on it.
+</p>
+]]>
+</description></item>
 <item>
-  <title>Cheap way to isolate devices in home network</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/homelab_network.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/homelab_network.html</guid>
-  <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Enable wireless debugging in Pixel phone</title>
+<link>https://goldayan.in/posts/wireless_adb_pixel.html</link>
+<pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/wireless_adb_pixel.html</guid>
+<description>
+<![CDATA[<p>
+Before trying this, ensure both laptop and android phone is on same
+network. On the Google Pixel 9 (running Android 14 or 15), there is
+<b><b>no single default port</b></b> for wireless debugging. Instead, the port
+number is <b><b>randomized</b></b> every time you enable the feature or reboot
+the device.
+</p>
+
+<p>
+This is a security feature introduced in Android 11 to prevent
+unauthorized remote access. To find your specific port and connect,
+follow the steps below.
+</p>
+
+<p>
+Before you are planning to follow the below instruction, enable
+Developer options in settings. Tap Build number until developer option
+is enabled message popup.
+</p>
+
+<div id="outline-container-org09b7d17" class="outline-2">
+<h2 id="org09b7d17"><span class="section-number-2">1.</span> Enabling Wireless debugging</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Go to <b><b>Settings</b></b> &gt; <b><b>System</b></b> &gt; <b><b>Developer options</b></b>.</li>
+<li>Scroll down to the <b><b>Debugging</b></b> section and tap the text
+<b><b>"Wireless debugging"</b></b> (not just the toggle).</li>
+<li>Look under <b><b>IP address &amp; Port</b></b>. You will see something like:</li>
+</ol>
+<p>
+&gt; `192.168.1.15:43215`
+&gt; <b>(In this example, <b>*43215</b></b> is the port you need).*
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a86b39" class="outline-2">
+<h2 id="org6a86b39"><span class="section-number-2">2.</span> First time pairing</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+If this is your first time connecting this computer to your Pixel 9,
+you must "Pair" before you can "Connect." Note that the <b><b>Pairing
+Port</b></b> and the <b><b>Connection Port</b></b> are usually different.
+</p>
+
+<ol class="org-ol">
+<li>In the Wireless debugging menu, tap <b><b>Pair device with pairing code</b></b>.</li>
+<li>On your computer, run:</li>
+</ol>
+<p>
+`adb pair [IP<sub>ADDRESS</sub>]:[PAIRING<sub>PORT</sub>]`
+</p>
+<ol class="org-ol">
+<li>Enter the 6-digit code shown on your phone.</li>
+<li>Once paired, use the <b><b>main port</b></b> shown on the previous screen to connect:</li>
+</ol>
+<p>
+`adb connect [IP<sub>ADDRESS</sub>]:[CONNECTION<sub>PORT</sub>]`
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf7e3454" class="outline-2">
+<h2 id="orgf7e3454"><span class="section-number-2">3.</span> Below is a fun little experiment using nmap</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+To find the pairing port using `nmap`, you need to scan the specific
+range of ports that Android uses for wireless debugging. On the Pixel
+9 (and other Android 11+ devices), these ports are typically found in
+the high range between <b><b>30000 and 49999</b></b>.
+</p>
+
+<p>
+Note that there are two different ports: the <b><b>Connection Port</b></b> (the
+main one on the Wireless Debugging screen) and the <b><b>Pairing Port</b></b>
+(the one that appears only when you click "Pair device with pairing
+code").
+</p>
+</div>
+
+<div id="outline-container-org94eddec" class="outline-3">
+<h3 id="org94eddec"><span class="section-number-3">3.1.</span> The Nmap Command</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+To find the open port on your Pixel 9, use the following command
+(replace `192.168.1.XX` with your phone's actual IP address):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">nmap -p 30000-49999 192.168.1.XX
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org996e9ce" class="outline-3">
+<h3 id="org996e9ce"><span class="section-number-3">3.2.</span> Speeding up the scan:</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Since you only care about "Open" ports, you can use a faster "Stealth"
+scan and filter the results:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo nmap -sS -p 30000-49999 --open 192.168.1.XX
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org11fed66" class="outline-3">
+<h3 id="org11fed66"><span class="section-number-3">3.3.</span> How to distinguish between the ports</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+When you run the scan, you might see one or two ports open:
+</p>
+
+<ol class="org-ol">
+<li><b><b>The Connection Port:</b></b> This port is active as long as "Wireless
+Debugging" is toggled <b><b>ON</b></b>. It is used for the `adb connect`
+command.</li>
+<li><b><b>The Pairing Port:</b></b> This port <b><b>only opens</b></b> when you are
+physically looking at the "Pair device with pairing code" popup on
+your phone. If you close that popup, the port closes.</li>
+</ol>
+
+<p>
+<b><b>Pro Tip:</b></b> If you see two ports open, the <b><b>higher</b></b> number is
+usually the pairing port, but the safest way to know is to run the
+scan once with the pairing popup closed, and once with it open. The
+"new" port that appears is your pairing port.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d12350" class="outline-3">
+<h3 id="org0d12350"><span class="section-number-3">3.4.</span> One-Liner to Pair and Connect</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+If you have `nmap` and `awk` installed, you can use this bash
+one-liner to find the port and connect automatically:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-comment-delimiter"># </span><span class="org-comment">To Connect (after you have already paired once)
+</span><span class="org-variable-name">PHONE_IP</span>=<span class="org-string">"192.168.1.XX"</span>
+adb connect $<span class="org-variable-name">PHONE_IP</span>:$(<span class="org-sh-quoted-exec">nmap -p 30000-49999 $PHONE_IP | awk "/\/tcp/ {print \$1}" | cut -d/ -f1</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org571ca02" class="outline-2">
+<h2 id="org571ca02"><span class="section-number-2">4.</span> How to use the "Classic" Port 5555</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+If you need a static port (like the traditional <b><b>5555</b></b>) because your
+script or tool requires it, you can force it manually using a USB
+cable once:
+</p>
+
+<ol class="org-ol">
+<li>Connect your Pixel 9 to your computer via <b><b>USB</b></b>.</li>
+<li><p>
+Open your terminal and run:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">adb tcpip 5555
+</pre>
+</div></li>
+
+<li>Disconnect the USB cable.</li>
+<li>You can now connect wirelessly using:</li>
+</ol>
+<p>
+`adb connect [YOUR<sub>IP</sub><sub>ADDRESS</sub>]:5555`
+</p>
+
+<p>
+You will get a conformation in device to allow debugging, once it is
+allowed. You are good to go. Check if the adb is connect via tcp
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">adb devices
+</pre>
+</div>
+
+<p>
+&gt; [!WARNING]
+&gt; This manual port setting will reset to random/disabled if you reboot your phone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8727af4" class="outline-2">
+<h2 id="org8727af4"><span class="section-number-2">5.</span> Important Considerations</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><b><b>Unlocked Screen:</b></b> Sometimes the wireless debugging service goes
+into a "sleep" state. Ensure your phone screen is <b><b>on and
+unlocked</b></b> while running the scan.</li>
+<li><b><b>mDNS Alternative:</b></b> Android actually broadcasts these ports via
+mDNS. If you have the `mdns-scan` tool or use `adb mdns check`, you
+can often find the port without a full nmap scan.
+Command: `adb mdns services`</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2a558da" class="outline-2">
+<h2 id="org2a558da"><span class="section-number-2">6.</span> Always on display</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+To make your phone screen ON and unlocked, I used a app called <b><b>Caffinate</b></b> from F-droid
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd70e90e" class="outline-2">
+<h2 id="orgd70e90e"><span class="section-number-2">7.</span> What to do next ?</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Scrcpy
+<ul class="org-ul">
+<li>Mirror your android screen and control it from the laptop.</li>
+<li>Follow the below blogpost on more info on this.</li>
+</ul></li>
+<li><a href="https://iamyaash.github.io/stashed/posts/tips/screen-mirror/scrcpy/">https://iamyaash.github.io/stashed/posts/tips/screen-mirror/scrcpy/</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Visited Anna Centenary Library</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/anna_library.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/anna_library.html</guid>
-  <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Cheap way to isolate devices in home network</title>
+<link>https://goldayan.in/posts/homelab_network.html</link>
+<pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/homelab_network.html</guid>
+<description>
+<![CDATA[<p>
+Network isolation for vulnerable devices in home
+</p>
+
+<div id="outline-container-orgcd0a05b" class="outline-2">
+<h2 id="orgcd0a05b"><span class="section-number-2">1.</span> Smart TV</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>I my case it uses intranet to stream video and cast video from phone.</li>
+<li>I can assign static ip address to smart tv and Access Control / Parental Controls: Create a rule to Block Internet Access for that specific IP.
+<ul class="org-ul">
+<li>I tried Parental controls to disable internet for a particular device but it also cann't access intranet.</li>
+</ul></li>
+<li>I can allow when needed to install app or stream something in it.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd188a29" class="outline-2">
+<h2 id="orgd188a29"><span class="section-number-2">2.</span> IOT devices</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Enable guest network</li>
+<li>The Isolation: In your router settings, look for a checkbox that says "Allow guests to see each other" or "Access Intranet/Local Network." Make sure these are OFF.</li>
+<li>If you consume only content from internet for TV use this network.</li>
+<li>If you use DIY IOT devices and use local api then connect it to the main wifi access point</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org99e5837" class="outline-2">
+<h2 id="org99e5837"><span class="section-number-2">3.</span> Homelab server</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Assign static ip address based on Mac</li>
+<li>For ease of use, you can assosiate free duckdns domain to it.</li>
+<li>Why ? Getting SSL certificates for local server it pretty easy this way</li>
+<li>I have personally tried caddy, i have seen people did it using ngnix proxy manager.</li>
+<li>If you want to secure further, you can access it through tailscale and map the tailscale ip to the duckdns domain.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org10b0ab5" class="outline-2">
+<h2 id="org10b0ab5"><span class="section-number-2">4.</span> Personal devices</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Your phone, laptops are connected to normal wifi access point</li>
+<li>Your phone cann't access IOT devices (i haven't verified it yet)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org92d6df5" class="outline-2">
+<h2 id="org92d6df5"><span class="section-number-2">5.</span> Changelog</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><span class="timestamp-wrapper"><span class="timestamp">&lt;2026-01-10 Sat&gt; </span></span> added few points in all sections.</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Cheap storage server options</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/cheap_storage_server.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/cheap_storage_server.html</guid>
-  <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Visited Anna Centenary Library</title>
+<link>https://goldayan.in/posts/anna_library.html</link>
+<pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/anna_library.html</guid>
+<description>
+<![CDATA[<p>
+This was my first time visiting the library, and it is impressive with
+its <b><b>8 floors</b></b> (plus a ground floor). The process is very simple:
+you don't need to pay any fees. Just drop your bag at the nearby
+counter (free of charge). You are allowed to carry a notebook and a
+water bottle inside. To enter, you just need to sign in—either in a
+physical register or online.
+</p>
+
+<p>
+If you bring a <b><b>laptop</b></b>, there is a separate sign-in process for
+security when entering and exiting. Each floor is divided into two
+sections: <b><b>Section A (அ)</b></b> and <b><b>Section B (ஆ)</b></b>.
+</p>
+<div id="outline-container-orgd81ea07" class="outline-2">
+<h2 id="orgd81ea07"><span class="section-number-2">1.</span> Floor 1</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I spent about 30–45 minutes here. <b><b>Section A</b></b> houses newspapers and
+magazines, while <b><b>Section B</b></b> is dedicated to children's books. I
+found several tech and science magazines particularly interesting,
+including:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Number</th>
+<th scope="col" class="org-left">Magazine Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">44</td>
+<td class="org-left">Tamil Computer</td>
+</tr>
+
+<tr>
+<td class="org-right">112</td>
+<td class="org-left">Data quest</td>
+</tr>
+
+<tr>
+<td class="org-right">113</td>
+<td class="org-left">Digit</td>
+</tr>
+
+<tr>
+<td class="org-right">114</td>
+<td class="org-left">Down to earth</td>
+</tr>
+
+<tr>
+<td class="org-right">117</td>
+<td class="org-left">Electronics for u</td>
+</tr>
+
+<tr>
+<td class="org-right">146</td>
+<td class="org-left">PC Quest</td>
+</tr>
+
+<tr>
+<td class="org-right">154</td>
+<td class="org-left">Stuff</td>
+</tr>
+
+<tr>
+<td class="org-right">184</td>
+<td class="org-left">The book review</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+I started with the December 1st edition of <b>Tamil Computer</b>. It
+featured fascinating articles on the importance of savings, Linux apps
+on Pixel, using the Linux terminal on Android, the benefits of
+websites, and how LLMs (Large Language Models) work. I even spotted
+articles by my friends: one on <b><b>Spell Checkers</b></b> by Kaniyam Shrini
+and another on <b><b>USB Workings</b></b> by Kaleeshwar. It reminded me of a
+conversation I had with Shrini last year about open-source
+spell-checking tools.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgac669ac" class="outline-2">
+<h2 id="orgac669ac"><span class="section-number-2">2.</span> Floor 3 section A</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Here i explored computer book specially and found quite a lot of interesting books.
+</p>
+<ul class="org-ul">
+<li>Domain Driven Design</li>
+</ul>
+<p>
+I found books from following publication
+</p>
+<ul class="org-ul">
+<li>OReilly</li>
+<li>APress</li>
+<li>Head First books (WOW)</li>
+<li>dummies series (eg: Network for Dummies)</li>
+<li>BPB publication</li>
+</ul>
+
+<p>
+I spent most of my time reading <b>Implementing NLP Use Cases Using
+BERT</b>. My interest in this was sparked by AI/ML engineers I've met at
+conferences and meetups who recommended studying <b><b>BERT</b></b>
+(Bidirectional Encoder Representations from Transformers).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org674bcdd" class="outline-2">
+<h2 id="org674bcdd"><span class="section-number-2">3.</span> Floor 5 section A</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Next, I explored the Mathematics section. Two books stood out:
+</p>
+<ul class="org-ul">
+<li>Business calculus DeMystified</li>
+<li>Make: Calculus
+<ul class="org-ul">
+<li>This one is amazing! It teaches calculus using <b><b>OpenSCAD</b></b> (3D
+modeling software), which is a very unique approach. I’ll
+definitely be coming back for this one.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9d0bc16" class="outline-2">
+<h2 id="org9d0bc16"><span class="section-number-2">4.</span> Final Thoughts</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+  My only regret was <b><b>not bringing my laptop</b></b>. While the library is a
+bit of a long commute for me, it is absolutely worth the trip. If you
+are in or around Chennai, you should definitely check it out!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org121e4fe" class="outline-2">
+<h2 id="org121e4fe"><span class="section-number-2">5.</span> Useful links</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Library catalogue and Membership
+<ul class="org-ul">
+<li><a href="https://www.annacentenarylibrary.org/pages/view/library-catalogue">https://www.annacentenarylibrary.org/pages/view/library-catalogue</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>TossConf 2025</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/tossconf2025.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/tossconf2025.html</guid>
-  <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Cheap storage server options</title>
+<link>https://goldayan.in/posts/cheap_storage_server.html</link>
+<pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/cheap_storage_server.html</guid>
+<description>
+<![CDATA[<p>
+The cheapest storage server/device you can use in home is mobile
+phone(smart phone) connected to hard disk via USB-C. If your phone
+supports SD card use that too.
+</p>
+
+<p>
+Second option if you have a old laptop lying around, change the hard
+disk and a external hdd. You can use it as a storage server as well as
+media server.
+</p>
+
+<p>
+If you have old business class laptop then it might have DVD disk
+which can be replaced with HDD.
+</p>
+
+<p>
+If you are on tight budget and have no old pc lying around the good
+way to start is buying second hand PC. I personally prefare Mini pc
+which are easy to carry around in travel and power draw is very
+minimal compared to PC.
+</p>
+
+<p>
+If you are planning to use SSD for storage, keep below points in your
+mind.
+</p>
+
+<div id="outline-container-orgfc0c2f5" class="outline-2">
+<h2 id="orgfc0c2f5"><span class="section-number-2">1.</span> SSD gotcha</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Unpowered SSD slowly lose data</li>
+<li>Don't use SSSD as backup</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d571fd" class="outline-2">
+<h2 id="org7d571fd"><span class="section-number-2">2.</span> Second hand hard disk</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Buy SATA hard disk which is what typically used in PC not SAS (SAS is different)</li>
+<li>There is website called <a href="https://serverpartdeals.com/">Server part deals</a> which provides second hard
+disk. which is recommanded by many youtubers who do selfhosting
+<ul class="org-ul">
+<li>Refurbished (Third party provider)</li>
+<li>Recertified (By the same company)</li>
+</ul></li>
+<li>Sweet spot is 12-16 terabyte.</li>
+<li>Server part deals does provide shipping to India which is great but
+when we include tax the price will be doubled.</li>
+<li>In india we have following options OLX, Amazon, .. but i don't feel
+like using their service better buy a new 4TB hard disk wich will be
+sufficient for most of the case.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org003c15f" class="outline-2">
+<h2 id="org003c15f"><span class="section-number-2">3.</span> Health of hdd, sdd</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Use S.M.A.R.T to measure the health of a device, predict possible
+device failure, and provide notifications on unsafe values.</li>
+<li>S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology)</li>
+<li>More info on <a href="https://wiki.archlinux.org/title/S.M.A.R.T">https://wiki.archlinux.org/title/S.M.A.R.T</a>.</li>
+</ul>
+
+<p>
+Above methods are just for storing data. If you need to backup stuff
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2d9cab" class="outline-2">
+<h2 id="orga2d9cab"><span class="section-number-2">4.</span> 321 backup technique</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>3 Copies of Data – Maintain three copies of data—the original, and
+at least two copies.</li>
+<li>2 Different Media – Use two different media types for storage. This
+can help reduce any impact that may be attributable to one specific
+storage media type. It’s your decision as to which storage medium
+will contain the original data and which will contain any of the
+additional copies.</li>
+<li>1 Copy Offsite – Keep one copy offsite to prevent the possibility of
+data loss due to a site-specific failure.</li>
+<li>Ref: <a href="https://www.seagate.com/in/en/blog/what-is-a-3-2-1-backup-strategy/">https://www.seagate.com/in/en/blog/what-is-a-3-2-1-backup-strategy/</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>HTML Button&apos;s Weird Behavior</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/html_button_issue.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/html_button_issue.html</guid>
-  <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
-</item>
+<title>TossConf 2025</title>
+<link>https://goldayan.in/posts/tossconf2025.html</link>
+<pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/tossconf2025.html</guid>
+<description>
+<![CDATA[<p>
+This year, I got an opportunity to be a volunteer at the JSLover conference
+which helped me a lot for TOSSConf 2025 preparation, as well as last
+year SFD(Software Freedom Day) 2024 event.
+</p>
+
+<p>
+KanchiLug volunteers, Pailagam Institute and St.joseph students are
+The reasons we can successfully hold this conference with great
+success.
+</p>
+
+<p>
+<del>I</del> We implemented a lot of things at the conference
+</p>
+<ul class="org-ul">
+<li>Two separate tracks for both the Workshop and talks</li>
+<li>Stalls</li>
+<li>Dhuruvangal book for speakers</li>
+<li>A5 Stickers sheet (stole the idea from JSLover conference)</li>
+</ul>
+
+<p>
+Each of the above tasks comes with its own set of issues, but with
+Volunteers, we can finalise the details before the conference starts.
+</p>
+
+<div id="outline-container-org8ce2546" class="outline-2">
+<h2 id="org8ce2546"><span class="section-number-2">1.</span> Workshop</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Self-hosting workshop
+<ul class="org-ul">
+<li>It went great. The only thing I regret is that we are only able to cover Jellyfin.</li>
+</ul></li>
+<li>Clojure
+<ul class="org-ul">
+<li>This workshop is not only about programming language but about a thought process.</li>
+<li>How to approach the problem.</li>
+<li>Functional paradigms that we can utilise in other programming languages.</li>
+<li>Finally, I got another reason to solve problems in Clojure.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7a7ff7d" class="outline-2">
+<h2 id="org7a7ff7d"><span class="section-number-2">2.</span> Talks</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>I was in Track 2, so I only got to listen to things that are happening there.</li>
+<li>Demystifying Artificial Intelligence: A Beginner’s Guide to Smart Machines
+<ul class="org-ul">
+<li>Dr. U. Sabura Banu gave this talk.</li>
+<li>How to solve problems around us using simple devices and tools.</li>
+<li>Examples given by the mam are very interesting.</li>
+</ul></li>
+<li>Dissect, Build Network packets
+<ul class="org-ul">
+<li>Rengaraj, one of the organisers of chennaipy community, gave this talk.</li>
+<li>Scapy is an excellent tool. He demonstrated what we can do with this.</li>
+</ul></li>
+<li>A day in the open source world
+<ul class="org-ul">
+<li>Bowrna Prabhakaran gave this talk.</li>
+<li>Impressed by her story and phonetic search support for the Tamil story</li>
+<li>I think we can use this to create a cheap autosuggestion for the editor
+<ul class="org-ul">
+<li>If anyone is interested, ping me.</li>
+</ul></li>
+</ul></li>
+<li>Speed It Up! Building Efficient Indexes in MongoDB
+<ul class="org-ul">
+<li>Naveen Kumar gave this talk.</li>
+<li>He went all out with this talk.</li>
+<li>I never thought talking about indexes would be this interesting.</li>
+<li>Interactive Quiz using Open source tool at the end is super cool.
+<ul class="org-ul">
+<li>tool: <a href="https://classquiz.de/">https://classquiz.de/</a></li>
+</ul></li>
+</ul></li>
+<li>Building Web with Batteries Included.
+<ul class="org-ul">
+<li>Namma Hari gave this talk, FossUnited organiser</li>
+<li>He gave a demo about creating a website on <a href="https://frappe.io/">https://frappe.io/</a></li>
+<li>I can't explain this software in words, damn this thing is crazy.</li>
+<li>Building SAS software in minutes is mind-blowing.</li>
+<li>Dhanasekar, the previous ilugc co-ordinator, gave a demo about this in
+Kanchilug but Hari took it to the next level.</li>
+<li>He asked if the crowd is not big, we can do a workshop. Wish I had said yes to him.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org73859f9" class="outline-2">
+<h2 id="org73859f9"><span class="section-number-2">3.</span> Conference</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org584ecfe" class="outline-3">
+<h3 id="org584ecfe"><span class="section-number-3">3.1.</span> Pros</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Met a lot of old and new friends at this conference.</li>
+<li>Stickers
+<ul class="org-ul">
+<li>we decided which sticker to print so got firefox, vlc, blender, ..</li>
+<li>Also tons of sticker from stalls but not able to get few.</li>
+<li>My laptop has no room for stickers now.</li>
+</ul></li>
+<li>Got my own hard copy of the book Dhuruvangal.
+<ul class="org-ul">
+<li>Gave my copy to my college friend to read.</li>
+</ul></li>
+<li>Invited my brothers for this event, they too enjoyed the event.</li>
+<li>Conducted Selfhosting workshop with salman over a huge crowd (I never did that before :p).
+<ul class="org-ul">
+<li>Conducting workshop with more than one member helps us identify and address the issue properly.</li>
+<li>So next time i am doing workshop i plan on doing it with more people.</li>
+<li>It also help us with crowd control and resolve their problems quickly.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a77f79" class="outline-3">
+<h3 id="org8a77f79"><span class="section-number-3">3.2.</span> Cons</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Not able to attend few talks
+<ul class="org-ul">
+<li>As i was handling one of the track i am not able to listen to talks that are happening in other track.</li>
+</ul></li>
+<li>Only had a few time to roam around the stall so i took bunch of photo but not able to talk to lot of them.</li>
+<li>Day 2 was more tough, i missed meeting few people who came to the conference.</li>
+<li>I felt the crowd control was bit off now and then but worked out in the end.</li>
+<li>Sometimes we felt we have fewer volunteers, especially during lunch.</li>
+</ul>
+
+<p>
+Overall i learned a lot and i am honoured that i get to take part in
+Tamil Nadu's only Tamil based Open Source conferenece.
+</p>
+</div>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Jbang exploration</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/jbang.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/jbang.html</guid>
-  <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
-</item>
+<title>HTML Button's Weird Behavior</title>
+<link>https://goldayan.in/posts/html_button_issue.html</link>
+<pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/html_button_issue.html</guid>
+<description>
+<![CDATA[<p>
+My junior and I were debugging an issue on a web page where pressing
+the enter key while entering text in an input field triggers a
+button. Let's call that button 'Button B'.
+</p>
+
+<p>
+We didn't know why this was happening. There are two buttons, A and B,
+on that page, but only Button B's `onclick` is triggered.
+</p>
+
+<p>
+Upon closer inspection:
+</p>
+
+<div id="outline-container-orgba29d61" class="outline-2">
+<h2 id="orgba29d61"><span class="section-number-2">1.</span> Button A code:</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button A&lt;/<span class="org-function-name">button</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6983492" class="outline-2">
+<h2 id="org6983492"><span class="section-number-2">2.</span> Button B code:</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">button</span> <span class="org-variable-name">name</span>=<span class="org-string">"sample2"</span> <span class="org-variable-name">class</span>=<span class="org-string">"green-button"</span>&gt;Button B&lt;/<span class="org-function-name">button</span>&gt;
+</pre>
+</div>
+
+<p>
+The `type` attribute is missing in Button B. After we added the
+`type`, Button B was no longer triggered by the enter key.
+</p>
+
+<p>
+Okay, cool! What is the default `type` attribute for a button?
+</p>
+
+<p>
+When we explored the MDN docs, we found that the default button type
+is `submit`, which caused this issue.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4e792d" class="outline-2">
+<h2 id="orga4e792d"><span class="section-number-2">3.</span> Proof of Concept:</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Keep the cursor in the input text field and press enter; the submit
+button's `onclick` will be called.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-keyword">!DOCTYPE</span> html&gt;
+&lt;<span class="org-function-name">html</span> <span class="org-variable-name">lang</span>=<span class="org-string">"en"</span>&gt;
+&lt;<span class="org-function-name">head</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">charset</span>=<span class="org-string">"UTF-8"</span>&gt;
+    &lt;<span class="org-function-name">meta</span> <span class="org-variable-name">name</span>=<span class="org-string">"viewport"</span> <span class="org-variable-name">content</span>=<span class="org-string">"width=device-width, initial-scale=1.0"</span>&gt;
+    &lt;<span class="org-function-name">title</span>&gt;<span class="org-underline"><span class="org-bold">Form with Buttons</span></span>&lt;/<span class="org-function-name">title</span>&gt;
+&lt;/<span class="org-function-name">head</span>&gt;
+&lt;<span class="org-function-name">body</span>&gt;
+
+&lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Sample Form</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+&lt;<span class="org-function-name">form</span> <span class="org-variable-name">id</span>=<span class="org-string">"myForm"</span>&gt;
+    &lt;<span class="org-function-name">label</span> <span class="org-variable-name">for</span>=<span class="org-string">"name"</span>&gt;Name:&lt;/<span class="org-function-name">label</span>&gt;
+    &lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"text"</span> <span class="org-variable-name">id</span>=<span class="org-string">"name"</span> <span class="org-variable-name">name</span>=<span class="org-string">"name"</span> required&gt;
+    &lt;<span class="org-function-name">br</span>&gt;&lt;<span class="org-function-name">br</span>&gt;
+
+    &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"button"</span> <span class="org-variable-name">onclick</span>=<span class="org-string">"alert('Button with type button clicked!')"</span>&gt;Button Type None&lt;/<span class="org-function-name">button</span>&gt;
+    &lt;<span class="org-function-name">button</span> <span class="org-variable-name">type</span>=<span class="org-string">"submit"</span> <span class="org-variable-name">onclick</span>=<span class="org-string">"alert('Button with type submit clicked!')"</span>&gt;Submit&lt;/<span class="org-function-name">button</span>&gt;
+&lt;/<span class="org-function-name">form</span>&gt;
+
+&lt;/<span class="org-function-name">body</span>&gt;
+&lt;/<span class="org-function-name">html</span>&gt;
+</pre>
+</div>
+
+
+<p>
+I tried similar thing using input tag for button and having input
+type as submit which trigger the submit onclick on enter key press in
+the text field
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">input</span> <span class="org-variable-name">type</span>=<span class="org-string">"submit"</span> <span class="org-variable-name">value</span>=<span class="org-string">"Click me"</span> <span class="org-variable-name">onclick</span>=<span class="org-string">"alert('Button with type button clicked!')"</span>&gt;
+</pre>
+</div>
+
+<p>
+pretty interesting..
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Warpd - Keyboard driven virtual pointer</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/warpd.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/warpd.html</guid>
-  <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Jbang exploration</title>
+<link>https://goldayan.in/posts/jbang.html</link>
+<pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/jbang.html</guid>
+<description>
+<![CDATA[
+<div id="outline-container-org30fa8ce" class="outline-2">
+<h2 id="org30fa8ce"><span class="section-number-2">1.</span> Installing jbang</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="https://asdf-vm.com/guide/getting-started.html">ASDF</a> is what i used (works in linux and mac)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge0be3f5" class="outline-2">
+<h2 id="orge0be3f5"><span class="section-number-2">2.</span> Basics</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Minimum requirement Java 8</li>
+<li>argument to jbang
+<ul class="org-ul">
+<li>Kotlin and groovy are experimental</li>
+</ul></li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Extension</th>
+<th scope="col" class="org-left">operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">.java</td>
+<td class="org-left">Compile the java</td>
+</tr>
+
+<tr>
+<td class="org-left">.jsh</td>
+<td class="org-left">Jshell</td>
+</tr>
+
+<tr>
+<td class="org-left">.md</td>
+<td class="org-left">Java code inside markdown</td>
+</tr>
+
+<tr>
+<td class="org-left">Folder</td>
+<td class="org-left">Main.java file executed</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li><p>
+Get started
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang Sample.java
+</pre>
+</div></li>
+<li><p>
+Sample.java
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Sample</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        System.out.println(<span class="org-string">"Hello, this is a simple Java program!"</span>);
+    }
+}
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1502b0f" class="outline-2">
+<h2 id="org1502b0f"><span class="section-number-2">3.</span> Managing Java version</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Adopt JDK will be used</li>
+<li><p>
+List jdk installed in the system
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk list
+</pre>
+</div></li>
+<li><p>
+Install particular java version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk install 14
+</pre>
+</div></li>
+<li><p>
+List all the available version by jbang
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk list --available
+</pre>
+</div></li>
+<li><p>
+Set default jdk version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk default 17
+</pre>
+</div></li>
+<li><p>
+Uninstall particular version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk uninstall 17
+</pre>
+</div></li>
+<li><p>
+JDK home path
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk home
+</pre>
+</div></li>
+<li><p>
+Install java from existing path
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk install 17 &lt;PATH&gt;
+jbang jdk install 17 <span class="org-sh-quoted-exec">`sdk home java 17.0.4.1-tem`</span>
+</pre>
+</div></li>
+<li><p>
+Environment variable details
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang jdk java-env
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5848f2f" class="outline-2">
+<h2 id="org5848f2f"><span class="section-number-2">4.</span> Simple example</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-shell">java init --template=cli hello.java
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org892dfda" class="outline-2">
+<h2 id="org892dfda"><span class="section-number-2">5.</span> JFX</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><p>
+Let's look into few examples
+</p>
+<div class="org-src-container">
+<pre class="src src-java">    <span class="org-comment-delimiter">//</span><span class="org-comment">JAVA 21+
+</span><span class="org-comment-delimiter">//</span><span class="org-comment">DEPS org.openjfx:javafx-controls:21:${os.detected.jfxname}
+</span><span class="org-comment-delimiter">//</span><span class="org-comment">DEPS org.openjfx:javafx-graphics:21:${os.detected.jfxname}
+</span><span class="org-comment-delimiter">//</span><span class="org-comment">RUNTIME_OPTIONS --enable-native-access=javafx.graphics
+</span><span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">application</span>.<span class="org-type">Application</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-type">Scene</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-constant">control</span>.<span class="org-type">Label</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">scene</span>.<span class="org-constant">layout</span>.<span class="org-type">StackPane</span>;
+<span class="org-keyword">import</span> <span class="org-constant">javafx</span>.<span class="org-constant">stage</span>.<span class="org-type">Stage</span>;
+
+
+<span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">jfx</span> <span class="org-keyword">extends</span> <span class="org-type">Application</span> {
+
+    <span class="org-c-annotation">@Override</span>
+    <span class="org-keyword">public</span> <span class="org-type">void</span> <span class="org-function-name">start</span>(<span class="org-type">Stage</span> <span class="org-variable-name">stage</span>) {
+        <span class="org-type">String</span> <span class="org-variable-name">javaVersion</span> = System.getProperty(<span class="org-string">"java.version"</span>);
+        <span class="org-type">String</span> <span class="org-variable-name">javafxVersion</span> = System.getProperty(<span class="org-string">"javafx.version"</span>);
+        <span class="org-type">Label</span> <span class="org-variable-name">l</span> = <span class="org-keyword">new</span> <span class="org-type">Label</span>(<span class="org-string">"Hello, JavaFX "</span> + javafxVersion + <span class="org-string">", running on Java "</span> + javaVersion + <span class="org-string">"."</span>);
+        <span class="org-type">Scene</span> <span class="org-variable-name">scene</span> = <span class="org-keyword">new</span> <span class="org-type">Scene</span>(<span class="org-keyword">new</span> <span class="org-type">StackPane</span>(l), 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        launch();
+    }
+
+}
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgebbe7eb" class="outline-2">
+<h2 id="orgebbe7eb"><span class="section-number-2">6.</span> Jbang edit</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit myfile.java
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+For Emacs/Vim (in sandbox mode), For editor that doesn't support jbang
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit -b myfile.java
+</pre>
+</div></li>
+<li><p>
+Live editing
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang edit --live
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9f7df58" class="outline-2">
+<h2 id="org9f7df58"><span class="section-number-2">7.</span> Jshell integration</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><p>
+Simple jsh file
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">Import necessary classes
+</span><span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.<span class="org-type">ArrayList</span>;
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Create a list and add elements
+</span><span class="org-type">ArrayList</span>&lt;<span class="org-type">String</span>&gt; <span class="org-variable-name">fruits</span> = <span class="org-keyword">new</span> <span class="org-type">ArrayList</span>&lt;&gt;();
+fruits.add(<span class="org-string">"Apple"</span>);
+fruits.add(<span class="org-string">"Banana"</span>);
+fruits.add(<span class="org-string">"Cherry"</span>);
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Print the list
+</span>System.out.println(<span class="org-string">"Fruits: "</span> + fruits);
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iterate over the list
+</span><span class="org-keyword">for</span> (<span class="org-type">String</span> <span class="org-variable-name">fruit</span> : fruits) {
+    System.out.println(fruit);
+}
+</pre>
+</div></li>
+
+<li><p>
+Execute the above script using
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang Sample.jsh
+</pre>
+</div></li>
+
+<li><p>
+We can spawn a interactive shell using the following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jbang --interactive Sample.jsh
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org23de122" class="outline-2">
+<h2 id="org23de122"><span class="section-number-2">8.</span> Java debugging</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+<pre class="src src-shell">jbang --debug hello.java
+</pre>
+</div>
+<ul class="org-ul">
+<li><p>
+attach with jdb
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">jdb -attach IP_ADDRESS:PORT
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf448ce5" class="outline-2">
+<h2 id="orgf448ce5"><span class="section-number-2">9.</span> Export</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orga3056b5" class="outline-3">
+<h3 id="orga3056b5"><span class="section-number-3">9.1.</span> Gradle</h3>
+<div class="outline-text-3" id="text-9-1">
+<div class="org-src-container">
+<pre class="src src-shell">jbang export gradle --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8768244" class="outline-3">
+<h3 id="org8768244"><span class="section-number-3">9.2.</span> Maven</h3>
+<div class="outline-text-3" id="text-9-2">
+<div class="org-src-container">
+<pre class="src src-shell">jbang export maven --group org.acme --artifact myapp --version 1.0.0-SNAPSHOT hello.java
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad1754c" class="outline-2">
+<h2 id="orgad1754c"><span class="section-number-2">10.</span> Java Flight Recorder</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-shell">jbang --jfr myapp.java
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org860c953" class="outline-2">
+<h2 id="org860c953"><span class="section-number-2">11.</span> Want more</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li><a href="https://www.jbang.dev/try/">https://www.jbang.dev/try/</a> (run it in the browser)</li>
+<li>Check their docs</li>
+<li>It can also generate Native code using GraalVM.</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>25th Build2Learn Hackathon project</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/build2learn_25_itr.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/build2learn_25_itr.html</guid>
-  <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Warpd - Keyboard driven virtual pointer</title>
+<link>https://goldayan.in/posts/warpd.html</link>
+<pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/warpd.html</guid>
+<description>
+<![CDATA[<p>
+This program allow us to control the mouse from keyboard that's why it
+is called keyboard driven virtual pointer
+</p>
+
+<p>
+I was looking for keyboard driven virtual pointer for long time
+especially for wayland. As i already know <b>keynav</b> keyboard driven
+virtual pointer which support X server.
+</p>
+
+<p>
+Today i stumble across <b>warpd</b> and when i find out it supports wayland
+i should defintely want to try out.
+</p>
+
+<p>
+To install in debian or ubuntu, I followed the below steps
+</p>
+<ul class="org-ul">
+<li><p>
+First clone the warpd repo
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">git clone https://github.com/rvaiya/warpd.git
+</pre>
+</div></li>
+<li><p>
+Install the dependency
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install libcairo2-dev libxkbcommon-dev libwayland-dev
+</pre>
+</div></li>
+<li><p>
+Go into the directory
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-builtin">cd</span> warpd
+</pre>
+</div></li>
+<li><p>
+Compile the warpd for wayland
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-variable-name">PLATFORM</span>=wayland make
+</pre>
+</div></li>
+<li><p>
+Install warpd
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo make install
+</pre>
+</div></li>
+<li><p>
+To use in sway, use the following line in sway config
+</p>
+<pre class="example" id="orgdb174b4">
+# warpd hotkeys
+
+bindsym Mod4+Mod1+x exec warpd --hint
+bindsym Mod4+Mod1+c exec warpd --normal
+bindsym Mod4+Mod1+v exec warpd --grid
+</pre>
+
+<p>
+That's it
+</p>
+
+<p>
+to invoke warpd use Window key(mod4) + ALT (mod1) with the shortcuts
+</p></li>
+</ul>
+
+<div id="outline-container-orgf759136" class="outline-2">
+<h2 id="orgf759136"><span class="section-number-2">1.</span> Things like about warpd</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Normal mode is great i can control the mouse using vim key bindings
+(hjkl) and use (m,.) for left click, middle click and right click</li>
+<li>Hint and normal mode provides overlay that will help to narrow down
+the area where the mouse needs to be placed.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8d90a5d" class="outline-2">
+<h2 id="org8d90a5d"><span class="section-number-2">2.</span> Need to explore</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Drag and drop workflow
+<ul class="org-ul">
+<li>I still don't understand it, need to spend more time in it.</li>
+</ul></li>
+<li>Customization using configuration file</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org511ed8b" class="outline-2">
+<h2 id="org511ed8b"><span class="section-number-2">3.</span> Resources</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>man warpd</li>
+<li><a href="https://github.com/rvaiya/warpd">https://github.com/rvaiya/warpd</a></li>
+<li><a href="https://www.joyk.com/dig/detail/1665915344496931">https://www.joyk.com/dig/detail/1665915344496931</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Digital library using calibre</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/calibre_digital_library.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/calibre_digital_library.html</guid>
-  <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-</item>
+<title>25th Build2Learn Hackathon project</title>
+<link>https://goldayan.in/posts/build2learn_25_itr.html</link>
+<pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/build2learn_25_itr.html</guid>
+<description>
+<![CDATA[<p>
+This time instead of creating project i want to write a book about
+understanding programming concepts.
+</p>
+
+<p>
+The book is currently developed in the following github
+<a href="https://github.com/ThangaAyyanar/understand-programs">https://github.com/ThangaAyyanar/understand-programs</a>
+</p>
+
+<p>
+I would like to thank Muthu from Pailagam &amp;&amp; other build2learn members
+for give me pointers in few chapters.
+</p>
+
+<p>
+This book is aimed at beginners who understand little bit about
+programming but fears when they see a program with nested loops,
+recursion and algorithms.
+</p>
+
+<p>
+So far i am able to write a draft for 3 chapters. Plan to write
+atleast 5 chapters within end of this week
+</p>
+
+<p>
+Future plans will be to seperate code and concepts so that a script
+can be used to generate a book for programming language
+</p>
+
+<p>
+Reason i started writing this book is to take note of tips and tricks
+i have used during my learning phase and share it with others. Other
+reason would be to learn more tips and tricks from other people
+</p>
+]]>
+</description></item>
 <item>
-  <title>Trying out floorp browser</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/trying_floorp.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/trying_floorp.html</guid>
-  <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Digital library using calibre</title>
+<link>https://goldayan.in/posts/calibre_digital_library.html</link>
+<pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/calibre_digital_library.html</guid>
+<description>
+<![CDATA[<p>
+Looking for a software to manage my ebooks. almost everyone recommends to calibre
+</p>
+
+<div id="outline-container-orgaad0df5" class="outline-2">
+<h2 id="orgaad0df5"><span class="section-number-2">1.</span> Installing</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Binary installation
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo -v &amp;&amp; wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+</pre>
+</div>
+
+<p>
+once installed i am able to open the calibre
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7afcf2a" class="outline-2">
+<h2 id="org7afcf2a"><span class="section-number-2">2.</span> Library path</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+you can change the location where the books are stored by clicking the
+<b>Calibre library</b> in tool bar. The default location will be
+</p>
+<pre class="example" id="org8d149a8">
+~/Calibre Library
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org81d7a09" class="outline-2">
+<h2 id="org81d7a09"><span class="section-number-2">3.</span> Appearance changes</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Default appearance of the calibre looks pretty old let's change
+it. select preference and click look &amp; feel
+</p>
+<ul class="org-ul">
+<li>Dark mode</li>
+<li>Set the font to Jet brains Mono nerd font (My preference)</li>
+<li>Change the icon pack to Monstre</li>
+</ul>
+
+<p>
+You can select different layout option using <b>layout</b> button in the status bar
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3dfbdae" class="outline-2">
+<h2 id="org3dfbdae"><span class="section-number-2">4.</span> Adding book</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+You can start adding books
+</p>
+<ul class="org-ul">
+<li>By drag and dropping the books</li>
+<li>Add books button</li>
+<li>Using calibredb command</li>
+</ul>
+
+
+<p>
+When you are trying to access calibre functions from the terminal
+ensure the GUI application is not opened or it will raise some errors
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55174b0" class="outline-2">
+<h2 id="org55174b0"><span class="section-number-2">5.</span> Calibredb</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+One of the coolest way to add books is to use <b>calibredb</b> command line tool. Check whether calibredb is accesible from terminal using the following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibredb list
+</pre>
+</div>
+<p>
+This will list all the books available in calibre. To add new books to the library
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibredb add [options] file1 file2
+</pre>
+</div>
+<p>
+you can more operation using calibredb like editing meta data, remove ebook.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org806ed2b" class="outline-2">
+<h2 id="org806ed2b"><span class="section-number-2">6.</span> Calibre web server</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><p>
+Start the web server using following command
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibre-server
+</pre>
+</div></li>
+<li><p>
+Web server with custom port
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">calibre-server --port=9876
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf9d912d" class="outline-2">
+<h2 id="orgf9d912d"><span class="section-number-2">7.</span> OPDS</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>OPDS is a protocol to access your ebook library in other devices</li>
+<li>URL for your OPDS is <b>HOSTNAME:PORT/opds</b> eg: 192.268.1.10:8080/opds</li>
+<li>Software that i use to consume content from OPDS
+<ul class="org-ul">
+<li>Foliate (linux ebook reader)
+<ul class="org-ul">
+<li><a href="https://johnfactotum.github.io/foliate/">https://johnfactotum.github.io/foliate/</a></li>
+</ul></li>
+<li>Librera Reader (Android)
+<ul class="org-ul">
+<li><a href="https://github.com/foobnix/LibreraReader">https://github.com/foobnix/LibreraReader</a></li>
+<li>Download the Pro version from github repo.</li>
+<li>Network tab in the app</li>
+<li>If network tab is not there then reset(not reinstall) the app</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b7ed1e" class="outline-2">
+<h2 id="org0b7ed1e"><span class="section-number-2">8.</span> Convert ebooks from terminal</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><p>
+you can convert books from GUI. i prefer terminal tools
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">ebook-convert input_file output_file [options]
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5cae339" class="outline-2">
+<h2 id="org5cae339"><span class="section-number-2">9.</span> Backuping up</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+To backup the library all we need is to copy the content of <b>Calibre
+Library</b> like a monthly once or twice. Depends on your needs
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39bbb73" class="outline-2">
+<h2 id="org39bbb73"><span class="section-number-2">10.</span> Others</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li><a href="https://github.com/janeczku/calibre-web">https://github.com/janeczku/calibre-web</a>
+<ul class="org-ul">
+<li>If you are not satisfied with web server that comes with calibre you can look into this.</li>
+</ul></li>
+<li>If you are okay with self hosting you can try <b>Kavita</b> - <a href="https://www.kavitareader.com/">https://www.kavitareader.com/</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Mako and Ednc Notifcation daemon</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/sway_notification.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/sway_notification.html</guid>
-  <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Trying out floorp browser</title>
+<link>https://goldayan.in/posts/trying_floorp.html</link>
+<pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/trying_floorp.html</guid>
+<description>
+<![CDATA[<p>
+I use flatpak to install floorp
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">flatpak install flathub one.ablaze.floorp
+</pre>
+</div>
+
+<p>
+Gone with Lepton custom theme as i need to customize the UI little bit.
+</p>
+
+<p>
+Disabled the following
+</p>
+<ul class="org-ul">
+<li>Tabs</li>
+<li>Side bar heading</li>
+<li>removed few unnecessary menu items in the menu bar</li>
+</ul>
+
+<p>
+Addons
+</p>
+<ul class="org-ul">
+<li>Firefox containers</li>
+<li>Container Tabs Sidebar
+<ul class="org-ul">
+<li>I usually prefar sidebery plugin but i want something minimalistic the website restore on startup</li>
+</ul></li>
+<li>ublock origin</li>
+</ul>
+
+<p>
+Installing web progressive app can be done once it is enabled in the
+settings
+</p>
+
+<p>
+but when progressive app is open the Floorp instance with existing
+session is also opened if it is not opened already which is annoying
+</p>
+
+<p>
+Other than that it is great no need to dabble with chrome.css to
+change UI (atleast for me, as my requirement is basic which comes with
+browser options itself)
+</p>
+
+<p>
+My browser needs are satisfied by
+</p>
+<ul class="org-ul">
+<li>librewolf</li>
+<li>floorp (sometimes)</li>
+<li>chrome (If above two won't work as expected)</li>
+</ul>
+]]>
+</description></item>
 <item>
-  <title>Simple Live reload server</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/autoreload_webpage.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/autoreload_webpage.html</guid>
-  <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Mako and Ednc Notifcation daemon</title>
+<link>https://goldayan.in/posts/sway_notification.html</link>
+<pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/sway_notification.html</guid>
+<description>
+<![CDATA[<p>
+I haven't focused on installing notification daemon for my linux
+machine which run sway in ubuntu. I come across dead simple
+notification notification daemon which works out of the box
+</p>
+
+<div id="outline-container-org2e578b7" class="outline-2">
+<h2 id="org2e578b7"><span class="section-number-2">1.</span> Mako</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Installing in ubuntu
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install mako-notifier
+</pre>
+</div>
+
+<p>
+Then in your sway config, add the following line
+</p>
+<pre class="example" id="org28c029b">
+exec mako
+</pre>
+
+<p>
+that's it. To test whether the notification working or not. Open the
+terminal and type the following
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">notify-send <span class="org-string">"Hello world notification"</span>
+</pre>
+</div>
+
+<p>
+To send notification from the Emacs
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(org-show-notification <span class="org-string">"Hello world notification from emacs"</span>)
+</pre>
+</div>
+
+<p>
+To send custom notification from emacs
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">require</span> '<span class="org-constant">notifications</span>)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">my-on-action-function</span> (id key)
+  (message <span class="org-string">"Message %d, key \"%s\" pressed"</span> id key))
+
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">my-on-close-function</span> (id reason)
+  (message <span class="org-string">"Message %d, closed due to \"%s\""</span> id reason))
+
+
+(notifications-notify
+ <span class="org-builtin">:title</span> <span class="org-string">"Title"</span>
+ <span class="org-builtin">:body</span> <span class="org-string">"This is &lt;b&gt;important&lt;/b&gt;."</span>
+ <span class="org-builtin">:actions</span> '(<span class="org-string">"Confirm"</span> <span class="org-string">"I agree"</span> <span class="org-string">"Refuse"</span> <span class="org-string">"I disagree"</span>)
+ <span class="org-builtin">:on-action</span> 'my-on-action-function
+ <span class="org-builtin">:on-close</span> 'my-on-close-function)
+</pre>
+</div>
+<ul class="org-ul">
+<li>actions only close function is called when notification is tapped, may be due to mako i guess</li>
+<li>reference: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Desktop-Notifications.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Desktop-Notifications.html</a></li>
+</ul>
+
+<p>
+we can control the mako daemon using <b>makoctl</b> command
+</p>
+
+<p>
+Few things i played with makoctl are
+</p>
+<ul class="org-ul">
+<li>dismiss the notification from the terminal</li>
+<li>display the last notification from history</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge395e05" class="outline-2">
+<h2 id="orge395e05"><span class="section-number-2">2.</span> EDNC - The Emacs Desktop Notification Center</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>site: <a href="https://github.com/sinic/ednc">https://github.com/sinic/ednc</a></li>
+</ul>
+
+<p>
+We can use emacs as notification daemon using a package called ednc,
+to use ednc ensure there is no other notification daemon is running
+</p>
+
+<p>
+Install the package (package is available in melpa)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span class="org-keyword">use-package</span> <span class="org-constant">ednc</span>)
+</pre>
+</div>
+
+<p>
+Enable <b>ednc-mode</b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">require</span> '<span class="org-constant">notifications</span>)
+(notifications-notify <span class="org-builtin">:title</span> <span class="org-string">"1st test"</span> <span class="org-builtin">:body</span> <span class="org-string">"hello, world"</span> <span class="org-builtin">:app-name</span> <span class="org-string">"EDNC"</span>
+                      <span class="org-builtin">:actions</span> '(<span class="org-string">"default"</span> <span class="org-string">"default"</span>))
+</pre>
+</div>
+
+<p>
+Notification list can be seen in <code>*ednc-log*</code> buffer
+</p>
+
+
+<p>
+Both are awesome package, for now i will stick with mako and see how
+it goes.
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Not able to comprehend eSIM</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/esim_issue.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/esim_issue.html</guid>
-  <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Simple Live reload server</title>
+<link>https://goldayan.in/posts/autoreload_webpage.html</link>
+<pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/autoreload_webpage.html</guid>
+<description>
+<![CDATA[<p>
+Simple live reload server using shell script, violent monkey (browser extension) and websocket.
+</p>
+
+<p>
+TLDR, File changes are detected using shell script(inotify) and sent a
+websocket message to violent monkey extension script to reload the
+site
+</p>
+
+<p>
+Shell script which uses inotify to monitor the file changes, well we can use something simple like <code>entr</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span class="org-comment-delimiter">#</span><span class="org-comment">!/bin/</span><span class="org-keyword">bash</span><span class="org-comment">
+</span>
+<span class="org-keyword">if</span> [ -z <span class="org-string">"$(</span><span class="org-sh-quoted-exec">which inotifywait</span><span class="org-string">)"</span> ]; <span class="org-keyword">then</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"inotifywait not installed."</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"In most distros, it is available in the inotify-tools package."</span>
+    <span class="org-keyword">exit</span> 1
+<span class="org-keyword">fi</span>
+
+inotifywait --recursive --monitor --format <span class="org-string">"%e %w%f"</span> <span class="org-sh-escaped-newline">\</span>
+--event modify,move,create,delete ./ <span class="org-sh-escaped-newline">\</span>
+| <span class="org-keyword">while </span><span class="org-builtin">read</span> changed; <span class="org-keyword">do</span>
+    <span class="org-builtin">echo</span> <span class="org-string">"reload"</span>
+<span class="org-keyword">done</span>
+</pre>
+</div>
+
+<p>
+violent monkey script
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span class="org-comment-delimiter">// </span><span class="org-comment">==UserScript==
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@name        New script 127.0.0.1:7878
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@namespace   Violentmonkey Scripts
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@match       http://127.0.0.1:7878/*
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@grant       none
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@version     1.0
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@author      -
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@description 20/2/2025, 10:25:19 pm
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">@require https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
+</span><span class="org-comment-delimiter">// </span><span class="org-comment">==/UserScript==
+</span>
+console.log(<span class="org-string">"hello world"</span>)
+
+<span class="org-keyword">let</span> <span class="org-variable-name">toggle</span> = <span class="org-constant">false</span>;
+<span class="org-keyword">const</span> <span class="org-variable-name">socket</span> = <span class="org-keyword">new</span> <span class="org-type">WebSocket</span>(<span class="org-string">'ws://localhost:7070'</span>);
+
+socket.onopen = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(<span class="org-string">"Websocket is created"</span>);
+};
+
+socket.onmessage = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(event.data);
+  <span class="org-keyword">if</span>(event.data===<span class="org-string">"reload"</span>) {
+    window.location.reload(); <span class="org-comment-delimiter">//</span><span class="org-comment">reload the window (simple reload not hard reload)
+</span>  }
+};
+
+socket.onclose = <span class="org-keyword">function</span>(<span class="org-variable-name">event</span>) {
+  console.log(<span class="org-string">"Websocket is terminated"</span>);
+};
+
+<span class="org-keyword">function</span> <span class="org-function-name">sendMessage</span>(<span class="org-variable-name">message</span>) {
+  socket.send(message);
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Keybindings
+</span>
+<span class="org-keyword">const</span> { register } = VM.shortcut;
+
+register(<span class="org-string">'c-i'</span>, () =&gt; {
+  toogle = !toggle;
+  sendMessage(toggle);
+});
+</pre>
+</div>
+
+<p>
+final piece of the puzzle is the websocket server <code>websocketd</code>
+</p>
+
+<p>
+download the websocketd binary from the github, <a href="https://github.com/joewalnes/websocketd">https://github.com/joewalnes/websocketd</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">./websocketd --port=7070 ./sample.sh 
+</pre>
+</div>
+
+<p>
+Drawback, This does a soft reload not hard reload. Still exploring how
+to do hard reload from javascript.
+</p>
+]]>
+</description></item>
 <item>
-  <title>NCMC Chennai card, My experience</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/ncmc_card.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/ncmc_card.html</guid>
-  <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
-</item>
+<title>Not able to comprehend eSIM</title>
+<link>https://goldayan.in/posts/esim_issue.html</link>
+<pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/esim_issue.html</guid>
+<description>
+<![CDATA[<p>
+I got a new phone from my office, and I swapped my Airtel 4G SIM to
+the new phone, but it didn't work. I borrowed my sibling's SIM to
+check if the phone was damaged, and his SIM worked immediately. In
+theory, the problem was with my SIM.
+</p>
+
+<p>
+I approached the Airtel store in our hometown, and I was told to get a
+new Airtel SIM for my number. However, since my SIM was originally
+purchased under my father's ID, I took my father with me. The SIM was
+registered under my father's first name only (what the heck?), not his
+full name, and they told us to go to the city Airtel office to get a
+new SIM.
+</p>
+
+<p>
+When I told my friends about the issue, one of them suggested using an
+eSIM if my mobile supports it. The good thing is that the process can
+be initiated from the Airtel Thanks app. Before proceeding, I wanted
+to ensure that my phone number was mapped to the correct email address
+because we need a QR code from Airtel to activate the eSIM. After
+selecting eSIM on the new phone, it opened a QR scanner so I emailed
+Airtel customer care to confirm that (121@in.airtel.com). Got
+confirmation that my mail id is mapped to this phone number.
+</p>
+
+<p>
+I initiated the eSIM process, but I didn't receive any QR email for
+eSIM from Airtel, so I emailed customer care about that. I started the
+process on Thursday, and after Friday night, incoming calls were
+barred—I could only use Online apps like whatsapp and others, and only
+mobile data worked.
+</p>
+
+<p>
+I approached a nearby Airtel store for assistance, and they told me to
+buy a replacement SIM. I opted for the eSIM because of the new SIM
+issue.
+</p>
+
+<p>
+Since I had no SIM for personal use no, I decided to buy a new SIM
+from a different operator. I inserted the new SIM, restarted the
+phone, and it said that the eSIM was detected and that Airtel worked.
+</p>
+
+<p>
+What??
+</p>
+
+<p>
+I didn't know what the heck had happened—it worked bizarrely, right?
+</p>
+
+<p>
+I didn't receive a proper response from either the Airtel store or
+Airtel support. We use our mobile numbers as identity for many things,
+especially for financial apps.
+</p>
+
+<p>
+Prevention (my rambling):
+</p>
+<ul class="org-ul">
+<li>If your personal SIM is registered under a parent's name, change it
+to your name as soon as possible. This way, if anything happens, you
+can take quick action.</li>
+<li>Keep a secondary SIM for personal use, such as for staying in touch
+with friends and family. If one SIM becomes compromised, you'll have
+another way to contact them.</li>
+<li>Back up your contacts to the cloud.</li>
+</ul>
+
+<p>
+What are your prevention mechanism do you use ? file it as issue in
+<a href="https://github.com/goldayan/goldayan.github.io/issues">https://github.com/goldayan/goldayan.github.io/issues</a>
+</p>
+]]>
+</description></item>
 <item>
-  <title>journalling prompts/tricks that i like most</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/journaling_prompts.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/journaling_prompts.html</guid>
-  <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
-</item>
+<title>NCMC Chennai card, My experience</title>
+<link>https://goldayan.in/posts/ncmc_card.html</link>
+<pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/ncmc_card.html</guid>
+<description>
+<![CDATA[<p>
+The National Common Mobility Card (NCMC) can be obtained for free from
+major bus stands in Chennai. I got one for free, but the minimum
+recharge amount for the card starts at ₹100, so I had a card with ₹100
+on it. The card is issued by SBI and is a prepaid card that can only
+be used for commuting, not for other but services like metro parking
+can be used (I haven't tried that, so I don't know for sure). They ask
+for your mobile number, and within five minutes, the card is ready to
+use.
+</p>
+
+<p>
+I started using it for MTC (Metropolitan Transport Corporation
+Chennai) buses, and after my third ride, the balance dropped to around
+₹17. At this point, I needed to recharge the card. There are two
+options: online and offline.
+</p>
+
+<p>
+Online options:
+</p>
+<ul class="org-ul">
+<li>Paytm</li>
+<li>Airtel Thanks App (I have tried this method: search for "NCMC",
+enter your mobile number and the last 4-6 digits of your card,
+select the recharge amount, and pay. They charge a platform fee of
+₹1.80. Similarly, there is a fee on Paytm, and I’m not sure if the
+SBI app charges a fee.)</li>
+<li>SBI (I assume an option is available)</li>
+</ul>
+
+<p>
+Offline option:
+</p>
+<ul class="org-ul">
+<li>Visit a major bus stand and recharge the card there.</li>
+</ul>
+
+<p>
+I attempted to recharge ₹200 for my card. I received a message saying
+the transaction was successful and that the amount would be reflected
+within a couple of hours. The amount was debited from my account;
+however, after a few hours, I received another message stating that
+the transaction had failed and my amount would be refunded.
+</p>
+
+<p>
+I then visited a nearby bus stand and spoke with the NCMC stall
+attendant about the issue. They refreshed the card (or did something
+similar), and the ₹200 was eventually transferred. They provided me
+with a new receipt showing the updated balance. Even though I
+recharged online, I had to verify it with them to get the amount
+credited, which is a bit inconvenient and takes away the convenience
+of online recharging.
+</p>
+
+<p>
+Overall, from my experience, here are the pros and cons:
+</p>
+
+<p>
+Pros:
+</p>
+<ul class="org-ul">
+<li>Cashless payment—no need to carry cash.</li>
+<li>You can block the card and get a new one if you lose
+it. Additionally, you can recover the amount stored on the card (at
+least, that’s what I’ve heard).</li>
+<li>It can be used with the metro and, soon, for purchasing electric
+train tickets.</li>
+</ul>
+
+<p>
+Cons:
+</p>
+<ul class="org-ul">
+<li>You do not receive an SMS or any notification after the transaction.</li>
+<li>I found the Airtel Thanks App for checking the NCMC card balance to
+be inaccurate, so there is no reliable way to check the balance
+online at the time of my writing. You either have to ask the bus
+conductor to check it or visit a bus stand.</li>
+<li>Even with online recharging, a visit to the bus stand is needed to
+“refresh” the card so that the recharge amount reflects in your
+balance (at the time of writing).</li>
+</ul>
+
+<p>
+This feature has been introduced recently, so kindly carry some cash
+with you just in case.
+</p>
+]]>
+</description></item>
 <item>
-  <title>Hello world</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/hello.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/hello.html</guid>
-  <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
-</item>
+<title>journalling prompts/tricks that i like most</title>
+<link>https://goldayan.in/posts/journaling_prompts.html</link>
+<pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/journaling_prompts.html</guid>
+<description>
+<![CDATA[<p>
+FOCUS ON THE SOLUTION NOT ON THE PROBLEM
+</p>
+
+<p>
+Most of the journalling prompts are stolen from Ali Abdaal videos. You
+can also grab his list from this link:
+<a href="https://aliabdaal.com/journalling-prompts-template/">https://aliabdaal.com/journalling-prompts-template/</a>
+</p>
+
+<div id="outline-container-org3347aa6" class="outline-2">
+<h2 id="org3347aa6"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Write about how you are feeling</li>
+<li>Talk about any new people you've met</li>
+<li>Talk about something that surprised you</li>
+<li>What are the 3 things you are grateful for?
+<ul class="org-ul">
+<li>Find someone that you want to express gratitude towards</li>
+<li>Pick three qualities that characterise this person
+<ul class="org-ul">
+<li>Stuck picking qualities check this website:</li>
+</ul></li>
+<li>Write about those and a time when they displayed them.</li>
+<li>SHARE with them :p.</li>
+</ul></li>
+<li>Write about your next decisions and actions.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8191ff3" class="outline-2">
+<h2 id="org8191ff3"><span class="section-number-2">2.</span> Odyssey plan</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>What does my life look like 5 years from now if I continue down on the same path?</li>
+<li>What does my life look like 5 years from now if I take completely different path?</li>
+<li>What does my life look like if I take a different path but not worry about money or other's opinions?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1df6736" class="outline-2">
+<h2 id="org1df6736"><span class="section-number-2">3.</span> Morning</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgbffea95" class="outline-3">
+<h3 id="orgbffea95"><span class="section-number-3">3.1.</span> Morning pages</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Write 3 pages my hand
+<ul class="org-ul">
+<li>Start writing 3 lines, 1 page but write</li>
+<li>Write whatever thing on your mind</li>
+</ul></li>
+<li>Start the paragraph by <code>Today is going to be a great/awesome day</code>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc6b2266" class="outline-3">
+<h3 id="orgc6b2266"><span class="section-number-3">3.2.</span> <span class="todo TODO">TODO</span> Morning manifesto</h3>
+</div>
+</div>
+
+<div id="outline-container-org312d7c8" class="outline-2">
+<h2 id="org312d7c8"><span class="section-number-2">4.</span> Night</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Things to do next day</li>
+<li>Write down things you are done that day</li>
+<li>What was the most story worthy thing that happened to me today?</li>
+<li>Talk about what you learned that day</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org628c8c3" class="outline-2">
+<h2 id="org628c8c3"><span class="section-number-2">5.</span> Wheel of time</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Draw a circle and split it into different blocks
+<ul class="org-ul">
+<li>Personal Growth</li>
+<li>Money/Finances</li>
+<li>Business/Career</li>
+<li>Romance</li>
+<li>Family</li>
+<li>Friends</li>
+<li>Body</li>
+<li>Mind</li>
+<li>Soul</li>
+</ul></li>
+<li>Rate each topic from 1 to 10 how conformtable or good you are</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc2a4e4b" class="outline-2">
+<h2 id="orgc2a4e4b"><span class="section-number-2">6.</span> Fear setting exercise</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>What is the worst thing that will happen if I do the things that i fear doing?</li>
+<li>What can I do to prevent each of the worst things from happening?</li>
+<li>If the worst case scenario happened, what can i do to repair it?</li>
+<li>What are the benefits of an attempt or partial success?</li>
+<li>If i don't do the thing that scares me, what will my life look like in 6 months, 1 year, and 3 years?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org726d505" class="outline-2">
+<h2 id="org726d505"><span class="section-number-2">7.</span> Notes</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><b>Solomon's Paradox</b> People give significantly better advice about personal scenarios if they don't know it's about themselves</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org155a3ff" class="outline-2">
+<h2 id="org155a3ff"><span class="section-number-2">8.</span> Resource</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https:https://www.youtube.com/c/aliabdaal/videos">Ali Abdaal</a> Youtube channel about journalling</li>
+</ul>
+
+
+<p>
+If you have any other tricks or tips send me a mail gldayan8[at]gmail[DOT]com
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Learning postgres using podman</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/trying_podman.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/trying_podman.html</guid>
-  <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-</item>
+<title>Hello world</title>
+<link>https://goldayan.in/posts/hello.html</link>
+<pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/hello.html</guid>
+<description>
+<![CDATA[<p>
+This is a simple hello world article
+</p>
+
+<p>
+இந்தியாவில் கிடைத்துள்ள ஏறத்தாழ 1,00,000 (நூறாயிரம்) கல்வெட்டுகளில் தொல்லெழுத்துப்
+பதிவுகளில் 60,000 (அறுபதாயிரம்)-இற்கும் அதிகமானவை தமிழகத்தில்
+கிடைத்துள்ளன. இதில் ஏறத்தாழ 95 விழுக்காடு தமிழில் உள்ளன; மற்ற மொழிகள் அனைத்தும்
+ஐந்து விழுக்காட்டுக்கும் குறைவான கல்வெட்டுகளையே கொண்டுள்ளன
+</p>
+
+<div id="outline-container-org6acbacf" class="outline-2">
+<h2 id="org6acbacf"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> Hello world <code>[0/1]</code></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org14f75c4" class="outline-3">
+<h3 id="org14f75c4"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Hello world 1</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org99a36e6" class="outline-4">
+<h4 id="org99a36e6"><span class="section-number-4">1.1.1.</span> <span class="todo TODO">TODO</span> Hello world 11</h4>
+</div>
+<div id="outline-container-orgd10238d" class="outline-4">
+<h4 id="orgd10238d"><span class="section-number-4">1.1.2.</span> <span class="todo TODO">TODO</span> Hello world 12</h4>
+</div>
+<div id="outline-container-orgdc33664" class="outline-4">
+<h4 id="orgdc33664"><span class="section-number-4">1.1.3.</span> <span class="todo TODO">TODO</span> Hello world 13</h4>
+</div>
+</div>
+<div id="outline-container-orga384531" class="outline-3">
+<h3 id="orga384531"><span class="section-number-3">1.2.</span> <span class="todo TODO">TODO</span> Hello world 2</h3>
+</div>
+<div id="outline-container-org09f5ee8" class="outline-3">
+<h3 id="org09f5ee8"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> Hello world 3</h3>
+</div>
+</div>
+
+<div id="outline-container-orgfb9ac70" class="outline-2">
+<h2 id="orgfb9ac70"><span class="section-number-2">2.</span> <span class="done DONE">DONE</span> Hello world</h2>
+</div>
+]]>
+</description></item>
 <item>
-  <title>ESP8266 in ubuntu</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/esp8266_ubuntu.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/esp8266_ubuntu.html</guid>
-  <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
-</item>
+<title>Learning postgres using podman</title>
+<link>https://goldayan.in/posts/trying_podman.html</link>
+<pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/trying_podman.html</guid>
+<description>
+<![CDATA[<p>
+I thought of learning postgres. Instead of installing in the host
+machine how difficult it would be to spin up the container. Let's find
+out.
+</p>
+
+<div id="outline-container-org59c0194" class="outline-2">
+<h2 id="org59c0194"><span class="section-number-2">1.</span> Installing podman</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>I installed the podman that is available in ubuntu repo</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install podman
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Note: you won't get the latest podman</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9819b28" class="outline-2">
+<h2 id="org9819b28"><span class="section-number-2">2.</span> Let's check podman</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Let's pull the postgres container</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pull postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Nothing happened, so i tried <code>podman search postgres</code> which gave me
+the following error</li>
+</ul>
+
+<pre class="example" id="orgabf202f">
+ERRO[0000] User-selected graph driver "vfs" overwritten by graph driver "overlay" from database - delete libpod local files to resolve 
+</pre>
+
+<ul class="org-ul">
+<li>After some googling and github issue surfing i found <code>fuse-overlayfs</code>
+is missing in my system, which caused the above error</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install fuse-overlayfs
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Only install this if you face error, by default it should be installed
+along with podman.</li>
+<li>source:
+<a href="https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an">https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga88afe0" class="outline-2">
+<h2 id="orga88afe0"><span class="section-number-2">3.</span> Pod initialize</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>we will spin the container inside the pod, later if we want we can
+migrate it to kubernetes :p.</li>
+<li>Creating the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod create --name postgres-pod -p 9876:80
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Install postgres in the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-v ~/Documents/Postgres:/var/lib/postgresql/data <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_PASSWORD</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_USER</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+--name db <span class="org-sh-escaped-newline">\</span>
+-d postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>I got the following error
+<code>short-name "postgres" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"</code></li>
+<li>I found the answer for this issue in the following stackoverflow
+answer,
+<a href="https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an">https://unix.stackexchange.com/questions/701784/podman-no-longer-searches-dockerhub-error-short-name-did-not-resolve-to-an</a></li>
+<li><code>NOTE: RISK OF USING UNQUALIFIED IMAGE NAMES</code> We recommend always
+using fully qualified image names including the registry server (full
+dns name), namespace, image name, and tag (e.g.,
+registry.redhat.io/ubi8/ubi:latest). Pulling by digest (i.e.,
+quay.io/repository/name@digest) further eliminates the ambiguity of
+tags</li>
+<li>Run the following command, let's replace postgres with
+docker.io/postgres.</li>
+<li>Telling it to fetch the image from docker.io registery.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-v ~/Documents/Postgres:/var/lib/postgresql/data <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_PASSWORD</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-variable-name">POSTGRES_USER</span>=goldayan <span class="org-sh-escaped-newline">\</span>
+--name db <span class="org-sh-escaped-newline">\</span>
+-d docker.io/postgres
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>pgadmin web version</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman run --pod=postgres-pod <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-string">'PGADMIN_DEFAULT_EMAIL=me@goldayan.in'</span> <span class="org-sh-escaped-newline">\</span>
+-e <span class="org-string">'PGADMIN_DEFAULT_PASSWORD=goldayan'</span> <span class="org-sh-escaped-newline">\</span>
+--name pgadmin <span class="org-string">\ </span> <span class="org-comment-delimiter"># </span><span class="org-comment">name the container
+</span>-d docker.io/dpage/pgadmin4   <span class="org-comment-delimiter"># </span><span class="org-comment">the image we are pulling</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Login to pgadmin using the following url <code>localhost:9876</code></li>
+<li>Enter the creds, same as what you given for PGADMIN<sub>DEFAULT</sub><sub>EMAIL</sub> and
+PGADMIN<sub>DEFAULT</sub><sub>PASSWORD</sub> when running pgadmin container</li>
+<li>After SignIn, Press add new server</li>
+<li>Give any name for the server and for the connection type <code>localhost</code>
+for server and <code>5432</code> as port number.</li>
+<li>Maintenance database will be postgres by default.</li>
+<li>Username and password will be what you specified in the POSTGRES<sub>USER</sub>
+and POSTGRES<sub>PASSWORD</sub> when running postgres container.</li>
+<li>Press save.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdfbb2b7" class="outline-2">
+<h2 id="orgdfbb2b7"><span class="section-number-2">4.</span> Pod commands</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Status of the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod stats postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Pause and unpause the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod pause postgres-pod
+podman pod unpause postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Start and stop the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman pod start postgres-pod
+podman pod stop postgres-pod
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Last but not least, generate kubeconfig from the pod</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman generate kube postgres-pod &gt;&gt; postgres-pod-conf.yml
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5fdb6fa" class="outline-2">
+<h2 id="org5fdb6fa"><span class="section-number-2">5.</span> Log into postgres container</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>we will log into the postgres container and use the psql command</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman exec -it db bash
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>psql command to connect to the db</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">psql -U goldayan
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>we use goldayan because that is the username we used previously during
+creating postgres container.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org38c551b" class="outline-2">
+<h2 id="org38c551b"><span class="section-number-2">6.</span> When importing csv file in pgadmin</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Before I upload the csv file i removed the header</li>
+<li>Select the upload csv file then press import, voila&#x2026; imported.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2a480c7" class="outline-2">
+<h2 id="org2a480c7"><span class="section-number-2">7.</span> Reset the podman [WARN]</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>To delete all the images, containers, pods and cache</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">podman system reset
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Just delete containers</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo rm -rf ~/.local/share/containers/
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd69c2e" class="outline-2">
+<h2 id="orgbd69c2e"><span class="section-number-2">8.</span> Reference</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o">https://dev.to/pr0pm/run-postgresql-pgadmin-in-pods-using-podman-386o</a></li>
+<li><a href="https://mehmetozanguven.com/run-postgresql-with-podman/">https://mehmetozanguven.com/run-postgresql-with-podman/</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Clojure HTTP server</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/clojure_http_server.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/clojure_http_server.html</guid>
-  <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-</item>
+<title>ESP8266 in ubuntu</title>
+<link>https://goldayan.in/posts/esp8266_ubuntu.html</link>
+<pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/esp8266_ubuntu.html</guid>
+<description>
+<![CDATA[
+<div id="outline-container-org77d0d53" class="outline-2">
+<h2 id="org77d0d53"><span class="section-number-2">1.</span> Intro</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I want to explore in the side of IOT devices for very long time, Arduino
+or Raspberry Pi. Let's go shopping but where ???
+</p>
+
+<p>
+<b>Ritchie Street</b> of course, It is the second-largest electronic market
+in India. Managed to grab ESP8266, Breadboard and Jumper wire.
+</p>
+
+<p>
+Okay let's try to run a simple script in ESP8266 in Ubuntu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfa14af8" class="outline-2">
+<h2 id="orgfa14af8"><span class="section-number-2">2.</span> Booting ESP8266</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>I tried booting the esp8266 in Ubuntu 22.04, using a micro USB cable.</li>
+<li>Use the below command to check if any new device is connected.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">lsusb
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Check the output differs after and before the connecting device if you
+see any new device then it is detected.</li>
+<li>Device is not shown for me for the first time</li>
+<li>After surfing the web, Probably it is the cable fault (cable must
+support data transfer otherwise it won't work).</li>
+<li>I ordered a new Amazon micro USB data cable, The device is shown after
+using this cable using above command</li>
+</ul>
+
+<pre class="example" id="org1dc7033">
+Bus 003 Device 005: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+</pre>
+
+<ul class="org-ul">
+<li>Check all the TTY devices and check if you found any file starts like
+<code>/dev/ttyUSB</code></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ls /dev/tty*
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Or you can use the below command</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ls /dev/ttyUSB*
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>Arduino IDE</code> doesn't detect the device</li>
+<li>DAMN, what's the problem now ???</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo dmesg --follow
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>I saw some device like this</li>
+</ul>
+
+<pre class="example" id="org997d3c6">
+[   60.830127] usb 1-2: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+</pre>
+
+<ul class="org-ul">
+<li>After checking the Ubuntu fourms, I figured we need to remove the
+above driver <b>brltty</b>, because the device is detected wrongly</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt remove brltty
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Now Arduino IDE able to detect the device let's try the Hello world of
+Electronics (Blinking the LED)</li>
+<li>let's try to blink the LED 2 that comes with ESP8266</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-C"><span class="org-preprocessor">#define</span> <span class="org-variable-name">ledPin1</span> 2
+
+<span class="org-type">void</span> <span class="org-function-name">setup</span>() {
+  <span class="org-comment-delimiter">// </span><span class="org-comment">put your setup code here, to run once:
+</span>  pinMode(ledPin1, OUTPUT);
+}
+
+<span class="org-type">void</span> <span class="org-function-name">loop</span>() {
+  digitalWrite(ledPin1, LOW);
+  delay(1000);
+  digitalWrite(ledPin1, HIGH);
+  delay(1000);
+}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Failed to upload to the device, with following problem.</li>
+</ul>
+
+<pre class="example" id="orgaec6f47">
+arduino Minimal supported version of Python is 3.7
+</pre>
+
+<ul class="org-ul">
+<li>So basically it can't find the python executable</li>
+<li>I installed the Arduino from Ubuntu App store</li>
+<li>Arduino provide <code>appImage</code> executable for the Linux distro so let's
+try it then.</li>
+<li>I fired it up and try to upload the code it worked like charm.</li>
+</ul>
+
+<p>
+Finally we are able to make the device works, hope this will help others
+in running code in ESP 8266 from Ubuntu
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3849a33" class="outline-2">
+<h2 id="org3849a33"><span class="section-number-2">3.</span> Reference</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="https://askubuntu.com/questions/1403705/dev-ttyusb0-not-present-in-ubuntu-22-04">https://askubuntu.com/questions/1403705/dev-ttyusb0-not-present-in-ubuntu-22-04</a></li>
+<li><a href="https://unix.stackexchange.com/questions/670636/unable-to-use-usb-dongle-based-on-usb-serial-converter-chip">https://unix.stackexchange.com/questions/670636/unable-to-use-usb-dongle-based-on-usb-serial-converter-chip</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Learn and improve touch typing</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/touch_typing.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/touch_typing.html</guid>
-  <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
-</item>
+<title>Clojure HTTP server</title>
+<link>https://goldayan.in/posts/clojure_http_server.html</link>
+<pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/clojure_http_server.html</guid>
+<description>
+<![CDATA[<p>
+when i want to transfer a file in a network, I normal use the following
+command to host a simple http server in python that host the current
+directory
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">python3 <span class="org-operator">-</span>m http.server 8888
+</pre>
+</div>
+
+<p>
+Here we are using the http.server module and telling it to run in <i>8888</i>
+port
+</p>
+
+<p>
+One of my junior developer uses chatgpt at work to solve some problems
+</p>
+
+<p>
+I was impressed very much with the relevant answer, I logged in
+yesterday and tried bunch of other things and i thought &gt; HMM why not
+ask the ChatGPT to create a simple HTTP server in clojure I started
+asking ton of question and the answer is just pouring out, It's like
+raining but you cann't harvest all the water. Time to harvest some
+answers.
+</p>
+
+<p>
+I started connecting the pieces together and voila, HTTP server that can
+serve a directory in clojure. It makes few mistakes though not biggy
+</p>
+
+<p>
+Let's discuss the code piece by piece
+</p>
+
+<p>
+We need HTTP server lib first so i choosed <code>http-kit</code>.
+</p>
+
+<p>
+deps.edn
+</p>
+
+<pre class="example" id="org48f8793">
+{:deps {http-kit/http-kit {:mvn/version "2.7.0-alpha1"}}}
+</pre>
+
+<p>
+Full code:
+<a href="https://github.com/ThangaAyyanar/Learning-Adventure/blob/master/Clojure/simple-http-server.clj">https://github.com/ThangaAyyanar/Learning-Adventure/blob/master/Clojure/simple-http-server.clj</a>
+</p>
+
+<p>
+Let's get straight into the coding
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(ns simple-http-server
+  (:require [org.httpkit.server :as http]
+            [clojure.java.io :as io]
+            [clojure.string :as string]))
+</pre>
+</div>
+
+<p>
+here we required - <code>java.io</code> to reading files and folder - <code>string</code>
+split and join the string - Next, Setting up the http sever
+</p>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defonce server (atom nil))
+
+(defn stop-server []
+  (when-not (nil? @server)
+    ;; graceful shutdown: wait 100ms for existing requests to be finished
+    ;; :timeout is optional, when no timeout, stop immediately
+    (@server :timeout 100)
+    (reset! server nil)))
+
+(defn -main [&amp; args]
+  (reset! server (http/run-server #'handler {:port 8080})))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Starting and stoping the http server code</li>
+<li>Below we have the handler function that does the routing and
+downloading file logics</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn get-path [uri]
+    (if (= uri "/") dir-path (str dir-path uri)))
+
+(def error-response {:status 404 :body "404 Not Found"})
+
+(defn file-download-response [file-path]
+  {:status 200
+   :headers {"Content-Type" "application/octet-stream"
+             "Content-Disposition" (str "attachment; filename="(.getName file-path))}
+   :body (io/input-stream file-path)})
+
+(defn folder-html-response [uri path]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (contents uri path)})
+
+(defn handler [request]
+  (let [uri (or (:uri request) "/")
+        path (get-path uri)
+        file-path (io/file path)]
+    (if file-path
+      (cond
+        (.isFile file-path) (file-download-response file-path)
+        (.isDirectory file-path) (folder-html-response uri path)
+        :else error-response
+        )
+      error-response)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>one of the core function of this program is getting all the files and
+directory</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn list-folders
+  ([path] (list-folders "/" path))
+  ([uri path]
+    (-&gt;&gt; (io/file path)
+        (.listFiles)
+        (map #(dirs-to-string uri %))
+        (string/join)
+        )))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Here we used multi arity function.</li>
+<li>First we will convert the path Eg: <code>/User/Ayan/Temp</code> into file object.</li>
+<li>Get all the files and folders using <code>.listFiles</code></li>
+<li>Convert it to strings using dirs-to-string function</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">defn folder-html [uri name]
+ (str "&lt;li&gt;&lt;a href='" (str uri name) "'&gt;" (str name "/") "&lt;/a&gt; &lt;/li&gt;"))
+
+(defn file-html [uri name]
+ (str "&lt;li&gt;&lt;a href='" (str uri name) "' download&gt;" (str name) "&lt;/a&gt; &lt;/li&gt;"))
+
+(defn dirs-to-string [uri file]
+  (let [name (.getName file)
+        new-uri (if (= uri "/") uri (str uri "/"))]
+    (cond
+      (.isDirectory file) (folder-html new-uri name)
+      (.isFile file) (file-html new-uri name)
+      :else "")))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>We use <code>.getName</code> function to get the name of the file or folder.</li>
+<li>Then construct a html string out of it.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn prepend-up-dir [uri]
+  (if (= uri "/") nil
+      (let [prev-folder (string/join "/" (pop (string/split uri #"/")))]
+        (str "&lt;li&gt;&lt;a href='" (if (empty? prev-folder) "/" prev-folder) "'&gt;..&lt;/a&gt;&lt;/li&gt;"))))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Also added a link to traverse back to previous folder if we move into
+other folder other than root.</li>
+<li>Finally generating overall html</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-clojure">(defn generate-html
+  [title uri items]
+  (let [title-html (str "&lt;h1&gt;" title "&lt;/h1&gt;")
+        uri-html  (str "&lt;b&gt;URI:&lt;/b&gt;" uri)
+        prev-dir (or (prepend-up-dir uri) "")
+        contents (str "&lt;hr/&gt;&lt;ul&gt;" prev-dir items "&lt;/ul&gt;&lt;hr/&gt;")]
+     (str title-html uri-html contents)))
+
+(defn contents [uri path]
+  (let [folders (list-folders uri path)]
+    (generate-html "Simple HTTP Server" uri folders)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><code>generate-html</code> function generate page for the browser</li>
+<li>I know, I have not included the boiler plate html code like html, head
+and body tags.</li>
+<li>That is a exercise for you :p</li>
+</ul>
+
+<div id="outline-container-would-you-like-to-go-further-try-few-things-below" class="outline-2">
+<h2 id="would-you-like-to-go-further-try-few-things-below"><span class="section-number-2">1.</span> Would you like to go further, Try few things below</h2>
+<div class="outline-text-2" id="text-would-you-like-to-go-further-try-few-things-below">
+<ul class="org-ul">
+<li>Run the above script in babashka</li>
+<li>How to add simple authentication token ?
+
+<ul class="org-ul">
+<li>Simple Token in header</li>
+<li>Authentication using jwt token</li>
+</ul></li>
+
+<li>Restrict maximum concurrent downloads</li>
+<li>My future self crazy idea's</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-resources" class="outline-2">
+<h2 id="resources"><span class="section-number-2">2.</span> Resources</h2>
+<div class="outline-text-2" id="text-resources">
+<ul class="org-ul">
+<li>ChatGPT</li>
+<li>Clojure Examples</li>
+<li>Amazing clojure docs website</li>
+<li>Last but not least, Stackoverflow</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Playing with AlpineVM</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/alpine_vm.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/alpine_vm.html</guid>
-  <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
-</item>
+<title>Learn and improve touch typing</title>
+<link>https://goldayan.in/posts/touch_typing.html</link>
+<pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/touch_typing.html</guid>
+<description>
+<![CDATA[
+<div id="outline-container-org8e93f97" class="outline-2">
+<h2 id="org8e93f97"><span class="section-number-2">1.</span> What is Touch Typing</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Also called as Blind Typing, Able to type keys without seeing the
+keyboard
+</p>
+
+<p>
+If you work with computer a lot, then learning this skill will make your
+life much easier. All it takes is spend 10 minutes of your time to
+practice everyday. I will provide few website to where you learn.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org845ab2f" class="outline-2">
+<h2 id="org845ab2f"><span class="section-number-2">2.</span> <a href="https://www.keybr.com/">Keybr</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+If you are begineer, this website is amazing. This website gives me the
+basic touch typing skills. I learned all the basics here.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9a1093" class="outline-2">
+<h2 id="orgc9a1093"><span class="section-number-2">3.</span> <a href="https://www.typingclub.com">Typing Club</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I prefer Typing club for begineer nowdays, their way of teaching is much
+more fun. They concentrate on one thing at a time. I am self-learned
+Touch Typer, During my learning process. i started using wrong fingers
+to type some letters so Typing club helped to correct my mistakes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org094eea9" class="outline-2">
+<h2 id="org094eea9"><span class="section-number-2">4.</span> <a href="https://monkeytype.com">MonkeyType</a></h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>One of the go to website for practice touch typing, once you learned
+the letters.</li>
+<li>Start using this website, practice everyday.</li>
+<li>You can practice different languages too.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8a356e9" class="outline-2">
+<h2 id="org8a356e9"><span class="section-number-2">5.</span> <a href="https://zty.pe/">ZType</a></h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>I use this website now and then</li>
+<li>practice touch typing using classic space invader style game.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc49e08e" class="outline-2">
+<h2 id="orgc49e08e"><span class="section-number-2">6.</span> <a href="https://play.typeracer.com">Type Racer</a></h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>If love to compete, this website is for you.</li>
+<li>Race with other typer.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaced8f4" class="outline-2">
+<h2 id="orgaced8f4"><span class="section-number-2">7.</span> <a href="https://10fastfingers.com/">10FastFingers</a></h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>I never used this website much but a awesome website too.</li>
+</ul>
+
+<p>
+Shall we spice it up a little bit, how about learn typing and reading a
+new book - <a href="https://typeabook.co.uk/books/">Typeabook.co.uk/books</a> -
+<a href="https://www.typelit.io">Typelit</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a92177" class="outline-2">
+<h2 id="org3a92177"><span class="section-number-2">8.</span> Advanced Skills</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+By default, most of us are using QWERTY keyboard layout. There are other
+popular layout such as - Dvorak - Colemak - Workman
+</p>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Samba configuration experience</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/shared_storage_samba.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/shared_storage_samba.html</guid>
-  <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
-</item>
+<title>Playing with AlpineVM</title>
+<link>https://goldayan.in/posts/alpine_vm.html</link>
+<pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/alpine_vm.html</guid>
+<description>
+<![CDATA[<p>
+Let's say you need to play/learn virtualization on linux but you are
+system has pretty low specs then what would you do ? we would use a low
+foot print linux distro, I choosed Alpine
+</p>
+
+<p>
+Before we start, we need to download the alpine iso, Alpine offers wide
+variety of iso. you can download the iso from -
+<a href="https://alpinelinux.org/downloads/">https://alpinelinux.org/downloads/</a> I choose virtual(x86<sub>64</sub>) and it is
+only 50MB (Mind Blown).
+</p>
+
+<p>
+Okay let's boot up Virtual Box and Create a new VM Type : Linux Version:
+Other Linux(64 Bit) no other special option, just go with default
+option.
+</p>
+
+<p>
+Before booting the server, let's set the networking.
+</p>
+
+<div id="outline-container-orga6cb477" class="outline-2">
+<h2 id="orga6cb477"><span class="section-number-2">1.</span> Networking</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>We need to forward the SSH port to Host so that we can connect to SSH
+using NAT.</li>
+<li>Right click the VM and choose the settigs.</li>
+<li>Navigate to the Network tab.</li>
+<li>Click the Advanced and Tap the Port Forwarding button</li>
+<li>Add new Rule
+
+<ul class="org-ul">
+<li>Name: SSH</li>
+<li>Protocol: TCP</li>
+<li>Host Protocol: 2200</li>
+<li>Guest Protocol: 22</li>
+</ul></li>
+
+<li>Add another Rule
+
+<ul class="org-ul">
+<li>Name: Test</li>
+<li>Protocol: TCP</li>
+<li>Host Protocol: 4444</li>
+<li>Guest Protocol: 4444</li>
+</ul></li>
+
+<li>Just leave the host and guest IP address as blank.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga0fa3ed" class="outline-2">
+<h2 id="orga0fa3ed"><span class="section-number-2">2.</span> Booting</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Start the VM</li>
+<li>When asked for username enter <i>root</i></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org865e65d" class="outline-2">
+<h2 id="org865e65d"><span class="section-number-2">3.</span> Setting up network</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>By default all the network interface are down</li>
+<li>You can check the network interface using</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifconfig -a
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>To up the network interface</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifconfig lo up
+ifconfig eth0 up
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Get IP address automatically</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">vi /etc/network/interfaces
+iface eth0 inet dhcp
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>up the eth0</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ifup eth0
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Now check if you have ip address in eth0.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcca0d5f" class="outline-2">
+<h2 id="orgcca0d5f"><span class="section-number-2">4.</span> Checking network connection</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>To check Host and Guest network connection works properly.</li>
+<li>We will use a tool called <code>nc</code> (netcat).</li>
+<li>In Alpine enter</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc -l -p 4444
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>In Host system enter</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc localhost 4444
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>if you type in guest/host, the text will appear in other system.</li>
+<li>If that happens then network connection is configured properly.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge30e787" class="outline-2">
+<h2 id="orge30e787"><span class="section-number-2">5.</span> Setting up SSH Server</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Install openssh server in alpine</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">apk add openssh
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Enable the sshd service so that its starts at boot</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">rc-update add sshd
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>List services using</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">rc-status
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>To check the sshd is enabled or not.</li>
+<li>Before we start let us disable the password authentication for SSH.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">vi /etc/ssh/sshd_config
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Search for the following string and remove # before and set yes to no.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">PasswordAuthentication no
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Start sshd service</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">/etc/init.d/sshd start
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge218980" class="outline-2">
+<h2 id="orge218980"><span class="section-number-2">6.</span> SSH Connection between Guest and Host</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>In Host system we need to run</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh-keygen
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Will use default file name and no passpharse</li>
+<li>This will create a id<sub>rsa</sub> and id<sub>rsa.pub</sub> file</li>
+<li>We need to copy the file id<sub>rsa.pub</sub> to the Alpine VM</li>
+<li>We can use the nc.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">nc -l -p 4444 &gt; ~/.ssh/authorized_keys <span class="org-comment-delimiter"># </span><span class="org-comment">On VM
+</span>nc localhost 4444 &lt; ~/.ssh/id_rsa.pub <span class="org-comment-delimiter"># </span><span class="org-comment">On Host</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>After few seconds we can cut the connection using Ctrl+c.</li>
+<li>Ensure the permission of the ssh related files and folder</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Restart the SSH server</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">/etc/init.d/sshd restart
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Connect from Host</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh -i ~/.ssh/id_rsa.pub root@localhost -p 2200
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Voila you logged into Alpine VM from Host system.</li>
+</ul>
+
+<p>
+The VM is created for demo purpose if you are using it for real
+projects, read below heading
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2dac03b" class="outline-2">
+<h2 id="org2dac03b"><span class="section-number-2">7.</span> Do's and Don't</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Use passpharse when generating ssh-keygen.</li>
+<li>Use ssh-copy-id instead of nc</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">ssh-copy-id -i path/to/certificate -p port username@remote_host
+</pre>
+</div>
+
+<p>
+In next article we can look into how to communicate between two Alpine
+VM.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35b8f85" class="outline-2">
+<h2 id="org35b8f85"><span class="section-number-2">8.</span> Resources</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server">https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server</a></li>
+<li><a href="https://wiki.alpinelinux.org/wiki/Configure_Networking">https://wiki.alpinelinux.org/wiki/Configure_Networking</a></li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
 <item>
-  <title>Digital notes exploration</title>
-  <description><![CDATA[<nil></nil>]]></description>
-  <link>https://goldayan.in/posts/digital_notes.html</link>
-  <guid isPermaLink="false">https://goldayan.in/posts/digital_notes.html</guid>
-  <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
-</item>
+<title>Samba configuration experience</title>
+<link>https://goldayan.in/posts/shared_storage_samba.html</link>
+<pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/shared_storage_samba.html</guid>
+<description>
+<![CDATA[<p>
+Everyone has a smart phone in our house, alteast one smart TV and a one
+laptop or computer.
+</p>
+
+<p>
+Things we do most of the time:
+</p>
+
+<ul class="org-ul">
+<li>Take photos in mobile transfer to computer for backup</li>
+<li>Download some video and transfer to Mobile/PC</li>
+<li>Share media or photos with Siblings or Parents</li>
+<li>Play those media in Smart TV</li>
+</ul>
+
+<p>
+One of the boring task. Can we make it interesting ?
+</p>
+
+<p>
+We need something that can act as middle man to store the stuff and can
+be accessed from any device.
+</p>
+
+<p>
+Solutions:
+</p>
+
+<ul class="org-ul">
+<li>SMB (Secure Message Block) protocol</li>
+<li>NFS (Network File System)</li>
+</ul>
+
+<p>
+So let's try to do a POC on SMB. The SMB in linux side called SAMBA
+(Open source implementation of SMB)
+</p>
+
+<div id="outline-container-org57d4583" class="outline-2">
+<h2 id="org57d4583"><span class="section-number-2">1.</span> POC</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Installing samba server in Ubuntu
+</p>
+
+<pre class="example" id="org03e1f26">
+sudo apt install samba
+</pre>
+
+<p>
+Configuring samba Configuration
+</p>
+
+<ul class="org-ul">
+<li>Tell samba server which folder to share.</li>
+<li>Who have permission to read/write.</li>
+<li>Template of /etc/samba/smb.conf</li>
+</ul>
+
+<pre class="example" id="orgd4bc347">
+[NAME]
+   Configuration
+</pre>
+
+<ul class="org-ul">
+<li>My Config</li>
+</ul>
+
+<pre class="example" id="orgc98059c">
+[Public]
+    comment = Samba on Ubuntu
+    path = /home/sample/Public
+    read only = no
+    write list = ayan
+    browsable = yes
+    guest ok = yes
+
+[Videos]
+    comment = Samba on Ubuntu
+    path = /home/sample/Videos
+    browsable = yes
+    guest ok = yes
+</pre>
+
+<ul class="org-ul">
+<li>In the above config only user <b>ayan</b> has permission to write file in
+public folder</li>
+<li>For Videos folder no one has write permission.</li>
+<li>Samba shared folders can be accessed by Guest (any one in the network)
+or Authenticated user.</li>
+<li>Let's see how we can create user for samba authentication.</li>
+</ul>
+
+<pre class="example" id="org1315bea">
+sudo useradd ayan -s /sbin/nologin
+</pre>
+
+<ul class="org-ul">
+<li>The above user creds cannot be used to login in to your linux system
+because of <code>-s /sbin/nologin</code></li>
+<li>Check if your user added to your system</li>
+</ul>
+
+<pre class="example" id="org0122d7f">
+sudo cat /etc/passwd
+</pre>
+
+<ul class="org-ul">
+<li>Set samba password for your user</li>
+</ul>
+
+<pre class="example" id="org1048067">
+sudo smbpasswd -a ayan
+</pre>
+
+<ul class="org-ul">
+<li>All done</li>
+<li>Restart the samba server</li>
+</ul>
+
+<pre class="example" id="org7e97fb8">
+sudo service smbd restart
+</pre>
+</div>
+
+<div id="outline-container-orgcf2b3d5" class="outline-3">
+<h3 id="orgcf2b3d5"><span class="section-number-3">1.1.</span> Debugging</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Cheking the service</li>
+</ul>
+
+<pre class="example" id="org39f3a62">
+sudo service smbd status
+</pre>
+
+<ul class="org-ul">
+<li>smb config debug</li>
+</ul>
+
+<pre class="example" id="org21a6c09">
+sudo testparm
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2488faf" class="outline-2">
+<h2 id="org2488faf"><span class="section-number-2">2.</span> Pros</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>All you need is VLC media player software or SMB Client.</li>
+<li>You can play the media in the shared folders.</li>
+<li>If you have SMB client you can copy new files or delete existing
+files.</li>
+</ul>
+
+<p>
+One of my favorite quote
+</p>
+
+<blockquote>
+<p>
+Solution to problem creates new problems
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org89bbf9f" class="outline-2">
+<h2 id="org89bbf9f"><span class="section-number-2">3.</span> Cons</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Device should be Alive.
+
+<ul class="org-ul">
+<li>We can use <i>Raspberry PI</i> which takes less power and do more than
+what we need</li>
+<li>Synology sells hardware that does similar things.</li>
+</ul></li>
+
+<li>Devices need to be same network
+
+<ul class="org-ul">
+<li>Most of us basically connects to same network (Wifi Router)</li>
+<li>You can enable hotspot in any device and connect the rest of the
+device you need to shared.</li>
+</ul></li>
+
+<li>Not able to access it through Internet.
+
+<ul class="org-ul">
+<li>We can set up software such as Tails or Zeronet through which we can
+access your home server from internet.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8f5f2ca" class="outline-2">
+<h2 id="org8f5f2ca"><span class="section-number-2">4.</span> Resources</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Ubuntu official</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
+<item>
+<title>Digital notes exploration</title>
+<link>https://goldayan.in/posts/digital_notes.html</link>
+<pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/digital_notes.html</guid>
+<description>
+<![CDATA[<p>
+Everything becomes digital nowdays. I barely ever touch paper and pen so
+how to create and manage notes?
+</p>
+
+<p>
+One important thing, I want my notes to be able to create/Edit using
+simple text editor such as Notepad,TexEdit&#x2026; not fancy software like
+MS-Word.
+</p>
+
+<p>
+Few solution i am using it in my daily life.let me share with you and
+pick one that excits you.
+</p>
+
+<p>
+you just need a text editor to get started But i have mentioned other
+tools which will assit you in managing or providing extra
+functionalities like auto completion, colours and shortcuts.
+</p>
+
+<div id="outline-container-org3b6d6be" class="outline-2">
+<h2 id="org3b6d6be"><span class="section-number-2">1.</span> Markdown</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Many popular note taking app like Evernote supports markdown and
+learning markdown only take you 2-10 minutes.It's just that simple.</li>
+<li>You can also write a entire book in markdown and convert to .epub or
+.pdf</li>
+<li>This article is written in markdown which is compiled using static
+site generator (zola in my case) to html</li>
+<li>You can maintain todo,insert image,tables.</li>
+<li>*pandoc*( command line tool ) can able to convert your markdown files
+to other file formats such as pdf,html..</li>
+</ul>
+</div>
+
+<div id="outline-container-org9a1bb7d" class="outline-3">
+<h3 id="org9a1bb7d"><span class="section-number-3">1.1.</span> Sample code</h3>
+<div class="outline-text-3" id="text-1-1">
+<pre class="example" id="orgd4f5da4">
+# An h1 header
+
+Paragraphs are separated by a blank line.
+
+_Italic_, **bold**, and `monospace`.
+
+Undordered List
+
+- one
+- two
+- three
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org45ae930" class="outline-3">
+<h3 id="org45ae930"><span class="section-number-3">1.2.</span> Resources</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://www.markdownguide.org/getting-started">https://www.markdownguide.org/getting-started</a></li>
+<li><a href="https://www.markdowntutorial.com">https://www.markdowntutorial.com</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org151a45f" class="outline-3">
+<h3 id="org151a45f"><span class="section-number-3">1.3.</span> Managing Tools</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li><a href="https://www.zettlr.com/">Zettlr</a> free software that can help you
+manage markdown files.</li>
+<li><a href="https://www.notion.so/">Notion</a> paid software but you can see how
+markdown can be used in different tasks.</li>
+<li>vim + <a href="https://github.com/vimwiki/vimwiki">vimwiki</a> plugin for vim
+can able to link to different markdown file. It will help you to build
+own wikipedia.</li>
+</ul>
+
+<p>
+choose one which suits you.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf5d6fb8" class="outline-2">
+<h2 id="orgf5d6fb8"><span class="section-number-2">2.</span> Latex</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Markdown is great but sometimes you need more.I first heard the term
+when i attend FStival event in Thagaraja college about linux software. I
+was jawdroped by the functionalities of latex. One best example is Math,
+thing about all those equations, derviation awwwwwww how pain it will be
+to write.
+</p>
+
+<p>
+say hello to latex
+</p>
+
+<p>
+using latex you can write
+</p>
+
+<ul class="org-ul">
+<li>Books ( maths book )</li>
+<li>Scienticfic paper,</li>
+<li>Thesis</li>
+</ul>
+
+<p>
+It has the capability more than Ms-word but you have to code. I never
+used much but definetly worth learning.
+</p>
+</div>
+
+<div id="outline-container-org8b61ad5" class="outline-3">
+<h3 id="org8b61ad5"><span class="section-number-3">2.1.</span> Sample code</h3>
+<div class="outline-text-3" id="text-2-1">
+<pre class="example" id="orge6e575f">
+\documentclass{article}
+
+\begin{document}
+First document. This is a simple example, with no
+extra parameters or packages included.
+\end{document}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org8d05d99" class="outline-3">
+<h3 id="org8d05d99"><span class="section-number-3">2.2.</span> Resources</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes</a></li>
+<li><a href="https://www.latex-tutorial.com/tutorials">https://www.latex-tutorial.com/tutorials</a></li>
+<li><a href="https://arachnoid.com/latex/">Interactive LaTeX Editor</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0100ce7" class="outline-3">
+<h3 id="org0100ce7"><span class="section-number-3">2.3.</span> Tools</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Lyx</li>
+<li>TeXstudio</li>
+<li>Pandoc
+
+<ul class="org-ul">
+<li>you can write latex in text editor then use pandoc to convert to
+pdf.</li>
+<li>below link will provide you necessary details to get started</li>
+<li><a href="https://pandoc.org/installing.html">https://pandoc.org/installing.html</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org18ee552" class="outline-2">
+<h2 id="org18ee552"><span class="section-number-2">3.</span> Org</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Org file is more awesome but only problem with org you need install
+emacs editor inorder to use it with functionalities such as shortcuts to
+create headers, bullets,check and uncheck list.
+</p>
+
+<p>
+If you are conformtable with emacs then org can change your file
+completely i use emacs with evil mode ( vi key binding in emacs ) for
+org.
+</p>
+
+<p>
+Best thing is you can do is writing latex inside org.
+</p>
+
+<p>
+most powerful feature in org mode is <b>Literate programming</b> which is
+writing code and notes in same file but you can able to compile code
+without having to comment the code similar to jupyter notebook.Code are
+written between tag <b><i>#+BEGIN<sub>SRC</sub></i></b> and <b><i>#+END<sub>SRC</sub></i></b>, the result are
+displayed in the <b><i>#+RESULTS</i></b>
+</p>
+
+<p>
+Other notable things are <b>agenda*( use it as a scheduler ) and *TODO</b>.
+</p>
+</div>
+
+<div id="outline-container-org5af6be5" class="outline-3">
+<h3 id="org5af6be5"><span class="section-number-3">3.1.</span> Sample code</h3>
+<div class="outline-text-3" id="text-3-1">
+<pre class="example" id="orgb709d88">
+#+BEGIN_SRC python3
+
+print("Hello Readers")
+
+#+END_SRC
+</pre>
+
+<p>
+check this link:
+<a href="https://raw.githubusercontent.com/ThangaAyyanar/elisp-guide/master/README.org">https://raw.githubusercontent.com/ThangaAyyanar/elisp-guide/master/README.org</a>
+for more context.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb9345b" class="outline-3">
+<h3 id="orgfb9345b"><span class="section-number-3">3.2.</span> Resources</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><a href="http://orgmode.org">orgmode.org</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1ef7847" class="outline-3">
+<h3 id="org1ef7847"><span class="section-number-3">3.3.</span> Tools</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Emacs Editor: It is bit different from normal text editor.few
+configuration can give you org editing editor.</li>
+<li>Online editors - <a href="https://org-web.org">https://org-web.org</a></li>
+<li>Android - orgzly</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc7df17e" class="outline-3">
+<h3 id="orgc7df17e"><span class="section-number-3">3.4.</span> Managing Tools</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li><a href="https://github.com/Kungsgeten/org-brain">org-brain</a></li>
+<li><a href="https://github.com/caiorss/org-wiki">org-wiki</a> similar to vim-wiki</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge1eb962" class="outline-2">
+<h2 id="orge1eb962"><span class="section-number-2">4.</span> Graphviz</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This program is bit different from above.
+</p>
+
+<p>
+create graph from code and you can customize the graph too. it is used
+by compilers, decompilers, graph software to make graph
+</p>
+
+<p>
+It uses <b>dot</b> language
+</p>
+</div>
+
+<div id="outline-container-orgbed6cba" class="outline-3">
+<h3 id="orgbed6cba"><span class="section-number-3">4.1.</span> Sample code</h3>
+<div class="outline-text-3" id="text-4-1">
+<pre class="example" id="org38038b0">
+digraph {
+  node [ shape=square ];
+  edge [ style=dashed ];
+
+  a -&gt; b -&gt; c;
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgc00f890" class="outline-3">
+<h3 id="orgc00f890"><span class="section-number-3">4.2.</span> Resources</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><a href="http://www.graphviz.org">http://www.graphviz.org</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge35cf6f" class="outline-3">
+<h3 id="orge35cf6f"><span class="section-number-3">4.3.</span> Tools</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>graphviz program</li>
+<li>sketchviz
+
+<ul class="org-ul">
+<li>It is interactive and a best way to learn graphviz</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc343817" class="outline-2">
+<h2 id="orgc343817"><span class="section-number-2">5.</span> Plantuml</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+This program convert code to UML diagrams
+</p>
+
+<blockquote>
+<p>
+UML - Unified Modeling Language
+</p>
+</blockquote>
+
+<p>
+If you are a computer science student you definetly heard UML diagrams
+which is representing logic in some kind of diagrams. such as
+</p>
+
+<ul class="org-ul">
+<li>Visualize the flow of code.</li>
+<li>Abstraction of the software.</li>
+<li>Time diagram.</li>
+<li>Sequence diagram.</li>
+</ul>
+
+<p>
+you can also able to create <b>Mindmap</b> , wireframes and more
+</p>
+</div>
+
+<div id="outline-container-org7276960" class="outline-3">
+<h3 id="org7276960"><span class="section-number-3">5.1.</span> Sample code</h3>
+<div class="outline-text-3" id="text-5-1">
+<pre class="example" id="org0068027">
+@startuml
+Class01 &lt;|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+@enduml
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga82d848" class="outline-3">
+<h3 id="orga82d848"><span class="section-number-3">5.2.</span> Resources</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li><a href="https://plantuml.com">https://plantuml.com</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org18716c9" class="outline-3">
+<h3 id="org18716c9"><span class="section-number-3">5.3.</span> Tools</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Download the jar file from <a href="https://plantuml.com/download">Plant uml
+website</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc0e7df" class="outline-2">
+<h2 id="orgbc0e7df"><span class="section-number-2">6.</span> Reveal.js or Impress.js</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The biggest problem in doing presentation is you need to have MS
+Powerpoint or some kind of third party software but for this software
+you only need web browser.
+</p>
+
+<p>
+I was using linux at that time of college so ppt done in open office,
+Libre office usually break when opened in MS-Powerpoint so i searched
+for alternate software i found this two goodies.
+</p>
+
+<p>
+you may guessed from the header of the topic it is related to
+javascript.
+</p>
+
+<p>
+you can create presentation from using html files such by importing this
+frameworks i used to do my presentation using this tools. it takes few
+minutes to learn and let you able to create basic presentation in
+minutes.
+</p>
+
+<p>
+But something special we can do this technology
+</p>
+
+<p>
+consider the scenario you have ton of notes and want to change it into
+presentation
+</p>
+
+<p>
+Remember our friends from above
+</p>
+
+<ul class="org-ul">
+<li>markdown</li>
+<li>org file you can convert them to presentation using tools which comes
+prety handy feature if your a student.</li>
+</ul>
+</div>
+
+<div id="outline-container-org26633df" class="outline-3">
+<h3 id="org26633df"><span class="section-number-3">6.1.</span> Tools</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>For Markdown - <a href="https://github.com/webpro/reveal-md">reveal-md</a></li>
+<li>latex - <a href="https://www.overleaf.com/learn/latex/Beamer">Beamer</a> ( It
+doesnot use reveal but we can create presentation from latex )</li>
+<li>Org - <a href="https://github.com/yjwen/org-reveal">org-reveal</a></li>
+</ul>
+
+<p>
+Check out the demo presentation:
+</p>
+
+<ul class="org-ul">
+<li>impress.js -&gt; <a href="https://impress.js.org">https://impress.js.org</a></li>
+<li>reveal.js -&gt; <a href="https://revealjs.com">https://revealjs.com</a></li>
+</ul>
+
+<p>
+Though, I write in html didn't know the potential of mardown and org
+when i was student this is will be good addition to the list.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f3f765" class="outline-2">
+<h2 id="org3f3f765"><span class="section-number-2">7.</span> Final Touch</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+I use mostly markdown and few org for my notes and it is easy for me
+create and maintain using version control system like github.
+</p>
+
+<p>
+I know that's a lot of tools, check it in your free time check whether
+it can solve any of your problem.
+</p>
+
+<p>
+Let me know which software do you use to manage your notes in comments.
+</p>
+</div>
+</div>
+]]>
+</description></item>
 </channel>
 </rss>

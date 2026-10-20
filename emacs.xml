@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:atom="http://www.w3.org/2005/Atom"
+ xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+ xmlns:georss="http://www.georss.org/georss"
+ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+ xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<atom:link href="https://goldayan.in/emacs.xml" rel="self" type="application/rss+xml" />
+<title>Gold Ayan's Tinker Garage - Emacs</title>
+<link>https://goldayan.in</link>
+<description><![CDATA[Blog posts tagged with emacs]]></description>
+<language>en</language>
+<lastBuildDate>Tue, 20 Oct 2026 17:30:15 +0000</lastBuildDate>
+<generator>Emacs 29.3 org-publish-rss.el 0.8</generator>
+<item>
+<title>Writer deck with cage and emacs</title>
+<link>https://goldayan.in/posts/writer_deck_emacs.html</link>
+<pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/writer_deck_emacs.html</guid>
+<description>
+<![CDATA[<p>
+What is writer deck?
+TLDR Distraction free writing machine, heard about this in Veronica
+explain channel video on Writer deck
+</p>
+
+<p>
+I don't have seperate machine to use as writer so i thought why not
+create a seperate user when i logged in with that user i only have
+writing tool for me it is emacs.
+</p>
+
+<p>
+After a while i came across a program called cage,
+</p>
+
+<p>
+What is cage ?
+</p>
+<ul class="org-ul">
+<li>Cage is a wayland kiosk compositor</li>
+<li>Cage runs a single, maximized application. Cage can run multiple
+applications, but only a single one is visible at any point in time.</li>
+</ul>
+
+<p>
+In ubuntu all you need to do for installing cage
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install cage
+</pre>
+</div>
+
+<p>
+Create a wayland session file in the following location
+<b>/usr/share/wayland-sessions</b>. I have created a file called
+cage-emacs.desktop with following content.
+</p>
+<pre class="example" id="orge2cbf7a">
+[Desktop Entry]
+Name=Cage Emacs
+Comment=Run Emacs as a standalone Wayland kiosk
+Exec=env XKB_DEFAULT_OPTIONS="ctrl:nocaps" cage /opt/emacs29/bin/emacs
+Type=Application
+DesktopNames=Cage-Emacs
+</pre>
+
+<p>
+In Exec, i have specified
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">env <span class="org-variable-name">XKB_DEFAULT_OPTIONS</span>=<span class="org-string">"ctrl:nocaps"</span>
+</pre>
+</div>
+<p>
+When i press caps it will be known as ctrl. (I got used to it) 
+</p>
+
+<p>
+Before i login to the system all i need to do is change the session
+(which will be in the bottom right in ubuntu login screen) and login
+in. I will be greeted with emacs. Sweeet..
+</p>
+
+<div id="outline-container-org2892bbd" class="outline-2">
+<h2 id="org2892bbd"><span class="section-number-2">1.</span> Cons</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>If your program hanged then only way is to poweroff explicitly
+because virtual tty not worked for me inside cage so keep that in
+mind. I faced it one time</li>
+</ul>
+</div>
+</div>
+]]>
+</description></item>
+<item>
+<title>Emacs custom Indentation for legacy code</title>
+<link>https://goldayan.in/posts/emacs_identation.html</link>
+<pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+<guid>https://goldayan.in/posts/emacs_identation.html</guid>
+<description>
+<![CDATA[<p>
+I often work on legacy codebases. Using Emacs at work is not a lot of
+fun due to the mix of indentation. As some lines in the project files
+have used TAB, some lines have 2, 4, or sometimes 8 spaces.
+</p>
+
+<p>
+I thought, how about turning the indentation in a particular buffer
+off. That should solve the problem.
+</p>
+
+<p>
+I asked Gemini to create an interactive function to do that. which
+toggle the new and old indentation when it is called.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil
+  <span class="org-doc">"Tracks whether free-flow mode is active in the current buffer."</span>)
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-original-indent-func</span> nil
+  <span class="org-doc">"Stores the original indentation function to restore it later."</span>)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Free Flow' (no auto-indent)."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">ENABLE FREE FLOW
+</span>      (<span class="org-keyword">progn</span>
+        (<span class="org-keyword">setq</span> my-original-indent-func indent-line-function)
+        (<span class="org-keyword">setq-local</span> indent-line-function 'insert-tab)
+        (<span class="org-keyword">setq-local</span> tab-always-indent nil)
+        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Emacs will not touch your indentation)"</span>))
+
+    <span class="org-comment-delimiter">;; </span><span class="org-comment">DISABLE FREE FLOW (Restore Defaults)
+</span>    (<span class="org-keyword">progn</span>
+      (<span class="org-keyword">setq-local</span> indent-line-function (<span class="org-keyword">or</span> my-original-indent-func 'indent-relative))
+      (<span class="org-keyword">setq-local</span> tab-always-indent t)
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Standard indentation restored)"</span>)))
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Here we are making the indent-line-function as just insert-tab, By
+default, this will have programming language/file specific indentation
+function such as c-indent-line or python-indent-line.</li>
+<li>Then we are turning off tab-always-indent to nil. When it is true,
+it indents the current line when the tab is pressed; when it is nil,
+it does not. If the cursor is at the start of a line, it indents;
+otherwise, it inserts &lt;tab&gt; key.</li>
+<li>Turning off the electric indent local mode, a feature that automatically
+indents the line the moment you press RET (Enter) or type certain
+characters (like a { or }).</li>
+</ul>
+
+<p>
+After navigating with the legacy code with new indentation, I was not
+satisfied with the result. There has to be a better way.
+</p>
+
+<p>
+Suddenly, an idea pops out: how about using the indentation of the
+previous line when a new line is inserted? This should do it&#x2026;
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">  (<span class="org-keyword">defun</span> <span class="org-function-name">my/indent-like-previous-line</span> ()
+  <span class="org-doc">"Insert a newline and indent it exactly like the previous line."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">let</span> ((indent (<span class="org-keyword">save-excursion</span>
+                  (forward-line 0)
+                  (<span class="org-keyword">let</span> ((start (point)))
+                    (back-to-indentation)
+                    (buffer-substring-no-properties start (point))))))
+    (newline)
+    (insert indent)))
+
+(<span class="org-keyword">defvar-local</span> <span class="org-variable-name">my-free-flow-state</span> nil)
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">toggle-free-flow</span> ()
+  <span class="org-doc">"Toggle between standard Emacs indentation and 'Previous Line' flow."</span>
+  (<span class="org-keyword">interactive</span>)
+  (<span class="org-keyword">if</span> (not my-free-flow-state)
+      (<span class="org-keyword">progn</span>
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Map RET to our new 'copy previous indent' function
+</span>        (local-set-key (kbd <span class="org-string">"RET"</span>) 'my/indent-like-previous-line)
+        <span class="org-comment-delimiter">;; </span><span class="org-comment">Disable Emacs's automatic '</span><span class="org-comment"><span class="org-constant">electric</span></span><span class="org-comment">' indentation
+</span>        (electric-indent-local-mode -1)
+        (<span class="org-keyword">setq</span> my-free-flow-state t)
+        (message <span class="org-string">"Free Flow: ON (Indenting based on previous line)"</span>))
+    (<span class="org-keyword">progn</span>
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">Restore default Return behavior
+</span>      (local-unset-key (kbd <span class="org-string">"RET"</span>))
+      (electric-indent-local-mode 1)
+      (<span class="org-keyword">setq</span> my-free-flow-state nil)
+      (message <span class="org-string">"Free Flow: OFF (Default Emacs indentation restored)"</span>)))
+</pre>
+</div>
+
+<p>
+Here I removed tab-based behavior for now and applied new behavior to
+<code>enter key</code> followed by disabling electric-indent-local-mode. I worked
+with legacy source code, much, much better now.
+</p>
+
+<p>
+I have called this function for each file in the project I am working
+on.Planning to add this function to .dir-locals.el after some time, I
+will update the article once I work on it.
+</p>
+]]>
+</description></item>
+</channel>
+</rss>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><!-- 2022-11-12 --><!-- 2026-07-07 Tue 02:30 -->
+<!DOCTYPE html><html><head><!-- 2022-11-12 --><!-- 2026-10-20 Tue 17:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Playing with AlpineVM</title>
@@ -27,9 +27,9 @@ option.
 Before booting the server, let's set the networking.
 </p>
 
-<div id="outline-container-org609d666" class="outline-2">
-<h2 id="org609d666">Networking</h2>
-<div class="outline-text-2" id="text-org609d666">
+<div id="outline-container-org303ef0c" class="outline-2">
+<h2 id="org303ef0c">Networking</h2>
+<div class="outline-text-2" id="text-org303ef0c">
 <ul class="org-ul">
 <li>We need to forward the SSH port to Host so that we can connect to SSH
 using NAT.</li>
@@ -59,9 +59,9 @@ using NAT.</li>
 </div>
 </div>
 
-<div id="outline-container-org129ba26" class="outline-2">
-<h2 id="org129ba26">Booting</h2>
-<div class="outline-text-2" id="text-org129ba26">
+<div id="outline-container-org2055127" class="outline-2">
+<h2 id="org2055127">Booting</h2>
+<div class="outline-text-2" id="text-org2055127">
 <ul class="org-ul">
 <li>Start the VM</li>
 <li>When asked for username enter <i>root</i></li>
@@ -69,9 +69,9 @@ using NAT.</li>
 </div>
 </div>
 
-<div id="outline-container-org1ac8297" class="outline-2">
-<h2 id="org1ac8297">Setting up network</h2>
-<div class="outline-text-2" id="text-org1ac8297">
+<div id="outline-container-org7f966ef" class="outline-2">
+<h2 id="org7f966ef">Setting up network</h2>
+<div class="outline-text-2" id="text-org7f966ef">
 <ul class="org-ul">
 <li>By default all the network interface are down</li>
 <li>You can check the network interface using</li>
@@ -117,9 +117,9 @@ iface eth0 inet dhcp
 </div>
 </div>
 
-<div id="outline-container-org14d66ce" class="outline-2">
-<h2 id="org14d66ce">Checking network connection</h2>
-<div class="outline-text-2" id="text-org14d66ce">
+<div id="outline-container-org5f91248" class="outline-2">
+<h2 id="org5f91248">Checking network connection</h2>
+<div class="outline-text-2" id="text-org5f91248">
 <ul class="org-ul">
 <li>To check Host and Guest network connection works properly.</li>
 <li>We will use a tool called <code>nc</code> (netcat).</li>
@@ -147,9 +147,9 @@ iface eth0 inet dhcp
 </div>
 </div>
 
-<div id="outline-container-orgf8294f5" class="outline-2">
-<h2 id="orgf8294f5">Setting up SSH Server</h2>
-<div class="outline-text-2" id="text-orgf8294f5">
+<div id="outline-container-org578d850" class="outline-2">
+<h2 id="org578d850">Setting up SSH Server</h2>
+<div class="outline-text-2" id="text-org578d850">
 <ul class="org-ul">
 <li>Install openssh server in alpine</li>
 </ul>
@@ -207,9 +207,9 @@ iface eth0 inet dhcp
 </div>
 </div>
 
-<div id="outline-container-org37123cb" class="outline-2">
-<h2 id="org37123cb">SSH Connection between Guest and Host</h2>
-<div class="outline-text-2" id="text-org37123cb">
+<div id="outline-container-org192b7b8" class="outline-2">
+<h2 id="org192b7b8">SSH Connection between Guest and Host</h2>
+<div class="outline-text-2" id="text-org192b7b8">
 <ul class="org-ul">
 <li>In Host system we need to run</li>
 </ul>
@@ -272,9 +272,9 @@ projects, read below heading
 </div>
 </div>
 
-<div id="outline-container-orgea9f1ce" class="outline-2">
-<h2 id="orgea9f1ce">Do's and Don't</h2>
-<div class="outline-text-2" id="text-orgea9f1ce">
+<div id="outline-container-orgefcca74" class="outline-2">
+<h2 id="orgefcca74">Do's and Don't</h2>
+<div class="outline-text-2" id="text-orgefcca74">
 <ul class="org-ul">
 <li>Use passpharse when generating ssh-keygen.</li>
 <li>Use ssh-copy-id instead of nc</li>
@@ -292,9 +292,9 @@ VM.
 </div>
 </div>
 
-<div id="outline-container-orgd65211a" class="outline-2">
-<h2 id="orgd65211a">Resources</h2>
-<div class="outline-text-2" id="text-orgd65211a">
+<div id="outline-container-org19aa447" class="outline-2">
+<h2 id="org19aa447">Resources</h2>
+<div class="outline-text-2" id="text-org19aa447">
 <ul class="org-ul">
 <li><a href="https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server">https://wiki.alpinelinux.org/wiki/Setting_up_a_SSH_server</a></li>
 <li><a href="https://wiki.alpinelinux.org/wiki/Configure_Networking">https://wiki.alpinelinux.org/wiki/Configure_Networking</a></li>
