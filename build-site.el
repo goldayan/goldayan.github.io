@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Set the package installation directory so that packages aren't stored in the
 ;; ~/.emacs.d/elpa path.
 (require 'package)
@@ -19,8 +20,11 @@
 (use-package htmlize
   :ensure t)
 
-(use-package webfeeder
-  :ensure t)
+(add-to-list 'load-path (expand-file-name "./dependency/org-publish-rss/"))
+(require 'org-publish-rss)
+
+;; Debugging org publish rss
+(message "Is org-publish-rss loaded? %s" (featurep 'org-publish-rss))
 
 ;; Set language environment
 (set-language-environment "UTF-8")
@@ -28,7 +32,7 @@
 ;; Load the publishing system
 (require 'ox-publish)
 
-(defun goldayan/head-extra ()
+(defvar goldayan/head-extra
   (concat
    "<link href=\"https://fonts.cdnfonts.com/css/share-tech-mono\" rel=\"stylesheet\">"
    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/code.css\"/>"
@@ -86,43 +90,117 @@
       ;;org-publish-timestamp-directory "./.org-cache/"
       )
 
-;; Define the publishing project
+;; Helper functions for Org keywords, drafts, and tags
+(defun goldayan/get-org-keyword (file keyword)
+  "Extract the value of a #+KEYWORD: from an org FILE (case-insensitive)."
+  (with-temp-buffer
+    (insert-file-contents file)
+    (goto-char (point-min))
+    (let ((case-fold-search t))
+      (when (re-search-forward (format "^#\\+%s:[ \t]*\\(.*\\)$" (regexp-quote keyword)) nil t)
+        (string-trim (match-string 1))))))
+
+(defun goldayan/org-file-draft-p (file)
+  "Return t if FILE is marked as a draft (#+draft: true/t/yes/1)."
+  (let ((val (goldayan/get-org-keyword file "draft")))
+    (and val (member (downcase val) '("true" "t" "yes" "1")))))
+
+(defun goldayan/org-file-has-tag-p (file target-tag)
+  "Return t if FILE has TARGET-TAG in its #+tags: or #+filetags: keyword."
+  (let ((val (or (goldayan/get-org-keyword file "tags")
+                 (goldayan/get-org-keyword file "filetags"))))
+    (when val
+      ;; Support both comma-separated ("emacs, guix") and colon-separated (":emacs:guix:")
+      (let ((tags (mapcar #'string-trim (split-string val "[,:]+" t))))
+        (member (downcase target-tag) (mapcar #'downcase tags))))))
+
+;; Filter function for main RSS feed
+(defun goldayan/rss-filter-main (file)
+  "Filter function for main RSS feed: include non-draft articles in posts/."
+  (and (string-match-p "/posts/" file)
+       (not (string-equal (file-name-nondirectory file) "index.org"))
+       (not (goldayan/org-file-draft-p file))))
+
+;; Custom tag-specific RSS feeds
+(defvar goldayan/rss-custom-tags
+  '("emacs" "linux")
+  "List of tags to generate individual RSS feeds for (e.g. emacs.xml, guix.xml).")
+
+(defun goldayan/generate-all-rss (project)
+  "Completion function to generate main RSS feed and custom tag-specific feeds."
+  ;; 1. Generate main feed (feed.xml)
+  (org-publish-rss project)
+
+  ;; 2. Generate tag-specific feeds
+  (let ((base-plist (cond ((stringp project)
+                           (cdr (assoc project org-publish-project-alist)))
+                          ((stringp (car project))
+                           (cdr project))
+                          (t project)))
+        (proj-name (cond ((stringp project) project)
+                         ((stringp (car project)) (car project))
+                         (t "project"))))
+    (dolist (tag goldayan/rss-custom-tags)
+      (let* ((filename (format "%s.xml" tag))
+             (title (format "Gold Ayan's Tinker Garage - %s" (capitalize tag)))
+             (desc (format "Blog posts tagged with %s" tag))
+             (filter-fn (lambda (file)
+                          (and (string-match-p "/posts/" file)
+                               (not (string-equal (file-name-nondirectory file) "index.org"))
+                               (not (goldayan/org-file-draft-p file))
+                               (goldayan/org-file-has-tag-p file tag))))
+             (tag-plist (copy-sequence base-plist)))
+        (setq tag-plist (plist-put tag-plist :rss-file filename))
+        (setq tag-plist (plist-put tag-plist :rss-title title))
+        (setq tag-plist (plist-put tag-plist :rss-description desc))
+        (setq tag-plist (plist-put tag-plist :rss-filter-function filter-fn))
+        (let ((tag-project (cons proj-name tag-plist)))
+          (message "Generating RSS feed for tag '%s' -> %s..." tag filename)
+          (org-publish-rss tag-project))))))
+
+;; Publish feed
+(setq org-publish-rss-publish-immediately t)
+
 (setq org-publish-project-alist
-      (list
-       (list "goldayan:main"
-             :recursive t
-             :base-directory "./content"
-	     :base-extension "org"
-	     :html-head-extra (goldayan/head-extra)
-             :publishing-function 'org-html-publish-to-html
-             :publishing-directory "./public"
-	     :htmlized-source t
-             :with-author nil           ;; Don't include author name
-             :with-creator nil          ;; Include Emacs and Org versions in footer
-             :with-toc nil              ;; Include a table of contents
-             :section-numbers nil)      ;; Don't include section numbers
-             ;;:time-stamp-file nil)      ;; Don't include time stamp in file
-       (list "goldayan:assets"          ;; Copy all the assets - images, css and js
-             :recursive t
-             :base-directory "./assets"
-	     :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|html\\|mp4\\|ico"
-             :publishing-function 'org-publish-attachment
-             :publishing-directory "./public/assets")))    
+      `(("goldayan:blog"
+	 :recursive t
+         :base-directory "./content"
+         :base-extension "org"
+         :publishing-directory "./public"
+	 :htmlized-source t
+
+	 :html-head-extra ,goldayan/head-extra
+
+         :with-author nil  ;; Don't include author name
+         :with-creator nil ;; Include Emacs and Org versions in footer
+         :with-toc nil     ;; Include a table of contents
+         :section-numbers nil ;; Don't include section numbers
+	 
+         :publishing-function  org-html-publish-to-html
+
+         :html-link-home "https://goldayan.in"
+
+         :auto-rss t
+         :rss-file "feed.xml"
+         :rss-title "Gold Ayan's Tinker Garage"
+         :rss-description "Let’s tinker!"
+         :rss-with-content all
+         :rss-filter-function goldayan/rss-filter-main
+
+         :completion-function goldayan/generate-all-rss)
+
+	("goldayan:assets" ;; Copy all the assets - images, css and js
+         :recursive t
+         :base-directory "./assets"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|html\\|mp4\\|ico"
+         :publishing-function org-publish-attachment
+         :publishing-directory "./public/assets")
+
+        ("goldayan.in" :components ("goldayan:blog" "goldayan:assets")) ))
 
 ;; Generate the site output
 (org-publish-all t)
 
 (message "Build complete!")
 
-;; RSS builder
-
-(webfeeder-build "./feed.xml"
-                   "./public"
-                   "https://goldayan.in"
-                   (delete "posts/index.html" (let ((default-directory (expand-file-name "./public")))
-                     (directory-files-recursively "posts" ".*\\.html$")))
-                   :builder 'webfeeder-make-rss
-                   :title "Gold Ayan's Tinker Garage"
-                   :description "Let’s tinker!"
-                   :author "Gold Ayan")
 
