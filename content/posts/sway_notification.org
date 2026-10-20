@@ -2,6 +2,7 @@
 #+subtitle: configure dead simple notifcation daemon for sway
 #+date: <2025-03-12 Wed>
 #+author: Gold Ayan
+#+tags: linux
 
 I haven't focused on installing notification daemon for my linux
 machine which run sway in ubuntu. I come across dead simple

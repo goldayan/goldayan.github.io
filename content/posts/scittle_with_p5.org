@@ -2,6 +2,7 @@
 #+subtitle: Scittle with P5 js demo with REPL driven development
 #+date: <2026-01-22 Thu>
 #+author: Gold Ayan
+#+tags: programming
 
 *** HTML with scittle and p5 js script
 #+begin_src html

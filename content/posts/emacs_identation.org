@@ -2,6 +2,7 @@
 #+subtitle: Custom indentation for Emacs
 #+date: <2026-01-02 Fri>
 #+author: Gold Ayan
+#+tags: emacs
 
 I often work on legacy codebases. Using Emacs at work is not a lot of
 fun due to the mix of indentation. As some lines in the project files

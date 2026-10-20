@@ -2,6 +2,7 @@
 #+subtitle: simple writer deck with emacs and caget
 #+date: <2026-06-17 Wed>
 #+author: Gold Ayan
+#+tags: emacs
 
 What is writer deck?
 TLDR Distraction free writing machine, heard about this in Veronica

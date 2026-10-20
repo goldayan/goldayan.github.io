@@ -2,6 +2,7 @@
 #+subtitle: managing your digital books using calibre
 #+date: <2025-03-14 Fri>
 #+author: Gold Ayan
+#+tags: selfhost, linux
 
 Looking for a software to manage my ebooks. almost everyone recommends to calibre
 

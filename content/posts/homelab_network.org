@@ -2,6 +2,7 @@
 #+subtitle: Some methods to isolate devices on home network on budget
 #+date: <2025-12-31 Wed>
 #+author: Gold Ayan
+#+tags: selfhost
 
 Network isolation for vulnerable devices in home
 

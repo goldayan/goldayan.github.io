@@ -1,23 +1,7 @@
 #+title: Goldayan articles
 
-** Things to write
-*** TODO -> Tiny experiment
-*** TODO -> [Book] Emacs Elements 
-*** TODO Make phone less distracting (kiss, ola and notification)
-*** TODO Buy it for life (casio F-91W, thinkpad t480, T14)
-*** TODO oneko.html
-*** TODO Live reloader js
-*** TODO Text editor in single js
-*** TODO Web speech recognition API
-*** TODO Simple archive selfhost using single file html and babashka
-*** TODO Adb android app install like pro
-- download apk from fdroid
-- install using adb
-*** TODO Bullet journelling good and bad
-*** TODO .llama file and its magic
-- checkout https://github.com/LostRuins/koboldcpp
-
 ** 2026
+*** -> [[file:ai_resource.org][How i keep me updated about new AI stuff]]
 *** -> [[file:writer_deck_emacs.org][Writer deck with emacs]] 
 *** -> [[file:lubuntu_notes.org][Lubuntu installation notes]]
 *** -> [[file:scittle_with_p5.org][Scittle and P5 js with REPL]]
