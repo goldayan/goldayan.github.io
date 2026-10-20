@@ -1,0 +1,188 @@
+#+TITLE: Org Publish RSS
+
+=org-publish-rss.el= is a simple RSS generator for [[https://orgmode.org/][Org-mode]]'s built-in
+[[info:org#Publishing][publishing functionality]].
+
+This package adds new options for controlling RSS generation to the
+=org-publish-project-alist= variable (see [[info:org#Project alist][the Org manual]] if you are
+new to the publishing options).  It adds =:auto-rss= and other options
+that work similar to the included =:auto-sitemap= functionality.  This
+should hopefully make it easy for users to add RSS feeds to existing
+Org publish websites.
+
+* Installing
+
+** Installing on Emacs 30.1 or newer
+
+#+begin_src emacs-lisp
+  (use-package org-publish-rss
+    :vc (:url "https://git.sr.ht/~taingram/org-publish-rss"
+         :rev :newest))
+#+end_src
+
+** Installing on older Emacs versions
+
+Clone the git repo and add it to your load path.  Change load path to
+wherever you put the repository.
+
+#+begin_src sh
+git clone https://git.sr.ht/~taingram/org-publish-rss
+#+end_src
+
+Manually load and require the package.
+
+#+begin_src emacs-lisp
+  (add-to-list 'load-path "~/.config/emacs/my-lisp/org-publish-rss/")
+  (require 'org-publish-rss)
+#+end_src
+
+Or do the same with use-package:
+
+#+begin_src emacs-lisp
+  (use-package org-publish-rss
+    :load-path "~/.config/emacs/my-lisp/org-publish-rss/")
+#+end_src
+
+* Setup
+To use =org-publish-rss.el= you must add the configuration options
+to your =org-publish-project-alist= settings.  The minimum required
+options are:
+
+- :auto-rss :: (t/nil) Enables RSS feed generation.
+
+- :rss-title :: Channel title of the RSS feed.  If blank will fall
+  back to :sitemap-title.
+
+- :rss-description :: Channel description of the RSS feed.
+
+- :rss-link :: The URL to the website corresponding to the RSS
+  channel.  Will use =:html-link-home= if blank.
+
+- :rss-root-url :: The root website URL where the project is being
+  published (e.g. https://example.com/blog/).  This is used to
+  generate RSS links correctly.  If blank will fallback to
+  =:html-link-up= / =:html-link-home= / =:rss-link=, but that may
+  result in broken links.
+
+** Optional Settings
+- :rss-guid :: (permalink/function) by default the file's published
+  permalink is used as the unique identifier in the RSS feed.  Changes
+  to the filename/URL will cause the file to show as new in feed
+  readers.
+
+  To use a unique ID tag instead set this option to a custom function.
+  We provide a small package =org-file-id.el= that can be used to
+  generate unique IDs for files.  To enable it set your =:rss-guid=
+  or =org-publish-rss-guid-method= to =org-file-id-get-create=.
+
+- :rss-with-content :: (all/top/nil) If non-nil will generate RSS feed
+  with exported HTML content of all files included.  Option "all" will
+  include all content, "top" will include text before first head.
+
+For complete list of options see the Commentary section of
+[[https://git.sr.ht/~taingram/org-publish-rss/tree/master/item/org-publish-rss.el][org-publish-rss.el]].
+
+** Example Project
+#+begin_src emacs-lisp
+  (setq org-publish-project-alist
+  	'(("blog"
+  	   :base-directory "~/Documents/org/website/"
+  	   :base-extension "org"
+  	   :publishing-directory "~/public_html/"
+  	   :publishing-function  org-html-publish-to-html
+
+  	   :html-link-home "https://example.com"
+
+  	   :auto-rss t
+  	   :rss-title "Example Posts"
+  	   :rss-description "My example website."
+  	   :rss-with-content all
+
+  	   :completion-function org-publish-rss)
+  	  ("static"
+  	   :base-directory "~/Documents/org/website/"
+  	   :base-extension "css\\|jpg\\|png\||gif"
+  	   :include ("rss.xml")
+  	   :publishing-directory "~/public_html/"
+  	   :publishing-function org-publish-attachment)
+  	  ("example.com" :components ("blog" "static"))))
+#+end_src
+
+* Running
+
+M-x org-publish-rss [RET] PROJECT [RET]
+
+You may get a cache error, retry this after recently publishing the
+corresponding project.
+
+After generating verify the articles' =<link>= tags are correct. If
+not, adjust the =:rss-root-url= property.
+
+** Run Automatically when Publishing
+
+You can run this automatically by adding =org-publish-rss= as a
+=:completion-function= which will run after any publishing action for
+that project.  This is the final publishing step so uploading the RSS
+file will need to be handled by a separate project, see example
+project, or by enabling =org-publish-rss-publish-immediately=.
+
+When publishing a file you can ensure all related projects are also
+published by using: =org-publish-current-project= (C-c C-e P p).
+
+* Why not use ox-rss.el?
+Using an Org exporter adds an additional export steps and
+configuration that is unnecessary for a basic project.
+
+#+begin_src
+  Org project --[auto-sitemap]--> Org sitemap --[ox-rss]--> RSS
+
+  Org project --[org-publish-rss]--> RSS
+#+end_src
+
+Plus adding specific RSS options to =org-publish-project-alist= makes
+RSS more easily configurable across multiple projects.
+
+=ox-rss.el= is still a great solution if you want to convert one
+monolithic Org file into an RSS feed.  If you are interested in using
+ox-rss with org-publish see the [[https://writepermission.com/org-blogging-rss-feed.html][clever solution provided by Toon
+Claes]].
+
+* Contributing
+
+Please email me with feedback, bugs, and patches.  You can find my
+email near the top of the elisp files.  I will generally try to get
+back to you within a week.  Please follow-up if you have not heard
+from me.
+
+If you send me a patch for this project I will assume you are agreeing
+to redistribute your code under the terms of the GPLv3 or later
+versions.
+
+** License GPLv3
+
+See LICENSE file for full terms..
+
+#+begin_quote
+This file is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+For a full copy of the GNU General Public License
+see <http://www.gnu.org/licenses/>.
+#+end_quote
+
+* Acknowledgments
+
+Thank you to Thibaut Meyer for his great feedback, suggestions, and
+development assistance.  Thanks as well to Hanno Perrey for his
+additional feedback and suggestions.
+
+Thank you to the kind people on the Org mailing lists and the Org
+developers.  If Org wasn't so great I probably would have never
+discovered the joys of Lisp and the Emacs community.
